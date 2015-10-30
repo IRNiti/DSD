@@ -1,0 +1,12 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;  
+
+entity g10_score_encoder is
+port (score_code : out std_logic_vector (3 downto 0);
+		num_exact_matches: in std_logic_vector (2 downto 0);
+		num_color_matches: in std_logic_vector (2 downto 0));
+end g10_score_encoder;
+
+architecture implementation of g10_score_encoder is
+
