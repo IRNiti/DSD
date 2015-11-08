@@ -1,0 +1,7 @@
+entity g10_color_matches is
+	port ( P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
+			 G1, G2, G3, G4 : in std_logic_vector (2 downto 0);
+			 num_exact_matches : out std_logic_vector (2 downto 0);
+			 num_color_matches : out std_logic_vector (2 downto 0));
+end g10_color_matches;
+

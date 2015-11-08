@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity g10_mastermind_score is 
+port (P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
+		G1, G2, G3, G4 : in std_logic_vector (2 downto 0);
+		exact_match_score : out std_logic_vector (2 downto 0);
+		color_match_score : out std_logic_vector (2 downto 0);
+		score_code : out std_logic_vector (3 downto 0));
+		
+end 	g10_mastermind_score;
+
+architecture implementation of g10_mastermind_score is
+
+component g10_num_matches 
+	port ()

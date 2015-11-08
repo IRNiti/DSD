@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {g10_7_segment_decoder.vho g10_7_segment_decoder_vhd.sdo}}
+	{{"Fast Model"} {g10_7_segment_decoder_fast.vho g10_7_segment_decoder_vhd_fast.sdo}}
+}

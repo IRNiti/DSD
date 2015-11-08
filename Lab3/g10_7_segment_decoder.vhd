@@ -6,7 +6,7 @@ entity g10_7_segment_decoder is
 
 port( code            : in std_logic_vector(3 downto 0);
 		RippleBlank_In  : in std_logic;
-		RippleBlank_Out : out std_logic;
+		RippleBlank_Out : out std_logic;  
 		segments        : out std_logic_vector(6 downto 0));
 end g10_7_segment_decoder;
 
@@ -16,7 +16,6 @@ architecture behaviour of g10_7_segment_decoder is
 	
 	begin 
 	RippleBlankAndCode <= RippleBlank_In & code;
-	
 
 	halloween: process (code, RippleBlank_In)
 	begin 

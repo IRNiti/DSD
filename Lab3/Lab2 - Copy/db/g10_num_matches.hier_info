@@ -1,0 +1,1517 @@
+|g10_mastermind_score
+P1[0] => g10_num_matches:Gate1.P1[0]
+P1[0] => g10_color_matches:Gate2.P1[0]
+P1[1] => g10_num_matches:Gate1.P1[1]
+P1[1] => g10_color_matches:Gate2.P1[1]
+P1[2] => g10_num_matches:Gate1.P1[2]
+P1[2] => g10_color_matches:Gate2.P1[2]
+P2[0] => g10_num_matches:Gate1.P2[0]
+P2[0] => g10_color_matches:Gate2.P2[0]
+P2[1] => g10_num_matches:Gate1.P2[1]
+P2[1] => g10_color_matches:Gate2.P2[1]
+P2[2] => g10_num_matches:Gate1.P2[2]
+P2[2] => g10_color_matches:Gate2.P2[2]
+P3[0] => g10_num_matches:Gate1.P3[0]
+P3[0] => g10_color_matches:Gate2.P3[0]
+P3[1] => g10_num_matches:Gate1.P3[1]
+P3[1] => g10_color_matches:Gate2.P3[1]
+P3[2] => g10_num_matches:Gate1.P3[2]
+P3[2] => g10_color_matches:Gate2.P3[2]
+P4[0] => g10_num_matches:Gate1.P4[0]
+P4[0] => g10_color_matches:Gate2.P4[0]
+P4[1] => g10_num_matches:Gate1.P4[1]
+P4[1] => g10_color_matches:Gate2.P4[1]
+P4[2] => g10_num_matches:Gate1.P4[2]
+P4[2] => g10_color_matches:Gate2.P4[2]
+G1[0] => g10_num_matches:Gate1.G1[0]
+G1[0] => g10_color_matches:Gate2.G1[0]
+G1[1] => g10_num_matches:Gate1.G1[1]
+G1[1] => g10_color_matches:Gate2.G1[1]
+G1[2] => g10_num_matches:Gate1.G1[2]
+G1[2] => g10_color_matches:Gate2.G1[2]
+G2[0] => g10_num_matches:Gate1.G2[0]
+G2[0] => g10_color_matches:Gate2.G2[0]
+G2[1] => g10_num_matches:Gate1.G2[1]
+G2[1] => g10_color_matches:Gate2.G2[1]
+G2[2] => g10_num_matches:Gate1.G2[2]
+G2[2] => g10_color_matches:Gate2.G2[2]
+G3[0] => g10_num_matches:Gate1.G3[0]
+G3[0] => g10_color_matches:Gate2.G3[0]
+G3[1] => g10_num_matches:Gate1.G3[1]
+G3[1] => g10_color_matches:Gate2.G3[1]
+G3[2] => g10_num_matches:Gate1.G3[2]
+G3[2] => g10_color_matches:Gate2.G3[2]
+G4[0] => g10_num_matches:Gate1.G4[0]
+G4[0] => g10_color_matches:Gate2.G4[0]
+G4[1] => g10_num_matches:Gate1.G4[1]
+G4[1] => g10_color_matches:Gate2.G4[1]
+G4[2] => g10_num_matches:Gate1.G4[2]
+G4[2] => g10_color_matches:Gate2.G4[2]
+exact_match_score[0] <= g10_num_matches:Gate1.N_exact[0]
+exact_match_score[1] <= g10_num_matches:Gate1.N_exact[1]
+exact_match_score[2] <= g10_num_matches:Gate1.N_exact[2]
+color_match_score[0] <= g10_color_matches:Gate2.num_color_matches[0]
+color_match_score[1] <= g10_color_matches:Gate2.num_color_matches[1]
+color_match_score[2] <= g10_color_matches:Gate2.num_color_matches[2]
+score_code[0] <= g10_score_encoder:Gate3.score_code[0]
+score_code[1] <= g10_score_encoder:Gate3.score_code[1]
+score_code[2] <= g10_score_encoder:Gate3.score_code[2]
+score_code[3] <= g10_score_encoder:Gate3.score_code[3]
+
+
+|g10_mastermind_score|g10_num_matches:Gate1
+P1[0] => g10_comp3:Gate1.A[0]
+P1[1] => g10_comp3:Gate1.A[1]
+P1[2] => g10_comp3:Gate1.A[2]
+P2[0] => g10_comp3:Gate2.A[0]
+P2[1] => g10_comp3:Gate2.A[1]
+P2[2] => g10_comp3:Gate2.A[2]
+P3[0] => g10_comp3:Gate3.A[0]
+P3[1] => g10_comp3:Gate3.A[1]
+P3[2] => g10_comp3:Gate3.A[2]
+P4[0] => g10_comp3:Gate4.A[0]
+P4[1] => g10_comp3:Gate4.A[1]
+P4[2] => g10_comp3:Gate4.A[2]
+G1[0] => g10_comp3:Gate1.B[0]
+G1[1] => g10_comp3:Gate1.B[1]
+G1[2] => g10_comp3:Gate1.B[2]
+G2[0] => g10_comp3:Gate2.B[0]
+G2[1] => g10_comp3:Gate2.B[1]
+G2[2] => g10_comp3:Gate2.B[2]
+G3[0] => g10_comp3:Gate3.B[0]
+G3[1] => g10_comp3:Gate3.B[1]
+G3[2] => g10_comp3:Gate3.B[2]
+G4[0] => g10_comp3:Gate4.B[0]
+G4[1] => g10_comp3:Gate4.B[1]
+G4[2] => g10_comp3:Gate4.B[2]
+N_exact[0] <= g10_num1s:Gate5.num1s[0]
+N_exact[1] <= g10_num1s:Gate5.num1s[1]
+N_exact[2] <= g10_num1s:Gate5.num1s[2]
+
+
+|g10_mastermind_score|g10_num_matches:Gate1|g10_comp3:Gate1
+A[0] => SYNTHESIZED_WIRE_0.IN0
+A[1] => SYNTHESIZED_WIRE_1.IN0
+A[2] => SYNTHESIZED_WIRE_2.IN0
+B[0] => SYNTHESIZED_WIRE_0.IN1
+B[1] => SYNTHESIZED_WIRE_1.IN1
+B[2] => SYNTHESIZED_WIRE_2.IN1
+AeqB <= SYNTHESIZED_WIRE_6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_num_matches:Gate1|g10_comp3:Gate2
+A[0] => SYNTHESIZED_WIRE_0.IN0
+A[1] => SYNTHESIZED_WIRE_1.IN0
+A[2] => SYNTHESIZED_WIRE_2.IN0
+B[0] => SYNTHESIZED_WIRE_0.IN1
+B[1] => SYNTHESIZED_WIRE_1.IN1
+B[2] => SYNTHESIZED_WIRE_2.IN1
+AeqB <= SYNTHESIZED_WIRE_6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_num_matches:Gate1|g10_comp3:Gate3
+A[0] => SYNTHESIZED_WIRE_0.IN0
+A[1] => SYNTHESIZED_WIRE_1.IN0
+A[2] => SYNTHESIZED_WIRE_2.IN0
+B[0] => SYNTHESIZED_WIRE_0.IN1
+B[1] => SYNTHESIZED_WIRE_1.IN1
+B[2] => SYNTHESIZED_WIRE_2.IN1
+AeqB <= SYNTHESIZED_WIRE_6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_num_matches:Gate1|g10_comp3:Gate4
+A[0] => SYNTHESIZED_WIRE_0.IN0
+A[1] => SYNTHESIZED_WIRE_1.IN0
+A[2] => SYNTHESIZED_WIRE_2.IN0
+B[0] => SYNTHESIZED_WIRE_0.IN1
+B[1] => SYNTHESIZED_WIRE_1.IN1
+B[2] => SYNTHESIZED_WIRE_2.IN1
+AeqB <= SYNTHESIZED_WIRE_6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_num_matches:Gate1|g10_num1s:Gate5
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2
+P1[0] => LPM_DECODE:Gate1.DATA[0]
+P1[1] => LPM_DECODE:Gate1.DATA[1]
+P1[2] => LPM_DECODE:Gate1.DATA[2]
+P2[0] => LPM_DECODE:Gate2.DATA[0]
+P2[1] => LPM_DECODE:Gate2.DATA[1]
+P2[2] => LPM_DECODE:Gate2.DATA[2]
+P3[0] => LPM_DECODE:Gate3.DATA[0]
+P3[1] => LPM_DECODE:Gate3.DATA[1]
+P3[2] => LPM_DECODE:Gate3.DATA[2]
+P4[0] => LPM_DECODE:Gate4.DATA[0]
+P4[1] => LPM_DECODE:Gate4.DATA[1]
+P4[2] => LPM_DECODE:Gate4.DATA[2]
+G1[0] => LPM_DECODE:Gate5.DATA[0]
+G1[1] => LPM_DECODE:Gate5.DATA[1]
+G1[2] => LPM_DECODE:Gate5.DATA[2]
+G2[0] => LPM_DECODE:Gate6.DATA[0]
+G2[1] => LPM_DECODE:Gate6.DATA[1]
+G2[2] => LPM_DECODE:Gate6.DATA[2]
+G3[0] => LPM_DECODE:Gate7.DATA[0]
+G3[1] => LPM_DECODE:Gate7.DATA[1]
+G3[2] => LPM_DECODE:Gate7.DATA[2]
+G4[0] => LPM_DECODE:Gate8.DATA[0]
+G4[1] => LPM_DECODE:Gate8.DATA[1]
+G4[2] => LPM_DECODE:Gate8.DATA[2]
+num_exact_matches[0] => LPM_ADD_SUB:Gate34.DATAB[0]
+num_exact_matches[1] => LPM_ADD_SUB:Gate34.DATAB[1]
+num_exact_matches[2] => LPM_ADD_SUB:Gate34.DATAB[2]
+num_color_matches[0] <= LPM_ADD_SUB:Gate34.RESULT[0]
+num_color_matches[1] <= LPM_ADD_SUB:Gate34.RESULT[1]
+num_color_matches[2] <= LPM_ADD_SUB:Gate34.RESULT[2]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate1
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate1|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate2
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate2|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate3
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate3|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate4
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate4|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate5
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate5|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate6
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate6|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate7
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate7|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate8
+data[0] => decode_7jg:auto_generated.data[0]
+data[1] => decode_7jg:auto_generated.data[1]
+data[2] => decode_7jg:auto_generated.data[2]
+enable => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_7jg:auto_generated.eq[0]
+eq[1] <= decode_7jg:auto_generated.eq[1]
+eq[2] <= decode_7jg:auto_generated.eq[2]
+eq[3] <= decode_7jg:auto_generated.eq[3]
+eq[4] <= decode_7jg:auto_generated.eq[4]
+eq[5] <= decode_7jg:auto_generated.eq[5]
+eq[6] <= decode_7jg:auto_generated.eq[6]
+eq[7] <= decode_7jg:auto_generated.eq[7]
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_DECODE:Gate8|decode_7jg:auto_generated
+data[0] => w_anode19w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode30w[1].IN0
+data[0] => w_anode41w[1].IN1
+data[0] => w_anode52w[1].IN0
+data[0] => w_anode63w[1].IN1
+data[0] => w_anode74w[1].IN0
+data[0] => w_anode85w[1].IN1
+data[1] => w_anode19w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode30w[2].IN1
+data[1] => w_anode41w[2].IN1
+data[1] => w_anode52w[2].IN0
+data[1] => w_anode63w[2].IN0
+data[1] => w_anode74w[2].IN1
+data[1] => w_anode85w[2].IN1
+data[2] => w_anode19w[3].IN0
+data[2] => w_anode1w[3].IN0
+data[2] => w_anode30w[3].IN0
+data[2] => w_anode41w[3].IN0
+data[2] => w_anode52w[3].IN1
+data[2] => w_anode63w[3].IN1
+data[2] => w_anode74w[3].IN1
+data[2] => w_anode85w[3].IN1
+eq[0] <= w_anode1w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode19w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode30w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode41w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= w_anode52w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= w_anode63w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= w_anode74w[3].DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= w_anode85w[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate9
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate10
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate11
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate12
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate13
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate14
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate15
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate16
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate17
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate18
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate19
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_num1s:Gate20
+x[0] => num1s.IN1
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[0] => num1s.IN0
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN0
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[1] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[2] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+x[3] => num1s.IN1
+num1s[0] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[1] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+num1s[2] <= num1s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_minimum3:Gate21
+N[0] => NgtM.IN1
+N[0] => min.DATAA
+N[1] => NgtM.IN1
+N[1] => NgtM.IN0
+N[1] => min.DATAA
+N[2] => NgtM.IN0
+N[2] => NgtM.IN0
+N[2] => min.DATAA
+M[0] => min.DATAB
+M[0] => NgtM.IN1
+M[1] => NgtM.IN1
+M[1] => min.DATAB
+M[1] => NgtM.IN1
+M[2] => NgtM.IN1
+M[2] => min.DATAB
+M[2] => NgtM.IN1
+min[0] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_minimum3:Gate22
+N[0] => NgtM.IN1
+N[0] => min.DATAA
+N[1] => NgtM.IN1
+N[1] => NgtM.IN0
+N[1] => min.DATAA
+N[2] => NgtM.IN0
+N[2] => NgtM.IN0
+N[2] => min.DATAA
+M[0] => min.DATAB
+M[0] => NgtM.IN1
+M[1] => NgtM.IN1
+M[1] => min.DATAB
+M[1] => NgtM.IN1
+M[2] => NgtM.IN1
+M[2] => min.DATAB
+M[2] => NgtM.IN1
+min[0] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_minimum3:Gate23
+N[0] => NgtM.IN1
+N[0] => min.DATAA
+N[1] => NgtM.IN1
+N[1] => NgtM.IN0
+N[1] => min.DATAA
+N[2] => NgtM.IN0
+N[2] => NgtM.IN0
+N[2] => min.DATAA
+M[0] => min.DATAB
+M[0] => NgtM.IN1
+M[1] => NgtM.IN1
+M[1] => min.DATAB
+M[1] => NgtM.IN1
+M[2] => NgtM.IN1
+M[2] => min.DATAB
+M[2] => NgtM.IN1
+min[0] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_minimum3:Gate24
+N[0] => NgtM.IN1
+N[0] => min.DATAA
+N[1] => NgtM.IN1
+N[1] => NgtM.IN0
+N[1] => min.DATAA
+N[2] => NgtM.IN0
+N[2] => NgtM.IN0
+N[2] => min.DATAA
+M[0] => min.DATAB
+M[0] => NgtM.IN1
+M[1] => NgtM.IN1
+M[1] => min.DATAB
+M[1] => NgtM.IN1
+M[2] => NgtM.IN1
+M[2] => min.DATAB
+M[2] => NgtM.IN1
+min[0] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_minimum3:Gate25
+N[0] => NgtM.IN1
+N[0] => min.DATAA
+N[1] => NgtM.IN1
+N[1] => NgtM.IN0
+N[1] => min.DATAA
+N[2] => NgtM.IN0
+N[2] => NgtM.IN0
+N[2] => min.DATAA
+M[0] => min.DATAB
+M[0] => NgtM.IN1
+M[1] => NgtM.IN1
+M[1] => min.DATAB
+M[1] => NgtM.IN1
+M[2] => NgtM.IN1
+M[2] => min.DATAB
+M[2] => NgtM.IN1
+min[0] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|g10_minimum3:Gate26
+N[0] => NgtM.IN1
+N[0] => min.DATAA
+N[1] => NgtM.IN1
+N[1] => NgtM.IN0
+N[1] => min.DATAA
+N[2] => NgtM.IN0
+N[2] => NgtM.IN0
+N[2] => min.DATAA
+M[0] => min.DATAB
+M[0] => NgtM.IN1
+M[1] => NgtM.IN1
+M[1] => min.DATAB
+M[1] => NgtM.IN1
+M[2] => NgtM.IN1
+M[2] => min.DATAB
+M[2] => NgtM.IN1
+min[0] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= min.DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= min.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
+dataa[0] => add_sub_8hf:auto_generated.dataa[0]
+dataa[1] => add_sub_8hf:auto_generated.dataa[1]
+dataa[2] => add_sub_8hf:auto_generated.dataa[2]
+datab[0] => add_sub_8hf:auto_generated.datab[0]
+datab[1] => add_sub_8hf:auto_generated.datab[1]
+datab[2] => add_sub_8hf:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_8hf:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_8hf:auto_generated.result[0]
+result[1] <= add_sub_8hf:auto_generated.result[1]
+result[2] <= add_sub_8hf:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27|add_sub_8hf:auto_generated
+add_sub => ~NO_FANOUT~
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => op_1.IN5
+datab[1] => op_1.IN3
+datab[2] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
+dataa[0] => add_sub_8hf:auto_generated.dataa[0]
+dataa[1] => add_sub_8hf:auto_generated.dataa[1]
+dataa[2] => add_sub_8hf:auto_generated.dataa[2]
+datab[0] => add_sub_8hf:auto_generated.datab[0]
+datab[1] => add_sub_8hf:auto_generated.datab[1]
+datab[2] => add_sub_8hf:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_8hf:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_8hf:auto_generated.result[0]
+result[1] <= add_sub_8hf:auto_generated.result[1]
+result[2] <= add_sub_8hf:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28|add_sub_8hf:auto_generated
+add_sub => ~NO_FANOUT~
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => op_1.IN5
+datab[1] => op_1.IN3
+datab[2] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
+dataa[0] => add_sub_8hf:auto_generated.dataa[0]
+dataa[1] => add_sub_8hf:auto_generated.dataa[1]
+dataa[2] => add_sub_8hf:auto_generated.dataa[2]
+datab[0] => add_sub_8hf:auto_generated.datab[0]
+datab[1] => add_sub_8hf:auto_generated.datab[1]
+datab[2] => add_sub_8hf:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_8hf:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_8hf:auto_generated.result[0]
+result[1] <= add_sub_8hf:auto_generated.result[1]
+result[2] <= add_sub_8hf:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29|add_sub_8hf:auto_generated
+add_sub => ~NO_FANOUT~
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => op_1.IN5
+datab[1] => op_1.IN3
+datab[2] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
+dataa[0] => add_sub_8hf:auto_generated.dataa[0]
+dataa[1] => add_sub_8hf:auto_generated.dataa[1]
+dataa[2] => add_sub_8hf:auto_generated.dataa[2]
+datab[0] => add_sub_8hf:auto_generated.datab[0]
+datab[1] => add_sub_8hf:auto_generated.datab[1]
+datab[2] => add_sub_8hf:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_8hf:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_8hf:auto_generated.result[0]
+result[1] <= add_sub_8hf:auto_generated.result[1]
+result[2] <= add_sub_8hf:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30|add_sub_8hf:auto_generated
+add_sub => ~NO_FANOUT~
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => op_1.IN5
+datab[1] => op_1.IN3
+datab[2] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
+dataa[0] => add_sub_8hf:auto_generated.dataa[0]
+dataa[1] => add_sub_8hf:auto_generated.dataa[1]
+dataa[2] => add_sub_8hf:auto_generated.dataa[2]
+datab[0] => add_sub_8hf:auto_generated.datab[0]
+datab[1] => add_sub_8hf:auto_generated.datab[1]
+datab[2] => add_sub_8hf:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_8hf:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_8hf:auto_generated.result[0]
+result[1] <= add_sub_8hf:auto_generated.result[1]
+result[2] <= add_sub_8hf:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31|add_sub_8hf:auto_generated
+add_sub => ~NO_FANOUT~
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => op_1.IN5
+datab[1] => op_1.IN3
+datab[2] => op_1.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
+dataa[0] => add_sub_r4f:auto_generated.dataa[0]
+dataa[1] => add_sub_r4f:auto_generated.dataa[1]
+dataa[2] => add_sub_r4f:auto_generated.dataa[2]
+datab[0] => add_sub_r4f:auto_generated.datab[0]
+datab[1] => add_sub_r4f:auto_generated.datab[1]
+datab[2] => add_sub_r4f:auto_generated.datab[2]
+cin => ~NO_FANOUT~
+add_sub => add_sub_r4f:auto_generated.add_sub
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_r4f:auto_generated.result[0]
+result[1] <= add_sub_r4f:auto_generated.result[1]
+result[2] <= add_sub_r4f:auto_generated.result[2]
+cout <= <GND>
+overflow <= <GND>
+
+
+|g10_mastermind_score|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34|add_sub_r4f:auto_generated
+add_sub => _.IN0
+add_sub => _.IN0
+add_sub => _.IN0
+dataa[0] => op_1.IN4
+dataa[1] => op_1.IN2
+dataa[2] => op_1.IN0
+datab[0] => _.IN1
+datab[1] => _.IN1
+datab[2] => _.IN1
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|g10_mastermind_score|g10_score_encoder:Gate3
+score_code[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+score_code[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+score_code[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+score_code[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+num_exact_matches[0] => Mux0.IN66
+num_exact_matches[0] => Mux1.IN66
+num_exact_matches[0] => Mux2.IN66
+num_exact_matches[0] => Mux3.IN66
+num_exact_matches[1] => Mux0.IN65
+num_exact_matches[1] => Mux1.IN65
+num_exact_matches[1] => Mux2.IN65
+num_exact_matches[1] => Mux3.IN65
+num_exact_matches[2] => Mux0.IN64
+num_exact_matches[2] => Mux1.IN64
+num_exact_matches[2] => Mux2.IN64
+num_exact_matches[2] => Mux3.IN64
+num_color_matches[0] => Mux0.IN69
+num_color_matches[0] => Mux1.IN69
+num_color_matches[0] => Mux2.IN69
+num_color_matches[0] => Mux3.IN69
+num_color_matches[1] => Mux0.IN68
+num_color_matches[1] => Mux1.IN68
+num_color_matches[1] => Mux2.IN68
+num_color_matches[1] => Mux3.IN68
+num_color_matches[2] => Mux0.IN67
+num_color_matches[2] => Mux1.IN67
+num_color_matches[2] => Mux2.IN67
+num_color_matches[2] => Mux3.IN67
+
+
