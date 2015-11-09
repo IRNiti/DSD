@@ -78,72 +78,45 @@ BEGIN
 --		TC_EN <= '1';  --enable
 --		TC_RST <= '0';
 --	
-		for i in 0 to 12960 loop
+		for i in 0 to 13100 loop
 		--Clock_Cycle <= i;
 		
 		CLK <= NOT CLK;
 		
-		if((i > 80) and (i < 100)) then --testing enable function
+		if((i > 2601) and (i < 2620)) then --testing enable function
 		TC_EN <= '0';
 			else 
 		TC_EN <= '1';
 		end if;
 		
-		if((i = 180)) then -- testing reset function
+		if((i = 2640)) then -- testing reset function
 		TC_RST <= '1';
 			else 
 		TC_RST <= '0';
 		end if;
 		
-		if(i >= 181) then --testing write and read functions for 0 and 1
+		if(i >= 2650) then --testing write function for 1
 		TM_EN <= '1';
 		TM_IN <= '1';
 		end if;
 		
-		if(i >= 1500) then
+		if(i >= 5242) then --testing read function for 1
 		TM_EN <= '0';
 		TM_IN <= '1';
 		end if;
 		
-		if(i >= 2800) then
+		if(i >= 7834) then --testing write function for 0
 		TM_EN <= '1';
 		TM_IN <= '0';
 		end if;
 		
-		if(i >= 4100) then
+		if(i >= 10426) then --testing read function for 0
 		TM_EN <= '0';
 		TM_IN <= '0';
 		end if;
 		
-		wait for 40 ns;
-		end loop;
-		
---		if(clk = 1) then
---		TM_IN <= '1'; --write value of 1
---		--wait for 40 ns;
---		TM_EN <= '1'; --actually write
---		--wait for 52000 ns;
---		TC_RST <= '1';
---		--wait for 40 ns;
---		TC_RST <= '0';
---		--wait for 40 ns;
---		TM_EN <= '0'; --read
---		--wait for 52000 ns;
---		
---		TM_IN <= '0'; --write value of 0
---		--wait for 40 ns;
---		TM_EN <= '1'; --actually write
---		--wait for 52000 ns;
---		TC_RST <= '1';
---		--wait for 40 ns;
---		TC_RST <= '0';
---		--wait for 40 ns;
---		TM_EN <= '0'; --read
---		--wait for 52000 ns;
-		
-		
-		
-		
+		wait for 20 ns;
+		end loop;		
 		  
 WAIT;                                                        
 END PROCESS always;                                          

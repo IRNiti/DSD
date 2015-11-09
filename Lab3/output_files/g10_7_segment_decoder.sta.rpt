@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for g10_7_segment_decoder
-Fri Nov 06 15:28:42 2015
+Sun Nov 08 20:33:21 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,36 +16,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Setup: 'CLK'
- 12. Slow Model Hold: 'CLK'
- 13. Slow Model Minimum Pulse Width: 'CLK'
- 14. Setup Times
- 15. Hold Times
- 16. Clock to Output Times
- 17. Minimum Clock to Output Times
- 18. Fast Model Setup Summary
- 19. Fast Model Hold Summary
- 20. Fast Model Recovery Summary
- 21. Fast Model Removal Summary
- 22. Fast Model Minimum Pulse Width Summary
- 23. Fast Model Setup: 'CLK'
- 24. Fast Model Hold: 'CLK'
- 25. Fast Model Minimum Pulse Width: 'CLK'
- 26. Setup Times
- 27. Hold Times
- 28. Clock to Output Times
- 29. Minimum Clock to Output Times
- 30. Multicorner Timing Analysis Summary
- 31. Setup Times
- 32. Hold Times
- 33. Clock to Output Times
- 34. Minimum Clock to Output Times
- 35. Setup Transfers
- 36. Hold Transfers
- 37. Report TCCS
- 38. Report RSKM
- 39. Unconstrained Paths
- 40. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Minimum Pulse Width: 'altera_reserved_tck'
+ 12. Slow Model Datasheet Report
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Fast Model Minimum Pulse Width: 'altera_reserved_tck'
+ 19. Fast Model Datasheet Report
+ 20. Multicorner Timing Analysis Summary
+ 21. Clock Transfers
+ 22. Report TCCS
+ 23. Report RSKM
+ 24. Unconstrained Paths
+ 25. TimeQuest Timing Analyzer Messages
 
 
 
@@ -81,52 +66,48 @@ applicable agreement for further details.
 +--------------------+-------------------------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 2      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                          ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
-; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                    ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period  ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; altera_reserved_tck ; Base ; 100.000 ; 10.0 MHz  ; 0.000 ; 50.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { altera_reserved_tck } ;
++---------------------+------+---------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Slow Model Fmax Summary                                                                           ;
-+------------+-----------------+------------+-------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
-+------------+-----------------+------------+-------------------------------------------------------+
-; 310.95 MHz ; 195.01 MHz      ; CLK        ; limit due to high minimum pulse width violation (tch) ;
-+------------+-----------------+------------+-------------------------------------------------------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
 
 
-+--------------------------------+
-; Slow Model Setup Summary       ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; CLK   ; -2.216 ; -57.841       ;
-+-------+--------+---------------+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
 
 
-+-------------------------------+
-; Slow Model Hold Summary       ;
-+-------+-------+---------------+
-; Clock ; Slack ; End Point TNS ;
-+-------+-------+---------------+
-; CLK   ; 0.445 ; 0.000         ;
-+-------+-------+---------------+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
 
 
 -------------------------------
@@ -141,425 +122,40 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
-; Slow Model Minimum Pulse Width Summary ;
-+-------+--------+-----------------------+
-; Clock ; Slack  ; End Point TNS         ;
-+-------+--------+-----------------------+
-; CLK   ; -2.064 ; -158.301              ;
-+-------+--------+-----------------------+
++----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.531 ; 0.000         ;
++---------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'CLK'                                                                                                                                                                                                                              ;
-+--------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                                         ; To Node                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -2.216 ; TM_ADDR2[2]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 3.253      ;
-; -2.210 ; TM_ADDR2[2]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 3.247      ;
-; -2.132 ; TM_ADDR1[2]                                                                       ; TM_ADDR2[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.172      ;
-; -2.130 ; TM_ADDR1[2]                                                                       ; TM_ADDR2[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.170      ;
-; -2.129 ; TM_ADDR1[2]                                                                       ; TM_ADDR2[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.169      ;
-; -2.107 ; TM_ADDR1[0]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.146      ;
-; -2.094 ; TM_ADDR1[0]                                                                       ; TM_ADDR2[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.134      ;
-; -2.092 ; TM_ADDR1[0]                                                                       ; TM_ADDR2[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.132      ;
-; -2.091 ; TM_ADDR1[0]                                                                       ; TM_ADDR2[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.131      ;
-; -2.076 ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_datain_reg0 ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.022     ; 3.014      ;
-; -2.072 ; TM_ADDR3[1]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.110      ;
-; -2.072 ; TM_ADDR3[1]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.110      ;
-; -2.072 ; TM_ADDR3[1]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.110      ;
-; -2.061 ; TM_ADDR2[1]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 3.098      ;
-; -2.055 ; TM_ADDR2[1]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 3.092      ;
-; -2.049 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.087      ;
-; -2.048 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.086      ;
-; -2.047 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.085      ;
-; -2.046 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.084      ;
-; -2.041 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.079      ;
-; -2.041 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.079      ;
-; -2.040 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.078      ;
-; -2.029 ; TM_ADDR1[2]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.068      ;
-; -2.029 ; TM_ADDR1[2]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.068      ;
-; -2.029 ; TM_ADDR1[2]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.068      ;
-; -2.023 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.063      ;
-; -2.021 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.061      ;
-; -2.018 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.058      ;
-; -2.017 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.057      ;
-; -2.011 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.049      ;
-; -2.010 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.048      ;
-; -2.009 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.047      ;
-; -2.008 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.046      ;
-; -2.003 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.041      ;
-; -2.003 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.041      ;
-; -2.002 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 3.040      ;
-; -1.991 ; TM_ADDR1[0]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.030      ;
-; -1.991 ; TM_ADDR1[0]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.030      ;
-; -1.991 ; TM_ADDR1[0]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 3.030      ;
-; -1.985 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.025      ;
-; -1.983 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.023      ;
-; -1.980 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.020      ;
-; -1.979 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.002      ; 3.019      ;
-; -1.956 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.992      ;
-; -1.955 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.991      ;
-; -1.954 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.990      ;
-; -1.953 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.989      ;
-; -1.948 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.984      ;
-; -1.948 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.984      ;
-; -1.947 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.983      ;
-; -1.931 ; TM_ADDR2[0]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.968      ;
-; -1.930 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.968      ;
-; -1.928 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.966      ;
-; -1.925 ; TM_ADDR2[0]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.962      ;
-; -1.925 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.963      ;
-; -1.924 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.962      ;
-; -1.909 ; TM_ADDR1[2]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.948      ;
-; -1.870 ; TM_ADDR2[2]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.907      ;
-; -1.870 ; TM_ADDR3[2]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.908      ;
-; -1.870 ; TM_ADDR3[2]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.908      ;
-; -1.870 ; TM_ADDR3[2]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.908      ;
-; -1.815 ; TM_ADDR2[2]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.852      ;
-; -1.815 ; TM_ADDR2[2]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.852      ;
-; -1.815 ; TM_ADDR2[2]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.852      ;
-; -1.801 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.837      ;
-; -1.800 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.836      ;
-; -1.799 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.835      ;
-; -1.798 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.834      ;
-; -1.796 ; TM_ADDR3[1]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.834      ;
-; -1.793 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.829      ;
-; -1.793 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.829      ;
-; -1.792 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.828      ;
-; -1.790 ; TM_ADDR1[0]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.829      ;
-; -1.790 ; TM_ADDR3[1]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.828      ;
-; -1.784 ; TM_ADDR1[0]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.823      ;
-; -1.775 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.813      ;
-; -1.773 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.811      ;
-; -1.770 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.808      ;
-; -1.769 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.807      ;
-; -1.764 ; TM_ADDR1[2]                                                                       ; TC_LAST~reg0                                                                      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.803      ;
-; -1.757 ; TM_ADDR1[1]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.796      ;
-; -1.741 ; TM_ADDR1[1]                                                                       ; TM_ADDR2[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.781      ;
-; -1.739 ; TM_ADDR1[1]                                                                       ; TM_ADDR2[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.779      ;
-; -1.738 ; TM_ADDR1[1]                                                                       ; TM_ADDR2[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.778      ;
-; -1.736 ; TM_ADDR3[0]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.774      ;
-; -1.736 ; TM_ADDR3[0]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.774      ;
-; -1.736 ; TM_ADDR3[0]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.774      ;
-; -1.728 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.765      ;
-; -1.727 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.764      ;
-; -1.726 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.763      ;
-; -1.726 ; TM_ADDR1[0]                                                                       ; TC_LAST~reg0                                                                      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.765      ;
-; -1.725 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.762      ;
-; -1.720 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.757      ;
-; -1.720 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.757      ;
-; -1.719 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.756      ;
-; -1.717 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.754      ;
-; -1.716 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.753      ;
-; -1.715 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.752      ;
-; -1.715 ; TM_ADDR2[1]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.752      ;
-; -1.714 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.751      ;
-+--------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'altera_reserved_tck'                                                       ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.531 ; 100.000      ; 2.469          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'CLK'                                                                                                                                                              ;
-+-------+-----------------+-------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node       ; To Node                                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------+-------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.445 ; TM_ADDR1[0]     ; TM_ADDR1[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR1[2]     ; TM_ADDR1[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR1[1]     ; TM_ADDR1[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR2[0]     ; TM_ADDR2[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR2[1]     ; TM_ADDR2[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR2[2]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR3[1]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR3[2]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR3[0]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR4[1]     ; TM_ADDR4[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.445 ; TM_ADDR4[2]     ; TM_ADDR4[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.731      ;
-; 0.621 ; TM_ADDR_Int[11] ; TM_ADDR[11]~reg0                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.907      ;
-; 0.624 ; TM_ADDR_Int[2]  ; TM_ADDR[2]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.910      ;
-; 0.625 ; TM_ADDR_Int[4]  ; TM_ADDR[4]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.911      ;
-; 0.626 ; TM_ADDR_Int[10] ; TM_ADDR[10]~reg0                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.912      ;
-; 0.643 ; TM_ADDR4[0]     ; TM_ADDR4[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.929      ;
-; 0.643 ; TM_ADDR4[0]     ; TM_ADDR4[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.929      ;
-; 0.777 ; TM_ADDR_Int[1]  ; TM_ADDR[1]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.063      ;
-; 0.779 ; TM_ADDR_Int[5]  ; TM_ADDR[5]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.065      ;
-; 0.781 ; TM_ADDR_Int[7]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg7  ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.146      ;
-; 0.784 ; TM_ADDR_Int[3]  ; TM_ADDR[3]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.070      ;
-; 0.786 ; TM_ADDR2[2]     ; TM_ADDR_Int[5]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
-; 0.799 ; TM_ADDR_Int[11] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg11 ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.164      ;
-; 0.817 ; TM_ADDR_Int[7]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg7  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.146      ;
-; 0.835 ; TM_ADDR_Int[11] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg11 ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.164      ;
-; 0.998 ; TM_ADDR2[0]     ; TM_ADDR_Int[3]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.284      ;
-; 1.000 ; TM_ADDR4[2]     ; TM_ADDR_Int[11]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.285      ;
-; 1.005 ; TM_ADDR2[0]     ; TM_ADDR2[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.291      ;
-; 1.014 ; TM_ADDR1[1]     ; TM_ADDR_Int[1]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.300      ;
-; 1.035 ; TM_ADDR4[1]     ; TM_ADDR4[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.321      ;
-; 1.076 ; TM_ADDR_Int[2]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg2  ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.441      ;
-; 1.081 ; TM_ADDR_Int[1]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg1  ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.446      ;
-; 1.082 ; TM_ADDR_Int[0]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg0  ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.447      ;
-; 1.093 ; TM_ADDR_Int[4]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg4  ; CLK          ; CLK         ; 0.000        ; 0.113      ; 1.456      ;
-; 1.100 ; TM_ADDR_Int[3]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg3  ; CLK          ; CLK         ; 0.000        ; 0.113      ; 1.463      ;
-; 1.106 ; TM_ADDR_Int[5]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg5  ; CLK          ; CLK         ; 0.000        ; 0.113      ; 1.469      ;
-; 1.107 ; TM_ADDR_Int[6]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg6  ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.472      ;
-; 1.108 ; TM_ADDR_Int[8]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg8  ; CLK          ; CLK         ; 0.000        ; 0.115      ; 1.473      ;
-; 1.112 ; TM_ADDR_Int[9]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg9  ; CLK          ; CLK         ; 0.000        ; 0.113      ; 1.475      ;
-; 1.112 ; TM_ADDR_Int[2]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg2  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.441      ;
-; 1.114 ; TM_ADDR_Int[10] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg10 ; CLK          ; CLK         ; 0.000        ; 0.113      ; 1.477      ;
-; 1.115 ; TM_ADDR_Int[7]  ; TM_ADDR[7]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.401      ;
-; 1.118 ; TM_ADDR_Int[0]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg0  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.447      ;
-; 1.130 ; TM_ADDR4[1]     ; TM_ADDR_Int[10]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.417      ;
-; 1.136 ; TM_ADDR_Int[3]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg3  ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.463      ;
-; 1.136 ; TM_ADDR_Int[1]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg1  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.465      ;
-; 1.140 ; TM_ADDR_Int[4]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg4  ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.467      ;
-; 1.142 ; TM_ADDR_Int[5]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg5  ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.469      ;
-; 1.143 ; TM_ADDR_Int[6]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg6  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.472      ;
-; 1.144 ; TM_ADDR_Int[8]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg8  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 1.473      ;
-; 1.148 ; TM_ADDR_Int[9]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg9  ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.475      ;
-; 1.150 ; TM_ADDR_Int[10] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg10 ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.477      ;
-; 1.156 ; TM_ADDR_Int[6]  ; TM_ADDR[6]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; -0.005     ; 1.437      ;
-; 1.157 ; TM_ADDR_Int[8]  ; TM_ADDR[8]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; -0.005     ; 1.438      ;
-; 1.183 ; TM_ADDR_Int[0]  ; TM_ADDR[0]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.469      ;
-; 1.198 ; TM_ADDR2[1]     ; TM_ADDR_Int[4]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.484      ;
-; 1.198 ; TM_ADDR1[0]     ; TM_ADDR1[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.484      ;
-; 1.198 ; TM_ADDR1[0]     ; TM_ADDR1[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.484      ;
-; 1.202 ; TM_ADDR1[0]     ; TM_ADDR_Int[0]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.488      ;
-; 1.202 ; TM_ADDR1[2]     ; TM_ADDR1[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.488      ;
-; 1.207 ; TM_ADDR4[0]     ; TM_ADDR_Int[9]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 1.494      ;
-; 1.210 ; TM_ADDR1[2]     ; TM_ADDR_Int[2]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.496      ;
-; 1.246 ; TM_ADDR3[2]     ; TM_ADDR_Int[8]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.531      ;
-; 1.253 ; TM_ADDR3[0]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.539      ;
-; 1.260 ; TM_ADDR3[1]     ; TM_ADDR_Int[7]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.545      ;
-; 1.298 ; TM_ADDR3[0]     ; TM_ADDR_Int[6]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.583      ;
-; 1.431 ; TM_ADDR_Int[9]  ; TM_ADDR[9]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; -0.007     ; 1.710      ;
-; 1.488 ; TM_ADDR1[1]     ; TM_ADDR1[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.774      ;
-; 1.696 ; TM_ADDR2[0]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.982      ;
-; 1.705 ; TM_ADDR4[0]     ; TM_ADDR4[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.991      ;
-; 1.761 ; TM_ADDR3[0]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.047      ;
-; 1.816 ; TM_ADDR3[0]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.102      ;
-; 1.832 ; TM_ADDR2[0]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.117      ;
-; 1.832 ; TM_ADDR2[1]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.118      ;
-; 1.833 ; TM_ADDR2[0]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.118      ;
-; 1.846 ; TM_ADDR1[1]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.133      ;
-; 1.956 ; TM_ADDR3[1]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.242      ;
-; 1.962 ; TM_ADDR2[1]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.247      ;
-; 1.963 ; TM_ADDR2[1]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.248      ;
-; 1.998 ; TM_ADDR1[2]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.285      ;
-; 2.036 ; TM_ADDR4[1]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.322      ;
-; 2.069 ; TM_ADDR3[0]     ; TM_ADDR_Int[5]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.356      ;
-; 2.070 ; TM_ADDR3[0]     ; TM_ADDR_Int[9]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.357      ;
-; 2.073 ; TM_ADDR3[0]     ; TM_ADDR_Int[4]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.360      ;
-; 2.075 ; TM_ADDR3[0]     ; TM_ADDR_Int[3]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.362      ;
-; 2.093 ; TM_ADDR3[0]     ; TM_ADDR_Int[0]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.378      ;
-; 2.093 ; TM_ADDR3[0]     ; TM_ADDR_Int[8]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.378      ;
-; 2.097 ; TM_ADDR3[1]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.383      ;
-; 2.097 ; TM_ADDR3[2]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.383      ;
-; 2.097 ; TM_ADDR1[1]     ; TM_ADDR2[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.385      ;
-; 2.098 ; TM_ADDR3[0]     ; TM_ADDR_Int[11]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.383      ;
-; 2.098 ; TM_ADDR1[1]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.386      ;
-; 2.099 ; TM_ADDR3[0]     ; TM_ADDR_Int[1]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.384      ;
-; 2.099 ; TM_ADDR1[1]     ; TM_ADDR2[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.387      ;
-; 2.100 ; TM_ADDR3[0]     ; TM_ADDR_Int[2]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.385      ;
-; 2.101 ; TM_ADDR3[0]     ; TM_ADDR_Int[7]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.386      ;
-; 2.107 ; TM_ADDR2[1]     ; TM_ADDR2[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.393      ;
-; 2.117 ; TM_ADDR2[2]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.402      ;
-; 2.118 ; TM_ADDR2[2]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.403      ;
-; 2.122 ; TM_ADDR1[1]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 2.409      ;
-+-------+-----------------+-------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+-------------------------------
+; Slow Model Datasheet Report ;
+-------------------------------
+Nothing to report.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'CLK'                                                                                                                                ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                              ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------+
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg0  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg0  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg1  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg1  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg10 ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg10 ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg11 ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg11 ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg2  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg2  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg3  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg3  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg4  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg4  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg5  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg5  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg6  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg6  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg7  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg7  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg8  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg8  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg9  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg9  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_datain_reg0   ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_datain_reg0   ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_memory_reg0   ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_memory_reg0   ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_we_reg        ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_we_reg        ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg0  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg0  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg1  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg1  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg10 ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg10 ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg11 ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg11 ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg2  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg2  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg3  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg3  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg4  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg4  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg5  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg5  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg6  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg6  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg7  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg7  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg8  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg8  ;
-; -2.064 ; 0.500        ; 2.564          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg9  ;
-; -2.064 ; 0.500        ; 2.564          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg9  ;
-; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                 ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TC_LAST~reg0                                                                        ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TC_LAST~reg0                                                                        ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR1[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR1[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR1[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR1[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR1[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR1[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR2[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR2[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR2[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR2[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR2[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR2[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR3[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR3[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR3[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR3[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR3[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR3[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR4[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR4[0]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR4[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR4[1]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR4[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR4[2]                                                                         ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[0]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[0]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[10]~reg0                                                                    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[10]~reg0                                                                    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[11]~reg0                                                                    ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[11]~reg0                                                                    ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[1]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[1]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[2]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[2]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[3]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[3]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[4]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[4]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[5]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[5]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[6]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[6]~reg0                                                                     ;
-; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[7]~reg0                                                                     ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
 
 
-+-----------------------------------------------------------------------+
-; Setup Times                                                           ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; TC_EN     ; CLK        ; 5.997 ; 5.997 ; Rise       ; CLK             ;
-; TC_RST    ; CLK        ; 5.750 ; 5.750 ; Rise       ; CLK             ;
-; TM_EN     ; CLK        ; 3.952 ; 3.952 ; Rise       ; CLK             ;
-; TM_IN     ; CLK        ; 3.739 ; 3.739 ; Rise       ; CLK             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Hold Times                                                              ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; TC_EN     ; CLK        ; -3.614 ; -3.614 ; Rise       ; CLK             ;
-; TC_RST    ; CLK        ; -3.515 ; -3.515 ; Rise       ; CLK             ;
-; TM_EN     ; CLK        ; -3.662 ; -3.662 ; Rise       ; CLK             ;
-; TM_IN     ; CLK        ; -3.449 ; -3.449 ; Rise       ; CLK             ;
-+-----------+------------+--------+--------+------------+-----------------+
-
-
-+----------------------------------------------------------------------------+
-; Clock to Output Times                                                      ;
-+--------------+------------+--------+--------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+--------------+------------+--------+--------+------------+-----------------+
-; TC_LAST      ; CLK        ; 6.852  ; 6.852  ; Rise       ; CLK             ;
-; TM_ADDR[*]   ; CLK        ; 7.230  ; 7.230  ; Rise       ; CLK             ;
-;  TM_ADDR[0]  ; CLK        ; 7.180  ; 7.180  ; Rise       ; CLK             ;
-;  TM_ADDR[1]  ; CLK        ; 7.161  ; 7.161  ; Rise       ; CLK             ;
-;  TM_ADDR[2]  ; CLK        ; 6.871  ; 6.871  ; Rise       ; CLK             ;
-;  TM_ADDR[3]  ; CLK        ; 6.884  ; 6.884  ; Rise       ; CLK             ;
-;  TM_ADDR[4]  ; CLK        ; 6.846  ; 6.846  ; Rise       ; CLK             ;
-;  TM_ADDR[5]  ; CLK        ; 6.867  ; 6.867  ; Rise       ; CLK             ;
-;  TM_ADDR[6]  ; CLK        ; 6.875  ; 6.875  ; Rise       ; CLK             ;
-;  TM_ADDR[7]  ; CLK        ; 7.222  ; 7.222  ; Rise       ; CLK             ;
-;  TM_ADDR[8]  ; CLK        ; 7.123  ; 7.123  ; Rise       ; CLK             ;
-;  TM_ADDR[9]  ; CLK        ; 6.869  ; 6.869  ; Rise       ; CLK             ;
-;  TM_ADDR[10] ; CLK        ; 6.877  ; 6.877  ; Rise       ; CLK             ;
-;  TM_ADDR[11] ; CLK        ; 7.230  ; 7.230  ; Rise       ; CLK             ;
-; TM_OUT       ; CLK        ; 10.247 ; 10.247 ; Rise       ; CLK             ;
-+--------------+------------+--------+--------+------------+-----------------+
-
-
-+----------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                              ;
-+--------------+------------+--------+--------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+--------------+------------+--------+--------+------------+-----------------+
-; TC_LAST      ; CLK        ; 6.852  ; 6.852  ; Rise       ; CLK             ;
-; TM_ADDR[*]   ; CLK        ; 6.846  ; 6.846  ; Rise       ; CLK             ;
-;  TM_ADDR[0]  ; CLK        ; 7.180  ; 7.180  ; Rise       ; CLK             ;
-;  TM_ADDR[1]  ; CLK        ; 7.161  ; 7.161  ; Rise       ; CLK             ;
-;  TM_ADDR[2]  ; CLK        ; 6.871  ; 6.871  ; Rise       ; CLK             ;
-;  TM_ADDR[3]  ; CLK        ; 6.884  ; 6.884  ; Rise       ; CLK             ;
-;  TM_ADDR[4]  ; CLK        ; 6.846  ; 6.846  ; Rise       ; CLK             ;
-;  TM_ADDR[5]  ; CLK        ; 6.867  ; 6.867  ; Rise       ; CLK             ;
-;  TM_ADDR[6]  ; CLK        ; 6.875  ; 6.875  ; Rise       ; CLK             ;
-;  TM_ADDR[7]  ; CLK        ; 7.222  ; 7.222  ; Rise       ; CLK             ;
-;  TM_ADDR[8]  ; CLK        ; 7.123  ; 7.123  ; Rise       ; CLK             ;
-;  TM_ADDR[9]  ; CLK        ; 6.869  ; 6.869  ; Rise       ; CLK             ;
-;  TM_ADDR[10] ; CLK        ; 6.877  ; 6.877  ; Rise       ; CLK             ;
-;  TM_ADDR[11] ; CLK        ; 7.230  ; 7.230  ; Rise       ; CLK             ;
-; TM_OUT       ; CLK        ; 10.247 ; 10.247 ; Rise       ; CLK             ;
-+--------------+------------+--------+--------+------------+-----------------+
-
-
-+--------------------------------+
-; Fast Model Setup Summary       ;
-+-------+--------+---------------+
-; Clock ; Slack  ; End Point TNS ;
-+-------+--------+---------------+
-; CLK   ; -1.460 ; -5.142        ;
-+-------+--------+---------------+
-
-
-+-------------------------------+
-; Fast Model Hold Summary       ;
-+-------+-------+---------------+
-; Clock ; Slack ; End Point TNS ;
-+-------+-------+---------------+
-; CLK   ; 0.215 ; 0.000         ;
-+-------+-------+---------------+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
 
 
 -------------------------------
@@ -574,509 +170,46 @@ No paths to report.
 No paths to report.
 
 
-+----------------------------------------+
-; Fast Model Minimum Pulse Width Summary ;
-+-------+--------+-----------------------+
-; Clock ; Slack  ; End Point TNS         ;
-+-------+--------+-----------------------+
-; CLK   ; -1.627 ; -126.238              ;
-+-------+--------+-----------------------+
++----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; altera_reserved_tck ; 97.778 ; 0.000         ;
++---------------------+--------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'CLK'                                                                                                                                                                                                                              ;
-+--------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                                         ; To Node                                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.460 ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_datain_reg0 ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_memory_reg0 ; CLK          ; CLK         ; 1.000        ; -0.017     ; 2.442      ;
-; -0.247 ; TM_ADDR3[1]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.279      ;
-; -0.247 ; TM_ADDR3[1]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.279      ;
-; -0.247 ; TM_ADDR3[1]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.279      ;
-; -0.242 ; TM_ADDR1[2]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.275      ;
-; -0.242 ; TM_ADDR1[2]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.275      ;
-; -0.242 ; TM_ADDR1[2]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.275      ;
-; -0.230 ; TM_ADDR1[0]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.263      ;
-; -0.230 ; TM_ADDR1[0]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.263      ;
-; -0.230 ; TM_ADDR1[0]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.263      ;
-; -0.212 ; TM_ADDR2[2]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.244      ;
-; -0.209 ; TM_ADDR2[2]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.241      ;
-; -0.198 ; TM_ADDR1[2]                                                                       ; TM_ADDR2[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.231      ;
-; -0.197 ; TM_ADDR1[2]                                                                       ; TM_ADDR2[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.230      ;
-; -0.197 ; TM_ADDR1[2]                                                                       ; TM_ADDR2[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.230      ;
-; -0.186 ; TM_ADDR2[2]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.218      ;
-; -0.186 ; TM_ADDR2[2]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.218      ;
-; -0.186 ; TM_ADDR2[2]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.218      ;
-; -0.186 ; TM_ADDR1[0]                                                                       ; TM_ADDR2[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.219      ;
-; -0.185 ; TM_ADDR1[0]                                                                       ; TM_ADDR2[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.218      ;
-; -0.185 ; TM_ADDR1[0]                                                                       ; TM_ADDR2[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.218      ;
-; -0.174 ; TM_ADDR3[2]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.206      ;
-; -0.174 ; TM_ADDR3[2]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.206      ;
-; -0.174 ; TM_ADDR3[2]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.206      ;
-; -0.166 ; TM_ADDR1[0]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.199      ;
-; -0.165 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.196      ;
-; -0.165 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.196      ;
-; -0.165 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.196      ;
-; -0.163 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.194      ;
-; -0.158 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.189      ;
-; -0.157 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.188      ;
-; -0.156 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.187      ;
-; -0.155 ; TM_ADDR3[0]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.187      ;
-; -0.155 ; TM_ADDR3[0]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.187      ;
-; -0.155 ; TM_ADDR3[0]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.187      ;
-; -0.149 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.181      ;
-; -0.149 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.181      ;
-; -0.149 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.181      ;
-; -0.148 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.180      ;
-; -0.148 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.180      ;
-; -0.147 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.179      ;
-; -0.143 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.175      ;
-; -0.142 ; TM_ADDR2[2]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.174      ;
-; -0.142 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.174      ;
-; -0.141 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.173      ;
-; -0.140 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.172      ;
-; -0.139 ; TM_ADDR2[1]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.171      ;
-; -0.137 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.169      ;
-; -0.137 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.169      ;
-; -0.137 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.169      ;
-; -0.136 ; TM_ADDR2[1]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.168      ;
-; -0.135 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.167      ;
-; -0.132 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.165      ;
-; -0.132 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.165      ;
-; -0.130 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.162      ;
-; -0.129 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.161      ;
-; -0.128 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.160      ;
-; -0.127 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.160      ;
-; -0.126 ; TM_ADDR1[2]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.159      ;
-; -0.120 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.153      ;
-; -0.120 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.153      ;
-; -0.115 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.148      ;
-; -0.114 ; TM_ADDR1[0]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.147      ;
-; -0.113 ; TM_ADDR2[1]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.145      ;
-; -0.113 ; TM_ADDR2[1]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.145      ;
-; -0.113 ; TM_ADDR2[1]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.145      ;
-; -0.105 ; TM_ADDR1[1]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.138      ;
-; -0.105 ; TM_ADDR1[1]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.138      ;
-; -0.105 ; TM_ADDR1[1]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.138      ;
-; -0.103 ; TM_ADDR2[0]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.135      ;
-; -0.100 ; TM_ADDR2[0]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.132      ;
-; -0.098 ; TM_ADDR1[2]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.131      ;
-; -0.095 ; TM_ADDR2[2]                                                                       ; TM_ADDR3[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.127      ;
-; -0.092 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.123      ;
-; -0.092 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.123      ;
-; -0.092 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.123      ;
-; -0.090 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.121      ;
-; -0.085 ; TM_ADDR3[1]                                                                       ; TM_ADDR3[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.117      ;
-; -0.085 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[8]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.116      ;
-; -0.084 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[0]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.115      ;
-; -0.083 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[6]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.114      ;
-; -0.082 ; TM_ADDR3[1]                                                                       ; TM_ADDR3[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.114      ;
-; -0.077 ; TM_ADDR2[0]                                                                       ; TM_ADDR4[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.109      ;
-; -0.077 ; TM_ADDR2[0]                                                                       ; TM_ADDR4[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.109      ;
-; -0.077 ; TM_ADDR2[0]                                                                       ; TM_ADDR4[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.109      ;
-; -0.075 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[4]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.107      ;
-; -0.075 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[3]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.107      ;
-; -0.070 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[9]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.102      ;
-; -0.069 ; TM_ADDR2[1]                                                                       ; TM_ADDR_Int[5]                                                                    ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.101      ;
-; -0.061 ; TM_ADDR1[1]                                                                       ; TM_ADDR2[0]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.094      ;
-; -0.061 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.092      ;
-; -0.061 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.092      ;
-; -0.061 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.092      ;
-; -0.060 ; TM_ADDR1[1]                                                                       ; TM_ADDR2[1]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.093      ;
-; -0.060 ; TM_ADDR1[1]                                                                       ; TM_ADDR2[2]                                                                       ; CLK          ; CLK         ; 1.000        ; 0.001      ; 1.093      ;
-; -0.059 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[7]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.090      ;
-; -0.059 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[2]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.090      ;
-; -0.059 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[1]                                                                    ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.090      ;
-; -0.059 ; TM_ADDR3[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.090      ;
-; -0.057 ; TM_ADDR4[2]                                                                       ; TM_ADDR_Int[11]                                                                   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.088      ;
-+--------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'altera_reserved_tck'                                                       ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; Slack  ; Actual Width ; Required Width ; Type      ; Clock               ; Clock Edge ; Target              ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
+; 97.778 ; 100.000      ; 2.222          ; Port Rate ; altera_reserved_tck ; Rise       ; altera_reserved_tck ;
++--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'CLK'                                                                                                                                                              ;
-+-------+-----------------+-------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node       ; To Node                                                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------------+-------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.215 ; TM_ADDR1[0]     ; TM_ADDR1[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR1[2]     ; TM_ADDR1[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR1[1]     ; TM_ADDR1[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR2[0]     ; TM_ADDR2[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR2[1]     ; TM_ADDR2[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR2[2]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR3[1]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR3[2]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR3[0]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR4[1]     ; TM_ADDR4[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; TM_ADDR4[2]     ; TM_ADDR4[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.239 ; TM_ADDR_Int[11] ; TM_ADDR[11]~reg0                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.391      ;
-; 0.241 ; TM_ADDR_Int[2]  ; TM_ADDR[2]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.393      ;
-; 0.241 ; TM_ADDR_Int[4]  ; TM_ADDR[4]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.393      ;
-; 0.242 ; TM_ADDR_Int[10] ; TM_ADDR[10]~reg0                                                                    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.394      ;
-; 0.251 ; TM_ADDR4[0]     ; TM_ADDR4[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.403      ;
-; 0.252 ; TM_ADDR4[0]     ; TM_ADDR4[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.404      ;
-; 0.283 ; TM_ADDR_Int[7]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg7  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.492      ;
-; 0.287 ; TM_ADDR_Int[7]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg7  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.492      ;
-; 0.290 ; TM_ADDR_Int[11] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg11 ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.499      ;
-; 0.294 ; TM_ADDR_Int[11] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg11 ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.499      ;
-; 0.327 ; TM_ADDR2[2]     ; TM_ADDR_Int[5]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.479      ;
-; 0.330 ; TM_ADDR_Int[1]  ; TM_ADDR[1]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.482      ;
-; 0.332 ; TM_ADDR_Int[5]  ; TM_ADDR[5]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.484      ;
-; 0.335 ; TM_ADDR_Int[3]  ; TM_ADDR[3]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.487      ;
-; 0.380 ; TM_ADDR2[0]     ; TM_ADDR_Int[3]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.532      ;
-; 0.381 ; TM_ADDR4[1]     ; TM_ADDR4[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.533      ;
-; 0.382 ; TM_ADDR2[0]     ; TM_ADDR2[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.534      ;
-; 0.397 ; TM_ADDR_Int[2]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg2  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.606      ;
-; 0.398 ; TM_ADDR4[2]     ; TM_ADDR_Int[11]                                                                     ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.549      ;
-; 0.400 ; TM_ADDR_Int[1]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg1  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.609      ;
-; 0.401 ; TM_ADDR_Int[2]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg2  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.606      ;
-; 0.402 ; TM_ADDR_Int[0]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg0  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.611      ;
-; 0.406 ; TM_ADDR_Int[4]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg4  ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.614      ;
-; 0.406 ; TM_ADDR_Int[0]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg0  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.611      ;
-; 0.406 ; TM_ADDR1[1]     ; TM_ADDR_Int[1]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.558      ;
-; 0.409 ; TM_ADDR_Int[3]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg3  ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.617      ;
-; 0.411 ; TM_ADDR_Int[5]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg5  ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.619      ;
-; 0.412 ; TM_ADDR_Int[1]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg1  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.617      ;
-; 0.413 ; TM_ADDR_Int[6]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg6  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.622      ;
-; 0.413 ; TM_ADDR_Int[3]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg3  ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.617      ;
-; 0.414 ; TM_ADDR_Int[10] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg10 ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.622      ;
-; 0.414 ; TM_ADDR_Int[8]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg8  ; CLK          ; CLK         ; 0.000        ; 0.071      ; 0.623      ;
-; 0.415 ; TM_ADDR_Int[5]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg5  ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.619      ;
-; 0.415 ; TM_ADDR_Int[4]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg4  ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.619      ;
-; 0.415 ; TM_ADDR_Int[7]  ; TM_ADDR[7]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.567      ;
-; 0.416 ; TM_ADDR_Int[9]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg9  ; CLK          ; CLK         ; 0.000        ; 0.070      ; 0.624      ;
-; 0.417 ; TM_ADDR_Int[6]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg6  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.622      ;
-; 0.418 ; TM_ADDR_Int[10] ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg10 ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.622      ;
-; 0.418 ; TM_ADDR_Int[8]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg8  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.623      ;
-; 0.420 ; TM_ADDR_Int[9]  ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg9  ; CLK          ; CLK         ; 0.000        ; 0.066      ; 0.624      ;
-; 0.423 ; TM_ADDR4[1]     ; TM_ADDR_Int[10]                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.575      ;
-; 0.444 ; TM_ADDR2[1]     ; TM_ADDR_Int[4]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.596      ;
-; 0.445 ; TM_ADDR_Int[6]  ; TM_ADDR[6]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; -0.004     ; 0.593      ;
-; 0.446 ; TM_ADDR_Int[8]  ; TM_ADDR[8]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; -0.004     ; 0.594      ;
-; 0.448 ; TM_ADDR1[2]     ; TM_ADDR1[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.600      ;
-; 0.449 ; TM_ADDR4[0]     ; TM_ADDR_Int[9]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.601      ;
-; 0.450 ; TM_ADDR1[2]     ; TM_ADDR_Int[2]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.602      ;
-; 0.451 ; TM_ADDR_Int[0]  ; TM_ADDR[0]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.603      ;
-; 0.456 ; TM_ADDR1[0]     ; TM_ADDR1[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.608      ;
-; 0.456 ; TM_ADDR3[0]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.608      ;
-; 0.457 ; TM_ADDR1[0]     ; TM_ADDR1[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.609      ;
-; 0.458 ; TM_ADDR1[0]     ; TM_ADDR_Int[0]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.610      ;
-; 0.467 ; TM_ADDR3[1]     ; TM_ADDR_Int[7]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.618      ;
-; 0.468 ; TM_ADDR3[2]     ; TM_ADDR_Int[8]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.619      ;
-; 0.512 ; TM_ADDR3[0]     ; TM_ADDR_Int[6]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.663      ;
-; 0.545 ; TM_ADDR_Int[9]  ; TM_ADDR[9]~reg0                                                                     ; CLK          ; CLK         ; 0.000        ; -0.005     ; 0.692      ;
-; 0.550 ; TM_ADDR1[1]     ; TM_ADDR1[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.702      ;
-; 0.621 ; TM_ADDR2[0]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.773      ;
-; 0.645 ; TM_ADDR3[0]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.797      ;
-; 0.659 ; TM_ADDR4[0]     ; TM_ADDR4[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.811      ;
-; 0.664 ; TM_ADDR2[1]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.816      ;
-; 0.681 ; TM_ADDR1[1]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.834      ;
-; 0.691 ; TM_ADDR2[0]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.843      ;
-; 0.692 ; TM_ADDR2[0]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.844      ;
-; 0.702 ; TM_ADDR3[0]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.854      ;
-; 0.727 ; TM_ADDR2[1]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.879      ;
-; 0.728 ; TM_ADDR2[1]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.880      ;
-; 0.732 ; TM_ADDR1[2]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.885      ;
-; 0.744 ; TM_ADDR3[1]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.896      ;
-; 0.751 ; TM_ADDR4[1]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.903      ;
-; 0.760 ; TM_ADDR3[1]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.912      ;
-; 0.762 ; TM_ADDR2[1]     ; TM_ADDR2[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.914      ;
-; 0.767 ; TM_ADDR1[1]     ; TM_ADDR2[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.920      ;
-; 0.768 ; TM_ADDR1[1]     ; TM_ADDR2[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.921      ;
-; 0.769 ; TM_ADDR1[1]     ; TM_ADDR2[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.922      ;
-; 0.779 ; TM_ADDR1[1]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.932      ;
-; 0.792 ; TM_ADDR3[0]     ; TM_ADDR_Int[5]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.944      ;
-; 0.793 ; TM_ADDR3[0]     ; TM_ADDR_Int[9]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.945      ;
-; 0.795 ; TM_ADDR1[1]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.948      ;
-; 0.798 ; TM_ADDR1[1]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.951      ;
-; 0.798 ; TM_ADDR3[0]     ; TM_ADDR_Int[3]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.950      ;
-; 0.798 ; TM_ADDR3[0]     ; TM_ADDR_Int[4]                                                                      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.950      ;
-; 0.800 ; TM_ADDR1[0]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.001      ; 0.953      ;
-; 0.800 ; TM_ADDR2[2]     ; TM_ADDR3[1]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.952      ;
-; 0.801 ; TM_ADDR2[2]     ; TM_ADDR3[2]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.953      ;
-; 0.804 ; TM_ADDR3[2]     ; TM_ADDR3[0]                                                                         ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.956      ;
-; 0.807 ; TM_ADDR3[0]     ; TM_ADDR_Int[0]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.958      ;
-; 0.808 ; TM_ADDR3[0]     ; TM_ADDR_Int[8]                                                                      ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.959      ;
-; 0.812 ; TM_ADDR4[0]     ; TC_LAST~reg0                                                                        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.964      ;
-+-------+-----------------+-------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+-------------------------------
+; Fast Model Datasheet Report ;
+-------------------------------
+Nothing to report.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'CLK'                                                                                                                                ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                              ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------+
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_address_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_datain_reg0   ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_datain_reg0   ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_memory_reg0   ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_memory_reg0   ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_we_reg        ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~porta_we_reg        ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg0  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg1  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg10 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg11 ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg2  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg3  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg4  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg5  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg6  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg7  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg8  ;
-; -1.627 ; 0.500        ; 2.127          ; High Pulse Width ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg9  ;
-; -1.627 ; 0.500        ; 2.127          ; Low Pulse Width  ; CLK   ; Rise       ; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ram_block1a0~portb_address_reg9  ;
-; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                                                                                 ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TC_LAST~reg0                                                                        ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TC_LAST~reg0                                                                        ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR1[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR1[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR1[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR1[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR1[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR1[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR2[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR2[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR2[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR2[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR2[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR2[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR3[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR3[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR3[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR3[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR3[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR3[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR4[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR4[0]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR4[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR4[1]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR4[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR4[2]                                                                         ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[0]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[0]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[10]~reg0                                                                    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[10]~reg0                                                                    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[11]~reg0                                                                    ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[11]~reg0                                                                    ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[1]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[1]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[2]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[2]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[3]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[3]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[4]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[4]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[5]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[5]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[6]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; TM_ADDR[6]~reg0                                                                     ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; TM_ADDR[7]~reg0                                                                     ;
-+--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++----------------------+-------+------+----------+---------+---------------------+
+; Clock                ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack     ; N/A   ; N/A  ; N/A      ; N/A     ; 97.531              ;
+;  altera_reserved_tck ; N/A   ; N/A  ; N/A      ; N/A     ; 97.531              ;
+; Design-wide TNS      ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
+;  altera_reserved_tck ; N/A   ; N/A  ; N/A      ; N/A     ; 0.000               ;
++----------------------+-------+------+----------+---------+---------------------+
 
 
-+-----------------------------------------------------------------------+
-; Setup Times                                                           ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; TC_EN     ; CLK        ; 2.513 ; 2.513 ; Rise       ; CLK             ;
-; TC_RST    ; CLK        ; 2.410 ; 2.410 ; Rise       ; CLK             ;
-; TM_EN     ; CLK        ; 1.739 ; 1.739 ; Rise       ; CLK             ;
-; TM_IN     ; CLK        ; 1.647 ; 1.647 ; Rise       ; CLK             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Hold Times                                                              ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; TC_EN     ; CLK        ; -1.599 ; -1.599 ; Rise       ; CLK             ;
-; TC_RST    ; CLK        ; -1.545 ; -1.545 ; Rise       ; CLK             ;
-; TM_EN     ; CLK        ; -1.600 ; -1.600 ; Rise       ; CLK             ;
-; TM_IN     ; CLK        ; -1.508 ; -1.508 ; Rise       ; CLK             ;
-+-----------+------------+--------+--------+------------+-----------------+
-
-
-+--------------------------------------------------------------------------+
-; Clock to Output Times                                                    ;
-+--------------+------------+-------+-------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+--------------+------------+-------+-------+------------+-----------------+
-; TC_LAST      ; CLK        ; 3.741 ; 3.741 ; Rise       ; CLK             ;
-; TM_ADDR[*]   ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
-;  TM_ADDR[0]  ; CLK        ; 3.884 ; 3.884 ; Rise       ; CLK             ;
-;  TM_ADDR[1]  ; CLK        ; 3.861 ; 3.861 ; Rise       ; CLK             ;
-;  TM_ADDR[2]  ; CLK        ; 3.760 ; 3.760 ; Rise       ; CLK             ;
-;  TM_ADDR[3]  ; CLK        ; 3.772 ; 3.772 ; Rise       ; CLK             ;
-;  TM_ADDR[4]  ; CLK        ; 3.733 ; 3.733 ; Rise       ; CLK             ;
-;  TM_ADDR[5]  ; CLK        ; 3.753 ; 3.753 ; Rise       ; CLK             ;
-;  TM_ADDR[6]  ; CLK        ; 3.766 ; 3.766 ; Rise       ; CLK             ;
-;  TM_ADDR[7]  ; CLK        ; 3.903 ; 3.903 ; Rise       ; CLK             ;
-;  TM_ADDR[8]  ; CLK        ; 3.840 ; 3.840 ; Rise       ; CLK             ;
-;  TM_ADDR[9]  ; CLK        ; 3.758 ; 3.758 ; Rise       ; CLK             ;
-;  TM_ADDR[10] ; CLK        ; 3.763 ; 3.763 ; Rise       ; CLK             ;
-;  TM_ADDR[11] ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
-; TM_OUT       ; CLK        ; 5.697 ; 5.697 ; Rise       ; CLK             ;
-+--------------+------------+-------+-------+------------+-----------------+
-
-
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+--------------+------------+-------+-------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+--------------+------------+-------+-------+------------+-----------------+
-; TC_LAST      ; CLK        ; 3.741 ; 3.741 ; Rise       ; CLK             ;
-; TM_ADDR[*]   ; CLK        ; 3.733 ; 3.733 ; Rise       ; CLK             ;
-;  TM_ADDR[0]  ; CLK        ; 3.884 ; 3.884 ; Rise       ; CLK             ;
-;  TM_ADDR[1]  ; CLK        ; 3.861 ; 3.861 ; Rise       ; CLK             ;
-;  TM_ADDR[2]  ; CLK        ; 3.760 ; 3.760 ; Rise       ; CLK             ;
-;  TM_ADDR[3]  ; CLK        ; 3.772 ; 3.772 ; Rise       ; CLK             ;
-;  TM_ADDR[4]  ; CLK        ; 3.733 ; 3.733 ; Rise       ; CLK             ;
-;  TM_ADDR[5]  ; CLK        ; 3.753 ; 3.753 ; Rise       ; CLK             ;
-;  TM_ADDR[6]  ; CLK        ; 3.766 ; 3.766 ; Rise       ; CLK             ;
-;  TM_ADDR[7]  ; CLK        ; 3.903 ; 3.903 ; Rise       ; CLK             ;
-;  TM_ADDR[8]  ; CLK        ; 3.840 ; 3.840 ; Rise       ; CLK             ;
-;  TM_ADDR[9]  ; CLK        ; 3.758 ; 3.758 ; Rise       ; CLK             ;
-;  TM_ADDR[10] ; CLK        ; 3.763 ; 3.763 ; Rise       ; CLK             ;
-;  TM_ADDR[11] ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
-; TM_OUT       ; CLK        ; 5.697 ; 5.697 ; Rise       ; CLK             ;
-+--------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                           ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.216  ; 0.215 ; N/A      ; N/A     ; -2.064              ;
-;  CLK             ; -2.216  ; 0.215 ; N/A      ; N/A     ; -2.064              ;
-; Design-wide TNS  ; -57.841 ; 0.0   ; 0.0      ; 0.0     ; -158.301            ;
-;  CLK             ; -57.841 ; 0.000 ; N/A      ; N/A     ; -158.301            ;
-+------------------+---------+-------+----------+---------+---------------------+
-
-
-+-----------------------------------------------------------------------+
-; Setup Times                                                           ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; TC_EN     ; CLK        ; 5.997 ; 5.997 ; Rise       ; CLK             ;
-; TC_RST    ; CLK        ; 5.750 ; 5.750 ; Rise       ; CLK             ;
-; TM_EN     ; CLK        ; 3.952 ; 3.952 ; Rise       ; CLK             ;
-; TM_IN     ; CLK        ; 3.739 ; 3.739 ; Rise       ; CLK             ;
-+-----------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------------+
-; Hold Times                                                              ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; TC_EN     ; CLK        ; -1.599 ; -1.599 ; Rise       ; CLK             ;
-; TC_RST    ; CLK        ; -1.545 ; -1.545 ; Rise       ; CLK             ;
-; TM_EN     ; CLK        ; -1.600 ; -1.600 ; Rise       ; CLK             ;
-; TM_IN     ; CLK        ; -1.508 ; -1.508 ; Rise       ; CLK             ;
-+-----------+------------+--------+--------+------------+-----------------+
-
-
-+----------------------------------------------------------------------------+
-; Clock to Output Times                                                      ;
-+--------------+------------+--------+--------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+--------------+------------+--------+--------+------------+-----------------+
-; TC_LAST      ; CLK        ; 6.852  ; 6.852  ; Rise       ; CLK             ;
-; TM_ADDR[*]   ; CLK        ; 7.230  ; 7.230  ; Rise       ; CLK             ;
-;  TM_ADDR[0]  ; CLK        ; 7.180  ; 7.180  ; Rise       ; CLK             ;
-;  TM_ADDR[1]  ; CLK        ; 7.161  ; 7.161  ; Rise       ; CLK             ;
-;  TM_ADDR[2]  ; CLK        ; 6.871  ; 6.871  ; Rise       ; CLK             ;
-;  TM_ADDR[3]  ; CLK        ; 6.884  ; 6.884  ; Rise       ; CLK             ;
-;  TM_ADDR[4]  ; CLK        ; 6.846  ; 6.846  ; Rise       ; CLK             ;
-;  TM_ADDR[5]  ; CLK        ; 6.867  ; 6.867  ; Rise       ; CLK             ;
-;  TM_ADDR[6]  ; CLK        ; 6.875  ; 6.875  ; Rise       ; CLK             ;
-;  TM_ADDR[7]  ; CLK        ; 7.222  ; 7.222  ; Rise       ; CLK             ;
-;  TM_ADDR[8]  ; CLK        ; 7.123  ; 7.123  ; Rise       ; CLK             ;
-;  TM_ADDR[9]  ; CLK        ; 6.869  ; 6.869  ; Rise       ; CLK             ;
-;  TM_ADDR[10] ; CLK        ; 6.877  ; 6.877  ; Rise       ; CLK             ;
-;  TM_ADDR[11] ; CLK        ; 7.230  ; 7.230  ; Rise       ; CLK             ;
-; TM_OUT       ; CLK        ; 10.247 ; 10.247 ; Rise       ; CLK             ;
-+--------------+------------+--------+--------+------------+-----------------+
-
-
-+--------------------------------------------------------------------------+
-; Minimum Clock to Output Times                                            ;
-+--------------+------------+-------+-------+------------+-----------------+
-; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+--------------+------------+-------+-------+------------+-----------------+
-; TC_LAST      ; CLK        ; 3.741 ; 3.741 ; Rise       ; CLK             ;
-; TM_ADDR[*]   ; CLK        ; 3.733 ; 3.733 ; Rise       ; CLK             ;
-;  TM_ADDR[0]  ; CLK        ; 3.884 ; 3.884 ; Rise       ; CLK             ;
-;  TM_ADDR[1]  ; CLK        ; 3.861 ; 3.861 ; Rise       ; CLK             ;
-;  TM_ADDR[2]  ; CLK        ; 3.760 ; 3.760 ; Rise       ; CLK             ;
-;  TM_ADDR[3]  ; CLK        ; 3.772 ; 3.772 ; Rise       ; CLK             ;
-;  TM_ADDR[4]  ; CLK        ; 3.733 ; 3.733 ; Rise       ; CLK             ;
-;  TM_ADDR[5]  ; CLK        ; 3.753 ; 3.753 ; Rise       ; CLK             ;
-;  TM_ADDR[6]  ; CLK        ; 3.766 ; 3.766 ; Rise       ; CLK             ;
-;  TM_ADDR[7]  ; CLK        ; 3.903 ; 3.903 ; Rise       ; CLK             ;
-;  TM_ADDR[8]  ; CLK        ; 3.840 ; 3.840 ; Rise       ; CLK             ;
-;  TM_ADDR[9]  ; CLK        ; 3.758 ; 3.758 ; Rise       ; CLK             ;
-;  TM_ADDR[10] ; CLK        ; 3.763 ; 3.763 ; Rise       ; CLK             ;
-;  TM_ADDR[11] ; CLK        ; 3.908 ; 3.908 ; Rise       ; CLK             ;
-; TM_OUT       ; CLK        ; 5.697 ; 5.697 ; Rise       ; CLK             ;
-+--------------+------------+-------+-------+------------+-----------------+
-
-
-+-------------------------------------------------------------------+
-; Setup Transfers                                                   ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 319      ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Hold Transfers                                                    ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; CLK        ; CLK      ; 319      ; 0        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -1097,9 +230,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Clocks            ; 2     ; 2    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 52    ; 52   ;
+; Unconstrained Input Port Paths  ; 36    ; 36   ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
 ; Unconstrained Output Port Paths ; 25    ; 25   ;
 +---------------------------------+-------+------+
@@ -1111,57 +244,49 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 06 15:28:39 2015
+    Info: Processing started: Sun Nov 08 20:33:19 2015
 Info: Command: quartus_sta g10_lab3 -c g10_7_segment_decoder
 Info: qsta_default_script.tcl version: #1
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity sld_jtag_hub
+        Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
+        Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'g10_7_segment_decoder.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name CLK CLK
+Warning (332060): Node: CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: auto_stp_external_clock_0 was determined to be a clock but was found without an associated clock assignment.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.216
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -2.216       -57.841 CLK 
-Info (332146): Worst-case hold slack is 0.445
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     0.445         0.000 CLK 
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.064
+Info (332146): Worst-case minimum pulse width slack is 97.531
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -2.064      -158.301 CLK 
+    Info (332119):    97.531         0.000 altera_reserved_tck 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.460
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.460        -5.142 CLK 
-Info (332146): Worst-case hold slack is 0.215
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     0.215         0.000 CLK 
+Warning (332060): Node: CLK was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: auto_stp_external_clock_0 was determined to be a clock but was found without an associated clock assignment.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -1.627
+Info (332146): Worst-case minimum pulse width slack is 97.778
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.627      -126.238 CLK 
+    Info (332119):    97.778         0.000 altera_reserved_tck 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 387 megabytes
-    Info: Processing ended: Fri Nov 06 15:28:42 2015
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 426 megabytes
+    Info: Processing ended: Sun Nov 08 20:33:21 2015
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
