@@ -17,7 +17,7 @@ architecture behavior of g10_possibility_table is
 
 signal EN : std_logic;
 signal TM_ADDR1, TM_ADDR2, TM_ADDR3, TM_ADDR4  : std_logic_vector (2 downto 0);
-
+signal last: std_logic;
 signal TM : std_logic_vector(4095 downto 0);
 signal TM_ADDR_Int : std_logic_vector (11 downto 0);
 signal Q_value : std_logic_vector (11 downto 0);
@@ -46,8 +46,10 @@ begin
 		TM_ADDR_Int <= (OTHERS =>'0');
 	
 	elsif rising_edge(clk) then
-	
-		TC_LAST <= '0';
+		
+		if ((last /= '0') and (last /= '1')) then
+			last <= '0';
+		end if;
 
 		if (TC_EN = '1') then
 			
@@ -71,7 +73,7 @@ begin
 						TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 				
 						if (unsigned(TM_ADDR_Int) = "101101101101") then 
-							TC_LAST <= '1';
+							last <= '1';
 							TM_ADDR4 <= "000";
 							TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 							
@@ -85,6 +87,7 @@ begin
 			end if;
 		end if;
 	end if;
+	TC_LAST <= last;
 	TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 	Q_value <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 	TM_ADDR <= TM_ADDR_Int;	

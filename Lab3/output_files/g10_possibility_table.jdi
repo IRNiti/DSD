@@ -3,7 +3,7 @@
     <hash md5_digest_80b="d58e5cd5dabde142ec17"/>
   </project>
   <file_info>
-    <file device="EP2C20F484C8" path="g10_possibility_table.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP2C20F484C7" path="g10_possibility_table.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info hub_ir_width="8" ir_width="8" node_addr_width="1" node_count="1"/>
   <node_info>
