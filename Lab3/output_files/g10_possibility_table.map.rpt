@@ -1,5 +1,5 @@
 Analysis & Synthesis report for g10_possibility_table
-Wed Nov 11 15:04:29 2015
+Fri Nov 13 14:11:29 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,17 +15,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for altsyncram:TM[0]__1|altsyncram_cug1:auto_generated
- 14. Parameter Settings for User Entity Instance: altsyncram:TM[0]__1
- 15. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 16. altsyncram Parameter Settings by Entity Instance
- 17. SignalTap II Logic Analyzer Settings
- 18. Elapsed Time Per Partition
- 19. Connections to In-System Debugging Instance "auto_signaltap_0"
- 20. Analysis & Synthesis Messages
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for altsyncram:TM[0]__1|altsyncram_cug1:auto_generated
+ 15. Parameter Settings for User Entity Instance: altsyncram:TM[0]__1
+ 16. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. SignalTap II Logic Analyzer Settings
+ 19. Elapsed Time Per Partition
+ 20. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -51,18 +52,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 11 15:04:29 2015           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 13 14:11:28 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; g10_possibility_table                           ;
 ; Top-level Entity Name              ; g10_possibility_table                           ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 695                                             ;
-;     Total combinational functions  ; 403                                             ;
-;     Dedicated logic registers      ; 525                                             ;
-; Total registers                    ; 525                                             ;
+; Total logic elements               ; 671                                             ;
+;     Total combinational functions  ; 380                                             ;
+;     Dedicated logic registers      ; 513                                             ;
+; Total registers                    ; 513                                             ;
 ; Total pins                         ; 19                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 6,400                                           ;
+; Total memory bits                  ; 2,306                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -233,29 +234,29 @@ applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 695                      ;
+; Estimated Total logic elements              ; 671                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 403                      ;
+; Total combinational functions               ; 380                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 190                      ;
-;     -- 3 input functions                    ; 117                      ;
-;     -- <=2 input functions                  ; 96                       ;
+;     -- 4 input functions                    ; 182                      ;
+;     -- 3 input functions                    ; 107                      ;
+;     -- <=2 input functions                  ; 91                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 360                      ;
+;     -- normal mode                          ; 337                      ;
 ;     -- arithmetic mode                      ; 43                       ;
 ;                                             ;                          ;
-; Total registers                             ; 525                      ;
-;     -- Dedicated logic registers            ; 525                      ;
+; Total registers                             ; 513                      ;
+;     -- Dedicated logic registers            ; 513                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 19                       ;
-; Total memory bits                           ; 6400                     ;
+; Total memory bits                           ; 2306                     ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 311                      ;
-; Total fan-out                               ; 3228                     ;
-; Average fan-out                             ; 3.32                     ;
+; Total fan-out                               ; 3089                     ;
+; Average fan-out                             ; 3.30                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -264,11 +265,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                         ; Library Name ;
 +---------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g10_possibility_table                                                                                  ; 403 (23)          ; 525 (12)     ; 6400        ; 0            ; 0       ; 0         ; 19   ; 0            ; |g10_possibility_table                                                                                                                                                                                                                                                                                                                                      ; work         ;
-;    |altsyncram:TM[0]__1|                                                                                ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1                                                                                                                                                                                                                                                                                                                  ; work         ;
-;       |altsyncram_cug1:auto_generated|                                                                  ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1|altsyncram_cug1:auto_generated                                                                                                                                                                                                                                                                                   ; work         ;
-;    |sld_hub:auto_hub|                                                                                   ; 121 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 120 (82)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
+; |g10_possibility_table                                                                                  ; 380 (2)           ; 513 (0)      ; 2306        ; 0            ; 0       ; 0         ; 19   ; 0            ; |g10_possibility_table                                                                                                                                                                                                                                                                                                                                      ; work         ;
+;    |altsyncram:TM[0]__1|                                                                                ; 0 (0)             ; 0 (0)        ; 2           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1                                                                                                                                                                                                                                                                                                                  ; work         ;
+;       |altsyncram_cug1:auto_generated|                                                                  ; 0 (0)             ; 0 (0)        ; 2           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1|altsyncram_cug1:auto_generated                                                                                                                                                                                                                                                                                   ; work         ;
+;    |sld_hub:auto_hub|                                                                                   ; 119 (1)           ; 86 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                     ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                    ; 118 (80)          ; 86 (58)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                        ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                                                      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                    ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                              ; work         ;
 ;    |sld_signaltap:auto_signaltap_0|                                                                     ; 259 (1)           ; 427 (36)     ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|sld_signaltap:auto_signaltap_0                                                                                                                                                                                                                                                                                                       ; work         ;
@@ -342,7 +343,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                                                                                                                                                          ; Reason for Removal                                                                                                                                                                                 ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; last                                                                                                                                                                                   ; Stuck at VCC due to stuck port data_in                                                                                                                                                             ;
-; Total Number of Removed Registers = 1                                                                                                                                                  ;                                                                                                                                                                                                    ;
+; TM_ADDR1[0..2]                                                                                                                                                                         ; Stuck at GND due to stuck port clock_enable                                                                                                                                                        ;
+; TM_ADDR2[0..2]                                                                                                                                                                         ; Stuck at GND due to stuck port clock_enable                                                                                                                                                        ;
+; TM_ADDR3[0..2]                                                                                                                                                                         ; Stuck at GND due to stuck port clock_enable                                                                                                                                                        ;
+; TM_ADDR4[0..2]                                                                                                                                                                         ; Stuck at GND due to stuck port clock_enable                                                                                                                                                        ;
+; Total Number of Removed Registers = 13                                                                                                                                                 ;                                                                                                                                                                                                    ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|segment_shift_clk_ena                                                      ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_enable_delayed                                                ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[0] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[0] ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[1] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[1] ;
@@ -362,17 +367,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                             ;
++---------------+--------------------------------+----------------------------------------+
+; Register name ; Reason for Removal             ; Registers Removed due to This Register ;
++---------------+--------------------------------+----------------------------------------+
+; TM_ADDR1[2]   ; Stuck at GND                   ; TM_ADDR4[2]                            ;
+;               ; due to stuck port clock_enable ;                                        ;
++---------------+--------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 525   ;
+; Total registers                              ; 513   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 27    ;
-; Number of registers using Asynchronous Clear ; 216   ;
+; Number of registers using Asynchronous Clear ; 204   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 268   ;
+; Number of registers using Clock Enable       ; 256   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -411,7 +426,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                     ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                                               ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                           ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                    ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                    ;
 ; 20:1               ; 4 bits    ; 52 LEs        ; 36 LEs               ; 16 LEs                 ; Yes        ; |g10_possibility_table|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -580,9 +595,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------------------+--------------+
 ; Partition Name                 ; Elapsed Time ;
 +--------------------------------+--------------+
-; sld_signaltap:auto_signaltap_0 ; 00:00:01     ;
+; sld_signaltap:auto_signaltap_0 ; 00:00:03     ;
 ; sld_hub:auto_hub               ; 00:00:01     ;
-; Top                            ; 00:00:00     ;
+; Top                            ; 00:00:01     ;
 +--------------------------------+--------------+
 
 
@@ -598,30 +613,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; TC_LAST     ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~VCC                                                      ; N/A     ;
 ; TC_RST      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TC_RST                                                    ; N/A     ;
 ; TC_RST      ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TC_RST                                                    ; N/A     ;
-; TM_ADDR[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR1[0]                                               ; N/A     ;
-; TM_ADDR[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR1[0]                                               ; N/A     ;
-; TM_ADDR[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR4[1]                                               ; N/A     ;
-; TM_ADDR[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR4[1]                                               ; N/A     ;
-; TM_ADDR[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR4[2]                                               ; N/A     ;
-; TM_ADDR[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR4[2]                                               ; N/A     ;
-; TM_ADDR[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR1[1]                                               ; N/A     ;
-; TM_ADDR[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR1[1]                                               ; N/A     ;
-; TM_ADDR[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR1[2]                                               ; N/A     ;
-; TM_ADDR[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR1[2]                                               ; N/A     ;
-; TM_ADDR[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR2[0]                                               ; N/A     ;
-; TM_ADDR[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR2[0]                                               ; N/A     ;
-; TM_ADDR[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR2[1]                                               ; N/A     ;
-; TM_ADDR[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR2[1]                                               ; N/A     ;
-; TM_ADDR[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR2[2]                                               ; N/A     ;
-; TM_ADDR[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR2[2]                                               ; N/A     ;
-; TM_ADDR[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR3[0]                                               ; N/A     ;
-; TM_ADDR[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR3[0]                                               ; N/A     ;
-; TM_ADDR[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR3[1]                                               ; N/A     ;
-; TM_ADDR[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR3[1]                                               ; N/A     ;
-; TM_ADDR[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR3[2]                                               ; N/A     ;
-; TM_ADDR[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR3[2]                                               ; N/A     ;
-; TM_ADDR[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR4[0]                                               ; N/A     ;
-; TM_ADDR[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_ADDR4[0]                                               ; N/A     ;
+; TM_ADDR[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[0]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[10] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[11] ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[1]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[2]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[3]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[4]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[5]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[6]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[7]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[8]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
+; TM_ADDR[9]  ; pre-synthesis ; connected ; Top            ; post-synthesis    ; ~GND                                                      ; N/A     ;
 ; TM_EN       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_EN                                                     ; N/A     ;
 ; TM_EN       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_EN                                                     ; N/A     ;
 ; TM_IN       ; pre-synthesis ; connected ; Top            ; post-synthesis    ; TM_IN                                                     ; N/A     ;
@@ -637,7 +652,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 11 15:04:12 2015
+    Info: Processing started: Fri Nov 13 14:11:00 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off g10_Lab3 -c g10_possibility_table
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file g10_possibility_table.vhd
@@ -708,6 +723,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TC_LAST" is stuck at VCC
+    Warning (13410): Pin "TM_ADDR[0]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[1]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[2]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[3]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[4]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[5]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[6]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[7]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[8]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[9]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[10]" is stuck at GND
+    Warning (13410): Pin "TM_ADDR[11]" is stuck at GND
+Info (17036): Removed 11 MSB VCC or GND address nodes from RAM block "altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ALTSYNCRAM"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (18057): The assignment to disallow NOT gate push-back on register "sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|trigger_out_mode_ff" is ignored
@@ -718,15 +746,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 37 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 749 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 726 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 706 logic cells
+    Info (21061): Implemented 683 logic cells
     Info (21064): Implemented 19 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 8 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
     Info: Peak virtual memory: 524 megabytes
-    Info: Processing ended: Wed Nov 11 15:04:29 2015
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Processing ended: Fri Nov 13 14:11:29 2015
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:22
 
 
