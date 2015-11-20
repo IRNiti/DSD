@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity g10_mastermind_datapath is
+port (SC_CMP : in std_logic;
+		TC_LAST : in std_logic;
+		START : in std_logic;
+		READY : in std_logic;
+		CLK : in std_logic;
+		
+		SR_SEL : out std_logic;
+		P_SEL : out std_logic;
+		GR_SEL : out std_logic;
+		GR_LD : out std_logic;
+		SR_LD : out std_logic;
+		
+		TM_IN : out std_logic;
+		TM_EN : out std_logic;
+		TC_RST : out std_logic;
+		SOLVED : out std_logic);
+end g10_mastermind_controller;

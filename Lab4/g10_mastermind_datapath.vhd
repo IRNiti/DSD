@@ -1,0 +1,50 @@
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--
+--entity g10_mastermind_datapath is
+--port (G : in std_logic_vector(11 downto 0);
+--		EXT_PATTERN : in std_logic_vector (11 downto 0);
+--		TM_ADDR : in std_logic_vector (11 downto 0);
+--		SC_CMP : out std_logic;
+--		CLK : in std_logic;
+--		
+--		SR_SEL : in std_logic;
+--		P_SEL : in std_logic;
+--		GR_SEL : in std_logic;
+--		GR_LD : in std_logic;
+--		SR_LD : in std_logic);
+--end g10_mastermind_datapath;
+--
+--architecture behavior of g10_mastermind_datapath is
+--
+--signal a : std_logic;
+--signal b,c,d : std_logic_vector (11 downto 0);
+--signal e,f,g : std_logic_vector (11 downto 0);
+--
+--
+--component mastermind_score is
+--	port (P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
+--		   G1, G2, G3, G4 : in std_logic_vector (2 downto 0);
+--		   exact_match_score : out std_logic_vector (2 downto 0);
+--		   color_match_score : out std_logic_vector (2 downto 0);
+--		   score_code : out std_logic_vector (3 downto 0));
+--end component;
+--
+--component g10_possibility_table is
+--port (TC_EN : in std_logic; 
+--		TC_RST : in std_logic; 
+--		TM_IN : in std_logic;  
+--		TM_EN : in std_logic; 
+--		CLK : in std_logic;
+--		TC_LAST : out std_logic;
+--		TM_ADDR : out std_logic_vector (11 downto 0);
+--		TM_OUT : out std_logic);
+--end component;
+--
+----for components
+----score_comparator, use lpm_add_sub
+----mux, process block
+----register, use reginf
+----map
+--end behavior;
