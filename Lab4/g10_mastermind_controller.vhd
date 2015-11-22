@@ -39,12 +39,13 @@ Case y_present is
 	when A =>
 		if (START = '1') then 
 			SOLVED <= '0';
-			y_next <= B;
-			for i in 0 to 1096 loop
+			y_next <= B; 
+			for i in 0 to 1296 loop
 					TC_EN <= '1';
 					TM_EN <= '1';
 					TM_IN <= '1';
 			end loop;
+			
 		end if;
 	
 	when B => 
@@ -68,7 +69,7 @@ Case y_present is
 			SOLVED <= '1';
 			
 	when D =>
-		for i in 0 to 1096 loop
+		for i in 0 to 1296 loop
 			SR_SEL <= '0';
 			SR_LD <= '0';
 			P_SEL <= '1';
@@ -123,7 +124,7 @@ End process;
 
 clock : process (CLK, START)
  begin
-	if (START = '1') then
+	if (START = '0') then
 		y_present <= A;
 	elsif (rising_edge(CLK)) then 
 			y_present <= y_next;

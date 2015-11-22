@@ -107,7 +107,7 @@ BEGIN
 			READY <= '0';
 		end if;
 
-		if (i = 6 ) then	
+		if (i = 6 ) then	-- <--
 			READY <= '1';
 			SC_CMP <= '1';
 		end if;
