@@ -1,5 +1,5 @@
 EDA Netlist Writer report for lab4
-Fri Nov 20 16:48:56 2015
+Sun Nov 22 19:20:58 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -8,7 +8,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. EDA Netlist Writer Messages
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
 
 
 
@@ -34,11 +36,46 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Nov 20 16:48:56 2015 ;
+; EDA Netlist Writer Status ; Successful - Sun Nov 22 19:20:57 2015 ;
 ; Revision Name             ; lab4                                  ;
 ; Top-level Entity Name     ; g10_mastermind_controller             ;
 ; Family                    ; Cyclone II                            ;
+; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                        ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Option                                                                                            ; Setting                ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
+; Generate netlist for functional simulation only                                                   ; Off                    ;
+; Time scale                                                                                        ; 1 ps                   ;
+; Truncate long hierarchy paths                                                                     ; Off                    ;
+; Map illegal HDL characters                                                                        ; Off                    ;
+; Flatten buses into individual nodes                                                               ; Off                    ;
+; Maintain hierarchy                                                                                ; Off                    ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
+; Enable glitch filtering                                                                           ; Off                    ;
+; Do not write top level VHDL entity                                                                ; Off                    ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
+; Architecture name in VHDL output netlist                                                          ; structure              ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
++---------------------------------------------------------------------------------------------------+------------------------+
+
+
++--------------------------------------------------------------------------+
+; Simulation Generated Files                                               ;
++--------------------------------------------------------------------------+
+; Generated Files                                                          ;
++--------------------------------------------------------------------------+
+; C:/Users/Benjamin/Desktop/DSD/Lab4/simulation/modelsim/lab4.vho          ;
+; C:/Users/Benjamin/Desktop/DSD/Lab4/simulation/modelsim/lab4_fast.vho     ;
+; C:/Users/Benjamin/Desktop/DSD/Lab4/simulation/modelsim/lab4_vhd.sdo      ;
+; C:/Users/Benjamin/Desktop/DSD/Lab4/simulation/modelsim/lab4_vhd_fast.sdo ;
++--------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -47,14 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 20 16:48:53 2015
-Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off lab4 -c lab4 --gen_testbench
-Info (119006): Selected device EP2C20F484C7 for design "lab4"
-Info (201002): Generated VHDL Test Bench File C:/Users/Raluca/Desktop/école/School/Uni/A15/DSD/Lab/Lab4/simulation/modelsim/g10_mastermind_controller.vht for simulation
+    Info: Processing started: Sun Nov 22 19:20:57 2015
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off lab4 -c lab4
+Info (204026): Generated files "lab4.vho", "lab4_fast.vho", "lab4_vhd.sdo" and "lab4_vhd_fast.sdo" in directory "C:/Users/Benjamin/Desktop/DSD/Lab4/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 393 megabytes
-    Info: Processing ended: Fri Nov 20 16:48:56 2015
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 391 megabytes
+    Info: Processing ended: Sun Nov 22 19:20:58 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

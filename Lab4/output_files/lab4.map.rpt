@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Fri Nov 20 16:39:30 2015
+Sun Nov 22 19:36:50 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 20 16:39:30 2015           ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 22 19:36:50 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab4                                            ;
 ; Top-level Entity Name              ; g10_mastermind_controller                       ;
@@ -146,30 +146,24 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
-; g10_mastermind_controller.vhd    ; yes             ; User VHDL File  ; C:/Users/Raluca/Desktop/école/School/Uni/A15/DSD/Lab/Lab4/g10_mastermind_controller.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                            ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
+; g10_mastermind_controller.vhd    ; yes             ; User VHDL File  ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_controller.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -242,12 +236,12 @@ Encoding Type:  One-Hot
 ; TM_EN$latch                                         ; Selector11          ; yes                    ;
 ; TC_EN$latch                                         ; Selector9           ; yes                    ;
 ; SOLVED$latch                                        ; Selector7           ; yes                    ;
-; y_next.D_58505                                      ; Selector20          ; yes                    ;
-; y_next.B_71693                                      ; Selector20          ; yes                    ;
-; y_next.G_38723                                      ; Selector20          ; yes                    ;
-; y_next.F_45317                                      ; Selector20          ; yes                    ;
-; y_next.E_51911                                      ; Selector20          ; yes                    ;
-; y_next.C_65099                                      ; Selector20          ; yes                    ;
+; y_next.D_69099                                      ; Selector20          ; yes                    ;
+; y_next.B_84687                                      ; Selector20          ; yes                    ;
+; y_next.G_45717                                      ; Selector20          ; yes                    ;
+; y_next.F_53511                                      ; Selector20          ; yes                    ;
+; y_next.E_61305                                      ; Selector20          ; yes                    ;
+; y_next.C_76893                                      ; Selector20          ; yes                    ;
 ; Number of user-specified and inferred latches = 15  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -282,7 +276,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -292,22 +286,39 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 20 16:39:04 2015
+    Info: Processing started: Sun Nov 22 19:36:40 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/raluca/desktop/école/school/uni/a15/dsd/lab/lab3/lab2 - copy/g10_mastermind_score.vhd
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file mux21_12bit.vhd
+    Info (12022): Found design unit 1: mux21_12bit-behavior
+    Info (12023): Found entity 1: mux21_12bit
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/lab2 - copy/g10_mastermind_score.vhd
     Info (12022): Found design unit 1: g10_mastermind_score-implementation
     Info (12023): Found entity 1: g10_mastermind_score
-Info (12021): Found 2 design units, including 1 entities, in source file /users/raluca/desktop/école/school/uni/a15/dsd/lab/lab3/lab2 - copy/g10_comp3.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/lab2 - copy/g10_comp3.vhd
     Info (12022): Found design unit 1: g10_comp3-bdf_type
     Info (12023): Found entity 1: g10_comp3
-Info (12021): Found 2 design units, including 1 entities, in source file /users/raluca/desktop/école/school/uni/a15/dsd/lab/lab3/g10_possibility_table.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_possibility_table.vhd
     Info (12022): Found design unit 1: g10_possibility_table-behavior
     Info (12023): Found entity 1: g10_possibility_table
 Info (12021): Found 2 design units, including 1 entities, in source file g10_mastermind_controller.vhd
     Info (12022): Found design unit 1: g10_mastermind_controller-behavior
     Info (12023): Found entity 1: g10_mastermind_controller
-Info (12021): Found 0 design units, including 0 entities, in source file g10_mastermind_datapath.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file g10_mastermind_datapath.vhd
+    Info (12022): Found design unit 1: g10_mastermind_datapath-behavior
+    Info (12023): Found entity 1: g10_mastermind_datapath
+Info (12021): Found 2 design units, including 1 entities, in source file register_4bit.vhd
+    Info (12022): Found design unit 1: register_4bit-behavior
+    Info (12023): Found entity 1: register_4bit
+Info (12021): Found 2 design units, including 1 entities, in source file register_12bit.vhd
+    Info (12022): Found design unit 1: register_12bit-behavior
+    Info (12023): Found entity 1: register_12bit
+Info (12021): Found 2 design units, including 1 entities, in source file g10_comp4.vhd
+    Info (12022): Found design unit 1: g10_comp4-bdf_type
+    Info (12023): Found entity 1: g10_comp4
+Info (12021): Found 2 design units, including 1 entities, in source file register_3bit.vhd
+    Info (12022): Found design unit 1: register_3bit-behavior
+    Info (12023): Found entity 1: register_3bit
 Info (12127): Elaborating entity "g10_mastermind_controller" for the top level hierarchy
 Warning (10492): VHDL Process Statement warning at g10_mastermind_controller.vhd(37): signal "y_present" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at g10_mastermind_controller.vhd(33): inferring latch(es) for signal or variable "SOLVED", which holds its previous value in one or more paths through the process
@@ -351,11 +362,11 @@ Warning (13012): Latch TM_IN$latch has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.F
 Warning (13012): Latch TC_EN$latch has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.D
-Warning (13012): Latch y_next.D_58505 has unsafe behavior
+Warning (13012): Latch y_next.D_69099 has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.A
-Warning (13012): Latch y_next.B_71693 has unsafe behavior
+Warning (13012): Latch y_next.B_84687 has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.A
-Warning (13012): Latch y_next.C_65099 has unsafe behavior
+Warning (13012): Latch y_next.C_76893 has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.A
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "TC_RST" is stuck at VCC
@@ -365,10 +376,10 @@ Info (21057): Implemented 51 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 36 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 512 megabytes
-    Info: Processing ended: Fri Nov 20 16:39:30 2015
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Sun Nov 22 19:36:50 2015
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 
