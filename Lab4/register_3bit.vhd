@@ -19,9 +19,8 @@ begin
 
  if clr = '1' then
 	q <= "000";
- if rising_edge(clk) then
+ elsif rising_edge(clk) then
 		q <= p; 
- end if;
  end if;
 end process;
 end behavior;

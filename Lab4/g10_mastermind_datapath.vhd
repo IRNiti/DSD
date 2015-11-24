@@ -24,16 +24,16 @@ signal f,h,i : std_logic_vector (3 downto 0);
 signal P1,P2,P3,P4, G1,G2,G3,G4 : std_logic_vector (2 downto 0);
 signal exact,color : std_logic_vector (2 downto 0);
 signal d1,d2,d3,d4 : std_logic_vector (2 downto 0);
-signal ADDR1 : std_logic_vector (0 downto 2);
-signal ADDR2 : std_logic_vector (3 downto 5);
-signal ADDR3 : std_logic_vector (6 downto 8);
-signal ADDR4 : std_logic_vector (9 downto 11);
-signal EXT_PATTERN1 : std_logic_vector (0 downto 2);
-signal EXT_PATTERN2 : std_logic_vector (3 downto 5);
-signal EXT_PATTERN3 : std_logic_vector (6 downto 8);
-signal EXT_PATTERN4 : std_logic_vector (9 downto 11);
+signal ADDR1 : std_logic_vector (2 downto 0);
+signal ADDR2 : std_logic_vector (5 downto 3);
+signal ADDR3 : std_logic_vector (8 downto 6);
+signal ADDR4 : std_logic_vector (11 downto 9);
+signal EXT_PATTERN1 : std_logic_vector (2 downto 0);
+signal EXT_PATTERN2 : std_logic_vector (5 downto 3);
+signal EXT_PATTERN3 : std_logic_vector (8 downto 6);
+signal EXT_PATTERN4 : std_logic_vector (11 downto 9);
 
-component mastermind_score is
+component g10_mastermind_score is
 	port (P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
 		   G1, G2, G3, G4 : in std_logic_vector (2 downto 0);
 		   exact_match_score : out std_logic_vector (2 downto 0);
@@ -78,7 +78,7 @@ END component;
 --mux, process block
 begin
 
-Gate1: mastermind_score port map (P1 => P1, P2 => P2, P3 => P3, P4 => P4, G1 => G1, G2 => G2, G3 => G3, G4 => G4,
+Gate1: g10_mastermind_score port map (P1 => P1, P2 => P2, P3 => P3, P4 => P4, G1 => G1, G2 => G2, G3 => G3, G4 => G4,
 												exact_match_score => exact, color_match_score => color, score_code => f);
 
 Gate2: register_4bit port map(clr => SR_LD, clk => CLK, p => f, q => h); --score register
@@ -90,7 +90,7 @@ Gate7: register_3bit port map (clr => GR_LD, clk => CLK, p => d4, q => G4);
 
 --map
 
-datapath: process
+datapath: process (SR_SEL, GR_SEL, P_SEL, GR_LD, SR_LD,ADDR1,ADDR2,ADDR3,ADDR4)
 begin
 
 case SR_SEL is 
