@@ -91,114 +91,74 @@ always : PROCESS
                                     
 BEGIN  
 
-	for i in 0 to 777 loop
+	for i in 0 to 130 loop
 
 		CLK <= not CLK;
 		
-		if (i=0) then
+		if ((0<i) and (i<8)) then   -- state A
 			START <= '0';
 		end if;
 
-		if (i = 2) then
+		if ((8<i) and (i<16)) then   -- state A moving to B
 			START <= '1';
 		end if;
 
-		if(i = 4) then
+		if((16<i) and (i<24)) then   -- state B staying in B
 			READY <= '0';
 		end if;
 
-		if (i = 6 ) then	-- <--
+		if ((24<i) and (i<32)) then	-- state B moving to C
 			READY <= '1';
 			SC_CMP <= '1';
 		end if;
 
-		if (i = 8) then
+		if ((32<i) and (i<40)) then -- state C moving to A
 			START <= '0';
+			READY <= '0';
+			SC_CMP <= '0';
 		end if;
 
-		if (i = 10) then
+		if ((40<i) and (i<48)) then  -- state A moving to B
 			START <= '1';
 		end if;
 
-		if (i = 12) then
+		if ((48<i) and (i<56)) then  -- state B moving to D
 			READY <= '1';
 			SC_CMP <= '0';
 		end if;
 		
-		if ((13 < i) and (i < 19)) then
-			SC_CMP <= '1';
+		if ((56 < i) and (i < 72)) then  -- state D moving to E
+			SC_CMP <= '1';                -- 2 clock cycles, will automatically go back to state D
 			TC_LAST <= '0';
 		end if;
 		
-		if ((19 < i) and (i < 25)) then
-			SC_CMP <= '0';
+		if ((72 < i) and (i < 88)) then -- state D moving to F
+			SC_CMP <= '0';               -- 2 clock cycles, will automatically go back to state D
 			TC_LAST <= '0';
 		end if;
 		
-		if (i = 26) then
+		if ((88 < i) and (i < 96)) then     --state D moving to G
 			TC_LAST <= '1';
+		end if;
+		
+		if ((96 < i) and (i < 104)) then    -- state G staying in G
 			READY <= '0';
-		end if;
-		
-		if (i = 28) then
-			SC_CMP <= '1';
-			READY <= '1';
-		end if;
-		
-		if (i=30) then
-			START <= '0';
-		end if;
-
-		if (i = 32) then
-			START <= '1';
-		end if;
-
-		if(i = 34) then
-			READY <= '0';
-		end if;
-
-		if (i = 36) then	
-			READY <= '1';
-			SC_CMP <= '1';
-		end if;
-
-		if (i = 38) then
-			START <= '0';
-		end if;
-
-		if (i = 40) then
-			START <= '1';
-		end if;
-
-		if (i = 42) then
-			READY <= '1';
-			SC_CMP <= '0';
-		end if;
-		
-		if ((43 < i) and (i < 49)) then
-			SC_CMP <= '1';
 			TC_LAST <= '0';
 		end if;
 		
-		if ((49 < i) and (i < 55)) then
+		if ((104 < i) and (i < 112)) then   --state G moving to D
 			SC_CMP <= '0';
-			TC_LAST <= '0';
+			READY <= '1';
 		end if;
 		
-		if (i = 56) then
+		if ((112 < i) and (i < 120)) then    --state D moving to G
 			TC_LAST <= '1';
-			READY <= '0';
-		end if;	
-		
-		if (i = 58) then
+		end if;
+
+		if (120 < i) then  -- state G moving to C
+			SC_CMP <= '1';
 			READY <= '1';
-			SC_CMP <= '0';
 		end if;
-		
-		if (i = 60) then 
-			READY <= '0';
-		end if;
-		
 		
 		wait for 10 ns;
 		end loop;
