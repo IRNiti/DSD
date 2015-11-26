@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Tue Nov 24 15:18:22 2015
+Wed Nov 25 18:47:37 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,30 +13,24 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1
- 12. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2
- 13. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3
- 14. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4
- 15. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5
- 16. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6
- 17. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7
- 18. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8
- 19. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
- 20. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
- 21. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
- 22. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
- 23. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
- 24. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
- 25. Port Connectivity Checks: "register_3bit:Gate7"
- 26. Port Connectivity Checks: "register_3bit:Gate6"
- 27. Port Connectivity Checks: "register_3bit:Gate5"
- 28. Port Connectivity Checks: "register_3bit:Gate4"
- 29. Port Connectivity Checks: "g10_mastermind_score:Gate1"
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1
+ 10. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2
+ 11. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3
+ 12. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4
+ 13. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5
+ 14. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6
+ 15. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7
+ 16. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8
+ 17. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
+ 18. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
+ 19. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
+ 20. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
+ 21. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
+ 22. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
+ 23. Port Connectivity Checks: "g10_mastermind_score:Gate1"
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -62,16 +56,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 24 15:18:22 2015           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 25 18:47:37 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab4                                            ;
 ; Top-level Entity Name              ; g10_mastermind_datapath                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 43                                              ;
+; Total logic elements               ; 184                                             ;
+;     Total combinational functions  ; 184                                             ;
+;     Dedicated logic registers      ; 16                                              ;
+; Total registers                    ; 16                                              ;
+; Total pins                         ; 44                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -213,65 +207,100 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 184   ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 184   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 90    ;
+;     -- 3 input functions                    ; 81    ;
+;     -- <=2 input functions                  ; 13    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 184   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 16    ;
+;     -- Dedicated logic registers            ; 16    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 43    ;
+; I/O pins                                    ; 44    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 16    ;
+; Total fan-out                               ; 694   ;
+; Average fan-out                             ; 2.84  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
-; |g10_mastermind_datapath   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |g10_mastermind_datapath ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
+; |g10_mastermind_datapath                 ; 184 (24)          ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |g10_mastermind_datapath                                                                                                  ; work         ;
+;    |g10_comp4:Gate3|                     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_comp4:Gate3                                                                                  ; work         ;
+;    |g10_mastermind_score:Gate1|          ; 156 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1                                                                       ; work         ;
+;       |g10_color_matches:Gate2|          ; 135 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2                                               ; work         ;
+;          |g10_minimum3:Gate21|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21                           ; work         ;
+;          |g10_minimum3:Gate22|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22                           ; work         ;
+;          |g10_minimum3:Gate23|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23                           ; work         ;
+;          |g10_minimum3:Gate24|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24                           ; work         ;
+;          |g10_minimum3:Gate25|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25                           ; work         ;
+;          |g10_minimum3:Gate26|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26                           ; work         ;
+;          |g10_num1s:Gate10|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10                              ; work         ;
+;          |g10_num1s:Gate11|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11                              ; work         ;
+;          |g10_num1s:Gate12|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12                              ; work         ;
+;          |g10_num1s:Gate13|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13                              ; work         ;
+;          |g10_num1s:Gate14|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14                              ; work         ;
+;          |g10_num1s:Gate15|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15                              ; work         ;
+;          |g10_num1s:Gate16|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16                              ; work         ;
+;          |g10_num1s:Gate17|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17                              ; work         ;
+;          |g10_num1s:Gate18|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18                              ; work         ;
+;          |g10_num1s:Gate19|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19                              ; work         ;
+;          |g10_num1s:Gate20|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20                              ; work         ;
+;          |g10_num1s:Gate9|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9                               ; work         ;
+;          |lpm_add_sub:Gate27|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate28|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate29|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate30|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate31|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate34|            ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34                            ; work         ;
+;             |add_sub_r4f:auto_generated| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated ; work         ;
+;          |lpm_decode:Gate1|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate2|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate3|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate4|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate5|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate6|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate7|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated    ; work         ;
+;          |lpm_decode:Gate8|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8                              ; work         ;
+;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated    ; work         ;
+;       |g10_num_matches:Gate1|            ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1                                                 ; work         ;
+;          |g10_comp3:Gate1|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1                                 ; work         ;
+;          |g10_comp3:Gate2|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2                                 ; work         ;
+;          |g10_comp3:Gate3|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3                                 ; work         ;
+;          |g10_comp3:Gate4|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4                                 ; work         ;
+;          |g10_num1s:Gate5|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5                                 ; work         ;
+;       |g10_score_encoder:Gate3|          ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_score_encoder:Gate3                                               ; work         ;
+;    |register_3bit:Gate4|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate4                                                                              ; work         ;
+;    |register_3bit:Gate5|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate5                                                                              ; work         ;
+;    |register_3bit:Gate6|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate6                                                                              ; work         ;
+;    |register_3bit:Gate7|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate7                                                                              ; work         ;
+;    |register_4bit:Gate2|                 ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_4bit:Gate2                                                                              ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; register_3bit:Gate7|q[1,2]             ; Stuck at GND due to stuck port data_in ;
-; register_3bit:Gate6|q[1,2]             ; Stuck at GND due to stuck port data_in ;
-; register_3bit:Gate5|q[0..2]            ; Stuck at GND due to stuck port data_in ;
-; register_3bit:Gate4|q[0..2]            ; Stuck at GND due to stuck port data_in ;
-; register_3bit:Gate6|q[0]               ; Merged with register_3bit:Gate7|q[0]   ;
-; register_4bit:Gate2|q[2,3]             ; Stuck at GND due to stuck port data_in ;
-; register_3bit:Gate7|q[0]               ; Lost fanout                            ;
-; register_4bit:Gate2|q[0,1]             ; Lost fanout                            ;
-; Total Number of Removed Registers = 16 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                               ;
-+--------------------------+---------------------------+----------------------------------------------------+
-; Register name            ; Reason for Removal        ; Registers Removed due to This Register             ;
-+--------------------------+---------------------------+----------------------------------------------------+
-; register_3bit:Gate7|q[2] ; Stuck at GND              ; register_3bit:Gate7|q[0], register_4bit:Gate2|q[1] ;
-;                          ; due to stuck port data_in ;                                                    ;
-; register_3bit:Gate6|q[2] ; Stuck at GND              ; register_4bit:Gate2|q[3], register_4bit:Gate2|q[2] ;
-;                          ; due to stuck port data_in ;                                                    ;
-; register_3bit:Gate7|q[1] ; Stuck at GND              ; register_4bit:Gate2|q[0]                           ;
-;                          ; due to stuck port data_in ;                                                    ;
-+--------------------------+---------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -279,12 +308,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -609,44 +638,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "register_3bit:Gate7" ;
-+---------+-------+----------+--------------------+
-; Port    ; Type  ; Severity ; Details            ;
-+---------+-------+----------+--------------------+
-; p[2..1] ; Input ; Info     ; Stuck at GND       ;
-; p[0]    ; Input ; Info     ; Stuck at VCC       ;
-+---------+-------+----------+--------------------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "register_3bit:Gate6" ;
-+---------+-------+----------+--------------------+
-; Port    ; Type  ; Severity ; Details            ;
-+---------+-------+----------+--------------------+
-; p[2..1] ; Input ; Info     ; Stuck at GND       ;
-; p[0]    ; Input ; Info     ; Stuck at VCC       ;
-+---------+-------+----------+--------------------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "register_3bit:Gate5" ;
-+------+-------+----------+-----------------------+
-; Port ; Type  ; Severity ; Details               ;
-+------+-------+----------+-----------------------+
-; p    ; Input ; Info     ; Stuck at GND          ;
-+------+-------+----------+-----------------------+
-
-
-+-------------------------------------------------+
-; Port Connectivity Checks: "register_3bit:Gate4" ;
-+------+-------+----------+-----------------------+
-; Port ; Type  ; Severity ; Details               ;
-+------+-------+----------+-----------------------+
-; p    ; Input ; Info     ; Stuck at GND          ;
-+------+-------+----------+-----------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "g10_mastermind_score:Gate1"                                                                      ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -662,7 +653,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -672,7 +663,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 24 15:18:19 2015
+    Info: Processing started: Wed Nov 25 18:47:33 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/lab2 - copy/g10_minimum3.vhd
@@ -690,9 +681,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/lab2 - copy/g10_color_matches.vhd
     Info (12022): Found design unit 1: g10_color_matches-implementation
     Info (12023): Found entity 1: g10_color_matches
-Info (12021): Found 2 design units, including 1 entities, in source file mux21_12bit.vhd
-    Info (12022): Found design unit 1: mux21_12bit-behavior
-    Info (12023): Found entity 1: mux21_12bit
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/lab2 - copy/g10_mastermind_score.vhd
     Info (12022): Found design unit 1: g10_mastermind_score-implementation
     Info (12023): Found entity 1: g10_mastermind_score
@@ -711,9 +699,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file g10_mas
 Info (12021): Found 2 design units, including 1 entities, in source file register_4bit.vhd
     Info (12022): Found design unit 1: register_4bit-behavior
     Info (12023): Found entity 1: register_4bit
-Info (12021): Found 2 design units, including 1 entities, in source file register_12bit.vhd
-    Info (12022): Found design unit 1: register_12bit-behavior
-    Info (12023): Found entity 1: register_12bit
 Info (12021): Found 2 design units, including 1 entities, in source file g10_comp4.vhd
     Info (12022): Found design unit 1: g10_comp4-bdf_type
     Info (12023): Found entity 1: g10_comp4
@@ -721,21 +706,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
     Info (12022): Found design unit 1: register_3bit-behavior
     Info (12023): Found entity 1: register_3bit
 Info (12127): Elaborating entity "g10_mastermind_datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(25): object "exact" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(25): object "color" assigned a value but never read
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(27): used implicit default value for signal "ADDR1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(28): used implicit default value for signal "ADDR2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(29): used implicit default value for signal "ADDR3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(30): used implicit default value for signal "ADDR4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(31): used implicit default value for signal "EXT_PATTERN1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(32): used implicit default value for signal "EXT_PATTERN2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(33): used implicit default value for signal "EXT_PATTERN3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(34): used implicit default value for signal "EXT_PATTERN4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(97): signal "f" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(113): signal "EXT_PATTERN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(114): signal "EXT_PATTERN2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(115): signal "EXT_PATTERN3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(116): signal "EXT_PATTERN4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(28): object "exact" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(28): object "color" assigned a value but never read
 Info (12128): Elaborating entity "g10_mastermind_score" for hierarchy "g10_mastermind_score:Gate1"
 Info (12128): Elaborating entity "g10_num_matches" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1"
 Info (12128): Elaborating entity "g10_comp3" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1"
@@ -781,12 +753,9 @@ Info (12128): Elaborating entity "g10_score_encoder" for hierarchy "g10_mastermi
 Info (12128): Elaborating entity "register_4bit" for hierarchy "register_4bit:Gate2"
 Info (12128): Elaborating entity "g10_comp4" for hierarchy "g10_comp4:Gate3"
 Info (12128): Elaborating entity "register_3bit" for hierarchy "register_3bit:Gate4"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SC_CMP" is stuck at GND
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 42 input pin(s) that do not drive logic
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "G[0]"
     Warning (15610): No output dependent on input pin "G[1]"
     Warning (15610): No output dependent on input pin "G[2]"
@@ -799,43 +768,14 @@ Warning (21074): Design contains 42 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "G[9]"
     Warning (15610): No output dependent on input pin "G[10]"
     Warning (15610): No output dependent on input pin "G[11]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[0]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[1]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[2]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[3]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[4]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[5]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[6]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[7]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[8]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[9]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[10]"
-    Warning (15610): No output dependent on input pin "EXT_PATTERN[11]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[0]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[1]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[2]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[3]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[4]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[5]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[6]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[7]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[8]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[9]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[10]"
-    Warning (15610): No output dependent on input pin "TM_ADDR[11]"
-    Warning (15610): No output dependent on input pin "P_SEL"
-    Warning (15610): No output dependent on input pin "GR_SEL"
-    Warning (15610): No output dependent on input pin "SR_SEL"
-    Warning (15610): No output dependent on input pin "CLK"
-    Warning (15610): No output dependent on input pin "SR_LD"
-    Warning (15610): No output dependent on input pin "GR_LD"
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 42 input pins
+Info (21057): Implemented 231 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 43 input pins
     Info (21059): Implemented 1 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info (21061): Implemented 187 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 506 megabytes
-    Info: Processing ended: Tue Nov 24 15:18:22 2015
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Wed Nov 25 18:47:37 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

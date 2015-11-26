@@ -11,47 +11,86 @@ G[8] => ~NO_FANOUT~
 G[9] => ~NO_FANOUT~
 G[10] => ~NO_FANOUT~
 G[11] => ~NO_FANOUT~
-EXT_PATTERN[0] => ~NO_FANOUT~
-EXT_PATTERN[1] => ~NO_FANOUT~
-EXT_PATTERN[2] => ~NO_FANOUT~
-EXT_PATTERN[3] => ~NO_FANOUT~
-EXT_PATTERN[4] => ~NO_FANOUT~
-EXT_PATTERN[5] => ~NO_FANOUT~
-EXT_PATTERN[6] => ~NO_FANOUT~
-EXT_PATTERN[7] => ~NO_FANOUT~
-EXT_PATTERN[8] => ~NO_FANOUT~
-EXT_PATTERN[9] => ~NO_FANOUT~
-EXT_PATTERN[10] => ~NO_FANOUT~
-EXT_PATTERN[11] => ~NO_FANOUT~
-TM_ADDR[0] => ~NO_FANOUT~
-TM_ADDR[1] => ~NO_FANOUT~
-TM_ADDR[2] => ~NO_FANOUT~
-TM_ADDR[3] => ~NO_FANOUT~
-TM_ADDR[4] => ~NO_FANOUT~
-TM_ADDR[5] => ~NO_FANOUT~
-TM_ADDR[6] => ~NO_FANOUT~
-TM_ADDR[7] => ~NO_FANOUT~
-TM_ADDR[8] => ~NO_FANOUT~
-TM_ADDR[9] => ~NO_FANOUT~
-TM_ADDR[10] => ~NO_FANOUT~
-TM_ADDR[11] => ~NO_FANOUT~
+EXT_PATTERN[0] => P1[0].DATAB
+EXT_PATTERN[1] => P1[1].DATAB
+EXT_PATTERN[2] => P1[2].DATAB
+EXT_PATTERN[3] => P2[0].DATAB
+EXT_PATTERN[4] => P2[1].DATAB
+EXT_PATTERN[5] => P2[2].DATAB
+EXT_PATTERN[6] => P3[0].DATAB
+EXT_PATTERN[7] => P3[1].DATAB
+EXT_PATTERN[8] => P3[2].DATAB
+EXT_PATTERN[9] => P4[0].DATAB
+EXT_PATTERN[10] => P4[1].DATAB
+EXT_PATTERN[11] => P4[2].DATAB
+TM_ADDR[0] => d1[0].DATAB
+TM_ADDR[0] => P1[0].DATAA
+TM_ADDR[1] => d1[1].DATAB
+TM_ADDR[1] => P1[1].DATAA
+TM_ADDR[2] => d1[2].DATAB
+TM_ADDR[2] => P1[2].DATAA
+TM_ADDR[3] => d2[0].DATAB
+TM_ADDR[3] => P2[0].DATAA
+TM_ADDR[4] => d2[1].DATAB
+TM_ADDR[4] => P2[1].DATAA
+TM_ADDR[5] => d2[2].DATAB
+TM_ADDR[5] => P2[2].DATAA
+TM_ADDR[6] => d3[0].DATAB
+TM_ADDR[6] => P3[0].DATAA
+TM_ADDR[7] => d3[1].DATAB
+TM_ADDR[7] => P3[1].DATAA
+TM_ADDR[8] => d3[2].DATAB
+TM_ADDR[8] => P3[2].DATAA
+TM_ADDR[9] => d4[0].DATAB
+TM_ADDR[9] => P4[0].DATAA
+TM_ADDR[10] => d4[1].DATAB
+TM_ADDR[10] => P4[1].DATAA
+TM_ADDR[11] => d4[2].DATAB
+TM_ADDR[11] => P4[2].DATAA
 SC_CMP <= g10_comp4:Gate3.AeqB
 CLK => register_4bit:Gate2.clk
 CLK => register_3bit:Gate4.clk
 CLK => register_3bit:Gate5.clk
 CLK => register_3bit:Gate6.clk
 CLK => register_3bit:Gate7.clk
+clr => register_4bit:Gate2.clr
+clr => register_3bit:Gate4.clr
+clr => register_3bit:Gate5.clr
+clr => register_3bit:Gate6.clr
+clr => register_3bit:Gate7.clr
 SR_SEL => i[3].OUTPUTSELECT
 SR_SEL => i[2].OUTPUTSELECT
 SR_SEL => i[1].OUTPUTSELECT
 SR_SEL => i[0].OUTPUTSELECT
-P_SEL => ~NO_FANOUT~
-GR_SEL => ~NO_FANOUT~
-GR_LD => register_3bit:Gate4.clr
-GR_LD => register_3bit:Gate5.clr
-GR_LD => register_3bit:Gate6.clr
-GR_LD => register_3bit:Gate7.clr
-SR_LD => register_4bit:Gate2.clr
+P_SEL => P1[2].OUTPUTSELECT
+P_SEL => P1[1].OUTPUTSELECT
+P_SEL => P1[0].OUTPUTSELECT
+P_SEL => P2[2].OUTPUTSELECT
+P_SEL => P2[1].OUTPUTSELECT
+P_SEL => P2[0].OUTPUTSELECT
+P_SEL => P3[2].OUTPUTSELECT
+P_SEL => P3[1].OUTPUTSELECT
+P_SEL => P3[0].OUTPUTSELECT
+P_SEL => P4[2].OUTPUTSELECT
+P_SEL => P4[1].OUTPUTSELECT
+P_SEL => P4[0].OUTPUTSELECT
+GR_SEL => d1[2].OUTPUTSELECT
+GR_SEL => d1[1].OUTPUTSELECT
+GR_SEL => d1[0].OUTPUTSELECT
+GR_SEL => d2[2].OUTPUTSELECT
+GR_SEL => d2[1].OUTPUTSELECT
+GR_SEL => d2[0].OUTPUTSELECT
+GR_SEL => d3[2].OUTPUTSELECT
+GR_SEL => d3[1].OUTPUTSELECT
+GR_SEL => d3[0].OUTPUTSELECT
+GR_SEL => d4[2].OUTPUTSELECT
+GR_SEL => d4[1].OUTPUTSELECT
+GR_SEL => d4[0].OUTPUTSELECT
+GR_LD => register_3bit:Gate4.GR_LD
+GR_LD => register_3bit:Gate5.GR_LD
+GR_LD => register_3bit:Gate6.GR_LD
+GR_LD => register_3bit:Gate7.GR_LD
+SR_LD => register_4bit:Gate2.SR_LD
 
 
 |g10_mastermind_datapath|g10_mastermind_score:Gate1
@@ -1588,6 +1627,10 @@ q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SR_LD => q[3]~reg0.ENA
+SR_LD => q[2]~reg0.ENA
+SR_LD => q[1]~reg0.ENA
+SR_LD => q[0]~reg0.ENA
 
 
 |g10_mastermind_datapath|g10_comp4:Gate3
@@ -1615,6 +1658,9 @@ p[2] => q[2]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+GR_LD => q[2]~reg0.ENA
+GR_LD => q[1]~reg0.ENA
+GR_LD => q[0]~reg0.ENA
 
 
 |g10_mastermind_datapath|register_3bit:Gate5
@@ -1630,6 +1676,9 @@ p[2] => q[2]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+GR_LD => q[2]~reg0.ENA
+GR_LD => q[1]~reg0.ENA
+GR_LD => q[0]~reg0.ENA
 
 
 |g10_mastermind_datapath|register_3bit:Gate6
@@ -1645,6 +1694,9 @@ p[2] => q[2]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+GR_LD => q[2]~reg0.ENA
+GR_LD => q[1]~reg0.ENA
+GR_LD => q[0]~reg0.ENA
 
 
 |g10_mastermind_datapath|register_3bit:Gate7
@@ -1660,5 +1712,8 @@ p[2] => q[2]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+GR_LD => q[2]~reg0.ENA
+GR_LD => q[1]~reg0.ENA
+GR_LD => q[0]~reg0.ENA
 
 
