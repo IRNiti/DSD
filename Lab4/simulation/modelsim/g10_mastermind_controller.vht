@@ -91,73 +91,81 @@ always : PROCESS
                                     
 BEGIN  
 
-	for i in 0 to 130 loop
+	for i in 0 to 44 loop
 
 		CLK <= not CLK;
 		
-		if ((0<i) and (i<8)) then   -- state A
+		if (i=0) then   -- state A
 			START <= '0';
 		end if;
 
-		if ((8<i) and (i<16)) then   -- state A moving to B
+		if ((1<i) and (i<5)) then   -- state A moving to B and then C (2 CLK)
 			START <= '1';
 		end if;
 
-		if((16<i) and (i<24)) then   -- state B staying in B
+		if((5<i) and (i<7)) then   -- state C moving to D
+			TC_LAST <= '1';
+		end if;
+		
+		if((7<i) and (i<9)) then   -- state D staying in D
 			READY <= '0';
 		end if;
 
-		if ((24<i) and (i<32)) then	-- state B moving to C
+		if ((9<i) and (i<11)) then	-- state D moving to E
 			READY <= '1';
+		end if;
+		
+		if ((11<i) and (i<15)) then	-- state E moving to F
 			SC_CMP <= '1';
+			READY <= '0';
 		end if;
 
-		if ((32<i) and (i<40)) then -- state C moving to A
+		if ((15<i) and (i<17)) then -- state F moving to A
 			START <= '0';
-			READY <= '0';
 			SC_CMP <= '0';
 		end if;
 
-		if ((40<i) and (i<48)) then  -- state A moving to B
+		if ((17<i) and (i<21)) then  -- state A moving to B then C
 			START <= '1';
 		end if;
-
-		if ((48<i) and (i<56)) then  -- state B moving to D
-			READY <= '1';
-			SC_CMP <= '0';
-		end if;
 		
-		if ((56 < i) and (i < 72)) then  -- state D moving to E
-			SC_CMP <= '1';                -- 2 clock cycles, will automatically go back to state D
-			TC_LAST <= '0';
-		end if;
-		
-		if ((72 < i) and (i < 88)) then -- state D moving to F
-			SC_CMP <= '0';               -- 2 clock cycles, will automatically go back to state D
-			TC_LAST <= '0';
-		end if;
-		
-		if ((88 < i) and (i < 96)) then     --state D moving to G
+		if((21<i) and (i<23)) then   -- state C moving to D
 			TC_LAST <= '1';
 		end if;
+
+		if ((23<i) and (i<25)) then	-- state D moving to E
+			READY <= '1';
+		end if;
 		
-		if ((96 < i) and (i < 104)) then    -- state G staying in G
+		if ((25<i) and (i<27)) then  -- state E moving to G
 			READY <= '0';
+			SC_CMP <= '0';
+		end if;
+		
+		if ((27 < i) and (i < 31)) then  -- state G moving to H
+			SC_CMP <= '1';                -- 2 clock cycles, will automatically go back to state G
 			TC_LAST <= '0';
 		end if;
 		
-		if ((104 < i) and (i < 112)) then   --state G moving to D
-			SC_CMP <= '0';
-			READY <= '1';
+		if ((31 < i) and (i < 35)) then -- state G moving to I
+			SC_CMP <= '0';               -- 2 clock cycles, will automatically go back to state G
+			TC_LAST <= '0';
 		end if;
 		
-		if ((112 < i) and (i < 120)) then    --state D moving to G
+		if ((35 < i) and (i < 37)) then     --state G moving to J
+			TC_LAST <= '1';
+		end if;
+		
+		if ((37 < i) and (i < 39)) then   --state J moving to G
+			SC_CMP <= '0';
+		end if;
+		
+		if ((39 < i) and (i < 41)) then    --state G moving to J
 			TC_LAST <= '1';
 		end if;
 
-		if (120 < i) then  -- state G moving to C
+		if (41  < i) then  -- state J moving to F
 			SC_CMP <= '1';
-			READY <= '1';
 		end if;
 		
 		wait for 10 ns;
