@@ -15,7 +15,7 @@ signal tmp : std_logic_vector (3 downto 0);
 
 begin 
 
-process (clr, clk, p, SR_LD)
+process (clr, clk)
 begin 
 
  if clr = '1' then

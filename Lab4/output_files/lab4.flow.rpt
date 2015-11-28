@@ -1,5 +1,5 @@
 Flow report for lab4
-Wed Nov 25 18:47:37 2015
+Fri Nov 27 16:51:12 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 25 18:47:37 2015           ;
+; Flow Status                        ; Successful - Fri Nov 27 16:51:12 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab4                                            ;
 ; Top-level Entity Name              ; g10_mastermind_datapath                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 184                                             ;
-;     Total combinational functions  ; 184                                             ;
+; Total logic elements               ; 187                                             ;
+;     Total combinational functions  ; 187                                             ;
 ;     Dedicated logic registers      ; 16                                              ;
 ; Total registers                    ; 16                                              ;
-; Total pins                         ; 44                                              ;
+; Total pins                         ; 52                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/25/2015 18:47:34 ;
+; Start date & time ; 11/27/2015 16:51:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab4                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name             ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 198695757304521.144849525416692 ; --            ; --                      ; --             ;
+; COMPILER_SIGNATURE_ID               ; 198695757304521.144866106809900 ; --            ; --                      ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --                      ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --                      ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --                      ; --             ;
@@ -93,8 +93,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 506 MB              ; 00:00:03                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 514 MB              ; 00:00:03                           ;
+; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

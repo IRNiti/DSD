@@ -10,13 +10,15 @@ port (G : in std_logic_vector(11 downto 0);
 		CLK : in std_logic;
 		clr : in std_logic;
 		
+		--Y : out std_logic_vector (3 downto 0);
+		--U : out std_logic_vector (3 downto 0);
+		
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
 		GR_SEL : in std_logic;
 		GR_LD : in std_logic;
 		SR_LD : in std_logic);
-	--	Y : out std_logic_vector (3 downto 0);
-	-- U : out std_logic_vector (3 downto 0));
+		
 end g10_mastermind_datapath;
 
 architecture behavior of g10_mastermind_datapath is
@@ -116,7 +118,7 @@ begin
 
 case SR_SEL is 
 	when '0' => i <= f;
-	when others => i <= "0001"; --double check value of (4,0) in binary
+	when others => i <= "0001"; 
 end case;
 
 case GR_SEL is 

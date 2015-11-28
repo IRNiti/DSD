@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Wed Nov 25 18:47:37 2015
+Fri Nov 27 16:51:12 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -56,16 +56,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 25 18:47:37 2015           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 27 16:51:12 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab4                                            ;
 ; Top-level Entity Name              ; g10_mastermind_datapath                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 184                                             ;
-;     Total combinational functions  ; 184                                             ;
+; Total logic elements               ; 187                                             ;
+;     Total combinational functions  ; 187                                             ;
 ;     Dedicated logic registers      ; 16                                              ;
 ; Total registers                    ; 16                                              ;
-; Total pins                         ; 44                                              ;
+; Total pins                         ; 52                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -207,28 +207,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 184   ;
+; Estimated Total logic elements              ; 187   ;
 ;                                             ;       ;
-; Total combinational functions               ; 184   ;
+; Total combinational functions               ; 187   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 90    ;
-;     -- 3 input functions                    ; 81    ;
-;     -- <=2 input functions                  ; 13    ;
+;     -- 4 input functions                    ; 88    ;
+;     -- 3 input functions                    ; 84    ;
+;     -- <=2 input functions                  ; 15    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 184   ;
+;     -- normal mode                          ; 187   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 16    ;
 ;     -- Dedicated logic registers            ; 16    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 44    ;
+; I/O pins                                    ; 52    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 16    ;
-; Total fan-out                               ; 694   ;
-; Average fan-out                             ; 2.84  ;
+; Total fan-out                               ; 707   ;
+; Average fan-out                             ; 2.77  ;
 +---------------------------------------------+-------+
 
 
@@ -237,12 +237,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g10_mastermind_datapath                 ; 184 (24)          ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |g10_mastermind_datapath                                                                                                  ; work         ;
-;    |g10_comp4:Gate3|                     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_comp4:Gate3                                                                                  ; work         ;
+; |g10_mastermind_datapath                 ; 187 (28)          ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 52   ; 0            ; |g10_mastermind_datapath                                                                                                  ; work         ;
+;    |g10_comp4:Gate3|                     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_comp4:Gate3                                                                                  ; work         ;
 ;    |g10_mastermind_score:Gate1|          ; 156 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1                                                                       ; work         ;
-;       |g10_color_matches:Gate2|          ; 135 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2                                               ; work         ;
-;          |g10_minimum3:Gate21|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21                           ; work         ;
-;          |g10_minimum3:Gate22|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22                           ; work         ;
+;       |g10_color_matches:Gate2|          ; 136 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2                                               ; work         ;
+;          |g10_minimum3:Gate21|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21                           ; work         ;
+;          |g10_minimum3:Gate22|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22                           ; work         ;
 ;          |g10_minimum3:Gate23|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23                           ; work         ;
 ;          |g10_minimum3:Gate24|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24                           ; work         ;
 ;          |g10_minimum3:Gate25|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25                           ; work         ;
@@ -263,14 +263,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |add_sub_8hf:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated ; work         ;
 ;          |lpm_add_sub:Gate28|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28                            ; work         ;
 ;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate29|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate30|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate29|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated ; work         ;
+;          |lpm_add_sub:Gate30|            ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30                            ; work         ;
+;             |add_sub_8hf:auto_generated| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated ; work         ;
 ;          |lpm_add_sub:Gate31|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31                            ; work         ;
 ;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate34|            ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34                            ; work         ;
-;             |add_sub_r4f:auto_generated| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated ; work         ;
+;          |lpm_add_sub:Gate34|            ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34                            ; work         ;
+;             |add_sub_r4f:auto_generated| ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated ; work         ;
 ;          |lpm_decode:Gate1|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1                              ; work         ;
 ;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated    ; work         ;
 ;          |lpm_decode:Gate2|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2                              ; work         ;
@@ -293,7 +293,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |g10_comp3:Gate3|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3                                 ; work         ;
 ;          |g10_comp3:Gate4|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4                                 ; work         ;
 ;          |g10_num1s:Gate5|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5                                 ; work         ;
-;       |g10_score_encoder:Gate3|          ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_score_encoder:Gate3                                               ; work         ;
+;       |g10_score_encoder:Gate3|          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_score_encoder:Gate3                                               ; work         ;
 ;    |register_3bit:Gate4|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate4                                                                              ; work         ;
 ;    |register_3bit:Gate5|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate5                                                                              ; work         ;
 ;    |register_3bit:Gate6|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate6                                                                              ; work         ;
@@ -663,7 +663,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 25 18:47:33 2015
+    Info: Processing started: Fri Nov 27 16:51:08 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/lab2 - copy/g10_minimum3.vhd
@@ -706,8 +706,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
     Info (12022): Found design unit 1: register_3bit-behavior
     Info (12023): Found entity 1: register_3bit
 Info (12127): Elaborating entity "g10_mastermind_datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(28): object "exact" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(28): object "color" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(30): object "exact" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(30): object "color" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(116): signal "h" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(117): signal "i" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "g10_mastermind_score" for hierarchy "g10_mastermind_score:Gate1"
 Info (12128): Elaborating entity "g10_num_matches" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1"
 Info (12128): Elaborating entity "g10_comp3" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1"
@@ -768,14 +770,14 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "G[9]"
     Warning (15610): No output dependent on input pin "G[10]"
     Warning (15610): No output dependent on input pin "G[11]"
-Info (21057): Implemented 231 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 241 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 43 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 187 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 506 megabytes
-    Info: Processing ended: Wed Nov 25 18:47:37 2015
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 189 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 514 megabytes
+    Info: Processing ended: Fri Nov 27 16:51:12 2015
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
