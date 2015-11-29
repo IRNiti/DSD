@@ -76,13 +76,6 @@ port (TC_EN : in std_logic;
 		TM_OUT : out std_logic);
 end component;
 
---component counter_table is
---port (TC_EN2 : in std_logic; --indexer
---		TC_RST2 : in std_logic; 
---		CLK : in std_logic;
---		TC_LAST : out std_logic;
---		TM_ADDRN : out std_logic_vector (11 downto 0));
---end component;
 
 component RandomPatternGenerator is
 port (P_generated : in std_logic;
@@ -103,13 +96,11 @@ gate2: g10_mastermind_datapath port map (G => gg, EXT_PATTERN => pattern, TM_ADD
 
 gate3: g10_possibility_table port map (TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, CLK => clk, TC_LAST => last,
 													TM_ADDR => addr, TM_OUT => tmout);
---gate4: RandomPatternGenerator port map (P_Generated => P_Generated, clk => clk, EXT_PATTERN => pattern, Start => Start,
---													RP_LD => rpld, TC_EN => tce, TC_RST => tcr, TM_ADDR => addr);
+
 gate4: RandomPatternGenerator port map (P_Generated => P_Generated, clk => clk, EXT_PATTERN => pattern, Start => Start,
 													RP_LD => rpld);													
 													
---gate5: counter_table port map ( TC_EN2 => tce2, TC_RST2 => tcr2, CLK => clk, TC_LAST => last2,
---													TM_ADDRN => addrn);
+
 
 													
 mastermind : process (clk, Start, Ready, P_Generated, switch_LED, mode, switch_REG, LED_value)

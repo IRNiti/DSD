@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5
-Sat Nov 28 21:33:22 2015
+Sat Nov 28 21:50:46 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 28 21:33:22 2015           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 28 21:50:46 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
 ; Top-level Entity Name              ; MASTERMIND                                      ;
@@ -877,7 +877,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 28 21:33:18 2015
+    Info: Processing started: Sat Nov 28 21:50:42 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_possibility_table.vhd
@@ -941,16 +941,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file counter
     Info (12022): Found design unit 1: counter_table-behavior
     Info (12023): Found entity 1: counter_table
 Info (12127): Elaborating entity "MASTERMIND" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(17): used implicit default value for signal "LED1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(18): used implicit default value for signal "LED2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(19): used implicit default value for signal "LED3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(20): used implicit default value for signal "LED4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(24): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at mastermind.vhd(26): object "sol" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at mastermind.vhd(26): object "tmout" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(17): used implicit default value for signal "LED1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(18): used implicit default value for signal "LED2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(19): used implicit default value for signal "LED3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(20): used implicit default value for signal "LED4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(24): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "sol" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "tmout" assigned a value but never read
 Info (12128): Elaborating entity "g10_mastermind_controller" for hierarchy "g10_mastermind_controller:gate1"
-Warning (10631): VHDL Process Statement warning at g10_mastermind_controller.vhd(36): inferring latch(es) for signal or variable "RP_LD", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "RP_LD" at g10_mastermind_controller.vhd(36)
 Info (12128): Elaborating entity "g10_mastermind_datapath" for hierarchy "g10_mastermind_datapath:gate2"
 Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(31): object "exact" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(31): object "color" assigned a value but never read
@@ -1084,9 +1082,9 @@ Warning (21074): Design contains 24 input pin(s) that do not drive logic
 Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 24 input pins
     Info (21059): Implemented 16 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 520 megabytes
-    Info: Processing ended: Sat Nov 28 21:33:22 2015
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 516 megabytes
+    Info: Processing ended: Sat Nov 28 21:50:46 2015
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

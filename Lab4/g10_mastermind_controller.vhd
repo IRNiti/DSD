@@ -36,9 +36,10 @@ begin
 controller : process (CLK, READY, START,SC_CMP, TC_LAST)
 
 begin
+RP_LD <= '1';
+
 
 	if (START = '0') then
-		RP_LD <= '1'; -- move in new code later, when arrives
 		y_present <= A;
 		
 	elsif(rising_edge(CLK)) then 

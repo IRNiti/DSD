@@ -158,12 +158,5 @@ case P_SEL is
 end case;
 
 
---case RP_SEL is 
---	when '0' => tce <= TC_EN;
---					TC_RST <= TC_RST;
---	when others => L <= k; 
---end case;
-
-
 end process;
 end behavior;
