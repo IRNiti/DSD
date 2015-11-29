@@ -1,0 +1,21 @@
+library.ieee;
+use ieee.std_logic_1164.all;
+
+entity g10_num_matches is
+	port ( P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
+			 G1, G2, G3, G4  : in std_logic_vector (2 downto 0);
+			 N : out std_logic_vector (2 downto 0));
+end g10_num_matches;
+
+architecture a of g10_num_matches is
+
+component g10_comp6 -- instantiating a file
+	Port ()
+	
+end component;
+
+component g10_num1s 
+	Port ()
+	
+	
+end component;

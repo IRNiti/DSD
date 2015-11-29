@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5
-Sat Nov 28 21:12:25 2015
+Sat Nov 28 21:33:22 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 28 21:12:25 2015           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 28 21:33:22 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
 ; Top-level Entity Name              ; MASTERMIND                                      ;
@@ -184,23 +184,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path      ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
 +---------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; counter_table.vhd                     ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab5/counter_table.vhd                      ;         ;
-; ../Lab4/register_12bit.vhd            ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_12bit.vhd                     ;         ;
-; ../Lab2/g10_minimum3.vhd              ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_minimum3.vhd                       ;         ;
-; ../Lab2/g10_comp3.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_comp3.vhd                          ;         ;
-; ../Lab1/g10_num1s.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab1/g10_num1s.vhd                          ;         ;
-; ../Lab2/g10_score_encoder.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_score_encoder.vhd                  ;         ;
-; ../Lab2/g10_num_matches.vhd           ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_num_matches.vhd                    ;         ;
-; ../Lab2/g10_mastermind_score.vhd      ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_mastermind_score.vhd               ;         ;
-; ../Lab2/g10_color_matches.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_color_matches.vhd                  ;         ;
 ; ../Lab3/g10_possibility_table.vhd     ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_possibility_table.vhd              ;         ;
+; ../Lab3/g10_score_encoder.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_score_encoder.vhd                  ;         ;
+; ../Lab3/g10_num_matches.vhd           ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_num_matches.vhd                    ;         ;
+; ../Lab3/g10_minimum3.vhd              ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_minimum3.vhd                       ;         ;
+; ../Lab3/g10_mastermind_score.vhd      ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_mastermind_score.vhd               ;         ;
+; ../Lab3/g10_comp3.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_comp3.vhd                          ;         ;
+; ../Lab3/g10_color_matches.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_color_matches.vhd                  ;         ;
+; ../Lab3/g10_num1s.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_num1s.vhd                          ;         ;
+; ../Lab4/register_12bit.vhd            ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_12bit.vhd                     ;         ;
 ; ../Lab4/register_4bit.vhd             ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_4bit.vhd                      ;         ;
 ; ../Lab4/register_3bit.vhd             ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_3bit.vhd                      ;         ;
 ; ../Lab4/g10_mastermind_datapath.vhd   ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_datapath.vhd            ;         ;
 ; ../Lab4/g10_mastermind_controller.vhd ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_controller.vhd          ;         ;
 ; ../Lab4/g10_comp4.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_comp4.vhd                          ;         ;
-; ../Lab2/MASTERMIND.vhd                ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/MASTERMIND.vhd                         ;         ;
-; ../Lab4/RandomPatternGenerator.vhd    ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/RandomPatternGenerator.vhd             ;         ;
+; RandomPatternGenerator.vhd            ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab5/RandomPatternGenerator.vhd             ;         ;
+; MASTERMIND.vhd                        ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab5/MASTERMIND.vhd                         ;         ;
+; counter_table.vhd                     ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab5/counter_table.vhd                      ;         ;
 ; lpm_decode.tdf                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
 ; declut.inc                            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
 ; altshift.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
@@ -877,39 +877,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 28 21:12:20 2015
+    Info: Processing started: Sat Nov 28 21:33:18 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 2 design units, including 1 entities, in source file counter_table.vhd
-    Info (12022): Found design unit 1: counter_table-behavior
-    Info (12023): Found entity 1: counter_table
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/register_12bit.vhd
-    Info (12022): Found design unit 1: register_12bit-behavior
-    Info (12023): Found entity 1: register_12bit
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/g10_minimum3.vhd
-    Info (12022): Found design unit 1: g10_minimum3-a
-    Info (12023): Found entity 1: g10_minimum3
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/g10_comp3.vhd
-    Info (12022): Found design unit 1: g10_comp3-bdf_type
-    Info (12023): Found entity 1: g10_comp3
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab1/g10_num1s.vhd
-    Info (12022): Found design unit 1: g10_num1s-Implementation
-    Info (12023): Found entity 1: g10_num1s
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab1/g10_comp6.vhd
-    Info (12022): Found design unit 1: g10_comp6-bdf_type
-    Info (12023): Found entity 1: g10_comp6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/g10_score_encoder.vhd
-    Info (12022): Found design unit 1: g10_score_encoder-implementation
-    Info (12023): Found entity 1: g10_score_encoder
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/g10_num_matches.vhd
-    Info (12022): Found design unit 1: g10_num_matches-a
-    Info (12023): Found entity 1: g10_num_matches
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/g10_mastermind_score.vhd
-    Info (12022): Found design unit 1: g10_mastermind_score-implementation
-    Info (12023): Found entity 1: g10_mastermind_score
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/g10_color_matches.vhd
-    Info (12022): Found design unit 1: g10_color_matches-implementation
-    Info (12023): Found entity 1: g10_color_matches
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_possibility_table.vhd
     Info (12022): Found design unit 1: g10_possibility_table-behavior
     Info (12023): Found entity 1: g10_possibility_table
@@ -919,6 +889,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_7_seg_test.vhd
     Info (12022): Found design unit 1: g10_7_seg_test-behaviour
     Info (12023): Found entity 1: g10_7_seg_test
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_score_encoder.vhd
+    Info (12022): Found design unit 1: g10_score_encoder-implementation
+    Info (12023): Found entity 1: g10_score_encoder
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_num_matches.vhd
+    Info (12022): Found design unit 1: g10_num_matches-a
+    Info (12023): Found entity 1: g10_num_matches
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_minimum3.vhd
+    Info (12022): Found design unit 1: g10_minimum3-a
+    Info (12023): Found entity 1: g10_minimum3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_mastermind_score.vhd
+    Info (12022): Found design unit 1: g10_mastermind_score-implementation
+    Info (12023): Found entity 1: g10_mastermind_score
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_comp3.vhd
+    Info (12022): Found design unit 1: g10_comp3-bdf_type
+    Info (12023): Found entity 1: g10_comp3
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_color_matches.vhd
+    Info (12022): Found design unit 1: g10_color_matches-implementation
+    Info (12023): Found entity 1: g10_color_matches
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_num1s.vhd
+    Info (12022): Found design unit 1: g10_num1s-Implementation
+    Info (12023): Found entity 1: g10_num1s
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_comp6.vhd
+    Info (12022): Found design unit 1: g10_comp6-bdf_type
+    Info (12023): Found entity 1: g10_comp6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/register_12bit.vhd
+    Info (12022): Found design unit 1: register_12bit-behavior
+    Info (12023): Found entity 1: register_12bit
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/register_4bit.vhd
     Info (12022): Found design unit 1: register_4bit-behavior
     Info (12023): Found entity 1: register_4bit
@@ -934,20 +931,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/g10_comp4.vhd
     Info (12022): Found design unit 1: g10_comp4-bdf_type
     Info (12023): Found entity 1: g10_comp4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/mastermind.vhd
-    Info (12022): Found design unit 1: MASTERMIND-behavior
-    Info (12023): Found entity 1: MASTERMIND
-Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/randompatterngenerator.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file randompatterngenerator.vhd
     Info (12022): Found design unit 1: RandomPatternGenerator-behavior
     Info (12023): Found entity 1: RandomPatternGenerator
+Info (12021): Found 2 design units, including 1 entities, in source file mastermind.vhd
+    Info (12022): Found design unit 1: MASTERMIND-behavior
+    Info (12023): Found entity 1: MASTERMIND
+Info (12021): Found 2 design units, including 1 entities, in source file counter_table.vhd
+    Info (12022): Found design unit 1: counter_table-behavior
+    Info (12023): Found entity 1: counter_table
 Info (12127): Elaborating entity "MASTERMIND" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(17): used implicit default value for signal "LED1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(18): used implicit default value for signal "LED2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(19): used implicit default value for signal "LED3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(20): used implicit default value for signal "LED4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(24): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "sol" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "tmout" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(17): used implicit default value for signal "LED1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(18): used implicit default value for signal "LED2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(19): used implicit default value for signal "LED3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(20): used implicit default value for signal "LED4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at mastermind.vhd(24): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at mastermind.vhd(26): object "sol" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at mastermind.vhd(26): object "tmout" assigned a value but never read
 Info (12128): Elaborating entity "g10_mastermind_controller" for hierarchy "g10_mastermind_controller:gate1"
 Warning (10631): VHDL Process Statement warning at g10_mastermind_controller.vhd(36): inferring latch(es) for signal or variable "RP_LD", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "RP_LD" at g10_mastermind_controller.vhd(36)
@@ -1025,8 +1025,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_jdi1
 Info (12128): Elaborating entity "altsyncram_jdi1" for hierarchy "g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated"
 Info (12128): Elaborating entity "RandomPatternGenerator" for hierarchy "RandomPatternGenerator:gate4"
-Warning (10036): Verilog HDL or VHDL warning at RandomPatternGenerator.vhd(20): object "last2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at RandomPatternGenerator.vhd(21): object "rpld" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at randompatterngenerator.vhd(20): object "last2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at randompatterngenerator.vhd(21): object "rpld" assigned a value but never read
 Info (12128): Elaborating entity "counter_table" for hierarchy "RandomPatternGenerator:gate4|counter_table:gate1"
 Warning (10036): Verilog HDL or VHDL warning at counter_table.vhd(20): object "Q_value" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at counter_table.vhd(40): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -1086,8 +1086,8 @@ Info (21057): Implemented 40 device resources after synthesis - the final resour
     Info (21059): Implemented 16 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
     Info: Peak virtual memory: 520 megabytes
-    Info: Processing ended: Sat Nov 28 21:12:25 2015
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Sat Nov 28 21:33:22 2015
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

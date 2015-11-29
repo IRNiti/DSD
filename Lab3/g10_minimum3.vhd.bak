@@ -1,0 +1,9 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+entity g10_minimum3 is
+
+	port ( N, M : in std_logic_vector(2 downto 0);
+			 min : out std_logic_vector(2 downto 0));
+			 
+end g10_minimum3;
