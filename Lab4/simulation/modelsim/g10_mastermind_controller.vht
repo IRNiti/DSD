@@ -168,7 +168,7 @@ BEGIN
 			SC_CMP <= '1';
 		end if;
 		
-		wait for 10 ns;
+		wait for 20 ns;
 		end loop;
 	
 	

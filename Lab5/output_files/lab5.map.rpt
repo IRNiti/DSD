@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5
-Fri Nov 27 19:13:02 2015
+Sat Nov 28 21:12:25 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,24 +13,34 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1
- 10. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2
- 11. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3
- 12. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4
- 13. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5
- 14. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6
- 15. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7
- 16. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8
- 17. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
- 18. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
- 19. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
- 20. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
- 21. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
- 22. Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
- 23. Port Connectivity Checks: "g10_mastermind_score:Gate1"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  8. State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated
+ 14. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1
+ 15. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2
+ 16. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3
+ 17. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4
+ 18. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5
+ 19. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6
+ 20. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7
+ 21. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8
+ 22. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
+ 23. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
+ 24. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
+ 25. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
+ 26. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
+ 27. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
+ 28. Parameter Settings for User Entity Instance: g10_possibility_table:gate3|altsyncram:TM[0]__1
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "RandomPatternGenerator:gate4|counter_table:gate1"
+ 31. Port Connectivity Checks: "g10_possibility_table:gate3"
+ 32. Port Connectivity Checks: "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1"
+ 33. Port Connectivity Checks: "g10_mastermind_controller:gate1"
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -56,16 +66,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 27 19:13:02 2015           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 28 21:12:25 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
-; Top-level Entity Name              ; g10_mastermind_datapath                         ;
+; Top-level Entity Name              ; MASTERMIND                                      ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 184                                             ;
-;     Total combinational functions  ; 184                                             ;
-;     Dedicated logic registers      ; 16                                              ;
-; Total registers                    ; 16                                              ;
-; Total pins                         ; 44                                              ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 40                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -73,89 +83,89 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+----------------------------------------------------------------------------+-------------------------+--------------------+
-; Option                                                                     ; Setting                 ; Default Value      ;
-+----------------------------------------------------------------------------+-------------------------+--------------------+
-; Device                                                                     ; EP2C20F484C7            ;                    ;
-; Top-level entity name                                                      ; g10_mastermind_datapath ; lab5               ;
-; Family name                                                                ; Cyclone II              ; Cyclone IV GX      ;
-; Use smart compilation                                                      ; Off                     ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                      ; On                 ;
-; Enable compact report table                                                ; Off                     ; Off                ;
-; Restructure Multiplexers                                                   ; Auto                    ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                     ; Off                ;
-; Preserve fewer node names                                                  ; On                      ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                     ; Off                ;
-; Verilog Version                                                            ; Verilog_2001            ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993               ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto                    ; Auto               ;
-; Safe State Machine                                                         ; Off                     ; Off                ;
-; Extract Verilog State Machines                                             ; On                      ; On                 ;
-; Extract VHDL State Machines                                                ; On                      ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                     ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000                    ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                     ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                      ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                      ; On                 ;
-; Parallel Synthesis                                                         ; On                      ; On                 ;
-; DSP Block Balancing                                                        ; Auto                    ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                      ; On                 ;
-; Power-Up Don't Care                                                        ; On                      ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                     ; Off                ;
-; Remove Duplicate Registers                                                 ; On                      ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                     ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                     ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                     ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                     ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                     ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                      ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                     ; Off                ;
-; Optimization Technique                                                     ; Balanced                ; Balanced           ;
-; Carry Chain Length                                                         ; 70                      ; 70                 ;
-; Auto Carry Chains                                                          ; On                      ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                      ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                     ; Off                ;
-; Auto ROM Replacement                                                       ; On                      ; On                 ;
-; Auto RAM Replacement                                                       ; On                      ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto                    ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto                    ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                      ; On                 ;
-; Strict RAM Replacement                                                     ; Off                     ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                      ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                     ; Off                ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                     ; Off                ;
-; Auto Resource Sharing                                                      ; Off                     ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                     ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                     ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                     ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                      ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                     ; Off                ;
-; Timing-Driven Synthesis                                                    ; Off                     ; Off                ;
-; Report Parameter Settings                                                  ; On                      ; On                 ;
-; Report Source Assignments                                                  ; On                      ; On                 ;
-; Report Connectivity Checks                                                 ; On                      ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                     ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                       ; 2                  ;
-; PowerPlay Power Optimization                                               ; Normal compilation      ; Normal compilation ;
-; HDL message level                                                          ; Level2                  ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                     ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000                    ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                    ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                     ; 100                ;
-; Clock MUX Protection                                                       ; On                      ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                     ; Off                ;
-; Block Design Naming                                                        ; Auto                    ; Auto               ;
-; SDC constraint protection                                                  ; Off                     ; Off                ;
-; Synthesis Effort                                                           ; Auto                    ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                      ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                     ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium                  ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto                    ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                      ; On                 ;
-; Synthesis Seed                                                             ; 1                       ; 1                  ;
-+----------------------------------------------------------------------------+-------------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; MASTERMIND         ; lab5               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -169,37 +179,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+-------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+-------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; ../Lab2/g10_minimum3.vhd            ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_minimum3.vhd                       ;         ;
-; ../Lab2/g10_comp3.vhd               ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_comp3.vhd                          ;         ;
-; ../Lab1/g10_num1s.vhd               ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab1/g10_num1s.vhd                          ;         ;
-; ../Lab2/g10_score_encoder.vhd       ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_score_encoder.vhd                  ;         ;
-; ../Lab2/g10_num_matches.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_num_matches.vhd                    ;         ;
-; ../Lab2/g10_mastermind_score.vhd    ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_mastermind_score.vhd               ;         ;
-; ../Lab2/g10_color_matches.vhd       ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_color_matches.vhd                  ;         ;
-; ../Lab4/register_4bit.vhd           ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_4bit.vhd                      ;         ;
-; ../Lab4/register_3bit.vhd           ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_3bit.vhd                      ;         ;
-; ../Lab4/g10_mastermind_datapath.vhd ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_datapath.vhd            ;         ;
-; ../Lab4/g10_comp4.vhd               ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_comp4.vhd                          ;         ;
-; lpm_decode.tdf                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
-; declut.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
-; altshift.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; lpm_compare.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
-; lpm_constant.inc                    ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
-; aglobal130.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; db/decode_7jg.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/decode_7jg.tdf                      ;         ;
-; lpm_add_sub.tdf                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                         ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; bypassff.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; alt_stratix_add_sub.inc             ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_8hf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/add_sub_8hf.tdf                     ;         ;
-; db/add_sub_r4f.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/add_sub_r4f.tdf                     ;         ;
-+-------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++---------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++---------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; counter_table.vhd                     ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab5/counter_table.vhd                      ;         ;
+; ../Lab4/register_12bit.vhd            ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_12bit.vhd                     ;         ;
+; ../Lab2/g10_minimum3.vhd              ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_minimum3.vhd                       ;         ;
+; ../Lab2/g10_comp3.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_comp3.vhd                          ;         ;
+; ../Lab1/g10_num1s.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab1/g10_num1s.vhd                          ;         ;
+; ../Lab2/g10_score_encoder.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_score_encoder.vhd                  ;         ;
+; ../Lab2/g10_num_matches.vhd           ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_num_matches.vhd                    ;         ;
+; ../Lab2/g10_mastermind_score.vhd      ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_mastermind_score.vhd               ;         ;
+; ../Lab2/g10_color_matches.vhd         ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/g10_color_matches.vhd                  ;         ;
+; ../Lab3/g10_possibility_table.vhd     ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_possibility_table.vhd              ;         ;
+; ../Lab4/register_4bit.vhd             ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_4bit.vhd                      ;         ;
+; ../Lab4/register_3bit.vhd             ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_3bit.vhd                      ;         ;
+; ../Lab4/g10_mastermind_datapath.vhd   ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_datapath.vhd            ;         ;
+; ../Lab4/g10_mastermind_controller.vhd ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_controller.vhd          ;         ;
+; ../Lab4/g10_comp4.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_comp4.vhd                          ;         ;
+; ../Lab2/MASTERMIND.vhd                ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab2/MASTERMIND.vhd                         ;         ;
+; ../Lab4/RandomPatternGenerator.vhd    ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/RandomPatternGenerator.vhd             ;         ;
+; lpm_decode.tdf                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.tdf          ;         ;
+; declut.inc                            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/declut.inc              ;         ;
+; altshift.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; lpm_compare.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_constant.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; aglobal130.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/decode_7jg.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/decode_7jg.tdf                      ;         ;
+; lpm_add_sub.tdf                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                           ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; bypassff.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; alt_stratix_add_sub.inc               ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_8hf.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/add_sub_8hf.tdf                     ;         ;
+; db/add_sub_r4f.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/add_sub_r4f.tdf                     ;         ;
+; altsyncram.tdf                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc                 ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                           ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                        ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; a_rdenreg.inc                         ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_jdi1.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab5/db/altsyncram_jdi1.tdf                 ;         ;
++---------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -207,100 +232,162 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 184   ;
 ;                                             ;       ;
-; Total combinational functions               ; 184   ;
+; Total combinational functions               ; 0     ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 90    ;
-;     -- 3 input functions                    ; 81    ;
-;     -- <=2 input functions                  ; 13    ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 184   ;
+;     -- normal mode                          ; 0     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 16    ;
-;     -- Dedicated logic registers            ; 16    ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 44    ;
+; I/O pins                                    ; 40    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 16    ;
-; Total fan-out                               ; 694   ;
-; Average fan-out                             ; 2.84  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                       ; Library Name ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
-; |g10_mastermind_datapath                 ; 184 (24)          ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |g10_mastermind_datapath                                                                                                  ; work         ;
-;    |g10_comp4:Gate3|                     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_comp4:Gate3                                                                                  ; work         ;
-;    |g10_mastermind_score:Gate1|          ; 156 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1                                                                       ; work         ;
-;       |g10_color_matches:Gate2|          ; 135 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2                                               ; work         ;
-;          |g10_minimum3:Gate21|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21                           ; work         ;
-;          |g10_minimum3:Gate22|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22                           ; work         ;
-;          |g10_minimum3:Gate23|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23                           ; work         ;
-;          |g10_minimum3:Gate24|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24                           ; work         ;
-;          |g10_minimum3:Gate25|           ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25                           ; work         ;
-;          |g10_minimum3:Gate26|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26                           ; work         ;
-;          |g10_num1s:Gate10|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10                              ; work         ;
-;          |g10_num1s:Gate11|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11                              ; work         ;
-;          |g10_num1s:Gate12|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12                              ; work         ;
-;          |g10_num1s:Gate13|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13                              ; work         ;
-;          |g10_num1s:Gate14|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14                              ; work         ;
-;          |g10_num1s:Gate15|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15                              ; work         ;
-;          |g10_num1s:Gate16|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16                              ; work         ;
-;          |g10_num1s:Gate17|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17                              ; work         ;
-;          |g10_num1s:Gate18|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18                              ; work         ;
-;          |g10_num1s:Gate19|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19                              ; work         ;
-;          |g10_num1s:Gate20|              ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20                              ; work         ;
-;          |g10_num1s:Gate9|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9                               ; work         ;
-;          |lpm_add_sub:Gate27|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate28|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate29|            ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate30|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate31|            ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31                            ; work         ;
-;             |add_sub_8hf:auto_generated| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated ; work         ;
-;          |lpm_add_sub:Gate34|            ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34                            ; work         ;
-;             |add_sub_r4f:auto_generated| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated ; work         ;
-;          |lpm_decode:Gate1|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate2|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate3|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate4|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate5|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate6|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate7|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated    ; work         ;
-;          |lpm_decode:Gate8|              ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8                              ; work         ;
-;             |decode_7jg:auto_generated|  ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated    ; work         ;
-;       |g10_num_matches:Gate1|            ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1                                                 ; work         ;
-;          |g10_comp3:Gate1|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1                                 ; work         ;
-;          |g10_comp3:Gate2|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2                                 ; work         ;
-;          |g10_comp3:Gate3|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3                                 ; work         ;
-;          |g10_comp3:Gate4|               ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4                                 ; work         ;
-;          |g10_num1s:Gate5|               ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5                                 ; work         ;
-;       |g10_score_encoder:Gate3|          ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|g10_mastermind_score:Gate1|g10_score_encoder:Gate3                                               ; work         ;
-;    |register_3bit:Gate4|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate4                                                                              ; work         ;
-;    |register_3bit:Gate5|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate5                                                                              ; work         ;
-;    |register_3bit:Gate6|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate6                                                                              ; work         ;
-;    |register_3bit:Gate7|                 ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_3bit:Gate7                                                                              ; work         ;
-;    |register_4bit:Gate2|                 ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_mastermind_datapath|register_4bit:Gate2                                                                              ; work         ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |MASTERMIND                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 40   ; 0            ; |MASTERMIND         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present                                                                                   ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; Name        ; y_present.J ; y_present.I ; y_present.H ; y_present.G ; y_present.F ; y_present.E ; y_present.D ; y_present.C ; y_present.B ; y_present.A ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; y_present.A ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
+; y_present.B ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
+; y_present.C ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
+; y_present.D ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
+; y_present.E ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.F ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.G ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.H ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.I ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.J ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                  ;
++-----------------------------------------------------------------+---------------------------------------------------+
+; Register name                                                   ; Reason for Removal                                ;
++-----------------------------------------------------------------+---------------------------------------------------+
+; g10_mastermind_controller:gate1|TM_EN                           ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|TM_IN                           ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|SR_SEL                          ; Merged with g10_mastermind_controller:gate1|GR_LD ;
+; g10_possibility_table:gate3|last                                ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[0]          ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[0]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR1[0]                         ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|P_SEL                           ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[1]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR1[1]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[2]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR1[2]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[3]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR2[0]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[4]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR2[1]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[5]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR2[2]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[6]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR3[0]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[7]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR3[1]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[8]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR3[2]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[9]          ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR4[0]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[10]         ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR4[1]                         ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[11]         ; Lost fanout                                       ;
+; g10_possibility_table:gate3|TM_ADDR4[2]                         ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|GR_LD                           ; Lost fanout                                       ;
+; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[1..3]       ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|TC_RST                          ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|TC_EN                           ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|SR_LD                           ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|GR_SEL                          ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0..2] ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[0..2] ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0..2] ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0..2] ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|tcr2                               ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|tce2                               ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|last           ; Lost fanout                                       ;
+; RandomPatternGenerator:gate4|y_present                          ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.A                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.B                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.C                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.D                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.E                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.F                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.G                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.H                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.I                     ; Lost fanout                                       ;
+; g10_mastermind_controller:gate1|y_present.J                     ; Lost fanout                                       ;
+; Total Number of Removed Registers = 76                          ;                                                   ;
++-----------------------------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
++---------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------+
+; Register name                                           ; Reason for Removal ; Registers Removed due to This Register                                            ;
++---------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------+
+; g10_possibility_table:gate3|last                        ; Lost Fanouts       ; g10_possibility_table:gate3|TM_ADDR1[0], g10_possibility_table:gate3|TM_ADDR1[1], ;
+;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR1[2], g10_possibility_table:gate3|TM_ADDR2[0], ;
+;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR2[1], g10_possibility_table:gate3|TM_ADDR2[2], ;
+;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR3[0], g10_possibility_table:gate3|TM_ADDR3[1], ;
+;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR3[2], g10_possibility_table:gate3|TM_ADDR4[0], ;
+;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR4[1], g10_possibility_table:gate3|TM_ADDR4[2], ;
+;                                                         ;                    ; g10_mastermind_controller:gate1|TC_RST, g10_mastermind_controller:gate1|TC_EN     ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[0]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0],                     ;
+;                                                         ;                    ; RandomPatternGenerator:gate4|tcr2, RandomPatternGenerator:gate4|tce2,             ;
+;                                                         ;                    ; RandomPatternGenerator:gate4|counter_table:gate1|last,                            ;
+;                                                         ;                    ; RandomPatternGenerator:gate4|y_present                                            ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ; Lost Fanouts       ; g10_mastermind_controller:gate1|GR_LD, g10_mastermind_controller:gate1|GR_SEL     ;
+; g10_mastermind_controller:gate1|P_SEL                   ; Lost Fanouts       ; g10_mastermind_controller:gate1|y_present.G,                                      ;
+;                                                         ;                    ; g10_mastermind_controller:gate1|y_present.J                                       ;
+; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[0]  ; Lost Fanouts       ; g10_mastermind_controller:gate1|SR_LD                                             ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[1]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[1]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[2]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[2]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[3]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[0]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[4]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[1]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[5]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[2]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[6]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[7]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[1]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[8]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[2]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[9]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[10] ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[1]                      ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[11] ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[2]                      ;
++---------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -308,338 +395,456 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 11:1               ; 5 bits    ; 35 LEs        ; 30 LEs               ; 5 LEs                  ; No         ; |MASTERMIND|g10_mastermind_controller:gate1|Selector8 ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |MASTERMIND|g10_mastermind_controller:gate1|Selector4 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; Assignment                      ; Value              ; From ; To                                      ;
++---------------------------------+--------------------+------+-----------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                       ;
++---------------------------------+--------------------+------+-----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8 ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                                     ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3          ; Signed Integer                                                                                           ;
+; LPM_DECODES            ; 8          ; Signed Integer                                                                                           ;
+; LPM_PIPELINE           ; 0          ; Signed Integer                                                                                           ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                                                  ;
+; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                                                  ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                                           ;
++------------------------+------------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3           ; Signed Integer                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3           ; Signed Integer                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3           ; Signed Integer                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3           ; Signed Integer                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3           ; Signed Integer                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34 ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                                      ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 3           ; Signed Integer                                                                                            ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                                   ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                                   ;
+; LPM_PIPELINE           ; 0           ; Signed Integer                                                                                            ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                                   ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                                   ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                        ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                   ;
+; USE_WYS                ; OFF         ; Untyped                                                                                                   ;
+; STYLE                  ; FAST        ; Untyped                                                                                                   ;
+; CBXI_PARAMETER         ; add_sub_r4f ; Untyped                                                                                                   ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                            ;
++------------------------+-------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: g10_possibility_table:gate3|altsyncram:TM[0]__1 ;
++------------------------------------+----------------------+----------------------------------+
+; Parameter Name                     ; Value                ; Type                             ;
++------------------------------------+----------------------+----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                          ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                   ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                          ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                          ;
+; WIDTH_A                            ; 1                    ; Untyped                          ;
+; WIDTHAD_A                          ; 12                   ; Untyped                          ;
+; NUMWORDS_A                         ; 4096                 ; Untyped                          ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                          ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                          ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                          ;
+; WIDTH_B                            ; 1                    ; Untyped                          ;
+; WIDTHAD_B                          ; 12                   ; Untyped                          ;
+; NUMWORDS_B                         ; 4096                 ; Untyped                          ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                          ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                          ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                          ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                          ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                          ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                          ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                          ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                          ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                          ;
+; BYTE_SIZE                          ; 8                    ; Untyped                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
+; INIT_FILE                          ; UNUSED               ; Untyped                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                          ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                          ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                          ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                          ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_jdi1      ; Untyped                          ;
++------------------------------------+----------------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                            ;
++-------------------------------------------+-------------------------------------------------+
+; Name                                      ; Value                                           ;
++-------------------------------------------+-------------------------------------------------+
+; Number of entity instances                ; 1                                               ;
+; Entity Instance                           ; g10_possibility_table:gate3|altsyncram:TM[0]__1 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                       ;
+;     -- WIDTH_A                            ; 1                                               ;
+;     -- NUMWORDS_A                         ; 4096                                            ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                    ;
+;     -- WIDTH_B                            ; 1                                               ;
+;     -- NUMWORDS_B                         ; 4096                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                          ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                    ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                            ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                        ;
++-------------------------------------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RandomPatternGenerator:gate4|counter_table:gate1"                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; tc_last ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8 ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                                       ;
-+------------------------+------------+----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3          ; Signed Integer                                                             ;
-; LPM_DECODES            ; 8          ; Signed Integer                                                             ;
-; LPM_PIPELINE           ; 0          ; Signed Integer                                                             ;
-; CASCADE_CHAIN          ; MANUAL     ; Untyped                                                                    ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                    ;
-; CBXI_PARAMETER         ; decode_7jg ; Untyped                                                                    ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                               ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                             ;
-+------------------------+------------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27 ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                        ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3           ; Signed Integer                                                              ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28 ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                        ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3           ; Signed Integer                                                              ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29 ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                        ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3           ; Signed Integer                                                              ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30 ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                        ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3           ; Signed Integer                                                              ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31 ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                        ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3           ; Signed Integer                                                              ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_8hf ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34 ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                        ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 3           ; Signed Integer                                                              ;
-; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0           ; Signed Integer                                                              ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                     ;
-; USE_WYS                ; OFF         ; Untyped                                                                     ;
-; STYLE                  ; FAST        ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_r4f ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                              ;
-+------------------------+-------------+-----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+; Port Connectivity Checks: "g10_possibility_table:gate3"                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; tm_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "g10_mastermind_score:Gate1"                                                                      ;
+; Port Connectivity Checks: "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1"                                        ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port              ; Type   ; Severity ; Details                                                                             ;
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -648,12 +853,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "g10_mastermind_controller:gate1"                                                      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; solved ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -663,9 +877,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 27 19:12:58 2015
+    Info: Processing started: Sat Nov 28 21:12:20 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file counter_table.vhd
+    Info (12022): Found design unit 1: counter_table-behavior
+    Info (12023): Found entity 1: counter_table
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/register_12bit.vhd
     Info (12022): Found design unit 1: register_12bit-behavior
     Info (12023): Found entity 1: register_12bit
@@ -720,17 +937,31 @@ Info (12021): Found 2 design units, including 1 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab2/mastermind.vhd
     Info (12022): Found design unit 1: MASTERMIND-behavior
     Info (12023): Found entity 1: MASTERMIND
-Info (12127): Elaborating entity "g10_mastermind_datapath" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(30): object "exact" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(30): object "color" assigned a value but never read
-Info (12128): Elaborating entity "g10_mastermind_score" for hierarchy "g10_mastermind_score:Gate1"
-Info (12128): Elaborating entity "g10_num_matches" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1"
-Info (12128): Elaborating entity "g10_comp3" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1"
-Info (12128): Elaborating entity "g10_num1s" for hierarchy "g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5"
-Info (12128): Elaborating entity "g10_color_matches" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2"
-Info (12128): Elaborating entity "LPM_DECODE" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1"
-Info (12130): Elaborated megafunction instantiation "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1"
-Info (12133): Instantiated megafunction "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1" with the following parameter:
+Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab4/randompatterngenerator.vhd
+    Info (12022): Found design unit 1: RandomPatternGenerator-behavior
+    Info (12023): Found entity 1: RandomPatternGenerator
+Info (12127): Elaborating entity "MASTERMIND" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(17): used implicit default value for signal "LED1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(18): used implicit default value for signal "LED2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(19): used implicit default value for signal "LED3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(20): used implicit default value for signal "LED4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(24): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "sol" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "tmout" assigned a value but never read
+Info (12128): Elaborating entity "g10_mastermind_controller" for hierarchy "g10_mastermind_controller:gate1"
+Warning (10631): VHDL Process Statement warning at g10_mastermind_controller.vhd(36): inferring latch(es) for signal or variable "RP_LD", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "RP_LD" at g10_mastermind_controller.vhd(36)
+Info (12128): Elaborating entity "g10_mastermind_datapath" for hierarchy "g10_mastermind_datapath:gate2"
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(31): object "exact" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(31): object "color" assigned a value but never read
+Info (12128): Elaborating entity "g10_mastermind_score" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1"
+Info (12128): Elaborating entity "g10_num_matches" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1"
+Info (12128): Elaborating entity "g10_comp3" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1"
+Info (12128): Elaborating entity "g10_num1s" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5"
+Info (12128): Elaborating entity "g10_color_matches" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2"
+Info (12128): Elaborating entity "LPM_DECODE" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1"
+Info (12130): Elaborated megafunction instantiation "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1"
+Info (12133): Instantiated megafunction "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTH" = "3"
     Info (12134): Parameter "LPM_DECODES" = "8"
     Info (12134): Parameter "LPM_PIPELINE" = "0"
@@ -738,11 +969,11 @@ Info (12133): Instantiated megafunction "g10_mastermind_score:Gate1|g10_color_ma
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7jg.tdf
     Info (12023): Found entity 1: decode_7jg
-Info (12128): Elaborating entity "decode_7jg" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1|decode_7jg:auto_generated"
-Info (12128): Elaborating entity "g10_minimum3" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21"
-Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27"
-Info (12130): Elaborated megafunction instantiation "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27"
-Info (12133): Instantiated megafunction "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27" with the following parameter:
+Info (12128): Elaborating entity "decode_7jg" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1|decode_7jg:auto_generated"
+Info (12128): Elaborating entity "g10_minimum3" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21"
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27"
+Info (12130): Elaborated megafunction instantiation "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27"
+Info (12133): Instantiated megafunction "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27" with the following parameter:
     Info (12134): Parameter "LPM_WIDTH" = "3"
     Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
@@ -751,10 +982,10 @@ Info (12133): Instantiated megafunction "g10_mastermind_score:Gate1|g10_color_ma
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8hf.tdf
     Info (12023): Found entity 1: add_sub_8hf
-Info (12128): Elaborating entity "add_sub_8hf" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27|add_sub_8hf:auto_generated"
-Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34"
-Info (12130): Elaborated megafunction instantiation "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34"
-Info (12133): Instantiated megafunction "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34" with the following parameter:
+Info (12128): Elaborating entity "add_sub_8hf" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27|add_sub_8hf:auto_generated"
+Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34"
+Info (12130): Elaborated megafunction instantiation "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34"
+Info (12133): Instantiated megafunction "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34" with the following parameter:
     Info (12134): Parameter "LPM_WIDTH" = "3"
     Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
     Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
@@ -763,34 +994,100 @@ Info (12133): Instantiated megafunction "g10_mastermind_score:Gate1|g10_color_ma
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_r4f.tdf
     Info (12023): Found entity 1: add_sub_r4f
-Info (12128): Elaborating entity "add_sub_r4f" for hierarchy "g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34|add_sub_r4f:auto_generated"
-Info (12128): Elaborating entity "g10_score_encoder" for hierarchy "g10_mastermind_score:Gate1|g10_score_encoder:Gate3"
-Info (12128): Elaborating entity "register_4bit" for hierarchy "register_4bit:Gate2"
-Info (12128): Elaborating entity "g10_comp4" for hierarchy "g10_comp4:Gate3"
-Info (12128): Elaborating entity "register_3bit" for hierarchy "register_3bit:Gate4"
+Info (12128): Elaborating entity "add_sub_r4f" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34|add_sub_r4f:auto_generated"
+Info (12128): Elaborating entity "g10_score_encoder" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3"
+Info (12128): Elaborating entity "register_4bit" for hierarchy "g10_mastermind_datapath:gate2|register_4bit:Gate2"
+Info (12128): Elaborating entity "g10_comp4" for hierarchy "g10_mastermind_datapath:gate2|g10_comp4:Gate3"
+Info (12128): Elaborating entity "register_3bit" for hierarchy "g10_mastermind_datapath:gate2|register_3bit:Gate4"
+Info (12128): Elaborating entity "g10_possibility_table" for hierarchy "g10_possibility_table:gate3"
+Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(43): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(95): signal "last" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(98): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "altsyncram" for hierarchy "g10_possibility_table:gate3|altsyncram:TM[0]__1"
+Info (12130): Elaborated megafunction instantiation "g10_possibility_table:gate3|altsyncram:TM[0]__1"
+Info (12133): Instantiated megafunction "g10_possibility_table:gate3|altsyncram:TM[0]__1" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "1"
+    Info (12134): Parameter "WIDTHAD_A" = "12"
+    Info (12134): Parameter "NUMWORDS_A" = "4096"
+    Info (12134): Parameter "WIDTH_B" = "1"
+    Info (12134): Parameter "WIDTHAD_B" = "12"
+    Info (12134): Parameter "NUMWORDS_B" = "4096"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jdi1.tdf
+    Info (12023): Found entity 1: altsyncram_jdi1
+Info (12128): Elaborating entity "altsyncram_jdi1" for hierarchy "g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated"
+Info (12128): Elaborating entity "RandomPatternGenerator" for hierarchy "RandomPatternGenerator:gate4"
+Warning (10036): Verilog HDL or VHDL warning at RandomPatternGenerator.vhd(20): object "last2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at RandomPatternGenerator.vhd(21): object "rpld" assigned a value but never read
+Info (12128): Elaborating entity "counter_table" for hierarchy "RandomPatternGenerator:gate4|counter_table:gate1"
+Warning (10036): Verilog HDL or VHDL warning at counter_table.vhd(20): object "Q_value" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at counter_table.vhd(40): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter_table.vhd(92): signal "last" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counter_table.vhd(95): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "register_12bit" for hierarchy "RandomPatternGenerator:gate4|register_12bit:gate2"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated|q_b[0]"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED1[0]" is stuck at GND
+    Warning (13410): Pin "LED1[1]" is stuck at GND
+    Warning (13410): Pin "LED1[2]" is stuck at GND
+    Warning (13410): Pin "LED1[3]" is stuck at GND
+    Warning (13410): Pin "LED2[0]" is stuck at GND
+    Warning (13410): Pin "LED2[1]" is stuck at GND
+    Warning (13410): Pin "LED2[2]" is stuck at GND
+    Warning (13410): Pin "LED2[3]" is stuck at GND
+    Warning (13410): Pin "LED3[0]" is stuck at GND
+    Warning (13410): Pin "LED3[1]" is stuck at GND
+    Warning (13410): Pin "LED3[2]" is stuck at GND
+    Warning (13410): Pin "LED3[3]" is stuck at GND
+    Warning (13410): Pin "LED4[0]" is stuck at GND
+    Warning (13410): Pin "LED4[1]" is stuck at GND
+    Warning (13410): Pin "LED4[2]" is stuck at GND
+    Warning (13410): Pin "LED4[3]" is stuck at GND
+Info (17049): 75 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 12 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "G[0]"
-    Warning (15610): No output dependent on input pin "G[1]"
-    Warning (15610): No output dependent on input pin "G[2]"
-    Warning (15610): No output dependent on input pin "G[3]"
-    Warning (15610): No output dependent on input pin "G[4]"
-    Warning (15610): No output dependent on input pin "G[5]"
-    Warning (15610): No output dependent on input pin "G[6]"
-    Warning (15610): No output dependent on input pin "G[7]"
-    Warning (15610): No output dependent on input pin "G[8]"
-    Warning (15610): No output dependent on input pin "G[9]"
-    Warning (15610): No output dependent on input pin "G[10]"
-    Warning (15610): No output dependent on input pin "G[11]"
-Info (21057): Implemented 231 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 43 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 187 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 507 megabytes
-    Info: Processing ended: Fri Nov 27 19:13:02 2015
-    Info: Elapsed time: 00:00:04
+Warning (21074): Design contains 24 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switch_LED"
+    Warning (15610): No output dependent on input pin "mode"
+    Warning (15610): No output dependent on input pin "switch_REG[0]"
+    Warning (15610): No output dependent on input pin "switch_REG[1]"
+    Warning (15610): No output dependent on input pin "LED_value[0]"
+    Warning (15610): No output dependent on input pin "LED_value[1]"
+    Warning (15610): No output dependent on input pin "LED_value[2]"
+    Warning (15610): No output dependent on input pin "LED_value[3]"
+    Warning (15610): No output dependent on input pin "LED_value[4]"
+    Warning (15610): No output dependent on input pin "LED_value[5]"
+    Warning (15610): No output dependent on input pin "LED_value[6]"
+    Warning (15610): No output dependent on input pin "LED_value[7]"
+    Warning (15610): No output dependent on input pin "LED_value[8]"
+    Warning (15610): No output dependent on input pin "LED_value[9]"
+    Warning (15610): No output dependent on input pin "LED_value[10]"
+    Warning (15610): No output dependent on input pin "LED_value[11]"
+    Warning (15610): No output dependent on input pin "LED_value[12]"
+    Warning (15610): No output dependent on input pin "LED_value[13]"
+    Warning (15610): No output dependent on input pin "LED_value[14]"
+    Warning (15610): No output dependent on input pin "LED_value[15]"
+    Warning (15610): No output dependent on input pin "Start"
+    Warning (15610): No output dependent on input pin "Ready"
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "P_generated"
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 520 megabytes
+    Info: Processing ended: Sat Nov 28 21:12:25 2015
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

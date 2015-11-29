@@ -9,9 +9,9 @@ port (G : in std_logic_vector(11 downto 0);
 		SC_CMP : out std_logic;
 		CLK : in std_logic;
 		clr : in std_logic;
-		
-		--Y : out std_logic_vector (3 downto 0);
-		--U : out std_logic_vector (3 downto 0);
+				
+		--RP_LD : in std_logic; 
+		--RP_SEL : in std_logic;
 		
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
@@ -26,6 +26,7 @@ architecture behavior of g10_mastermind_datapath is
 signal a : std_logic;
 signal b,c,d,e : std_logic_vector (11 downto 0);
 signal f,h,i : std_logic_vector (3 downto 0);
+signal j,k,L,m : std_logic;
 signal P1,P2,P3,P4, G1,G2,G3,G4 : std_logic_vector (2 downto 0);
 signal exact,color : std_logic_vector (2 downto 0);
 signal d1,d2,d3,d4 : std_logic_vector (2 downto 0);
@@ -37,6 +38,10 @@ signal EXT_PATTERN1 : std_logic_vector (2 downto 0);
 signal EXT_PATTERN2 : std_logic_vector (2 downto 0);
 signal EXT_PATTERN3 : std_logic_vector (2 downto 0);
 signal EXT_PATTERN4 : std_logic_vector (2 downto 0);
+signal tmi,tme,tce,tcr,sol,tmout, last : std_logic; --possibility table
+signal addr, gg,pattern : std_logic_vector(11 downto 0); --vectors
+signal cmp, srs, ps, grs, grl, srld, rpld : std_logic;    -- controller 
+signal tmi2,tme2,tce2,tcr2,sol2,tmout2, last2 : std_logic; --counter table
 
 
 
@@ -82,6 +87,16 @@ component g10_comp4 IS
 		AeqB :  OUT  STD_LOGIC);
 END component;
 
+--component RandomPatternGenerator is
+--port (P_generated : in std_logic;
+--		clk : in std_logic;
+--		Start : in std_logic;
+--		RP_LD : in std_logic;
+--		TC_EN : out std_logic;
+--		TC_RST : out std_logic;
+--		TM_ADDR : in std_logic_vector (11 downto 0);
+--		EXT_PATTERN : out std_logic_vector(11 downto 0));
+--end component;
 
 --for components
 --mux, process block
@@ -106,15 +121,14 @@ Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD, p => d1, 
 Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD, p => d2, q => G2); --check tmp
 Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD, p => d3, q => G3);
 Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD, p => d4, q => G4);
+--gate8: RandomPatternGenerator port map (P_Generated => P_Generated, clk => clk, EXT_PATTERN => pattern, Start => Start,
+--													RP_LD => rpld, TC_EN2 => tce2, TC_RST2 => tcr2, TM_ADDRN => addrn);	
 
 --map
 
 datapath: process (SR_SEL, GR_SEL, P_SEL, GR_LD, SR_LD,ADDR1,ADDR2,ADDR3,ADDR4, EXT_PATTERN1, EXT_PATTERN2, 
 							EXT_PATTERN3, EXT_PATTERN4, exact, color, f)
 begin
-
---Y <= h;
---U <= i;
 
 case SR_SEL is 
 	when '0' => i <= f;
@@ -142,6 +156,13 @@ case P_SEL is
 						P3 <= ADDR3;
 						P4 <= ADDR4;
 end case;
+
+
+--case RP_SEL is 
+--	when '0' => tce <= TC_EN;
+--					TC_RST <= TC_RST;
+--	when others => L <= k; 
+--end case;
 
 
 end process;

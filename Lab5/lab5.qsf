@@ -48,6 +48,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name VHDL_FILE counter_table.vhd
 set_global_assignment -name VHDL_FILE ../Lab4/register_12bit.vhd
 set_global_assignment -name VHDL_FILE ../Lab2/g10_minimum3.vhd
 set_global_assignment -name VHDL_FILE ../Lab2/g10_comp3.vhd

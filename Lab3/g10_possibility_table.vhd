@@ -25,7 +25,7 @@ begin
 
 
 
-counter_table: process(CLK, TC_EN, TM_EN, TC_RST, TM_ADDR1, TM_ADDR2, TM_ADDR3, TM_ADDR4)
+table_counter: process(CLK, TC_EN, TM_EN, TC_RST, TM_ADDR1, TM_ADDR2, TM_ADDR3, TM_ADDR4)
 
 
 

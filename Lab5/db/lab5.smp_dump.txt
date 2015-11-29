@@ -1,5 +1,5 @@
 
-State Machine - |g10_mastermind_controller|y_present
+State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present
 Name y_present.J y_present.I y_present.H y_present.G y_present.F y_present.E y_present.D y_present.C y_present.B y_present.A 
 y_present.A 0 0 0 0 0 0 0 0 0 0 
 y_present.B 0 0 0 0 0 0 0 0 1 1 

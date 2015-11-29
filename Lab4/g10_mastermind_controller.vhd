@@ -15,6 +15,9 @@ port (SC_CMP : in std_logic;
 		GR_LD : out std_logic;
 		SR_LD : out std_logic;
 		
+		RP_LD : out std_logic; -- < new --
+		--RP_SEL : out std_logic;
+		
 		TM_IN : out std_logic;
 		TM_EN : out std_logic;
 		TC_EN : out std_logic;
@@ -35,6 +38,7 @@ controller : process (CLK, READY, START,SC_CMP, TC_LAST)
 begin
 
 	if (START = '0') then
+		RP_LD <= '1'; -- move in new code later, when arrives
 		y_present <= A;
 		
 	elsif(rising_edge(CLK)) then 
