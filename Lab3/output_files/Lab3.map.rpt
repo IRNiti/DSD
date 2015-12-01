@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Lab3
-Fri Nov 06 18:09:14 2015
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Sun Nov 29 14:58:40 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -14,12 +14,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Source assignments for altsyncram:TM[0]__1|altsyncram_cug1:auto_generated
- 11. Parameter Settings for User Entity Instance: altsyncram:TM[0]__1
- 12. altsyncram Parameter Settings by Entity Instance
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Registers Added for RAM Pass-Through Logic
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated
+ 14. Parameter Settings for User Entity Instance: altsyncram:TM[0]__1
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -42,24 +45,24 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                          ;
-+------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 06 18:09:14 2015            ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
-; Revision Name                      ; Lab3                                             ;
-; Top-level Entity Name              ; g10_possibility_table                            ;
-; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 33                                               ;
-;     Total combinational functions  ; 21                                               ;
-;     Dedicated logic registers      ; 25                                               ;
-; Total registers                    ; 25                                               ;
-; Total pins                         ; 19                                               ;
-; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 4,096                                            ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
-+------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Nov 29 14:58:40 2015           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Lab3                                            ;
+; Top-level Entity Name              ; g10_possibility_table                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 64                                              ;
+;     Total combinational functions  ; 49                                              ;
+;     Dedicated logic registers      ; 30                                              ;
+; Total registers                    ; 30                                              ;
+; Total pins                         ; 19                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 4,096                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -147,21 +150,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+-----------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -169,7 +166,7 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
-; g10_possibility_table.vhd        ; yes             ; User VHDL File               ; P:/DSD/Lab3/g10_possibility_table.vhd                                   ;         ;
+; g10_possibility_table.vhd        ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_possibility_table.vhd            ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -179,7 +176,7 @@ applicable agreement for further details.
 ; altrom.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_cug1.tdf           ; yes             ; Auto-Generated Megafunction  ; P:/DSD/Lab3/db/altsyncram_cug1.tdf                                      ;         ;
+; db/altsyncram_jdi1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Benjamin/Desktop/DSD/Lab3/db/altsyncram_jdi1.tdf               ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
 
 
@@ -188,29 +185,29 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 33    ;
+; Estimated Total logic elements              ; 64    ;
 ;                                             ;       ;
-; Total combinational functions               ; 21    ;
+; Total combinational functions               ; 49    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 7     ;
-;     -- 3 input functions                    ; 10    ;
-;     -- <=2 input functions                  ; 4     ;
+;     -- 4 input functions                    ; 36    ;
+;     -- 3 input functions                    ; 11    ;
+;     -- <=2 input functions                  ; 2     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 21    ;
+;     -- normal mode                          ; 49    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 25    ;
-;     -- Dedicated logic registers            ; 25    ;
+; Total registers                             ; 30    ;
+;     -- Dedicated logic registers            ; 30    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 19    ;
 ; Total memory bits                           ; 4096  ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 26    ;
-; Total fan-out                               ; 189   ;
-; Average fan-out                             ; 2.86  ;
+; Maximum fan-out                             ; 31    ;
+; Total fan-out                               ; 309   ;
+; Average fan-out                             ; 3.12  ;
 +---------------------------------------------+-------+
 
 
@@ -219,9 +216,9 @@ applicable agreement for further details.
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
-; |g10_possibility_table                 ; 21 (21)           ; 25 (25)      ; 4096        ; 0            ; 0       ; 0         ; 19   ; 0            ; |g10_possibility_table                                                    ; work         ;
+; |g10_possibility_table                 ; 49 (49)           ; 30 (30)      ; 4096        ; 0            ; 0       ; 0         ; 19   ; 0            ; |g10_possibility_table                                                    ; work         ;
 ;    |altsyncram:TM[0]__1|               ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1                                ; work         ;
-;       |altsyncram_cug1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1|altsyncram_cug1:auto_generated ; work         ;
+;       |altsyncram_jdi1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |g10_possibility_table|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated ; work         ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -231,8 +228,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                          ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +---------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; altsyncram:TM[0]__1|altsyncram_cug1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 1            ; 4096         ; 1            ; 4096 ; None ;
+; altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 4096         ; 1            ; 4096         ; 1            ; 4096 ; None ;
 +---------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++------------------------------------------------------------------+
+; Registers Removed During Synthesis                               ;
++----------------------------------------+-------------------------+
+; Register name                          ; Reason for Removal      ;
++----------------------------------------+-------------------------+
+; TM_0__bypass[6]                        ; Merged with TM_ADDR1[2] ;
+; TM_0__bypass[4]                        ; Merged with TM_ADDR1[1] ;
+; TM_0__bypass[2]                        ; Merged with TM_ADDR1[0] ;
+; TM_0__bypass[12]                       ; Merged with TM_ADDR2[2] ;
+; TM_0__bypass[10]                       ; Merged with TM_ADDR2[1] ;
+; TM_0__bypass[8]                        ; Merged with TM_ADDR2[0] ;
+; TM_0__bypass[18]                       ; Merged with TM_ADDR3[2] ;
+; TM_0__bypass[16]                       ; Merged with TM_ADDR3[1] ;
+; TM_0__bypass[14]                       ; Merged with TM_ADDR3[0] ;
+; TM_0__bypass[24]                       ; Merged with TM_ADDR4[2] ;
+; TM_0__bypass[22]                       ; Merged with TM_ADDR4[1] ;
+; TM_0__bypass[20]                       ; Merged with TM_ADDR4[0] ;
+; Total Number of Removed Registers = 12 ;                         ;
++----------------------------------------+-------------------------+
 
 
 +------------------------------------------------------+
@@ -240,18 +258,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
-; Number of registers using Synchronous Clear  ; 1     ;
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Clear ; 14    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 22    ;
+; Number of registers using Clock Enable       ; 13    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------+
+; Registers Added for RAM Pass-Through Logic ;
++------------------+-------------------------+
+; Register Name    ; RAM Name                ;
++------------------+-------------------------+
+; TM_0__bypass[0]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[1]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[2]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[3]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[4]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[5]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[6]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[7]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[8]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[9]  ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[10] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[11] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[12] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[13] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[14] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[15] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[16] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[17] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[18] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[19] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[20] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[21] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[22] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[23] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[24] ; altsyncram:TM[0]__1     ;
+; TM_0__bypass[25] ; altsyncram:TM[0]__1     ;
++------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g10_possibility_table|TM_ADDR1 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |g10_possibility_table|TM_ADDR2 ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |g10_possibility_table|TM_ADDR4 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |g10_possibility_table|TM_ADDR3 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
 +---------------------------------------------------------------------------+
-; Source assignments for altsyncram:TM[0]__1|altsyncram_cug1:auto_generated ;
+; Source assignments for altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated ;
 +---------------------------------+--------------------+------+-------------+
 ; Assignment                      ; Value              ; From ; To          ;
 +---------------------------------+--------------------+------+-------------+
@@ -315,7 +379,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped        ;
 ; DEVICE_FAMILY                      ; Cyclone II           ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_cug1      ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_jdi1      ; Untyped        ;
 +------------------------------------+----------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -354,10 +418,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Nov 06 18:09:08 2015
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 29 14:58:37 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file g10_7_segment_decoder.vhd
     Info (12022): Found design unit 1: g10_7_segment_decoder-behaviour
     Info (12023): Found entity 1: g10_7_segment_decoder
@@ -368,7 +432,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file g10_7_s
     Info (12022): Found design unit 1: g10_7_seg_test-behaviour
     Info (12023): Found entity 1: g10_7_seg_test
 Info (12127): Elaborating entity "g10_possibility_table" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(80): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(43): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(95): signal "last" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(98): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (276020): Inferred RAM node "|altsyncram:TM[0]__1" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "|altsyncram:TM[0]__1" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -404,20 +471,20 @@ Info (12133): Instantiated megafunction "altsyncram:TM[0]__1" with the following
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_cug1.tdf
-    Info (12023): Found entity 1: altsyncram_cug1
-Info (12128): Elaborating entity "altsyncram_cug1" for hierarchy "altsyncram:TM[0]__1|altsyncram_cug1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jdi1.tdf
+    Info (12023): Found entity 1: altsyncram_jdi1
+Info (12128): Elaborating entity "altsyncram_jdi1" for hierarchy "altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 33 logic cells
+    Info (21061): Implemented 76 logic cells
     Info (21064): Implemented 1 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 525 megabytes
-    Info: Processing ended: Fri Nov 06 18:09:14 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 531 megabytes
+    Info: Processing ended: Sun Nov 29 14:58:40 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

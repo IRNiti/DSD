@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity RandomPatternGenerator is
-port (P_generated : in std_logic;
+port (P_generatedN : in std_logic;
 		clk : in std_logic;
 		Start : in std_logic;
 		RP_LD : in std_logic;
@@ -60,7 +60,7 @@ gate1: counter_table port map (TC_EN2 => tce2, TC_RST2 => tcr2, CLK => clk, TC_L
 													TM_ADDRN => addrn);
 gate2: register_12bit port map (clr => Start, clk => clk, RP_LD => RP_LD, p => addrn, q => EXT_PATTERN);
 
-randomPattern: process (clk, P_generated, Start, y_present, RP_LD)
+randomPattern: process (clk, P_generatedN, Start, y_present, RP_LD)
 
 
 begin
@@ -73,7 +73,7 @@ if (Start = '0') then
 		
 		case y_present is
 			when A =>
-				if (P_generated = '1') then
+				if (P_generatedN = '1') then
 					tcr2 <= '0';
 					tce2 <= '1';
 					
@@ -81,7 +81,7 @@ if (Start = '0') then
 				end if;
 			
 			when B => 
-				if (P_generated = '0') then
+				if (P_generatedN = '0') then
 					tce2 <= '0';
 					rpld <= '1';
 				end if;			

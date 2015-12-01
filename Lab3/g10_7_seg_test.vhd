@@ -27,7 +27,7 @@ end component;
 
 begin
 
-Gate1: g10_7_segment_decoder port map(code => code1, RippleBlank_In => '1', RippleBlank_Out => ripple1, segments => segments1);
+Gate1: g10_7_segment_decoder port map(code => code1, RippleBlank_In => '0', RippleBlank_Out => ripple1, segments => segments1);
 Gate2: g10_7_segment_decoder port map(code => code2, RippleBlank_In => ripple1, RippleBlank_Out => ripple2, segments => segments2);
 Gate3: g10_7_segment_decoder port map(code => code1, RippleBlank_In => ripple2, RippleBlank_Out => ripple_out, segments => segments3);
 Gate4: g10_7_segment_decoder port map(code => code1, RippleBlank_In => '0', RippleBlank_Out => ripple_out, segments => segments4);
