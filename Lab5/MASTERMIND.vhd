@@ -9,9 +9,10 @@ port (clk : in std_logic;
 		Start : in std_logic;
 		Ready : in std_logic;
 		switch_LED : in std_logic;
+		
 				
 		mode : in std_logic;									  --switches
-		sw : in std_logic_vector (3 downto 0); --for 15 downto 0, bits  = code, in 7-seg
+		sw : in std_logic_vector (3 downto 0); --for 15 downto 0, bits  = code, in 7-seg; only actually 3 bits
 		modify_G : in std_logic;
 		
 		segment1 : out std_logic_vector(6 downto 0);  --displaying_LED's
@@ -39,6 +40,7 @@ signal grld1, grld2, grld3, grld4 : std_logic;
 signal led1r, led2r, led3r, led4r : std_logic;
 signal switchreg : std_logic;
 signal swI : std_logic_vector(2 downto 0);
+signal clrledr : std_logic;
 
 type state_type is (A,B,C,D,E,F,H,I,J);
 signal y_present : state_type;
@@ -51,6 +53,9 @@ port (G : in std_logic_vector(11 downto 0);
 		SC_CMP : out std_logic;
 		CLK : in std_logic;
 		clr : in std_logic;
+		clr_LED_R : in std_logic;
+				
+		--RP_LD : in std_logic; 
 		
 		sw: in std_logic_vector (2 downto 0);
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : in std_logic;
@@ -58,7 +63,6 @@ port (G : in std_logic_vector(11 downto 0);
 		switch_REG : in std_logic;
 		LED1_R, LED2_R, LED3_R, LED4_R : in std_logic;
 		
-		--RP_LD : in std_logic;
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
 		GR_SEL : in std_logic_vector (1 downto 0);
@@ -84,8 +88,9 @@ port (SC_CMP : in std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
 		switch_REG : out std_logic;
 		LED1_R, LED2_R, LED3_R, LED4_R : out std_logic;
+		clr_LED_R : out std_logic;
 		
-		RP_LD : out std_logic;
+		RP_LD : out std_logic; -- < new --
 		
 		TM_IN : out std_logic;
 		TM_EN : out std_logic;
@@ -150,13 +155,14 @@ gate1: g10_mastermind_controller port map (SC_CMP => cmp, TC_LAST => last, START
 													TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, SOLVED => sol, 
 													sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1,
 													GR_LD2 => grld2, GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, 
-													LED1_R => led1r, LED2_R => led2r, LED3_R => led3r, LED4_R => led4r);
+													LED1_R => led1r, LED2_R => led2r, LED3_R => led3r, LED4_R => led4r, 
+													clr_LED_R => clrledr);
 														
 gate2: g10_mastermind_datapath port map (G => gg, EXT_PATTERN => pattern, TM_ADDR => addr, SC_CMP => cmp, CLK => clk, 
 								clr => Start, SR_SEL => srs, P_SEL => ps, GR_SEL => grs, SR_LD => srld, 
 								sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1, GR_LD2 => grld2,
 								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, LED1_R => led1r, LED2_R => led2r, 
-								LED3_R => led3r, LED4_R => led4r, sw => swI );
+								LED3_R => led3r, LED4_R => led4r, sw => swI, clr_LED_R => clrledr );
 swI <= sw(3 downto 1);
 
 gate3: g10_possibility_table port map (TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, CLK => clk, TC_LAST => last,
@@ -168,177 +174,5 @@ gate4: RandomPatternGenerator port map (P_generatedN => P_generated, clk => clk,
 end behavior;									
 		
 
---		
---mastermind : process (clk, Start, Ready, P_Generated, LED_countup, mode, switch_REG, LED_value)
---LED_countup <= '0';
---LED_value <= "00";
---present_LED_value <= "00";
---next_LED_value <= "01";
---begin
---
---
---
---if (LED_value = "00") then
---	LD1 <= '1';
---	LD2 <= '0';
---	LD3 <= '0';
---	LD4 <= '0';
---	elsif (LED_value = "01") then
---    LD1 <= '0';
---	 LD2 <= '1';
---	 LD3 <= '0';
---	 LD4 <= '0';
---	elsif (LED_value = "10") then
---    LD1 <= '0';
---	 LD2 <= '0';
---	 LD3 <= '1';
---	 LD4 <= '0';
---	else
---    LD1 <= '0';
---	 LD2 <= '0';
---	 LD3 <= '0';
---	 LD4 <= '1';
---end if;
---
---if (LED_countup = '1') then
---	present_LED_value <= next_LED_value;
---	LED_countup = '0';
---	
---	case present_LED_value is
---	when "00" => next_LED_value <= "01";
---	when "01" => next_LED_value <= "10";
---	when "10" => next_LED_value <= "11";
---	when "11" => next_LED_value <= "00";
---	end case;
---	
---end if;
---
---
---
---
---if (START = '0') then
---		y_present <= A;
---		
---	elsif(rising_edge(CLK)) then 
---
---		Case y_present is 
---
---			when A => 
---				if (start = '1') then
---				--StartCD <= '0';  
---				--ReadyC <= '0';
---				--G <= "000000001001";
---				y_present <= A;
---				elsif (rising_edge(clk)) then 
---				y_present = L;
---			   end if;
---			when L => 
---				if (ready = '1') then
---					y_present <= B;
---			when B => 
---				if (mode = '0') then --user mode
---					if (P_generated = '0') then --RPG file
---					P_generatedN <= '1';
---					y_present = E;
---					end if;
---				else 
---					y_present = C
---				end if;
---			when E =>
---				if (P_generated = '1') then
---					P_generatedN <= '0';
---					y_present = F;
---				end if;
---			when F => --cyling ability
---				if (READY = '0') then --transmit bits
---										--controller activates certain sel 
---										-- can set bits in LEDs
---					y_present = H;
---				end if;
---			
---			when H =>
---				if (mode = '1') then --system
---					--do stuff 
---					y_present = C;
---				end if;
---			when C => -- system mode
---					if (mode = '0') then
---					y_present = B;
---					end if;
---					--do stuff
---				   y_present = J;
---			
---			when J =>
---				if (mode = '0') then
---					y_present = F;
---				end if;	
---		end case;
---				
---			
---			
---
---
---
---
---
---
---
---
---
---
---
---
---
---
-----
-----
-----	case current_LED is 
-----		when "00" => next_LED <= "01";
-----			g1 <= LED_valueI;	
-----		when "01" => next_LED <= "10";
-----			g2 <= LED_valueI;
-----		when "10" => next_LED <= "11";
-----			g3 <= LED_valueI;
-----		when "11" => next_LED <= "00";
-----		   g4 <= LED_valueI;
-----		when others => next_LED <= "11";
-----	end case;
-----
-----	case LED_countup is --display_guess
-----		when "00" => LED_value_int1 <= g1;
-----		when "01" => LED_value_int2 <= g2;
-----		when "10" => LED_value_int3 <= g3;
-----		when "11" => LED_value_int4 <= g4;
-----	end case;
-----	
-----	case current_LED is
-----		when "00" => LED_value_int1 <= LED_valueI;
-----						 LED_value_int2 <= '0';
-----						 LED_value_int3 <= '0';
-----						 LED_value_int4 <= '0';
-----		when "01" => LED_value_int2 <= LED_valueI;
-----		when "10" => LED_value_int3 <= LED_valueI;
-----		when "11" => LED_value_int4 <= LED_valueI;
-----	
---
---
-----if (switch_REG = "01") then					--fix up
-----LED_value_int1 <= display_guessN (11 downto 9);
-----LED_value_int2 <= display_guessN (8 downto 6);
-----LED_value_int3 <= display_guessN (5 downto 3);
-----LED_value_int4 <= display_guessN (2 downto 0);
-----end if;		  
-----
-----if (switch_REG = "10") then 
-----LED_value_int1 <= "000000";
-----LED_value_int2 <= "000000";
-----LED_value_int3 <= display_guessN (5 downto 3);
-----LED_value_int4 <= display_guessN (2 downto 0);
-----end if;
---
---
---
---
---end process;
 
 

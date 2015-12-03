@@ -2,14 +2,6 @@
 
 <pin_planner>
 	<pin_info>
-		<pin name="P_generated" source="Pin Planner" >
-		</pin>
-		<pin name="Start" source="Pin Planner" >
-		</pin>
-		<pin name="Ready" source="Pin Planner" >
-		</pin>
-		<pin name="switch_LED" source="Pin Planner" >
-		</pin>
 		<pin name="LED_value[3]" source="Pin Planner" >
 		</pin>
 		<pin name="LED_value[2]" source="Pin Planner" >
@@ -21,8 +13,6 @@
 		<pin name="switch_REG[1]" source="Pin Planner" >
 		</pin>
 		<pin name="switch_REG[0]" source="Pin Planner" >
-		</pin>
-		<pin name="mode" source="Pin Planner" >
 		</pin>
 		<pin name="LED1[6]" source="Pin Planner" >
 		</pin>

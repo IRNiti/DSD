@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "12/02/2015 18:05:32"
+-- DATE "12/03/2015 15:07:50"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -162,10 +162,10 @@ SIGNAL \gate9|Mux2~0_combout\ : std_logic;
 SIGNAL \gate9|Mux1~0_combout\ : std_logic;
 SIGNAL \gate9|Mux0~0_combout\ : std_logic;
 SIGNAL \gate1|gate1|TM_ADDR2\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \gate1|gate1|TM_ADDR3\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \gate1|gate2|q\ : std_logic_vector(11 DOWNTO 0);
-SIGNAL \gate1|gate1|TM_ADDR1\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \gate1|gate1|TM_ADDR4\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \gate1|gate1|TM_ADDR3\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \gate1|gate1|TM_ADDR1\ : std_logic_vector(2 DOWNTO 0);
+SIGNAL \gate1|gate2|q\ : std_logic_vector(11 DOWNTO 0);
 SIGNAL \ALT_INV_start~combout\ : std_logic;
 SIGNAL \gate1|ALT_INV_tcr2~regout\ : std_logic;
 

@@ -19,6 +19,8 @@ port (SC_CMP : in std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
 		switch_REG : out std_logic;
 		LED1_R, LED2_R, LED3_R, LED4_R : out std_logic;
+		clr_LED_R : out std_logic;
+		
 		
 		RP_LD : out std_logic; -- < new --
 		

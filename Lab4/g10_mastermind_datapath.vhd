@@ -9,6 +9,7 @@ port (G : in std_logic_vector(11 downto 0);
 		SC_CMP : out std_logic;
 		CLK : in std_logic;
 		clr : in std_logic;
+		clr_LED_R : in std_logic;
 				
 		--RP_LD : in std_logic; 
 		
