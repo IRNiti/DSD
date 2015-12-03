@@ -51,6 +51,13 @@ signal addr, gg,pattern : std_logic_vector(11 downto 0); --vectors
 signal cmp, srs, ps, grs, grl, srld, rpld : std_logic;    -- controller 
 signal tmi2,tme2,tce2,tcr2,sol2,tmout2, last2 : std_logic; --counter table
 
+signal sw1ld, sw2ld, sw3ld, sw4ld : std_logic;
+signal grld1, grld2, grld3, grld4 : std_logic;
+signal led1r, led2r, led3r, led4r : std_logic;
+signal switchreg : std_logic;
+signal swI : std_logic_vector(2 downto 0);
+signal clrledr : std_logic;
+
 
 
 component g10_mastermind_score is
@@ -125,10 +132,25 @@ Gate1: g10_mastermind_score port map (P1 => P1, P2 => P2, P3 => P3, P4 => P4, G1
 
 Gate2: register_4bit port map(clr => clr, clk => CLK, SR_LD => SR_LD, p => f, q => h); --score register
 Gate3: g10_comp4 port map(A => h, B => i, AeqB => SC_CMP); --score comparator
-Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); --1 of 4 guess registers
-Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); --check tmp
-Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
-Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
+
+--Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); 
+--Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); 
+--Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
+--Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
+--
+--Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); 
+--Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); 
+--Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
+--Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
+--
+--Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); 
+--Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); 
+--Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
+--Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
+
+
+
+
 --gate8: RandomPatternGenerator port map (P_Generated => P_Generated, clk => clk, EXT_PATTERN => pattern, Start => Start,
 --													RP_LD => rpld, TC_EN2 => tce2, TC_RST2 => tcr2, TM_ADDRN => addrn);	
 

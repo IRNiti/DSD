@@ -70,14 +70,19 @@ begin
 						TM_ADDR3 <= "000";
 						TM_ADDR4 <= std_logic_vector((unsigned(TM_ADDR4) + "1"));
 		--				TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
+						
+					if ((TM_ADDR4 = "100") and (TM_ADDR3 = "101") and (TM_ADDR2 = "101") and (TM_ADDR1 = "101")) then
+						TM_ADDR4 <= "000";
+						TM_ADDR3 <= "000";
 						TM_ADDR1 <= "000";
+						
 						
 							
 			--				TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 							
 						--TM_ADDR_Int <= "000000000000";	
 					--	else TC_LAST <= '0';
-							
+								end if;
 							end if;
 						end if;
 					end if;
