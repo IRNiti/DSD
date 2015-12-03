@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="P_generated" source="Pin Planner" >
+		</pin>
+		<pin name="Start" source="Pin Planner" >
+		</pin>
+		<pin name="Ready" source="Pin Planner" >
+		</pin>
+		<pin name="switch_LED" source="Pin Planner" >
+		</pin>
+		<pin name="LED_value[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LED_value[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LED_value[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LED_value[0]" source="Pin Planner" >
+		</pin>
+		<pin name="switch_REG[1]" source="Pin Planner" >
+		</pin>
+		<pin name="switch_REG[0]" source="Pin Planner" >
+		</pin>
+		<pin name="mode" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[6]" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[5]" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[4]" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LED1[0]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[6]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[5]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[4]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LED2[0]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[6]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[5]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[4]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LED3[0]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[6]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[5]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[4]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[3]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[2]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[1]" source="Pin Planner" >
+		</pin>
+		<pin name="LED4[0]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

@@ -18,7 +18,7 @@ begin
 register12 : process (clr, clk, p, RP_LD)
 begin 
 
- if clr = '1' then
+ if clr = '0' then
 	q <= "000000000000";
  elsif rising_edge(clk) then 
 	if (RP_LD = '1') then 

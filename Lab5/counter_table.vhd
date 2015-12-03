@@ -18,6 +18,7 @@ signal last: std_logic;
 signal TM : std_logic_vector(4095 downto 0);
 signal TM_ADDR_Int : std_logic_vector (11 downto 0);
 signal Q_value : std_logic_vector (11 downto 0);
+signal tcr2 : std_logic;
 begin
 
 
@@ -69,13 +70,9 @@ begin
 						TM_ADDR3 <= "000";
 						TM_ADDR4 <= std_logic_vector((unsigned(TM_ADDR4) + "1"));
 		--				TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
-				
-						if (unsigned(TM_ADDR_Int) = "101101101101") then 
-							last <= '1';
-							TM_ADDR1 <= "101";
-							TM_ADDR2 <= "101";
-							TM_ADDR3 <= "101";
-							TM_ADDR4 <= "101";
+						TM_ADDR1 <= "000";
+						
+							
 			--				TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 							
 						--TM_ADDR_Int <= "000000000000";	
@@ -87,12 +84,12 @@ begin
 				end if;			
 			end if;
 		end if;
-	end if;
 	
 	TC_LAST <= last;
 	TM_ADDR_Int <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 	Q_value <= TM_ADDR4 & TM_ADDR3 & TM_ADDR2 & TM_ADDR1;
 	TM_ADDRN <= TM_ADDR_Int;	
+
 	
   end process;
   

@@ -20,7 +20,7 @@ signal addr, addrn, pattern : std_logic_vector(11 downto 0); --vectors
 signal tmi2,tme2,tce2,tcr2,sol2,tmout2, last2 : std_logic; --counter table
 signal rpld : std_logic;
 
-type state_type is (A,B);
+type state_type is (A,B,C);
 signal y_present : state_type;
 
 
@@ -58,12 +58,17 @@ begin
 --													TM_ADDR => addr, TM_OUT => tmout);
 gate1: counter_table port map (TC_EN2 => tce2, TC_RST2 => tcr2, CLK => clk, TC_LAST => last2,
 													TM_ADDRN => addrn);
-gate2: register_12bit port map (clr => Start, clk => clk, RP_LD => RP_LD, p => addrn, q => EXT_PATTERN);
+gate2: register_12bit port map (clr => start, clk => clk, RP_LD => RP_LD, p => addrn, q => EXT_PATTERN);
+
+rpld <= '1';
 
 randomPattern: process (clk, P_generatedN, Start, y_present, RP_LD)
 
 
+
 begin
+
+
 
 if (Start = '0') then
 	tcr2 <= '1'; 
@@ -73,17 +78,25 @@ if (Start = '0') then
 		
 		case y_present is
 			when A =>
-				if (P_generatedN = '1') then
+				if (Start = '1') then
 					tcr2 <= '0';
-					tce2 <= '1';
 					
 					y_present <= B;
 				end if;
-			
-			when B => 
+				
+			when B =>
 				if (P_generatedN = '0') then
+					
+					tce2 <= '1';
+					
+					y_present <= C;
+				end if;
+			
+			when C => 
+				if (P_generatedN = '1') then
 					tce2 <= '0';
-					rpld <= '1';
+					
+				-- rpld <= '1';
 				end if;			
 				
 			end case;

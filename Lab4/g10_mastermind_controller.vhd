@@ -1,143 +1,145 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
-entity g10_mastermind_controller is
-port (SC_CMP : in std_logic;
-		TC_LAST : in std_logic;
-		START : in std_logic;
-		READY : in std_logic;
-		CLK : in std_logic;
-		
-		SR_SEL : out std_logic;
-		P_SEL : out std_logic;
-		GR_SEL : out std_logic;
-		GR_LD : out std_logic;
-		SR_LD : out std_logic;
-		
-		RP_LD : out std_logic; -- < new --
-		--RP_SEL : out std_logic;
-		
-		TM_IN : out std_logic;
-		TM_EN : out std_logic;
-		TC_EN : out std_logic;
-		TC_RST : out std_logic;
-		SOLVED : out std_logic);
-end g10_mastermind_controller;
-
-architecture behavior of g10_mastermind_controller is
-
-TYPE state_type is (A,B,C,D,E,F,G,H,I,J);
-signal y_present : state_type;
-signal TM_ADDR : std_logic_vector(11 downto 0);
-
-begin 
-
-controller : process (CLK, READY, START,SC_CMP, TC_LAST)
-
-begin
-RP_LD <= '1';
-
-
-	if (START = '0') then
-		y_present <= A;
-		
-	elsif(rising_edge(CLK)) then 
-
-		Case y_present is 
-
-			when A =>
-				SOLVED <= '0';
-				if (START = '1') then 
-					y_present <= B;
-				end if;	
-				
-			when B =>
-				TC_RST <= '1';
-				y_present <= C;
-				
-			when C =>
-				TC_RST <= '0';
-				TC_EN <= '1';
-				TM_EN <= '1';
-				TM_IN <= '1';
-				if (TC_LAST = '1') then
-					y_present <= D;
-				end if;
-			
-			when D => 
-				GR_SEL <= '1';
-				P_SEL <= '0';
-				GR_LD <= '1';
-				SR_SEL <= '1';
-				TC_RST <= '1';
-				if (READY = '0') then
-					y_present <= D;
-				elsif (READY = '1') then 
-					y_present <= E;
-				end if;
-			 
-			 
-			when E =>
-				SR_LD <= '1';
-				if (SC_CMP = '1') then
-					y_present <= F;
-				elsif (SC_CMP = '0') then
-					y_present <= G;
-				end if;
-					
-			when F =>
-				SOLVED <= '1';
-				if (START = '0') then 
-					y_present <= A;
-				end if;
-					
-			when G =>
-				SR_SEL <= '0';
-				SR_LD <= '0';
-				P_SEL <= '1';
-				GR_LD <= '0';
-				TM_EN <= '0';
-				TC_EN <= '1';
-				TC_RST <= '0';
-				if (TC_LAST = '1') then
-					y_present <= J;
-				elsif((TC_LAST = '0') and (SC_CMP = '1')) then
-					TC_EN <= '0';
-					y_present <= H;
-				elsif((TC_LAST = '0') and (SC_CMP = '0')) then
-					TC_EN <= '0';
-					y_present <= I;
-				end if;
-				
-			when H => 
-				TM_IN <= '1';
-				TM_EN <= '1';
-				y_present <= G;
-				
-			when I => 
-				TM_IN <= '0';
-				TM_EN <= '1';
-				y_present <= G;
-				
-			when J =>
-				SR_SEL <= '1';
-				P_SEL <= '0';
-				GR_SEL <= '0';
-				SR_LD <= '1';
-				GR_LD <= '1';
-				TC_RST <= '1';
---				if(READY = '0') then
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--
+--entity g10_mastermind_controller is
+--port (SC_CMP : in std_logic;
+--		TC_LAST : in std_logic;
+--		START : in std_logic;
+--		READY : in std_logic;
+--		CLK : in std_logic;
+--		
+--		SR_SEL : out std_logic;
+--		P_SEL : out std_logic;
+--		GR_SEL : out std_logic (1 downto 0);
+--		GR_LD : out std_logic;
+--		SR_LD : out std_logic;
+--		
+--		RP_LD : out std_logic; -- < new --
+--		--RP_SEL : out std_logic;
+--		
+--		GR_LD1, GR_LD2, GR_LD3,GR_LD4, : out std_logic;
+--		TM_IN : out std_logic;
+--		TM_EN : out std_logic;
+--		TC_EN : out std_logic;
+--		TC_RST : out std_logic;
+--		SOLVED : out std_logic);
+--end g10_mastermind_controller;
+--
+--architecture behavior of g10_mastermind_controller is
+--
+--TYPE state_type is (A,B,C,D,E,F,G,H,I,J);
+--signal y_present : state_type;
+--signal TM_ADDR : std_logic_vector(11 downto 0);
+--
+--begin 
+--
+--controller : process (CLK, READY, START,SC_CMP, TC_LAST)
+--
+--begin
+--RP_LD <= '1';
+--
+--
+--
+--	if (START = '0') then
+--		y_present <= A;
+--		
+--	elsif(rising_edge(CLK)) then 
+--
+--		Case y_present is 
+--
+--			when A =>
+--				SOLVED <= '0';
+--				if (START = '1') then 
+--					y_present <= B;
+--				end if;	
+--				
+--			when B =>
+--				TC_RST <= '1';
+--				y_present <= C;
+--				
+--			when C =>
+--				TC_RST <= '0';
+--				TC_EN <= '1';
+--				TM_EN <= '1';
+--				TM_IN <= '1';
+--				if (TC_LAST = '1') then
+--					y_present <= D;
+--				end if;
+--			
+--			when D => 
+--				GR_SEL <= '1';
+--				P_SEL <= '0';
+--				GR_LD <= '1';
+--				SR_SEL <= '1';
+--				TC_RST <= '1';
+--				if (READY = '0') then
+--					y_present <= D;
+--				elsif (READY = '1') then 
+--					y_present <= E;
+--				end if;
+--			 
+--			 
+--			when E =>
+--				SR_LD <= '1';
+--				if (SC_CMP = '1') then
+--					y_present <= F;
+--				elsif (SC_CMP = '0') then
+--					y_present <= G;
+--				end if;
+--					
+--			when F =>
+--				SOLVED <= '1';
+--				if (START = '0') then 
+--					y_present <= A;
+--				end if;
+--					
+--			when G =>
+--				SR_SEL <= '0';
+--				SR_LD <= '0';
+--				P_SEL <= '1';
+--				GR_LD <= '0';
+--				TM_EN <= '0';
+--				TC_EN <= '1';
+--				TC_RST <= '0';
+--				if (TC_LAST = '1') then
+--					y_present <= J;
+--				elsif((TC_LAST = '0') and (SC_CMP = '1')) then
+--					TC_EN <= '0';
 --					y_present <= H;
-				if (SC_CMP = '1') then
-					y_present <= F;
-				elsif (SC_CMP = '0') then
-					y_present <= G;
-				end if;
-				
-		End case;
-	End if;
-End process;
-
-end behavior;
-
+--				elsif((TC_LAST = '0') and (SC_CMP = '0')) then
+--					TC_EN <= '0';
+--					y_present <= I;
+--				end if;
+--				
+--			when H => 
+--				TM_IN <= '1';
+--				TM_EN <= '1';
+--				y_present <= G;
+--				
+--			when I => 
+--				TM_IN <= '0';
+--				TM_EN <= '1';
+--				y_present <= G;
+--				
+--			when J =>
+--				SR_SEL <= '1';
+--				P_SEL <= '0';
+--				GR_SEL <= '0';
+--				SR_LD <= '1';
+--				GR_LD <= '1';
+--				TC_RST <= '1';
+----				if(READY = '0') then
+----					y_present <= H;
+--				if (SC_CMP = '1') then
+--					y_present <= F;
+--				elsif (SC_CMP = '0') then
+--					y_present <= G;
+--				end if;
+--				
+--		End case;
+--	End if;
+--End process;
+--
+--end behavior;
+--
