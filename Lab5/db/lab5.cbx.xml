@@ -1,5 +1,20 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="lab5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31" CBX_FILE_NAME="add_sub_8hf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27" CBX_FILE_NAME="add_sub_8hf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28" CBX_FILE_NAME="add_sub_8hf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29" CBX_FILE_NAME="add_sub_8hf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30" CBX_FILE_NAME="add_sub_8hf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34" CBX_FILE_NAME="add_sub_r4f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5" CBX_FILE_NAME="decode_7jg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MASTERMIND|g10_possibility_table:gate3|altsyncram:TM[0]__1" CBX_FILE_NAME="altsyncram_jdi1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
