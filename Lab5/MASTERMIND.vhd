@@ -11,7 +11,7 @@ port (clk : in std_logic;
 		switch_LED : in std_logic;
 				
 		mode : in std_logic;									  --switches
-		sw : in std_logic_vector (3 downto 0); --for 15 downto 0, bits  = code, in 7-seg; only actually 3 bits
+		sw : in std_logic_vector (2 downto 0); --for 15 downto 0, bits  = code, in 7-seg; only actually 3 bits
 		modify_G : in std_logic;
 		
 		segment1 : out std_logic_vector(6 downto 0);  --displaying_LED's
@@ -140,10 +140,10 @@ gate1: g10_mastermind_controller port map (SC_CMP => cmp, TC_LAST => last, START
 gate2: g10_mastermind_datapath port map (G => gg, EXT_PATTERN => pattern, TM_ADDR => addr, SC_CMP => cmp, CLK => clk, 
 								clr => Start, SR_SEL => srs, P_SEL => ps, GR_SEL => grs, SR_LD => srld, 
 								sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1, GR_LD2 => grld2,
-								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, sw => swI, 
+								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, sw => sw, 
 								RippleBlank_In_state => ripple, segment1 => segment1,  segment2 => segment2,  segment3 => segment3,
 								segment4 => segment4);
-swI <= sw(3 downto 1);
+--swI <= sw(3 downto 1);
 
 gate3: g10_possibility_table port map (TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, CLK => clk, TC_LAST => last,
 													TM_ADDR => addr, TM_OUT => tmout);

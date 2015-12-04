@@ -41,6 +41,8 @@ case RippleBlank_In_state is
 					state2 <= '0';
 	when '1' => state1 <= '1';
 					state2 <= '0';
+	when others => state1 <= '0';
+						state2 <= '0';
 end case;
 
 end process;

@@ -97,6 +97,15 @@ if (mode = '1') then --user mode
 				if (switch_LED = '0') then 
 					y_present <= g;
 				end if;
+				
+				if (modify_G = '0') then 
+					GR_LD1 <= '0';
+					GR_LD2 <= '0';
+					GR_LD3 <= '0';
+					GR_LD4 <= '0';
+					y_present <= j;
+				end if;
+				
 			when g => 
 				sw1_LD <= '0';
 				sw2_LD <= '1';
@@ -105,6 +114,14 @@ if (mode = '1') then --user mode
 				
 				if (switch_LED = '0') then 
 					y_present <= h;
+				end if;
+				
+				if (modify_G = '0') then 
+					GR_LD1 <= '0';
+					GR_LD2 <= '0';
+					GR_LD3 <= '0';
+					GR_LD4 <= '0';
+					y_present <= j;
 				end if;
 			
 			when h => 
@@ -115,6 +132,14 @@ if (mode = '1') then --user mode
 				
 				if (switch_LED = '0') then 
 					y_present <= i;
+				end if;
+				
+				if (modify_G = '0') then 
+					GR_LD1 <= '0';
+					GR_LD2 <= '0';
+					GR_LD3 <= '0';
+					GR_LD4 <= '0';
+					y_present <= j;
 				end if;
 			
 			when i => 
@@ -143,7 +168,7 @@ if (mode = '1') then --user mode
 				
 			when l =>
 				SR_LD <= '0';
-				y_present <= n;
+				y_present <= m;
 			when m =>
 				switch_REG <= '1';
 				RippleBlankInState <= '1';
