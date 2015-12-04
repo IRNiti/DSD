@@ -11,6 +11,6 @@ architecture behaviour of g10_3to4_decoder is
 
 begin
 
-	output <= '1'&input;
+	output <= '0'&input;
 	
 end behaviour;

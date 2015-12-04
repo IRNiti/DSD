@@ -2049,7 +2049,7 @@ input[2] => output[2].DATAIN
 output[0] <= input[0].DB_MAX_OUTPUT_PORT_TYPE
 output[1] <= input[1].DB_MAX_OUTPUT_PORT_TYPE
 output[2] <= input[2].DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= <GND>
+output[3] <= <VCC>
 
 
 |MASTERMIND|g10_mastermind_datapath:gate2|g10_3to4_decoder:gate13
@@ -2059,7 +2059,7 @@ input[2] => output[2].DATAIN
 output[0] <= input[0].DB_MAX_OUTPUT_PORT_TYPE
 output[1] <= input[1].DB_MAX_OUTPUT_PORT_TYPE
 output[2] <= input[2].DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= <GND>
+output[3] <= <VCC>
 
 
 |MASTERMIND|g10_mastermind_datapath:gate2|g10_3to4_decoder:gate14
@@ -2069,7 +2069,7 @@ input[2] => output[2].DATAIN
 output[0] <= input[0].DB_MAX_OUTPUT_PORT_TYPE
 output[1] <= input[1].DB_MAX_OUTPUT_PORT_TYPE
 output[2] <= input[2].DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= <GND>
+output[3] <= <VCC>
 
 
 |MASTERMIND|g10_mastermind_datapath:gate2|g10_3to4_decoder:gate15
@@ -2079,7 +2079,7 @@ input[2] => output[2].DATAIN
 output[0] <= input[0].DB_MAX_OUTPUT_PORT_TYPE
 output[1] <= input[1].DB_MAX_OUTPUT_PORT_TYPE
 output[2] <= input[2].DB_MAX_OUTPUT_PORT_TYPE
-output[3] <= <GND>
+output[3] <= <VCC>
 
 
 |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16

@@ -1,5 +1,5 @@
 Fitter report for lab5
-Fri Dec 04 03:27:07 2015
+Fri Dec 04 03:49:33 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 04 03:27:07 2015           ;
+; Fitter Status                      ; Successful - Fri Dec 04 03:49:33 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
 ; Top-level Entity Name              ; MASTERMIND                                      ;
@@ -196,8 +196,8 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 17                    ;
-;     -- 3 input functions                    ; 33                    ;
-;     -- <=2 input functions                  ; 6                     ;
+;     -- 3 input functions                    ; 25                    ;
+;     -- <=2 input functions                  ; 14                    ;
 ;     -- Register only                        ; 12                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
@@ -227,8 +227,8 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 1%          ;
 ; Maximum fan-out                             ; 42                    ;
 ; Highest non-global fan-out                  ; 27                    ;
-; Total fan-out                               ; 376                   ;
-; Average fan-out                             ; 2.52                  ;
+; Total fan-out                               ; 364                   ;
+; Average fan-out                             ; 2.51                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -248,8 +248,8 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 17                   ; 0                              ;
-;     -- 3 input functions                    ; 33                   ; 0                              ;
-;     -- <=2 input functions                  ; 6                    ; 0                              ;
+;     -- 3 input functions                    ; 25                   ; 0                              ;
+;     -- <=2 input functions                  ; 14                   ; 0                              ;
 ;     -- Register only                        ; 12                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
@@ -275,8 +275,8 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 376                  ; 0                              ;
-;     -- Registered Connections               ; 177                  ; 0                              ;
+;     -- Total Connections                    ; 364                  ; 0                              ;
+;     -- Registered Connections               ; 169                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -968,8 +968,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sw[3]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; modify_G    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; mode        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; sw[1]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; sw[2]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; sw[1]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; switch_LED  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; Ready       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; P_generated ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -984,72 +984,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sw[0]                                                          ;                   ;         ;
 ; clk                                                            ;                   ;         ;
 ; Start                                                          ;                   ;         ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ; 1                 ; 6       ;
-;      - g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|RippleBlankInState~0    ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|y_present.a~0           ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|y_present.d~2           ; 1                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ; 0                 ; 6       ;
+;      - g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|RippleBlankInState~0    ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.a~0           ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.m~1           ; 0                 ; 6       ;
 ; sw[3]                                                          ;                   ;         ;
 ; modify_G                                                       ;                   ;         ;
 ; mode                                                           ;                   ;         ;
-; sw[1]                                                          ;                   ;         ;
 ; sw[2]                                                          ;                   ;         ;
+; sw[1]                                                          ;                   ;         ;
 ; switch_LED                                                     ;                   ;         ;
 ;      - g10_mastermind_controller:gate1|Selector4~0             ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|Selector8~0             ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|Selector5~0             ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|Selector5~1             ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|y_present.h~0           ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|y_present.d~4           ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|y_present.d~7           ; 1                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.m~3           ; 1                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.m~6           ; 1                 ; 6       ;
 ; Ready                                                          ;                   ;         ;
-;      - g10_mastermind_controller:gate1|y_present.d~2           ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.m~1           ; 0                 ; 6       ;
 ; P_generated                                                    ;                   ;         ;
-;      - g10_mastermind_controller:gate1|y_present.d~3           ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.m~2           ; 0                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|Selector2~0             ; 0                 ; 6       ;
 +----------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                  ;
-+------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                 ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Start                                                ; PIN_R22           ; 27      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk                                                  ; PIN_L1            ; 42      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; g10_mastermind_controller:gate1|GR_LD1               ; LCFF_X1_Y13_N27   ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|RippleBlankInState~0 ; LCCOMB_X3_Y13_N28 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|sw1_LD               ; LCFF_X1_Y13_N1    ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|sw2_LD               ; LCFF_X1_Y13_N3    ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|sw3_LD               ; LCFF_X1_Y13_N13   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|sw4_LD               ; LCFF_X1_Y13_N23   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|y_present.a~0        ; LCCOMB_X3_Y13_N22 ; 13      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; g10_mastermind_controller:gate1|y_present.d~8        ; LCCOMB_X2_Y13_N16 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|y_present.h~0        ; LCCOMB_X3_Y13_N10 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mode                                                 ; PIN_L22           ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                   ;
++------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                 ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Start                                                ; PIN_R22            ; 27      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk                                                  ; PIN_L1             ; 42      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; g10_mastermind_controller:gate1|GR_LD1               ; LCFF_X1_Y13_N19    ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|RippleBlankInState~0 ; LCCOMB_X1_Y13_N2   ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|sw1_LD               ; LCFF_X1_Y13_N17    ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|sw2_LD               ; LCFF_X1_Y13_N29    ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|sw3_LD               ; LCFF_X1_Y13_N23    ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|sw4_LD               ; LCFF_X1_Y13_N1     ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|y_present.a~0        ; LCCOMB_X1_Y13_N26  ; 13      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; g10_mastermind_controller:gate1|y_present.h~0        ; LCCOMB_X18_Y13_N28 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|y_present.m~7        ; LCCOMB_X18_Y13_N18 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mode                                                 ; PIN_L22            ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1058,7 +1058,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                          ; Location          ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
 ; clk                                           ; PIN_L1            ; 42      ; Global Clock         ; GCLK2            ; --                        ;
-; g10_mastermind_controller:gate1|y_present.a~0 ; LCCOMB_X3_Y13_N22 ; 13      ; Global Clock         ; GCLK1            ; --                        ;
+; g10_mastermind_controller:gate1|y_present.a~0 ; LCCOMB_X1_Y13_N26 ; 13      ; Global Clock         ; GCLK1            ; --                        ;
 +-----------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1073,25 +1073,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modify_G                                                                                 ; 8       ;
 ; switch_LED                                                                               ; 7       ;
 ; g10_mastermind_controller:gate1|y_present.i                                              ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1]                                  ; 7       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0]                                  ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2]                                  ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1]                                  ; 7       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1]                                  ; 7       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0]                                  ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2]                                  ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]                                   ; 7       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1]                                  ; 7       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]                                   ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]                                   ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]                                   ; 7       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]                                   ; 7       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]                                   ; 7       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]                                   ; 7       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]                                   ; 7       ;
 ; g10_mastermind_controller:gate1|y_present.h                                              ; 6       ;
-; g10_mastermind_controller:gate1|y_present.d~8                                            ; 5       ;
+; g10_mastermind_controller:gate1|y_present.m~7                                            ; 5       ;
 ; g10_mastermind_controller:gate1|y_present.d                                              ; 5       ;
-; g10_mastermind_controller:gate1|y_present.d~0                                            ; 5       ;
+; g10_mastermind_controller:gate1|y_present.m~0                                            ; 5       ;
 ; g10_mastermind_controller:gate1|RippleBlankInState~0                                     ; 5       ;
-; sw[2]                                                                                    ; 4       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2]                                  ; 5       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2]                                  ; 5       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]                                   ; 5       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]                                   ; 5       ;
 ; sw[1]                                                                                    ; 4       ;
+; sw[2]                                                                                    ; 4       ;
 ; sw[3]                                                                                    ; 4       ;
 ; g10_mastermind_controller:gate1|y_present.l                                              ; 4       ;
 ; g10_mastermind_controller:gate1|y_present.k                                              ; 4       ;
@@ -1112,17 +1112,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g10_mastermind_controller:gate1|y_present.a~feeder                                       ; 1       ;
 ; Ready                                                                                    ; 1       ;
 ; g10_mastermind_controller:gate1|y_present.b~0                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~10                                           ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~8                                            ; 1       ;
 ; g10_mastermind_controller:gate1|Selector2~0                                              ; 1       ;
 ; g10_mastermind_controller:gate1|Selector13~0                                             ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~9                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~7                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~6                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~5                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~4                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~3                                            ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~2                                            ; 1       ;
 ; g10_mastermind_controller:gate1|y_present.d~1                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~6                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~5                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~4                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~3                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~2                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.m~1                                            ; 1       ;
+; g10_mastermind_controller:gate1|y_present.d~0                                            ; 1       ;
 ; g10_mastermind_controller:gate1|Selector5~1                                              ; 1       ;
 ; g10_mastermind_controller:gate1|Selector5~0                                              ; 1       ;
 ; g10_mastermind_controller:gate1|Selector19~0                                             ; 1       ;
@@ -1133,41 +1133,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g10_mastermind_controller:gate1|Selector4~0                                              ; 1       ;
 ; g10_mastermind_controller:gate1|Selector16~0                                             ; 1       ;
 ; g10_mastermind_controller:gate1|Selector20~0                                             ; 1       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]                                   ; 1       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]                                   ; 1       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]                                   ; 1       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]                                   ; 1       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]                                   ; 1       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]                                   ; 1       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]                                   ; 1       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux0~0 ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux1~0 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux6~1 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux2~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux3~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux4~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux5~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux6~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux0~0 ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux1~0 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux6~1 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux2~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux3~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux4~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux5~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux6~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux0~0 ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux1~0 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux6~1 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux2~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux3~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux4~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux5~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux6~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux0~0 ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux1~0 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux6~1 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux2~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux3~0 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux4~0 ; 1       ;
@@ -1181,14 +1181,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 96 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 1 / 2,100 ( < 1 % )   ;
-; C4 interconnects            ; 51 / 36,000 ( < 1 % ) ;
-; Direct links                ; 34 / 54,004 ( < 1 % ) ;
+; Block interconnects         ; 94 / 54,004 ( < 1 % ) ;
+; C16 interconnects           ; 2 / 2,100 ( < 1 % )   ;
+; C4 interconnects            ; 55 / 36,000 ( < 1 % ) ;
+; Direct links                ; 21 / 54,004 ( < 1 % ) ;
 ; Global clocks               ; 2 / 16 ( 13 % )       ;
-; Local interconnects         ; 33 / 18,752 ( < 1 % ) ;
-; R24 interconnects           ; 14 / 1,900 ( < 1 % )  ;
-; R4 interconnects            ; 22 / 46,920 ( < 1 % ) ;
+; Local interconnects         ; 37 / 18,752 ( < 1 % ) ;
+; R24 interconnects           ; 16 / 1,900 ( < 1 % )  ;
+; R4 interconnects            ; 47 / 46,920 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
@@ -1204,13 +1204,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
 ; 7                                          ; 1                           ;
-; 8                                          ; 1                           ;
-; 9                                          ; 1                           ;
-; 10                                         ; 3                           ;
-; 11                                         ; 0                           ;
+; 8                                          ; 0                           ;
+; 9                                          ; 0                           ;
+; 10                                         ; 5                           ;
+; 11                                         ; 1                           ;
 ; 12                                         ; 0                           ;
 ; 13                                         ; 0                           ;
-; 14                                         ; 1                           ;
+; 14                                         ; 0                           ;
 ; 15                                         ; 0                           ;
 ; 16                                         ; 0                           ;
 +--------------------------------------------+-----------------------------+
@@ -1219,11 +1219,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 3.00) ; Number of LABs  (Total = 7) ;
+; LAB-wide Signals  (Average = 2.57) ; Number of LABs  (Total = 7) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 7                           ;
+; 1 Async. clear                     ; 6                           ;
 ; 1 Clock                            ; 7                           ;
-; 1 Clock enable                     ; 4                           ;
+; 1 Clock enable                     ; 2                           ;
 ; 2 Clock enables                    ; 3                           ;
 +------------------------------------+-----------------------------+
 
@@ -1231,7 +1231,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 15.00) ; Number of LABs  (Total = 7) ;
+; Number of Signals Sourced  (Average = 14.43) ; Number of LABs  (Total = 7) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -1246,22 +1246,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 10                                           ; 1                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
-; 14                                           ; 2                           ;
-; 15                                           ; 2                           ;
+; 13                                           ; 2                           ;
+; 14                                           ; 1                           ;
+; 15                                           ; 0                           ;
 ; 16                                           ; 1                           ;
-; 17                                           ; 0                           ;
-; 18                                           ; 0                           ;
-; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
-; 21                                           ; 1                           ;
+; 17                                           ; 1                           ;
+; 18                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.43) ; Number of LABs  (Total = 7) ;
+; Number of Signals Sourced Out  (Average = 7.14) ; Number of LABs  (Total = 7) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
@@ -1270,18 +1267,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 1                           ;
-; 7                                               ; 5                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 0                           ;
-; 11                                              ; 1                           ;
+; 7                                               ; 4                           ;
+; 8                                               ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.43) ; Number of LABs  (Total = 7) ;
+; Number of Distinct Inputs  (Average = 9.29) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -1293,8 +1287,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 3                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 10                                          ; 1                           ;
+; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
@@ -1374,7 +1368,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 28 output pins without output pin load capacitance assignment
     Info (306007): Pin "segment1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1408,14 +1402,14 @@ Warning (306006): Found 28 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Benjamin/Desktop/DSD/Lab5/output_files/lab5.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 627 megabytes
-    Info: Processing ended: Fri Dec 04 03:27:07 2015
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Fri Dec 04 03:49:33 2015
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+
