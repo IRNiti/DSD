@@ -9,7 +9,6 @@ port (G : in std_logic_vector(11 downto 0);
 		SC_CMP : out std_logic;
 		CLK : in std_logic;
 		clr : in std_logic;
-		clr_LED_R : in std_logic;
 				
 		--RP_LD : in std_logic; 
 		
@@ -17,12 +16,11 @@ port (G : in std_logic_vector(11 downto 0);
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : in std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : in std_logic;
 		switch_REG : in std_logic;
-		LED1_R, LED2_R, LED3_R, LED4_R : in std_logic;
 		
 		
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
-		GR_SEL : in std_logic_vector (1 downto 0);
+		GR_SEL : in std_logic;
 		--GR_LD : in std_logic;
 		SR_LD : in std_logic);
 		
@@ -57,8 +55,11 @@ signal led1r, led2r, led3r, led4r : std_logic;
 signal switchreg : std_logic;
 signal swI : std_logic_vector(2 downto 0);
 signal clrledr : std_logic;
-
-
+signal sw1,sw2,sw3,sw4 : std_logic;
+signal S1,S2,S3,S4 : std_logic_vector (2 downto 0);
+signal sr1,sr2,sr3,sr4 : std_logic_vector (2 downto 0);
+signal led1,led2,led3,led4 : std_logic_vector (2 downto 0);
+signal LD1mux, LD2mux, LD3mux, LD4mux : std_logic_vector (2 downto 0);
 
 component g10_mastermind_score is
 	port (P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
@@ -90,7 +91,7 @@ end component;
 component register_3bit is 
 port (clr : in std_logic;
 		clk : in std_logic;
-		GR_LD : in std_logic;
+		R_LD : in std_logic;
 		p : in std_logic_vector (2 downto 0);
 		q : out std_logic_vector (2 downto 0));
 end component;
@@ -122,31 +123,24 @@ EXT_PATTERN2 <= EXT_PATTERN(5 downto 3);
 EXT_PATTERN3 <= EXT_PATTERN(8 downto 6);
 EXT_PATTERN4 <= EXT_PATTERN(11 downto 9);
 
-ADDR1 <= TM_ADDR (2 downto 0);
-ADDR2 <= TM_ADDR (5 downto 3);
-ADDR3 <= TM_ADDR (8 downto 6);
-ADDR4 <= TM_ADDR (11 downto 9);
 
-Gate1: g10_mastermind_score port map (P1 => P1, P2 => P2, P3 => P3, P4 => P4, G1 => G1, G2 => G2, G3 => G3, G4 => G4,
-												exact_match_score => exact, color_match_score => color, score_code => f);
+Gate1: g10_mastermind_score port map (P1 => EXT_PATTERN1, P2 => EXT_PATTERN2, P3 => EXT_PATTERN3, P4 => EXT_PATTERN4, G1 => G1, 
+											G2 => G2, G3 => G3, G4 => G4,	exact_match_score => exact,
+											color_match_score => color, score_code => f);
 
 Gate2: register_4bit port map(clr => clr, clk => CLK, SR_LD => SR_LD, p => f, q => h); --score register
 Gate3: g10_comp4 port map(A => h, B => i, AeqB => SC_CMP); --score comparator
 
---Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); 
---Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); 
---Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
---Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
---
---Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); 
---Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); 
---Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
---Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
---
---Gate4: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD1, p => d1, q => G1); 
---Gate5: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD2, p => d2, q => G2); 
---Gate6: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD3, p => d3, q => G3);
---Gate7: register_3bit port map (clr => clr, clk => CLK, GR_LD => GR_LD4, p => d4, q => G4);
+Gate4: register_3bit port map (clr => clr, clk => CLK, R_LD => sw1_LD, p => sw, q => d1); 
+Gate5: register_3bit port map (clr => clr, clk => CLK, R_LD => sw2_LD, p => sw, q => d2); 
+Gate6: register_3bit port map (clr => clr, clk => CLK, R_LD => sw3_LD, p => sw, q => d3);
+Gate7: register_3bit port map (clr => clr, clk => CLK, R_LD => sw4_LD, p => sw, q => d4);
+
+Gate8: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD1, p => d1, q => G1); 
+Gate9: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD2, p => d2, q => G2); 
+Gate10: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD3, p => d3, q => G3);
+Gate11: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD4, p => d4, q => G4);
+
 
 
 
@@ -164,42 +158,20 @@ Gate3: g10_comp4 port map(A => h, B => i, AeqB => SC_CMP); --score comparator
 --GR4 <= d4;
 
 datapath: process (SR_SEL, P_SEL, SR_LD,ADDR1,ADDR2,ADDR3,ADDR4, EXT_PATTERN1, EXT_PATTERN2, 
-							EXT_PATTERN3, EXT_PATTERN4, exact, color, f)
+							EXT_PATTERN3, EXT_PATTERN4, exact, color, f, G1,G2,G3,G4,S1,S2,S3,S4)
 begin
 
-
-
-case SR_SEL is 
-	when '0' => i <= f;
-	when others => i <= "0001"; 
+case switch_REG is 
+	when '0' =>    sr1 <= G1;
+						sr2 <= G2;
+						sr3 <= G3;
+						sr4 <= G4;
+	when others => sr1 <= S1;
+						sr2 <= S2;
+						sr3 <= S3;
+						sr4 <= S4;
 end case;
 
-case GR_SEL is 
-	when "00" => d1 <= ADDR1;
-					d2 <= ADDR2;
-					d3 <= ADDR3;
-					d4 <= ADDR4;
-	when "01" => d1 <= sw;
-					 d2 <= sw;
-					 d3 <= sw;
-					 d4 <= sw;
-	
-	when others => d1 <= "000"; -- < use for user input. going to be "G".
-						d2 <= "000";
-						d3 <= "001";
-						d4 <= "001";
-end case;
-
-case P_SEL is 
-	when '0' =>    P1 <= EXT_PATTERN1;
-						P2 <= EXT_PATTERN2;
-						P3 <= EXT_PATTERN3;
-						P4 <= EXT_PATTERN4;
-	when others => P1 <= ADDR1;
-						P2 <= ADDR2;
-						P3 <= ADDR3;
-						P4 <= ADDR4;
-end case;
 
 
 end process;

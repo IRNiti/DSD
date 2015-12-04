@@ -1,5 +1,5 @@
 Fitter report for lab5
-Thu Dec 03 15:49:54 2015
+Thu Dec 03 21:34:16 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Dec 03 15:49:54 2015           ;
+; Fitter Status                      ; Successful - Thu Dec 03 21:34:16 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
 ; Top-level Entity Name              ; MASTERMIND                                      ;
@@ -305,17 +305,17 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; P_generated ; E9    ; 3        ; 13           ; 27           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; Ready       ; D16   ; 4        ; 42           ; 27           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; P_generated ; P17   ; 6        ; 50           ; 8            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Ready       ; A10   ; 3        ; 20           ; 27           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; Start       ; R22   ; 6        ; 50           ; 10           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; clk         ; L1    ; 2        ; 0            ; 13           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; mode        ; R13   ; 7        ; 37           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; modify_G    ; A10   ; 3        ; 20           ; 27           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; sw[0]       ; E20   ; 5        ; 50           ; 23           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; sw[1]       ; H8    ; 3        ; 7            ; 27           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; sw[2]       ; P17   ; 6        ; 50           ; 8            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; sw[3]       ; R2    ; 1        ; 0            ; 8            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; switch_LED  ; V15   ; 7        ; 46           ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; mode        ; D16   ; 4        ; 42           ; 27           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modify_G    ; R2    ; 1        ; 0            ; 8            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; sw[0]       ; V15   ; 7        ; 46           ; 0            ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; sw[1]       ; R13   ; 7        ; 37           ; 0            ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; sw[2]       ; E20   ; 5        ; 50           ; 23           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; sw[3]       ; H8    ; 3        ; 7            ; 27           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; switch_LED  ; E9    ; 3        ; 13           ; 27           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -385,7 +385,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; A7       ; 306        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A8       ; 304        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A9       ; 298        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A10      ; 293        ; 3        ; modify_G                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A10      ; 293        ; 3        ; Ready                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A11      ; 287        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A12      ; 283        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A13      ; 281        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -501,7 +501,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; D13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D14      ; 267        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 259        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D16      ; 255        ; 4        ; Ready                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D16      ; 255        ; 4        ; mode                                     ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D17      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; D18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D19      ; 240        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -516,7 +516,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; E6       ;            ;          ; VCCA_PLL3                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; E7       ; 316        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E8       ; 308        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; E9       ; 301        ; 3        ; P_generated                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E9       ; 301        ; 3        ; switch_LED                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E10      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E11      ; 288        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E12      ; 285        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -527,7 +527,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; E17      ;            ;          ; GND_PLL2                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E18      ; 243        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E19      ; 242        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E20      ; 234        ; 5        ; sw[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E20      ; 234        ; 5        ; sw[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E21      ; 227        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E22      ; 228        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F1       ; 22         ; 2        ; segment1[5]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -581,7 +581,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; H5       ; 18         ; 2        ; segment2[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; H6       ; 19         ; 2        ; segment2[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; H7       ; 318        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H8       ; 314        ; 3        ; sw[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H8       ; 314        ; 3        ; sw[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H9       ; 300        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H10      ; 299        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H11      ; 290        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -722,14 +722,14 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; P14      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P15      ; 193        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P16      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P17      ; 186        ; 6        ; sw[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P17      ; 186        ; 6        ; P_generated                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P18      ; 187        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P19      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P20      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; R1       ; 57         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R2       ; 58         ; 1        ; sw[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R2       ; 58         ; 1        ; modify_G                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R3       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R4       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; R5       ; 63         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -740,7 +740,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; R10      ; 108        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R11      ; 116        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R12      ; 134        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; R13      ; 145        ; 7        ; mode                                     ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; R13      ; 145        ; 7        ; sw[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; R14      ; 150        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R15      ; 151        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; R16      ; 155        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -808,7 +808,7 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; V12      ; 126        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; V13      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V14      ; 142        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V15      ; 158        ; 7        ; switch_LED                               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; V15      ; 158        ; 7        ; sw[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; V16      ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V18      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -916,13 +916,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+----------+---------------+---------------+-----------------------+-----+
 ; Name        ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +-------------+----------+---------------+---------------+-----------------------+-----+
-; switch_LED  ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; mode        ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; sw[0]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; sw[0]       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; sw[1]       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; sw[2]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; sw[3]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; modify_G    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; sw[3]       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; segment1[0] ; Output   ; --            ; --            ; --                    ; --  ;
 ; segment1[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; segment1[2] ; Output   ; --            ; --            ; --                    ; --  ;
@@ -951,10 +948,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segment4[4] ; Output   ; --            ; --            ; --                    ; --  ;
 ; segment4[5] ; Output   ; --            ; --            ; --                    ; --  ;
 ; segment4[6] ; Output   ; --            ; --            ; --                    ; --  ;
-; P_generated ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; P_generated ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; Start       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; clk         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; modify_G    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; Ready       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; switch_LED  ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; mode        ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 +-------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -963,17 +963,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
-; switch_LED          ;                   ;         ;
-; mode                ;                   ;         ;
 ; sw[0]               ;                   ;         ;
 ; sw[1]               ;                   ;         ;
 ; sw[2]               ;                   ;         ;
 ; sw[3]               ;                   ;         ;
-; modify_G            ;                   ;         ;
 ; P_generated         ;                   ;         ;
 ; Start               ;                   ;         ;
 ; clk                 ;                   ;         ;
+; modify_G            ;                   ;         ;
 ; Ready               ;                   ;         ;
+; switch_LED          ;                   ;         ;
+; mode                ;                   ;         ;
 +---------------------+-------------------+---------+
 
 
@@ -1039,15 +1039,15 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~nCSO~ is reserved at location C3
     Info (169125): Pin ~LVDS91p/nCEO~ is reserved at location W20
 Critical Warning (169085): No exact pin location assignment(s) for 9 pins of 39 total pins
-    Info (169086): Pin switch_LED not assigned to an exact location on the device
-    Info (169086): Pin mode not assigned to an exact location on the device
     Info (169086): Pin sw[0] not assigned to an exact location on the device
     Info (169086): Pin sw[1] not assigned to an exact location on the device
     Info (169086): Pin sw[2] not assigned to an exact location on the device
     Info (169086): Pin sw[3] not assigned to an exact location on the device
-    Info (169086): Pin modify_G not assigned to an exact location on the device
     Info (169086): Pin P_generated not assigned to an exact location on the device
+    Info (169086): Pin modify_G not assigned to an exact location on the device
     Info (169086): Pin Ready not assigned to an exact location on the device
+    Info (169086): Pin switch_LED not assigned to an exact location on the device
+    Info (169086): Pin mode not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab5.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1084,7 +1084,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 28 output pins without output pin load capacitance assignment
     Info (306007): Pin "segment1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1124,7 +1124,7 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/Users/Benjamin/Desktop/DSD/Lab5/output_files/lab5.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 630 megabytes
-    Info: Processing ended: Thu Dec 03 15:49:54 2015
+    Info: Processing ended: Thu Dec 03 21:34:16 2015
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

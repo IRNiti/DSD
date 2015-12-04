@@ -6,14 +6,18 @@ y_present.B 0 1 1
 y_present.C 1 0 1 
 
 State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present
-Name y_present.J y_present.I y_present.H y_present.G y_present.F y_present.E y_present.D y_present.C y_present.B y_present.A 
-y_present.A 0 0 0 0 0 0 0 0 0 0 
-y_present.B 0 0 0 0 0 0 0 0 1 1 
-y_present.C 0 0 0 0 0 0 0 1 0 1 
-y_present.D 0 0 0 0 0 0 1 0 0 1 
-y_present.E 0 0 0 0 0 1 0 0 0 1 
-y_present.F 0 0 0 0 1 0 0 0 0 1 
-y_present.G 0 0 0 1 0 0 0 0 0 1 
-y_present.H 0 0 1 0 0 0 0 0 0 1 
-y_present.I 0 1 0 0 0 0 0 0 0 1 
-y_present.J 1 0 0 0 0 0 0 0 0 1 
+Name y_present.n y_present.m y_present.l y_present.k y_present.j y_present.i y_present.h y_present.g y_present.f y_present.e y_present.d y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+y_present.b 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+y_present.c 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+y_present.d 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+y_present.e 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+y_present.f 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+y_present.g 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+y_present.h 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+y_present.i 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+y_present.j 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+y_present.k 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+y_present.l 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+y_present.m 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+y_present.n 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

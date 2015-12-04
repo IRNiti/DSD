@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "12/03/2015 15:50:02"
+-- DATE "12/03/2015 21:34:23"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -49,13 +49,10 @@ ENTITY 	MASTERMIND IS
 END MASTERMIND;
 
 -- Design Ports Information
--- switch_LED	=>  Location: PIN_V15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- mode	=>  Location: PIN_R13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- sw[0]	=>  Location: PIN_E20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- sw[1]	=>  Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- sw[2]	=>  Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- sw[3]	=>  Location: PIN_R2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- modify_G	=>  Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- sw[0]	=>  Location: PIN_V15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- sw[1]	=>  Location: PIN_R13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- sw[2]	=>  Location: PIN_E20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- sw[3]	=>  Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- segment1[0]	=>  Location: PIN_J2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 -- segment1[1]	=>  Location: PIN_J1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 -- segment1[2]	=>  Location: PIN_H2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
@@ -84,10 +81,13 @@ END MASTERMIND;
 -- segment4[4]	=>  Location: PIN_L8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 -- segment4[5]	=>  Location: PIN_F3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 -- segment4[6]	=>  Location: PIN_D4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
--- P_generated	=>  Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- P_generated	=>  Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- Start	=>  Location: PIN_R22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- clk	=>  Location: PIN_L1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- Ready	=>  Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- modify_G	=>  Location: PIN_R2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Ready	=>  Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- switch_LED	=>  Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- mode	=>  Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF MASTERMIND IS
@@ -132,56 +132,6 @@ ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
 -- Location: PIN_V15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\switch_LED~I\ : cycloneii_io
--- pragma translate_off
-GENERIC MAP (
-	input_async_reset => "none",
-	input_power_up => "low",
-	input_register_mode => "none",
-	input_sync_reset => "none",
-	oe_async_reset => "none",
-	oe_power_up => "low",
-	oe_register_mode => "none",
-	oe_sync_reset => "none",
-	operation_mode => "input",
-	output_async_reset => "none",
-	output_power_up => "low",
-	output_register_mode => "none",
-	output_sync_reset => "none")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	devoe => ww_devoe,
-	oe => GND,
-	padio => ww_switch_LED);
-
--- Location: PIN_R13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\mode~I\ : cycloneii_io
--- pragma translate_off
-GENERIC MAP (
-	input_async_reset => "none",
-	input_power_up => "low",
-	input_register_mode => "none",
-	input_sync_reset => "none",
-	oe_async_reset => "none",
-	oe_power_up => "low",
-	oe_register_mode => "none",
-	oe_sync_reset => "none",
-	operation_mode => "input",
-	output_async_reset => "none",
-	output_power_up => "low",
-	output_register_mode => "none",
-	output_sync_reset => "none")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	devoe => ww_devoe,
-	oe => GND,
-	padio => ww_mode);
-
--- Location: PIN_E20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \sw[0]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -206,7 +156,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_sw(0));
 
--- Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_R13,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \sw[1]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -231,7 +181,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_sw(1));
 
--- Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_E20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \sw[2]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -256,7 +206,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_sw(2));
 
--- Location: PIN_R2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \sw[3]~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -280,31 +230,6 @@ PORT MAP (
 	devoe => ww_devoe,
 	oe => GND,
 	padio => ww_sw(3));
-
--- Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\modify_G~I\ : cycloneii_io
--- pragma translate_off
-GENERIC MAP (
-	input_async_reset => "none",
-	input_power_up => "low",
-	input_register_mode => "none",
-	input_sync_reset => "none",
-	oe_async_reset => "none",
-	oe_power_up => "low",
-	oe_register_mode => "none",
-	oe_sync_reset => "none",
-	operation_mode => "input",
-	output_async_reset => "none",
-	output_power_up => "low",
-	output_register_mode => "none",
-	output_sync_reset => "none")
--- pragma translate_on
-PORT MAP (
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	devoe => ww_devoe,
-	oe => GND,
-	padio => ww_modify_G);
 
 -- Location: PIN_J2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \segment1[0]~I\ : cycloneii_io
@@ -1034,7 +959,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_segment4(6));
 
--- Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_P17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \P_generated~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -1109,7 +1034,32 @@ PORT MAP (
 	oe => GND,
 	padio => ww_clk);
 
--- Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_R2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\modify_G~I\ : cycloneii_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "input",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => GND,
+	padio => ww_modify_G);
+
+-- Location: PIN_A10,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Ready~I\ : cycloneii_io
 -- pragma translate_off
 GENERIC MAP (
@@ -1133,6 +1083,56 @@ PORT MAP (
 	devoe => ww_devoe,
 	oe => GND,
 	padio => ww_Ready);
+
+-- Location: PIN_E9,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\switch_LED~I\ : cycloneii_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "input",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => GND,
+	padio => ww_switch_LED);
+
+-- Location: PIN_D16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\mode~I\ : cycloneii_io
+-- pragma translate_off
+GENERIC MAP (
+	input_async_reset => "none",
+	input_power_up => "low",
+	input_register_mode => "none",
+	input_sync_reset => "none",
+	oe_async_reset => "none",
+	oe_power_up => "low",
+	oe_register_mode => "none",
+	oe_sync_reset => "none",
+	operation_mode => "input",
+	output_async_reset => "none",
+	output_power_up => "low",
+	output_register_mode => "none",
+	output_sync_reset => "none")
+-- pragma translate_on
+PORT MAP (
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	devoe => ww_devoe,
+	oe => GND,
+	padio => ww_mode);
 END structure;
 
 

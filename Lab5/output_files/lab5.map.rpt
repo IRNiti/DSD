@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5
-Thu Dec 03 15:49:48 2015
+Thu Dec 03 21:34:11 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,32 +16,31 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. State Machine - |MASTERMIND|RandomPatternGenerator:gate4|y_present
   9. State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present
  10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated
- 15. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1
- 16. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2
- 17. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3
- 18. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4
- 19. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5
- 20. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6
- 21. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7
- 22. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8
- 23. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
- 24. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
- 25. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
- 26. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
- 27. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
- 28. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
- 29. Parameter Settings for User Entity Instance: g10_possibility_table:gate3|altsyncram:TM[0]__1
- 30. altsyncram Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "RandomPatternGenerator:gate4|counter_table:gate1"
- 32. Port Connectivity Checks: "g10_possibility_table:gate3"
- 33. Port Connectivity Checks: "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1"
- 34. Port Connectivity Checks: "g10_mastermind_controller:gate1"
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for g10_possibility_table:gate3|altsyncram:TM[0]__1|altsyncram_jdi1:auto_generated
+ 14. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate1
+ 15. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate2
+ 16. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate3
+ 17. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate4
+ 18. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate5
+ 19. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate6
+ 20. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate7
+ 21. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_DECODE:Gate8
+ 22. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate27
+ 23. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate28
+ 24. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate29
+ 25. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate30
+ 26. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate31
+ 27. Parameter Settings for User Entity Instance: g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|LPM_ADD_SUB:Gate34
+ 28. Parameter Settings for User Entity Instance: g10_possibility_table:gate3|altsyncram:TM[0]__1
+ 29. altsyncram Parameter Settings by Entity Instance
+ 30. Port Connectivity Checks: "RandomPatternGenerator:gate4|counter_table:gate1"
+ 31. Port Connectivity Checks: "g10_possibility_table:gate3"
+ 32. Port Connectivity Checks: "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1"
+ 33. Port Connectivity Checks: "g10_mastermind_controller:gate1"
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -67,7 +66,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 03 15:49:48 2015           ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 03 21:34:10 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
 ; Top-level Entity Name              ; MASTERMIND                                      ;
@@ -195,6 +194,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ../Lab3/g10_num1s.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab3/g10_num1s.vhd                          ;         ;
 ; ../Lab4/register_12bit.vhd            ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_12bit.vhd                     ;         ;
 ; ../Lab4/register_4bit.vhd             ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_4bit.vhd                      ;         ;
+; ../Lab4/register_3bit.vhd             ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/register_3bit.vhd                      ;         ;
 ; ../Lab4/g10_mastermind_datapath.vhd   ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_datapath.vhd            ;         ;
 ; ../Lab4/g10_mastermind_controller.vhd ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_mastermind_controller.vhd          ;         ;
 ; ../Lab4/g10_comp4.vhd                 ; yes             ; User VHDL File               ; C:/Users/Benjamin/Desktop/DSD/Lab4/g10_comp4.vhd                          ;         ;
@@ -275,115 +275,57 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present                                                                                   ;
-+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-; Name        ; y_present.J ; y_present.I ; y_present.H ; y_present.G ; y_present.F ; y_present.E ; y_present.D ; y_present.C ; y_present.B ; y_present.A ;
-+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-; y_present.A ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
-; y_present.B ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
-; y_present.C ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
-; y_present.D ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
-; y_present.E ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
-; y_present.F ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; y_present.G ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; y_present.H ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; y_present.I ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; y_present.J ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |MASTERMIND|g10_mastermind_controller:gate1|y_present                                                                                                                                           ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; Name        ; y_present.n ; y_present.m ; y_present.l ; y_present.k ; y_present.j ; y_present.i ; y_present.h ; y_present.g ; y_present.f ; y_present.e ; y_present.d ; y_present.c ; y_present.b ; y_present.a ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+; y_present.a ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
+; y_present.b ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
+; y_present.c ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
+; y_present.d ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
+; y_present.e ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.f ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.g ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.h ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.i ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.j ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.k ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.l ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.m ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; y_present.n ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+-----------------------------------------------------------------+--------------------+
-; Register name                                                   ; Reason for Removal ;
-+-----------------------------------------------------------------+--------------------+
-; g10_mastermind_controller:gate1|TM_EN                           ; Lost fanout        ;
-; g10_mastermind_controller:gate1|TM_IN                           ; Lost fanout        ;
-; g10_possibility_table:gate3|last                                ; Lost fanout        ;
-; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[0]          ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[7]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR3[1]                         ; Lost fanout        ;
-; g10_mastermind_controller:gate1|P_SEL                           ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[6]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR3[0]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[8]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR3[2]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[1]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR1[1]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[0]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR1[0]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[2]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR1[2]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[4]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR2[1]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[3]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR2[0]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[5]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR2[2]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[10]         ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR4[1]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[9]          ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR4[0]                         ; Lost fanout        ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[11]         ; Lost fanout        ;
-; g10_possibility_table:gate3|TM_ADDR4[2]                         ; Lost fanout        ;
-; g10_mastermind_controller:gate1|SR_SEL                          ; Lost fanout        ;
-; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[1..3]       ; Lost fanout        ;
-; g10_mastermind_controller:gate1|TC_RST                          ; Lost fanout        ;
-; g10_mastermind_controller:gate1|TC_EN                           ; Lost fanout        ;
-; g10_mastermind_controller:gate1|SR_LD                           ; Lost fanout        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0..2] ; Lost fanout        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0..2] ; Lost fanout        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[0..2] ; Lost fanout        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0..2] ; Lost fanout        ;
-; RandomPatternGenerator:gate4|tcr2                               ; Lost fanout        ;
-; RandomPatternGenerator:gate4|tce2                               ; Lost fanout        ;
-; RandomPatternGenerator:gate4|y_present.A                        ; Lost fanout        ;
-; RandomPatternGenerator:gate4|y_present.B                        ; Lost fanout        ;
-; RandomPatternGenerator:gate4|y_present.C                        ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.A                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.B                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.C                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.D                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.E                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.F                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.G                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.H                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.I                     ; Lost fanout        ;
-; g10_mastermind_controller:gate1|y_present.J                     ; Lost fanout        ;
-; Total Number of Removed Registers = 63                          ;                    ;
-+-----------------------------------------------------------------+--------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
-+---------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------+
-; Register name                                           ; Reason for Removal ; Registers Removed due to This Register                                            ;
-+---------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------+
-; g10_possibility_table:gate3|last                        ; Lost Fanouts       ; g10_possibility_table:gate3|TM_ADDR3[2], g10_possibility_table:gate3|TM_ADDR1[1], ;
-;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR1[0], g10_possibility_table:gate3|TM_ADDR1[2], ;
-;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR2[1], g10_possibility_table:gate3|TM_ADDR2[0], ;
-;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR2[2], g10_possibility_table:gate3|TM_ADDR4[1], ;
-;                                                         ;                    ; g10_possibility_table:gate3|TM_ADDR4[0], g10_possibility_table:gate3|TM_ADDR4[2], ;
-;                                                         ;                    ; g10_mastermind_controller:gate1|TC_RST, g10_mastermind_controller:gate1|TC_EN     ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[7]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[1],                     ;
-;                                                         ;                    ; RandomPatternGenerator:gate4|tcr2, RandomPatternGenerator:gate4|tce2              ;
-; g10_mastermind_controller:gate1|P_SEL                   ; Lost Fanouts       ; g10_mastermind_controller:gate1|y_present.G,                                      ;
-;                                                         ;                    ; g10_mastermind_controller:gate1|y_present.J                                       ;
-; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[0]  ; Lost Fanouts       ; g10_mastermind_controller:gate1|SR_LD                                             ;
-; g10_possibility_table:gate3|TM_ADDR3[1]                 ; Lost Fanouts       ; g10_possibility_table:gate3|TM_ADDR3[0]                                           ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[6]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[8]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[2]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[1]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[1]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[0]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[2]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[2]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[4]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[1]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[3]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[0]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[5]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[2]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[10] ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[1]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[9]  ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]                      ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[11] ; Lost Fanouts       ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[2]                      ;
-+---------------------------------------------------------+--------------------+-----------------------------------------------------------------------------------+
++------------------------------------------------------------------+
+; Registers Removed During Synthesis                               ;
++---------------------------------------------+--------------------+
+; Register name                               ; Reason for Removal ;
++---------------------------------------------+--------------------+
+; g10_possibility_table:gate3|TM_ADDR1[0..2]  ; Lost fanout        ;
+; g10_possibility_table:gate3|TM_ADDR2[0..2]  ; Lost fanout        ;
+; g10_possibility_table:gate3|TM_ADDR3[0..2]  ; Lost fanout        ;
+; g10_possibility_table:gate3|TM_ADDR4[0..2]  ; Lost fanout        ;
+; g10_possibility_table:gate3|last            ; Lost fanout        ;
+; RandomPatternGenerator:gate4|y_present.A    ; Lost fanout        ;
+; RandomPatternGenerator:gate4|y_present.B    ; Lost fanout        ;
+; RandomPatternGenerator:gate4|y_present.C    ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.a ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.b ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.c ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.d ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.e ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.f ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.g ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.h ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.i ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.j ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.k ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.l ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.m ; Lost fanout        ;
+; g10_mastermind_controller:gate1|y_present.n ; Lost fanout        ;
+; Total Number of Removed Registers = 30      ;                    ;
++---------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -401,15 +343,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |MASTERMIND|RandomPatternGenerator:gate4|Selector2    ;
-; 11:1               ; 5 bits    ; 35 LEs        ; 30 LEs               ; 5 LEs                  ; No         ; |MASTERMIND|g10_mastermind_controller:gate1|Selector8 ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |MASTERMIND|g10_mastermind_controller:gate1|Selector4 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |MASTERMIND|RandomPatternGenerator:gate4|Selector0      ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; No         ; |MASTERMIND|g10_mastermind_controller:gate1|y_present.a ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -875,7 +816,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 03 15:49:43 2015
+    Info: Processing started: Thu Dec 03 21:34:06 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file /users/benjamin/desktop/dsd/lab3/g10_possibility_table.vhd
@@ -946,46 +887,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file g10_3to
     Info (12022): Found design unit 1: g10_3to4_decoder-behaviour
     Info (12023): Found entity 1: g10_3to4_decoder
 Info (12127): Elaborating entity "MASTERMIND" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(18): used implicit default value for signal "segment1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(19): used implicit default value for signal "segment2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(20): used implicit default value for signal "segment3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(21): used implicit default value for signal "segment4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(25): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(26): object "grl" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(28): object "sol" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(28): object "tmout" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(17): used implicit default value for signal "segment1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(18): used implicit default value for signal "segment2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(19): used implicit default value for signal "segment3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(20): used implicit default value for signal "segment4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at MASTERMIND.vhd(24): used implicit default value for signal "gg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(25): object "grl" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(27): object "sol" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MASTERMIND.vhd(27): object "tmout" assigned a value but never read
 Info (12128): Elaborating entity "g10_mastermind_controller" for hierarchy "g10_mastermind_controller:gate1"
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(12): used implicit default value for signal "SR_SEL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(13): used implicit default value for signal "P_SEL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(14): used implicit default value for signal "GR_SEL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(18): used implicit default value for signal "sw1_LD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(18): used implicit default value for signal "sw2_LD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(18): used implicit default value for signal "sw3_LD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(18): used implicit default value for signal "sw4_LD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(19): used implicit default value for signal "GR_LD1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(19): used implicit default value for signal "GR_LD2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(19): used implicit default value for signal "GR_LD3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(19): used implicit default value for signal "GR_LD4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(20): used implicit default value for signal "switch_REG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(21): used implicit default value for signal "LED1_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(21): used implicit default value for signal "LED2_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(21): used implicit default value for signal "LED3_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(21): used implicit default value for signal "LED4_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(22): used implicit default value for signal "clr_LED_R" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(15): used implicit default value for signal "GR_LD" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(29): used implicit default value for signal "TM_IN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(30): used implicit default value for signal "TM_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(31): used implicit default value for signal "TC_EN" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(32): used implicit default value for signal "TC_RST" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_controller.vhd(33): used implicit default value for signal "SOLVED" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at g10_mastermind_controller.vhd(50): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "g10_mastermind_datapath" for hierarchy "g10_mastermind_datapath:gate2"
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(38): used implicit default value for signal "G1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(38): used implicit default value for signal "G2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(38): used implicit default value for signal "G3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(38): used implicit default value for signal "G4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(39): object "exact" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(39): object "color" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(40): object "d1" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(40): object "d2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(40): object "d3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(40): object "d4" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(177): signal "GR_SEL" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(182): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(183): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(184): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(185): signal "sw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(34): used implicit default value for signal "i" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(37): object "exact" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(37): object "color" assigned a value but never read
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(59): used implicit default value for signal "S1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(59): used implicit default value for signal "S2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(59): used implicit default value for signal "S3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at g10_mastermind_datapath.vhd(59): used implicit default value for signal "S4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(60): object "sr1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(60): object "sr2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(60): object "sr3" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at g10_mastermind_datapath.vhd(60): object "sr4" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at g10_mastermind_datapath.vhd(164): signal "switch_REG" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "g10_mastermind_score" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1"
 Info (12128): Elaborating entity "g10_num_matches" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1"
 Info (12128): Elaborating entity "g10_comp3" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1"
@@ -1030,6 +963,7 @@ Info (12128): Elaborating entity "add_sub_r4f" for hierarchy "g10_mastermind_dat
 Info (12128): Elaborating entity "g10_score_encoder" for hierarchy "g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3"
 Info (12128): Elaborating entity "register_4bit" for hierarchy "g10_mastermind_datapath:gate2|register_4bit:Gate2"
 Info (12128): Elaborating entity "g10_comp4" for hierarchy "g10_mastermind_datapath:gate2|g10_comp4:Gate3"
+Info (12128): Elaborating entity "register_3bit" for hierarchy "g10_mastermind_datapath:gate2|register_3bit:Gate4"
 Info (12128): Elaborating entity "g10_possibility_table" for hierarchy "g10_possibility_table:gate3"
 Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(43): signal "TM_ADDR_Int" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at g10_possibility_table.vhd(95): signal "last" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -1098,27 +1032,27 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "segment4[4]" is stuck at GND
     Warning (13410): Pin "segment4[5]" is stuck at GND
     Warning (13410): Pin "segment4[6]" is stuck at GND
-Info (17049): 63 registers lost all their fanouts during netlist optimizations.
+Info (17049): 30 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "switch_LED"
-    Warning (15610): No output dependent on input pin "mode"
     Warning (15610): No output dependent on input pin "sw[0]"
     Warning (15610): No output dependent on input pin "sw[1]"
     Warning (15610): No output dependent on input pin "sw[2]"
     Warning (15610): No output dependent on input pin "sw[3]"
-    Warning (15610): No output dependent on input pin "modify_G"
     Warning (15610): No output dependent on input pin "P_generated"
     Warning (15610): No output dependent on input pin "Start"
     Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "modify_G"
     Warning (15610): No output dependent on input pin "Ready"
+    Warning (15610): No output dependent on input pin "switch_LED"
+    Warning (15610): No output dependent on input pin "mode"
 Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 28 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 93 warnings
-    Info: Peak virtual memory: 527 megabytes
-    Info: Processing ended: Thu Dec 03 15:49:48 2015
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 85 warnings
+    Info: Peak virtual memory: 525 megabytes
+    Info: Processing ended: Thu Dec 03 21:34:11 2015
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 

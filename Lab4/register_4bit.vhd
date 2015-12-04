@@ -18,7 +18,7 @@ begin
 process (clr, clk)
 begin 
 
- if clr = '1' then
+ if clr = '0' then
 	q <= "0000";
  elsif rising_edge(clk) then
 	if (SR_LD ='1') then

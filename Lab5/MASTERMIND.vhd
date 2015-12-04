@@ -9,7 +9,6 @@ port (clk : in std_logic;
 		Start : in std_logic;
 		Ready : in std_logic;
 		switch_LED : in std_logic;
-		
 				
 		mode : in std_logic;									  --switches
 		sw : in std_logic_vector (3 downto 0); --for 15 downto 0, bits  = code, in 7-seg; only actually 3 bits
@@ -24,7 +23,7 @@ end MASTERMIND;
 architecture behavior of MASTERMIND is 
 signal addr, G, gg, addrn,pattern : std_logic_vector(11 downto 0); --vectors
 signal cmp, srs, ps, grl, srld, rpld : std_logic;    -- controller 
-signal grs : std_logic_vector (1 downto 0);
+signal grs : std_logic;
 signal tmi,tme,tce,tcr,sol,tmout, last : std_logic; --possibility table
 signal tmi2,tme2,tce2,tcr2,sol2,tmout2, last2 : std_logic; --counter table
 signal P_generatedN : std_logic;
@@ -40,7 +39,7 @@ signal grld1, grld2, grld3, grld4 : std_logic;
 signal led1r, led2r, led3r, led4r : std_logic;
 signal switchreg : std_logic;
 signal swI : std_logic_vector(2 downto 0);
-signal clrledr : std_logic;
+
 
 type state_type is (A,B,C,D,E,F,H,I,J);
 signal y_present : state_type;
@@ -53,7 +52,6 @@ port (G : in std_logic_vector(11 downto 0);
 		SC_CMP : out std_logic;
 		CLK : in std_logic;
 		clr : in std_logic;
-		clr_LED_R : in std_logic;
 				
 		--RP_LD : in std_logic; 
 		
@@ -61,11 +59,10 @@ port (G : in std_logic_vector(11 downto 0);
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : in std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : in std_logic;
 		switch_REG : in std_logic;
-		LED1_R, LED2_R, LED3_R, LED4_R : in std_logic;
 		
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
-		GR_SEL : in std_logic_vector (1 downto 0);
+		GR_SEL : in std_logic;
 		--GR_LD : in std_logic;
 		SR_LD : in std_logic);
 		
@@ -80,15 +77,18 @@ port (SC_CMP : in std_logic;
 		
 		SR_SEL : out std_logic;
 		P_SEL : out std_logic;
-		GR_SEL : out std_logic_vector (1 downto 0);
+		GR_SEL : out std_logic;
 		GR_LD : out std_logic;
 		SR_LD : out std_logic;
 		
+		modify_G : in std_logic;
+		mode : in std_logic;
+		switch_LED : in std_logic;
+		P_generated : in std_logic;
+		
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : out std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
-		switch_REG : out std_logic;
-		LED1_R, LED2_R, LED3_R, LED4_R : out std_logic;
-		clr_LED_R : out std_logic;
+		switch_REG : out std_logic;		
 		
 		RP_LD : out std_logic; -- < new --
 		
@@ -154,15 +154,14 @@ gate1: g10_mastermind_controller port map (SC_CMP => cmp, TC_LAST => last, START
 													SR_SEL => srs, P_SEL => ps, GR_SEL => grs, GR_LD => grl, SR_LD => srld, RP_LD => rpld,
 													TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, SOLVED => sol, 
 													sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1,
-													GR_LD2 => grld2, GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, 
-													LED1_R => led1r, LED2_R => led2r, LED3_R => led3r, LED4_R => led4r, 
-													clr_LED_R => clrledr);
+													GR_LD2 => grld2, GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg,
+													modify_G => modify_G, switch_LED => switch_LED, mode => mode,
+													P_generated => P_generated);
 														
 gate2: g10_mastermind_datapath port map (G => gg, EXT_PATTERN => pattern, TM_ADDR => addr, SC_CMP => cmp, CLK => clk, 
 								clr => Start, SR_SEL => srs, P_SEL => ps, GR_SEL => grs, SR_LD => srld, 
 								sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1, GR_LD2 => grld2,
-								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, LED1_R => led1r, LED2_R => led2r, 
-								LED3_R => led3r, LED4_R => led4r, sw => swI, clr_LED_R => clrledr );
+								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, sw => swI );
 swI <= sw(3 downto 1);
 
 gate3: g10_possibility_table port map (TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, CLK => clk, TC_LAST => last,
@@ -173,6 +172,10 @@ gate4: RandomPatternGenerator port map (P_generatedN => P_generated, clk => clk,
 
 end behavior;									
 		
-
-
-
+--mastermind : process (P_generated, Start, Ready, switch_LED, mode, sw, modify_G)
+--
+--if (mode = '0') then
+--	--do system mode
+--	else 
+--	-- do user mode
+--end if;
