@@ -39,6 +39,8 @@ signal grld1, grld2, grld3, grld4 : std_logic;
 signal led1r, led2r, led3r, led4r : std_logic;
 signal switchreg : std_logic;
 signal swI : std_logic_vector(2 downto 0);
+signal ripple : std_logic;
+signal sr1N, sr2N, sr3N, sr4N : std_logic_vector (3 downto 0);
 
 
 type state_type is (A,B,C,D,E,F,H,I,J);
@@ -59,6 +61,9 @@ port (G : in std_logic_vector(11 downto 0);
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : in std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : in std_logic;
 		switch_REG : in std_logic;
+		RippleBlank_In_state : in std_logic;
+		
+		segment1, segment2, segment3, segment4 : out std_logic_vector(6 downto 0);
 		
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
@@ -85,6 +90,7 @@ port (SC_CMP : in std_logic;
 		mode : in std_logic;
 		switch_LED : in std_logic;
 		P_generated : in std_logic;
+		RippleBlankInState : out std_logic;
 		
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : out std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
@@ -110,14 +116,6 @@ port (TC_EN : in std_logic;
 		TM_OUT : out std_logic);
 end component;
 
-component g10_7_segment_decoder is
-port( code            : in std_logic_vector(3 downto 0);
-		RippleBlank_In  : in std_logic;
-		RippleBlank_Out : out std_logic;  
-		segments        : out std_logic_vector(6 downto 0));
-end component;
-
-
 component RandomPatternGenerator is
 port (P_GeneratedN : in std_logic;
 		clk : in std_logic;
@@ -129,25 +127,6 @@ end component;
 
 begin
 
---g1 <= "000";
---g2 <= "000";
---g3 <= "000";
---g4 <= "000";
---gg <= g4 & g3 & g2 & g1;
-
---
---with switch_REG select --switch_REG
---	view_REG <= current_guess when "01", -- use -<- when guessing
---					display_guessN when "10",
---		         display_scoreN when "11",
---		         "000000000000" when others; 
-
-					
---LED_value_int1 <= LED_value;
---LED_value_int2 <= LED_value;
---LED_value_int3 <= LED_value;
---LED_value_int4 <= LED_value;
-
 
 --mapping between controller, datapath and possiblity table
 gate1: g10_mastermind_controller port map (SC_CMP => cmp, TC_LAST => last, START => Start, READY => Ready, CLK => clk, 
@@ -156,19 +135,23 @@ gate1: g10_mastermind_controller port map (SC_CMP => cmp, TC_LAST => last, START
 													sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1,
 													GR_LD2 => grld2, GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg,
 													modify_G => modify_G, switch_LED => switch_LED, mode => mode,
-													P_generated => P_generated);
+													P_generated => P_generated, RippleBlankInState => ripple);
 														
 gate2: g10_mastermind_datapath port map (G => gg, EXT_PATTERN => pattern, TM_ADDR => addr, SC_CMP => cmp, CLK => clk, 
 								clr => Start, SR_SEL => srs, P_SEL => ps, GR_SEL => grs, SR_LD => srld, 
 								sw1_LD => sw1ld, sw2_LD => sw2ld, sw3_LD => sw3ld, sw4_LD => sw4ld, GR_LD1 => grld1, GR_LD2 => grld2,
-								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, sw => swI );
+								GR_LD3 => grld3, GR_LD4 => grld4, switch_REG => switchreg, sw => swI, 
+								RippleBlank_In_state => ripple, segment1 => segment1,  segment2 => segment2,  segment3 => segment3,
+								segment4 => segment4);
 swI <= sw(3 downto 1);
 
 gate3: g10_possibility_table port map (TM_IN => tmi, TM_EN => tme, TC_EN => tce, TC_RST => tcr, CLK => clk, TC_LAST => last,
 													TM_ADDR => addr, TM_OUT => tmout);
 
 gate4: RandomPatternGenerator port map (P_generatedN => P_generated, clk => clk, EXT_PATTERN => pattern, Start => Start,
-													RP_LD => rpld);													
+													RP_LD => rpld);		
+--gate5: g10_display_LED port map (sr1 => sr1N, sr2 => sr2N, sr3 => sr3N, sr4 => sr4N, RippleBlank_In_state => ripple, 
+--						segment1 => segment1, segment2 => segment2, segment3 => segment3, segment4 => segment4);										
 
 end behavior;									
 		

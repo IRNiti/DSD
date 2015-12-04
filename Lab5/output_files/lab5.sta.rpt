@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lab5
-Thu Dec 03 21:34:21 2015
+Fri Dec 04 03:27:12 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -9,26 +9,44 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   1. Legal Notice
   2. TimeQuest Timing Analyzer Summary
   3. Parallel Compilation
-  4. Clocks
-  5. Slow Model Fmax Summary
-  6. Slow Model Setup Summary
-  7. Slow Model Hold Summary
-  8. Slow Model Recovery Summary
-  9. Slow Model Removal Summary
- 10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Datasheet Report
- 12. Fast Model Setup Summary
- 13. Fast Model Hold Summary
- 14. Fast Model Recovery Summary
- 15. Fast Model Removal Summary
- 16. Fast Model Minimum Pulse Width Summary
- 17. Fast Model Datasheet Report
- 18. Multicorner Timing Analysis Summary
- 19. Clock Transfers
- 20. Report TCCS
- 21. Report RSKM
- 22. Unconstrained Paths
- 23. TimeQuest Timing Analyzer Messages
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'clk'
+ 25. Fast Model Hold: 'clk'
+ 26. Fast Model Minimum Pulse Width: 'clk'
+ 27. Setup Times
+ 28. Hold Times
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Multicorner Timing Analysis Summary
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Setup Transfers
+ 37. Hold Transfers
+ 38. Report TCCS
+ 39. Report RSKM
+ 40. Unconstrained Paths
+ 41. TimeQuest Timing Analyzer Messages
 
 
 
@@ -75,28 +93,50 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++----------------------------------------------------+
+; SDC File List                                      ;
++----------------+--------+--------------------------+
+; SDC File Path  ; Status ; Read at                  ;
++----------------+--------+--------------------------+
+; mastermind.sdc ; OK     ; Fri Dec 04 03:27:11 2015 ;
++----------------+--------+--------------------------+
 
 
----------------------------
-; Slow Model Fmax Summary ;
----------------------------
-No paths to report.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-----------------------------
-; Slow Model Setup Summary ;
-----------------------------
-No paths to report.
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 227.53 MHz ; 227.53 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
----------------------------
-; Slow Model Hold Summary ;
----------------------------
-No paths to report.
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; 15.605 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -111,28 +151,471 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 8.889 ; 0.000                  ;
++-------+-------+------------------------+
 
 
--------------------------------
-; Slow Model Datasheet Report ;
--------------------------------
-Nothing to report.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                                         ;
++--------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                              ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.605 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.002      ; 4.435      ;
+; 15.693 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.345      ;
+; 15.693 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.345      ;
+; 15.693 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.345      ;
+; 15.693 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.345      ;
+; 15.699 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.339      ;
+; 15.787 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 4.249      ;
+; 15.787 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 4.249      ;
+; 15.787 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 4.249      ;
+; 15.787 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 4.249      ;
+; 15.930 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.002      ; 4.110      ;
+; 16.018 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.020      ;
+; 16.018 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.020      ;
+; 16.018 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.020      ;
+; 16.018 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 4.020      ;
+; 16.040 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.998      ;
+; 16.065 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.973      ;
+; 16.128 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.908      ;
+; 16.128 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.908      ;
+; 16.128 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.908      ;
+; 16.128 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.908      ;
+; 16.149 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.889      ;
+; 16.153 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.883      ;
+; 16.153 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.883      ;
+; 16.153 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.883      ;
+; 16.153 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.883      ;
+; 16.197 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.841      ;
+; 16.237 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.799      ;
+; 16.237 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.799      ;
+; 16.237 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.799      ;
+; 16.237 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.799      ;
+; 16.285 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.751      ;
+; 16.285 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.751      ;
+; 16.285 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.751      ;
+; 16.285 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.751      ;
+; 16.386 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.652      ;
+; 16.406 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.002      ; 3.634      ;
+; 16.474 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.562      ;
+; 16.474 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.562      ;
+; 16.474 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.562      ;
+; 16.474 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.562      ;
+; 16.494 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.544      ;
+; 16.494 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.544      ;
+; 16.494 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.544      ;
+; 16.494 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.544      ;
+; 16.803 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.002      ; 3.237      ;
+; 16.852 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.186      ;
+; 16.891 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.147      ;
+; 16.891 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.147      ;
+; 16.891 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.147      ;
+; 16.891 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 3.147      ;
+; 16.928 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.108      ;
+; 16.928 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.108      ;
+; 16.929 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.107      ;
+; 16.933 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.103      ;
+; 16.940 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.096      ;
+; 16.940 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.096      ;
+; 16.940 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.096      ;
+; 16.940 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.002     ; 3.096      ;
+; 16.989 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.002      ; 3.051      ;
+; 17.012 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.024      ;
+; 17.012 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.024      ;
+; 17.013 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.023      ;
+; 17.017 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.019      ;
+; 17.077 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 2.961      ;
+; 17.077 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 2.961      ;
+; 17.077 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 2.961      ;
+; 17.077 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 2.961      ;
+; 17.249 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 2.787      ;
+; 17.249 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 2.787      ;
+; 17.250 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 2.786      ;
+; 17.254 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 2.782      ;
+; 17.393 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; clk          ; clk         ; 20.000       ; -0.008     ; 2.637      ;
+; 17.393 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; clk          ; clk         ; 20.000       ; -0.008     ; 2.637      ;
+; 17.393 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; clk          ; clk         ; 20.000       ; -0.008     ; 2.637      ;
+; 17.399 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; clk          ; clk         ; 20.000       ; -0.012     ; 2.627      ;
+; 17.399 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; clk          ; clk         ; 20.000       ; -0.012     ; 2.627      ;
+; 17.399 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; clk          ; clk         ; 20.000       ; -0.012     ; 2.627      ;
+; 17.439 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ; clk          ; clk         ; 20.000       ; -0.012     ; 2.587      ;
+; 17.439 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ; clk          ; clk         ; 20.000       ; -0.012     ; 2.587      ;
+; 17.439 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ; clk          ; clk         ; 20.000       ; -0.012     ; 2.587      ;
+; 17.475 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ; clk          ; clk         ; 20.000       ; -0.008     ; 2.555      ;
+; 17.475 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ; clk          ; clk         ; 20.000       ; -0.008     ; 2.555      ;
+; 17.475 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ; clk          ; clk         ; 20.000       ; -0.008     ; 2.555      ;
+; 17.666 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; 0.000      ; 2.372      ;
+; 17.666 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; 0.000      ; 2.372      ;
+; 17.667 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; 0.000      ; 2.371      ;
+; 17.671 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; 0.000      ; 2.367      ;
+; 17.735 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; clk          ; clk         ; 20.000       ; -0.018     ; 2.285      ;
+; 17.735 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; clk          ; clk         ; 20.000       ; -0.018     ; 2.285      ;
+; 17.735 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; clk          ; clk         ; 20.000       ; -0.018     ; 2.285      ;
+; 17.737 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; clk          ; clk         ; 20.000       ; -0.027     ; 2.274      ;
+; 17.737 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; clk          ; clk         ; 20.000       ; -0.027     ; 2.274      ;
+; 17.737 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 20.000       ; -0.027     ; 2.274      ;
+; 17.779 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ; clk          ; clk         ; 20.000       ; -0.018     ; 2.241      ;
+; 17.779 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ; clk          ; clk         ; 20.000       ; -0.018     ; 2.241      ;
+; 17.779 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ; clk          ; clk         ; 20.000       ; -0.018     ; 2.241      ;
+; 17.813 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.002      ; 2.227      ;
+; 17.851 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 20.000       ; -0.027     ; 2.160      ;
+; 17.901 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 2.137      ;
++--------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-----------------------------
-; Fast Model Setup Summary ;
-----------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                         ;
++-------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                              ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.c             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.n             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.f             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.i             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_controller:gate1|GR_LD1                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.631 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.n             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.760 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.046      ;
+; 0.761 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.047      ;
+; 0.761 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.047      ;
+; 0.784 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.070      ;
+; 0.784 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.070      ;
+; 0.786 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.810 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; -0.002     ; 1.094      ;
+; 0.852 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.c             ; clk          ; clk         ; 0.000        ; 0.002      ; 1.140      ;
+; 0.862 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.e             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.148      ;
+; 0.875 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.161      ;
+; 0.894 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.180      ;
+; 0.896 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.182      ;
+; 0.902 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.188      ;
+; 0.970 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.g             ; clk          ; clk         ; 0.000        ; -0.002     ; 1.254      ;
+; 0.984 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.270      ;
+; 0.991 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.277      ;
+; 0.991 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.277      ;
+; 1.006 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.l             ; clk          ; clk         ; 0.000        ; 0.002      ; 1.294      ;
+; 1.010 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.296      ;
+; 1.019 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; -0.002     ; 1.303      ;
+; 1.034 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; -0.002     ; 1.318      ;
+; 1.079 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.365      ;
+; 1.079 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.365      ;
+; 1.079 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.365      ;
+; 1.144 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|GR_LD1                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.428      ;
+; 1.144 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.428      ;
+; 1.159 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.445      ;
+; 1.204 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.212 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.498      ;
+; 1.218 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.i             ; clk          ; clk         ; 0.000        ; 0.002      ; 1.506      ;
+; 1.265 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.h             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.551      ;
+; 1.430 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.716      ;
+; 1.453 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.737      ;
+; 1.457 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.e             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.743      ;
+; 1.496 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|GR_LD1                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.780      ;
+; 1.544 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.e             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.830      ;
+; 1.670 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; clk          ; clk         ; 0.000        ; -0.027     ; 1.929      ;
+; 1.676 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; clk          ; clk         ; 0.000        ; -0.027     ; 1.935      ;
+; 1.700 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.f             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.986      ;
+; 1.798 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.f             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.084      ;
+; 1.851 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.137      ;
+; 1.851 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.137      ;
+; 1.851 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.137      ;
+; 1.851 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.137      ;
+; 1.901 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 0.000        ; -0.027     ; 2.160      ;
+; 1.939 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.002      ; 2.227      ;
+; 1.973 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.241      ;
+; 1.973 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.241      ;
+; 1.973 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.241      ;
+; 2.001 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.287      ;
+; 2.015 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; clk          ; clk         ; 0.000        ; -0.027     ; 2.274      ;
+; 2.015 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; clk          ; clk         ; 0.000        ; -0.027     ; 2.274      ;
+; 2.015 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 0.000        ; -0.027     ; 2.274      ;
+; 2.017 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.285      ;
+; 2.017 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.285      ;
+; 2.017 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; clk          ; clk         ; 0.000        ; -0.018     ; 2.285      ;
+; 2.081 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.367      ;
+; 2.085 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.371      ;
+; 2.086 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 2.372      ;
+; 2.130 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.002      ; 2.418      ;
+; 2.277 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ; clk          ; clk         ; 0.000        ; -0.008     ; 2.555      ;
+; 2.277 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ; clk          ; clk         ; 0.000        ; -0.008     ; 2.555      ;
+; 2.277 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ; clk          ; clk         ; 0.000        ; -0.008     ; 2.555      ;
+; 2.313 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ; clk          ; clk         ; 0.000        ; -0.012     ; 2.587      ;
+; 2.313 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ; clk          ; clk         ; 0.000        ; -0.012     ; 2.587      ;
+; 2.313 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ; clk          ; clk         ; 0.000        ; -0.012     ; 2.587      ;
+; 2.353 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; clk          ; clk         ; 0.000        ; -0.012     ; 2.627      ;
+; 2.353 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; clk          ; clk         ; 0.000        ; -0.012     ; 2.627      ;
+; 2.353 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; clk          ; clk         ; 0.000        ; -0.012     ; 2.627      ;
+; 2.359 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; clk          ; clk         ; 0.000        ; -0.008     ; 2.637      ;
+; 2.359 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; clk          ; clk         ; 0.000        ; -0.008     ; 2.637      ;
+; 2.359 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; clk          ; clk         ; 0.000        ; -0.008     ; 2.637      ;
+; 2.472 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.758      ;
+; 2.472 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.758      ;
+; 2.472 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.758      ;
+; 2.498 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 2.782      ;
+; 2.502 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 2.786      ;
+; 2.503 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 2.787      ;
+; 2.503 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 2.787      ;
+; 2.552 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; -0.002     ; 2.836      ;
+; 2.552 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; -0.002     ; 2.836      ;
+; 2.552 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; -0.002     ; 2.836      ;
+; 2.552 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; -0.002     ; 2.836      ;
+; 2.560 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.002      ; 2.848      ;
+; 2.567 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.853      ;
+; 2.567 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.853      ;
+; 2.567 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; 0.000      ; 2.853      ;
+; 2.655 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.002      ; 2.943      ;
+; 2.735 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 3.019      ;
++-------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
----------------------------
-; Fast Model Hold Summary ;
----------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|GR_LD1                  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|GR_LD1                  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw1_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw1_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw2_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw2_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw3_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw3_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw4_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw4_LD                  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.a             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.a             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.b             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.b             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.c             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.c             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.d             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.d             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.e             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.e             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.f             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.f             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.g             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.g             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.h             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.h             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.i             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.i             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.j             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.j             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.k             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.k             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.l             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.l             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.n             ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.n             ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ;
+; 8.889  ; 10.000       ; 1.111          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ;
+; 8.889  ; 10.000       ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                             ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                             ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                    ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                    ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                      ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                      ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|GR_LD1|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|GR_LD1|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw1_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw1_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw2_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw2_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw3_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw3_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw4_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw4_LD|clk                                        ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; P_generated ; clk        ; 7.021 ; 7.021 ; Rise       ; clk             ;
+; Ready       ; clk        ; 7.083 ; 7.083 ; Rise       ; clk             ;
+; Start       ; clk        ; 7.649 ; 7.649 ; Rise       ; clk             ;
+; mode        ; clk        ; 2.854 ; 2.854 ; Rise       ; clk             ;
+; modify_G    ; clk        ; 3.508 ; 3.508 ; Rise       ; clk             ;
+; sw[*]       ; clk        ; 0.132 ; 0.132 ; Rise       ; clk             ;
+;  sw[1]      ; clk        ; 0.013 ; 0.013 ; Rise       ; clk             ;
+;  sw[2]      ; clk        ; 0.132 ; 0.132 ; Rise       ; clk             ;
+;  sw[3]      ; clk        ; 0.013 ; 0.013 ; Rise       ; clk             ;
+; switch_LED  ; clk        ; 7.022 ; 7.022 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; P_generated ; clk        ; -4.894 ; -4.894 ; Rise       ; clk             ;
+; Ready       ; clk        ; -6.747 ; -6.747 ; Rise       ; clk             ;
+; Start       ; clk        ; -6.097 ; -6.097 ; Rise       ; clk             ;
+; mode        ; clk        ; -1.038 ; -1.038 ; Rise       ; clk             ;
+; modify_G    ; clk        ; -0.490 ; -0.490 ; Rise       ; clk             ;
+; sw[*]       ; clk        ; 1.486  ; 1.486  ; Rise       ; clk             ;
+;  sw[1]      ; clk        ; 1.413  ; 1.413  ; Rise       ; clk             ;
+;  sw[2]      ; clk        ; 1.409  ; 1.409  ; Rise       ; clk             ;
+;  sw[3]      ; clk        ; 1.486  ; 1.486  ; Rise       ; clk             ;
+; switch_LED  ; clk        ; -4.308 ; -4.308 ; Rise       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; segment1[*]  ; clk        ; 7.781 ; 7.781 ; Rise       ; clk             ;
+;  segment1[0] ; clk        ; 7.709 ; 7.709 ; Rise       ; clk             ;
+;  segment1[1] ; clk        ; 7.781 ; 7.781 ; Rise       ; clk             ;
+;  segment1[2] ; clk        ; 7.677 ; 7.677 ; Rise       ; clk             ;
+;  segment1[3] ; clk        ; 7.731 ; 7.731 ; Rise       ; clk             ;
+;  segment1[4] ; clk        ; 7.387 ; 7.387 ; Rise       ; clk             ;
+;  segment1[5] ; clk        ; 7.392 ; 7.392 ; Rise       ; clk             ;
+;  segment1[6] ; clk        ; 7.398 ; 7.398 ; Rise       ; clk             ;
+; segment2[*]  ; clk        ; 7.782 ; 7.782 ; Rise       ; clk             ;
+;  segment2[0] ; clk        ; 7.720 ; 7.720 ; Rise       ; clk             ;
+;  segment2[1] ; clk        ; 7.381 ; 7.381 ; Rise       ; clk             ;
+;  segment2[2] ; clk        ; 7.321 ; 7.321 ; Rise       ; clk             ;
+;  segment2[3] ; clk        ; 7.379 ; 7.379 ; Rise       ; clk             ;
+;  segment2[4] ; clk        ; 7.390 ; 7.390 ; Rise       ; clk             ;
+;  segment2[5] ; clk        ; 7.782 ; 7.782 ; Rise       ; clk             ;
+;  segment2[6] ; clk        ; 7.753 ; 7.753 ; Rise       ; clk             ;
+; segment3[*]  ; clk        ; 7.802 ; 7.802 ; Rise       ; clk             ;
+;  segment3[0] ; clk        ; 7.733 ; 7.733 ; Rise       ; clk             ;
+;  segment3[1] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
+;  segment3[2] ; clk        ; 7.469 ; 7.469 ; Rise       ; clk             ;
+;  segment3[3] ; clk        ; 7.470 ; 7.470 ; Rise       ; clk             ;
+;  segment3[4] ; clk        ; 7.787 ; 7.787 ; Rise       ; clk             ;
+;  segment3[5] ; clk        ; 7.785 ; 7.785 ; Rise       ; clk             ;
+;  segment3[6] ; clk        ; 7.802 ; 7.802 ; Rise       ; clk             ;
+; segment4[*]  ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  segment4[0] ; clk        ; 7.562 ; 7.562 ; Rise       ; clk             ;
+;  segment4[1] ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  segment4[2] ; clk        ; 7.884 ; 7.884 ; Rise       ; clk             ;
+;  segment4[3] ; clk        ; 7.799 ; 7.799 ; Rise       ; clk             ;
+;  segment4[4] ; clk        ; 7.787 ; 7.787 ; Rise       ; clk             ;
+;  segment4[5] ; clk        ; 7.445 ; 7.445 ; Rise       ; clk             ;
+;  segment4[6] ; clk        ; 7.802 ; 7.802 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; segment1[*]  ; clk        ; 7.049 ; 7.049 ; Rise       ; clk             ;
+;  segment1[0] ; clk        ; 7.151 ; 7.151 ; Rise       ; clk             ;
+;  segment1[1] ; clk        ; 7.177 ; 7.177 ; Rise       ; clk             ;
+;  segment1[2] ; clk        ; 7.166 ; 7.166 ; Rise       ; clk             ;
+;  segment1[3] ; clk        ; 7.382 ; 7.382 ; Rise       ; clk             ;
+;  segment1[4] ; clk        ; 7.053 ; 7.053 ; Rise       ; clk             ;
+;  segment1[5] ; clk        ; 7.051 ; 7.051 ; Rise       ; clk             ;
+;  segment1[6] ; clk        ; 7.049 ; 7.049 ; Rise       ; clk             ;
+; segment2[*]  ; clk        ; 6.819 ; 6.819 ; Rise       ; clk             ;
+;  segment2[0] ; clk        ; 7.198 ; 7.198 ; Rise       ; clk             ;
+;  segment2[1] ; clk        ; 6.819 ; 6.819 ; Rise       ; clk             ;
+;  segment2[2] ; clk        ; 6.819 ; 6.819 ; Rise       ; clk             ;
+;  segment2[3] ; clk        ; 7.063 ; 7.063 ; Rise       ; clk             ;
+;  segment2[4] ; clk        ; 7.074 ; 7.074 ; Rise       ; clk             ;
+;  segment2[5] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
+;  segment2[6] ; clk        ; 7.437 ; 7.437 ; Rise       ; clk             ;
+; segment3[*]  ; clk        ; 6.829 ; 6.829 ; Rise       ; clk             ;
+;  segment3[0] ; clk        ; 7.169 ; 7.169 ; Rise       ; clk             ;
+;  segment3[1] ; clk        ; 6.829 ; 6.829 ; Rise       ; clk             ;
+;  segment3[2] ; clk        ; 6.869 ; 6.869 ; Rise       ; clk             ;
+;  segment3[3] ; clk        ; 7.236 ; 7.236 ; Rise       ; clk             ;
+;  segment3[4] ; clk        ; 7.553 ; 7.553 ; Rise       ; clk             ;
+;  segment3[5] ; clk        ; 7.539 ; 7.539 ; Rise       ; clk             ;
+;  segment3[6] ; clk        ; 7.565 ; 7.565 ; Rise       ; clk             ;
+; segment4[*]  ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  segment4[0] ; clk        ; 7.063 ; 7.063 ; Rise       ; clk             ;
+;  segment4[1] ; clk        ; 7.370 ; 7.370 ; Rise       ; clk             ;
+;  segment4[2] ; clk        ; 7.372 ; 7.372 ; Rise       ; clk             ;
+;  segment4[3] ; clk        ; 7.407 ; 7.407 ; Rise       ; clk             ;
+;  segment4[4] ; clk        ; 7.398 ; 7.398 ; Rise       ; clk             ;
+;  segment4[5] ; clk        ; 7.057 ; 7.057 ; Rise       ; clk             ;
+;  segment4[6] ; clk        ; 7.410 ; 7.410 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; 18.318 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -147,32 +630,601 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 9.000 ; 0.000                  ;
++-------+-------+------------------------+
 
 
--------------------------------
-; Fast Model Datasheet Report ;
--------------------------------
-Nothing to report.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                                         ;
++--------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                              ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 18.318 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.714      ;
+; 18.318 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.714      ;
+; 18.318 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.714      ;
+; 18.318 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.714      ;
+; 18.324 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.707      ;
+; 18.324 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.707      ;
+; 18.324 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.707      ;
+; 18.324 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.707      ;
+; 18.389 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.001      ; 1.644      ;
+; 18.395 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.637      ;
+; 18.449 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.583      ;
+; 18.449 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.583      ;
+; 18.449 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.583      ;
+; 18.449 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.583      ;
+; 18.458 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.573      ;
+; 18.458 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.573      ;
+; 18.458 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.573      ;
+; 18.458 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.573      ;
+; 18.464 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.567      ;
+; 18.464 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.567      ;
+; 18.464 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.567      ;
+; 18.464 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.567      ;
+; 18.483 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.548      ;
+; 18.483 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.548      ;
+; 18.483 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.548      ;
+; 18.483 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.548      ;
+; 18.520 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.001      ; 1.513      ;
+; 18.529 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.503      ;
+; 18.535 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.497      ;
+; 18.539 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.492      ;
+; 18.539 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.492      ;
+; 18.539 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.492      ;
+; 18.539 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.492      ;
+; 18.554 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.478      ;
+; 18.563 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.469      ;
+; 18.563 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.469      ;
+; 18.563 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.469      ;
+; 18.563 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.469      ;
+; 18.608 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.423      ;
+; 18.608 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.423      ;
+; 18.608 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.423      ;
+; 18.608 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.423      ;
+; 18.610 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.422      ;
+; 18.634 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.001      ; 1.399      ;
+; 18.679 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.353      ;
+; 18.721 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.311      ;
+; 18.721 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.311      ;
+; 18.721 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.311      ;
+; 18.721 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.311      ;
+; 18.772 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.259      ;
+; 18.772 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.259      ;
+; 18.772 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.259      ;
+; 18.772 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; -0.001     ; 1.259      ;
+; 18.788 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.244      ;
+; 18.788 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.244      ;
+; 18.788 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.244      ;
+; 18.788 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.244      ;
+; 18.791 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; clk          ; clk         ; 20.000       ; -0.007     ; 1.234      ;
+; 18.791 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; clk          ; clk         ; 20.000       ; -0.007     ; 1.234      ;
+; 18.791 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; clk          ; clk         ; 20.000       ; -0.007     ; 1.234      ;
+; 18.792 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.001      ; 1.241      ;
+; 18.799 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; clk          ; clk         ; 20.000       ; -0.011     ; 1.222      ;
+; 18.799 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; clk          ; clk         ; 20.000       ; -0.011     ; 1.222      ;
+; 18.799 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; clk          ; clk         ; 20.000       ; -0.011     ; 1.222      ;
+; 18.820 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ; clk          ; clk         ; 20.000       ; -0.011     ; 1.201      ;
+; 18.820 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ; clk          ; clk         ; 20.000       ; -0.011     ; 1.201      ;
+; 18.820 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ; clk          ; clk         ; 20.000       ; -0.011     ; 1.201      ;
+; 18.822 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ; clk          ; clk         ; 20.000       ; -0.007     ; 1.203      ;
+; 18.822 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ; clk          ; clk         ; 20.000       ; -0.007     ; 1.203      ;
+; 18.822 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ; clk          ; clk         ; 20.000       ; -0.007     ; 1.203      ;
+; 18.830 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.200      ;
+; 18.831 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.199      ;
+; 18.832 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.198      ;
+; 18.836 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.194      ;
+; 18.843 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.000      ; 1.189      ;
+; 18.849 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.181      ;
+; 18.850 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.180      ;
+; 18.851 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.179      ;
+; 18.855 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.175      ;
+; 18.859 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 20.000       ; 0.001      ; 1.174      ;
+; 18.929 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; clk          ; clk         ; 20.000       ; -0.023     ; 1.080      ;
+; 18.929 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; clk          ; clk         ; 20.000       ; -0.023     ; 1.080      ;
+; 18.929 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 20.000       ; -0.023     ; 1.080      ;
+; 18.930 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; clk          ; clk         ; 20.000       ; -0.016     ; 1.086      ;
+; 18.930 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; clk          ; clk         ; 20.000       ; -0.016     ; 1.086      ;
+; 18.930 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; clk          ; clk         ; 20.000       ; -0.016     ; 1.086      ;
+; 18.955 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ; clk          ; clk         ; 20.000       ; -0.016     ; 1.061      ;
+; 18.955 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ; clk          ; clk         ; 20.000       ; -0.016     ; 1.061      ;
+; 18.955 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ; clk          ; clk         ; 20.000       ; -0.016     ; 1.061      ;
+; 18.974 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.056      ;
+; 18.975 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.055      ;
+; 18.976 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.054      ;
+; 18.980 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 20.000       ; -0.002     ; 1.050      ;
+; 19.053 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 20.000       ; -0.023     ; 0.956      ;
+; 19.065 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 20.000       ; 0.000      ; 0.967      ;
+; 19.065 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 20.000       ; 0.000      ; 0.967      ;
+; 19.065 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 20.000       ; 0.000      ; 0.967      ;
+; 19.065 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 20.000       ; 0.000      ; 0.967      ;
+; 19.087 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 20.000       ; -0.001     ; 0.944      ;
+; 19.088 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 20.000       ; -0.001     ; 0.943      ;
++--------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                         ;
++-------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                              ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.c             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.n             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.f             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.i             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_controller:gate1|GR_LD1                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.245 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.n             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.319 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.470      ;
+; 0.323 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.475      ;
+; 0.323 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.475      ;
+; 0.323 ; g10_mastermind_controller:gate1|y_present.b            ; g10_mastermind_controller:gate1|y_present.c             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.476      ;
+; 0.324 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.329 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.e             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.336 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.488      ;
+; 0.336 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.488      ;
+; 0.338 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.490      ;
+; 0.339 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.490      ;
+; 0.345 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.496      ;
+; 0.347 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.498      ;
+; 0.364 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.516      ;
+; 0.385 ; g10_mastermind_controller:gate1|y_present.d            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.536      ;
+; 0.403 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.555      ;
+; 0.407 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.559      ;
+; 0.408 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.560      ;
+; 0.412 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.l             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.565      ;
+; 0.413 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.564      ;
+; 0.415 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|y_present.g             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.566      ;
+; 0.416 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.568      ;
+; 0.430 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|GR_LD1                  ; clk          ; clk         ; 0.000        ; -0.002     ; 0.580      ;
+; 0.430 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 0.580      ;
+; 0.453 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.i             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.606      ;
+; 0.458 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.609      ;
+; 0.461 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.613      ;
+; 0.465 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.616      ;
+; 0.507 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|y_present.h             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.659      ;
+; 0.510 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.510 ; g10_mastermind_controller:gate1|sw1_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.662      ;
+; 0.545 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|GR_LD1                  ; clk          ; clk         ; 0.000        ; -0.002     ; 0.695      ;
+; 0.551 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.e             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.557 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 0.707      ;
+; 0.566 ; g10_mastermind_controller:gate1|y_present.l            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.718      ;
+; 0.577 ; g10_mastermind_controller:gate1|y_present.n            ; g10_mastermind_controller:gate1|y_present.e             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.729      ;
+; 0.623 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|y_present.f             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.775      ;
+; 0.647 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|y_present.f             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.730 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.882      ;
+; 0.744 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.897      ;
+; 0.748 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; clk          ; clk         ; 0.000        ; -0.023     ; 0.877      ;
+; 0.754 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; clk          ; clk         ; 0.000        ; -0.023     ; 0.883      ;
+; 0.787 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.938      ;
+; 0.791 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.942      ;
+; 0.793 ; g10_mastermind_controller:gate1|y_present.g            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.944      ;
+; 0.801 ; g10_mastermind_controller:gate1|y_present.k            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.954      ;
+; 0.815 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.967      ;
+; 0.815 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.967      ;
+; 0.815 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.967      ;
+; 0.815 ; g10_mastermind_controller:gate1|y_present.h            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.967      ;
+; 0.827 ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1] ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 0.000        ; -0.023     ; 0.956      ;
+; 0.900 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.050      ;
+; 0.904 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.054      ;
+; 0.905 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.055      ;
+; 0.906 ; g10_mastermind_controller:gate1|y_present.e            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.056      ;
+; 0.925 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ; clk          ; clk         ; 0.000        ; -0.016     ; 1.061      ;
+; 0.925 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ; clk          ; clk         ; 0.000        ; -0.016     ; 1.061      ;
+; 0.925 ; g10_mastermind_controller:gate1|sw2_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ; clk          ; clk         ; 0.000        ; -0.016     ; 1.061      ;
+; 0.943 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.001      ; 1.096      ;
+; 0.950 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ; clk          ; clk         ; 0.000        ; -0.016     ; 1.086      ;
+; 0.950 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ; clk          ; clk         ; 0.000        ; -0.016     ; 1.086      ;
+; 0.950 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ; clk          ; clk         ; 0.000        ; -0.016     ; 1.086      ;
+; 0.951 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ; clk          ; clk         ; 0.000        ; -0.023     ; 1.080      ;
+; 0.951 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ; clk          ; clk         ; 0.000        ; -0.023     ; 1.080      ;
+; 0.951 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ; clk          ; clk         ; 0.000        ; -0.023     ; 1.080      ;
+; 0.986 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.d             ; clk          ; clk         ; 0.000        ; 0.001      ; 1.139      ;
+; 1.014 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.166      ;
+; 1.014 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.166      ;
+; 1.014 ; g10_mastermind_controller:gate1|y_present.a            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.166      ;
+; 1.025 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw4_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.175      ;
+; 1.029 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.179      ;
+; 1.030 ; g10_mastermind_controller:gate1|y_present.f            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.180      ;
+; 1.048 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw3_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.198      ;
+; 1.049 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw2_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.199      ;
+; 1.050 ; g10_mastermind_controller:gate1|y_present.i            ; g10_mastermind_controller:gate1|sw1_LD                  ; clk          ; clk         ; 0.000        ; -0.002     ; 1.200      ;
+; 1.050 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.201      ;
+; 1.050 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.201      ;
+; 1.050 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.201      ;
+; 1.050 ; g10_mastermind_controller:gate1|y_present.c            ; g10_mastermind_controller:gate1|y_present.k             ; clk          ; clk         ; 0.000        ; -0.001     ; 1.201      ;
+; 1.057 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.a             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.209      ;
+; 1.057 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.b             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.209      ;
+; 1.057 ; g10_mastermind_controller:gate1|y_present.j            ; g10_mastermind_controller:gate1|y_present.j             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.209      ;
+; 1.058 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ; clk          ; clk         ; 0.000        ; -0.007     ; 1.203      ;
+; 1.058 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ; clk          ; clk         ; 0.000        ; -0.007     ; 1.203      ;
+; 1.058 ; g10_mastermind_controller:gate1|sw3_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ; clk          ; clk         ; 0.000        ; -0.007     ; 1.203      ;
+; 1.060 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ; clk          ; clk         ; 0.000        ; -0.011     ; 1.201      ;
+; 1.060 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ; clk          ; clk         ; 0.000        ; -0.011     ; 1.201      ;
+; 1.060 ; g10_mastermind_controller:gate1|sw4_LD                 ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ; clk          ; clk         ; 0.000        ; -0.011     ; 1.201      ;
+; 1.081 ; g10_mastermind_controller:gate1|GR_LD1                 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; clk          ; clk         ; 0.000        ; -0.011     ; 1.222      ;
++-------+--------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                  ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|GR_LD1                  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|GR_LD1                  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw1_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw1_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw2_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw2_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw3_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw3_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw4_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|sw4_LD                  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.a             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.a             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.b             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.b             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.c             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.c             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.d             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.d             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.e             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.e             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.f             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.f             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.g             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.g             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.h             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.h             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.i             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.i             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.j             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.j             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.k             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.k             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.l             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.l             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.n             ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_controller:gate1|y_present.n             ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0] ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1] ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2] ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0] ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate4|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate5|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate6|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate7|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]  ;
+; 9.000  ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ;
+; 9.000  ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]  ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                                             ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                                             ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                    ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]                                    ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk                                      ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk                                      ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|GR_LD1|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|GR_LD1|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw1_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw1_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw2_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw2_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw3_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw3_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; clk   ; Rise       ; gate1|sw4_LD|clk                                        ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; gate1|sw4_LD|clk                                        ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; P_generated ; clk        ; 3.054  ; 3.054  ; Rise       ; clk             ;
+; Ready       ; clk        ; 3.119  ; 3.119  ; Rise       ; clk             ;
+; Start       ; clk        ; 3.439  ; 3.439  ; Rise       ; clk             ;
+; mode        ; clk        ; 0.611  ; 0.611  ; Rise       ; clk             ;
+; modify_G    ; clk        ; 0.851  ; 0.851  ; Rise       ; clk             ;
+; sw[*]       ; clk        ; -0.429 ; -0.429 ; Rise       ; clk             ;
+;  sw[1]      ; clk        ; -0.435 ; -0.435 ; Rise       ; clk             ;
+;  sw[2]      ; clk        ; -0.429 ; -0.429 ; Rise       ; clk             ;
+;  sw[3]      ; clk        ; -0.438 ; -0.438 ; Rise       ; clk             ;
+; switch_LED  ; clk        ; 3.066  ; 3.066  ; Rise       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; P_generated ; clk        ; -2.203 ; -2.203 ; Rise       ; clk             ;
+; Ready       ; clk        ; -2.928 ; -2.928 ; Rise       ; clk             ;
+; Start       ; clk        ; -2.771 ; -2.771 ; Rise       ; clk             ;
+; mode        ; clk        ; 0.020  ; 0.020  ; Rise       ; clk             ;
+; modify_G    ; clk        ; 0.324  ; 0.324  ; Rise       ; clk             ;
+; sw[*]       ; clk        ; 1.141  ; 1.141  ; Rise       ; clk             ;
+;  sw[1]      ; clk        ; 1.126  ; 1.126  ; Rise       ; clk             ;
+;  sw[2]      ; clk        ; 1.123  ; 1.123  ; Rise       ; clk             ;
+;  sw[3]      ; clk        ; 1.141  ; 1.141  ; Rise       ; clk             ;
+; switch_LED  ; clk        ; -2.011 ; -2.011 ; Rise       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; segment1[*]  ; clk        ; 4.042 ; 4.042 ; Rise       ; clk             ;
+;  segment1[0] ; clk        ; 3.998 ; 3.998 ; Rise       ; clk             ;
+;  segment1[1] ; clk        ; 4.042 ; 4.042 ; Rise       ; clk             ;
+;  segment1[2] ; clk        ; 4.026 ; 4.026 ; Rise       ; clk             ;
+;  segment1[3] ; clk        ; 4.020 ; 4.020 ; Rise       ; clk             ;
+;  segment1[4] ; clk        ; 3.892 ; 3.892 ; Rise       ; clk             ;
+;  segment1[5] ; clk        ; 3.891 ; 3.891 ; Rise       ; clk             ;
+;  segment1[6] ; clk        ; 3.897 ; 3.897 ; Rise       ; clk             ;
+; segment2[*]  ; clk        ; 4.050 ; 4.050 ; Rise       ; clk             ;
+;  segment2[0] ; clk        ; 4.050 ; 4.050 ; Rise       ; clk             ;
+;  segment2[1] ; clk        ; 3.881 ; 3.881 ; Rise       ; clk             ;
+;  segment2[2] ; clk        ; 3.881 ; 3.881 ; Rise       ; clk             ;
+;  segment2[3] ; clk        ; 3.891 ; 3.891 ; Rise       ; clk             ;
+;  segment2[4] ; clk        ; 3.903 ; 3.903 ; Rise       ; clk             ;
+;  segment2[5] ; clk        ; 4.050 ; 4.050 ; Rise       ; clk             ;
+;  segment2[6] ; clk        ; 4.050 ; 4.050 ; Rise       ; clk             ;
+; segment3[*]  ; clk        ; 4.049 ; 4.049 ; Rise       ; clk             ;
+;  segment3[0] ; clk        ; 4.013 ; 4.013 ; Rise       ; clk             ;
+;  segment3[1] ; clk        ; 3.895 ; 3.895 ; Rise       ; clk             ;
+;  segment3[2] ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+;  segment3[3] ; clk        ; 3.930 ; 3.930 ; Rise       ; clk             ;
+;  segment3[4] ; clk        ; 4.034 ; 4.034 ; Rise       ; clk             ;
+;  segment3[5] ; clk        ; 4.032 ; 4.032 ; Rise       ; clk             ;
+;  segment3[6] ; clk        ; 4.049 ; 4.049 ; Rise       ; clk             ;
+; segment4[*]  ; clk        ; 4.182 ; 4.182 ; Rise       ; clk             ;
+;  segment4[0] ; clk        ; 3.964 ; 3.964 ; Rise       ; clk             ;
+;  segment4[1] ; clk        ; 4.162 ; 4.162 ; Rise       ; clk             ;
+;  segment4[2] ; clk        ; 4.182 ; 4.182 ; Rise       ; clk             ;
+;  segment4[3] ; clk        ; 4.043 ; 4.043 ; Rise       ; clk             ;
+;  segment4[4] ; clk        ; 4.033 ; 4.033 ; Rise       ; clk             ;
+;  segment4[5] ; clk        ; 3.914 ; 3.914 ; Rise       ; clk             ;
+;  segment4[6] ; clk        ; 4.055 ; 4.055 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; segment1[*]  ; clk        ; 3.774 ; 3.774 ; Rise       ; clk             ;
+;  segment1[0] ; clk        ; 3.827 ; 3.827 ; Rise       ; clk             ;
+;  segment1[1] ; clk        ; 3.856 ; 3.856 ; Rise       ; clk             ;
+;  segment1[2] ; clk        ; 3.845 ; 3.845 ; Rise       ; clk             ;
+;  segment1[3] ; clk        ; 3.891 ; 3.891 ; Rise       ; clk             ;
+;  segment1[4] ; clk        ; 3.778 ; 3.778 ; Rise       ; clk             ;
+;  segment1[5] ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  segment1[6] ; clk        ; 3.774 ; 3.774 ; Rise       ; clk             ;
+; segment2[*]  ; clk        ; 3.708 ; 3.708 ; Rise       ; clk             ;
+;  segment2[0] ; clk        ; 3.874 ; 3.874 ; Rise       ; clk             ;
+;  segment2[1] ; clk        ; 3.708 ; 3.708 ; Rise       ; clk             ;
+;  segment2[2] ; clk        ; 3.708 ; 3.708 ; Rise       ; clk             ;
+;  segment2[3] ; clk        ; 3.775 ; 3.775 ; Rise       ; clk             ;
+;  segment2[4] ; clk        ; 3.786 ; 3.786 ; Rise       ; clk             ;
+;  segment2[5] ; clk        ; 3.933 ; 3.933 ; Rise       ; clk             ;
+;  segment2[6] ; clk        ; 3.933 ; 3.933 ; Rise       ; clk             ;
+; segment3[*]  ; clk        ; 3.717 ; 3.717 ; Rise       ; clk             ;
+;  segment3[0] ; clk        ; 3.843 ; 3.843 ; Rise       ; clk             ;
+;  segment3[1] ; clk        ; 3.717 ; 3.717 ; Rise       ; clk             ;
+;  segment3[2] ; clk        ; 3.757 ; 3.757 ; Rise       ; clk             ;
+;  segment3[3] ; clk        ; 3.858 ; 3.858 ; Rise       ; clk             ;
+;  segment3[4] ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  segment3[5] ; clk        ; 3.947 ; 3.947 ; Rise       ; clk             ;
+;  segment3[6] ; clk        ; 3.974 ; 3.974 ; Rise       ; clk             ;
+; segment4[*]  ; clk        ; 3.780 ; 3.780 ; Rise       ; clk             ;
+;  segment4[0] ; clk        ; 3.800 ; 3.800 ; Rise       ; clk             ;
+;  segment4[1] ; clk        ; 3.999 ; 3.999 ; Rise       ; clk             ;
+;  segment4[2] ; clk        ; 4.001 ; 4.001 ; Rise       ; clk             ;
+;  segment4[3] ; clk        ; 3.915 ; 3.915 ; Rise       ; clk             ;
+;  segment4[4] ; clk        ; 3.906 ; 3.906 ; Rise       ; clk             ;
+;  segment4[5] ; clk        ; 3.780 ; 3.780 ; Rise       ; clk             ;
+;  segment4[6] ; clk        ; 3.920 ; 3.920 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 15.605 ; 0.215 ; N/A      ; N/A     ; 8.889               ;
+;  clk             ; 15.605 ; 0.215 ; N/A      ; N/A     ; 8.889               ;
+; Design-wide TNS  ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; P_generated ; clk        ; 7.021 ; 7.021 ; Rise       ; clk             ;
+; Ready       ; clk        ; 7.083 ; 7.083 ; Rise       ; clk             ;
+; Start       ; clk        ; 7.649 ; 7.649 ; Rise       ; clk             ;
+; mode        ; clk        ; 2.854 ; 2.854 ; Rise       ; clk             ;
+; modify_G    ; clk        ; 3.508 ; 3.508 ; Rise       ; clk             ;
+; sw[*]       ; clk        ; 0.132 ; 0.132 ; Rise       ; clk             ;
+;  sw[1]      ; clk        ; 0.013 ; 0.013 ; Rise       ; clk             ;
+;  sw[2]      ; clk        ; 0.132 ; 0.132 ; Rise       ; clk             ;
+;  sw[3]      ; clk        ; 0.013 ; 0.013 ; Rise       ; clk             ;
+; switch_LED  ; clk        ; 7.022 ; 7.022 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Hold Times                                                                ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; P_generated ; clk        ; -2.203 ; -2.203 ; Rise       ; clk             ;
+; Ready       ; clk        ; -2.928 ; -2.928 ; Rise       ; clk             ;
+; Start       ; clk        ; -2.771 ; -2.771 ; Rise       ; clk             ;
+; mode        ; clk        ; 0.020  ; 0.020  ; Rise       ; clk             ;
+; modify_G    ; clk        ; 0.324  ; 0.324  ; Rise       ; clk             ;
+; sw[*]       ; clk        ; 1.486  ; 1.486  ; Rise       ; clk             ;
+;  sw[1]      ; clk        ; 1.413  ; 1.413  ; Rise       ; clk             ;
+;  sw[2]      ; clk        ; 1.409  ; 1.409  ; Rise       ; clk             ;
+;  sw[3]      ; clk        ; 1.486  ; 1.486  ; Rise       ; clk             ;
+; switch_LED  ; clk        ; -2.011 ; -2.011 ; Rise       ; clk             ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; segment1[*]  ; clk        ; 7.781 ; 7.781 ; Rise       ; clk             ;
+;  segment1[0] ; clk        ; 7.709 ; 7.709 ; Rise       ; clk             ;
+;  segment1[1] ; clk        ; 7.781 ; 7.781 ; Rise       ; clk             ;
+;  segment1[2] ; clk        ; 7.677 ; 7.677 ; Rise       ; clk             ;
+;  segment1[3] ; clk        ; 7.731 ; 7.731 ; Rise       ; clk             ;
+;  segment1[4] ; clk        ; 7.387 ; 7.387 ; Rise       ; clk             ;
+;  segment1[5] ; clk        ; 7.392 ; 7.392 ; Rise       ; clk             ;
+;  segment1[6] ; clk        ; 7.398 ; 7.398 ; Rise       ; clk             ;
+; segment2[*]  ; clk        ; 7.782 ; 7.782 ; Rise       ; clk             ;
+;  segment2[0] ; clk        ; 7.720 ; 7.720 ; Rise       ; clk             ;
+;  segment2[1] ; clk        ; 7.381 ; 7.381 ; Rise       ; clk             ;
+;  segment2[2] ; clk        ; 7.321 ; 7.321 ; Rise       ; clk             ;
+;  segment2[3] ; clk        ; 7.379 ; 7.379 ; Rise       ; clk             ;
+;  segment2[4] ; clk        ; 7.390 ; 7.390 ; Rise       ; clk             ;
+;  segment2[5] ; clk        ; 7.782 ; 7.782 ; Rise       ; clk             ;
+;  segment2[6] ; clk        ; 7.753 ; 7.753 ; Rise       ; clk             ;
+; segment3[*]  ; clk        ; 7.802 ; 7.802 ; Rise       ; clk             ;
+;  segment3[0] ; clk        ; 7.733 ; 7.733 ; Rise       ; clk             ;
+;  segment3[1] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
+;  segment3[2] ; clk        ; 7.469 ; 7.469 ; Rise       ; clk             ;
+;  segment3[3] ; clk        ; 7.470 ; 7.470 ; Rise       ; clk             ;
+;  segment3[4] ; clk        ; 7.787 ; 7.787 ; Rise       ; clk             ;
+;  segment3[5] ; clk        ; 7.785 ; 7.785 ; Rise       ; clk             ;
+;  segment3[6] ; clk        ; 7.802 ; 7.802 ; Rise       ; clk             ;
+; segment4[*]  ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  segment4[0] ; clk        ; 7.562 ; 7.562 ; Rise       ; clk             ;
+;  segment4[1] ; clk        ; 7.889 ; 7.889 ; Rise       ; clk             ;
+;  segment4[2] ; clk        ; 7.884 ; 7.884 ; Rise       ; clk             ;
+;  segment4[3] ; clk        ; 7.799 ; 7.799 ; Rise       ; clk             ;
+;  segment4[4] ; clk        ; 7.787 ; 7.787 ; Rise       ; clk             ;
+;  segment4[5] ; clk        ; 7.445 ; 7.445 ; Rise       ; clk             ;
+;  segment4[6] ; clk        ; 7.802 ; 7.802 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; segment1[*]  ; clk        ; 3.774 ; 3.774 ; Rise       ; clk             ;
+;  segment1[0] ; clk        ; 3.827 ; 3.827 ; Rise       ; clk             ;
+;  segment1[1] ; clk        ; 3.856 ; 3.856 ; Rise       ; clk             ;
+;  segment1[2] ; clk        ; 3.845 ; 3.845 ; Rise       ; clk             ;
+;  segment1[3] ; clk        ; 3.891 ; 3.891 ; Rise       ; clk             ;
+;  segment1[4] ; clk        ; 3.778 ; 3.778 ; Rise       ; clk             ;
+;  segment1[5] ; clk        ; 3.776 ; 3.776 ; Rise       ; clk             ;
+;  segment1[6] ; clk        ; 3.774 ; 3.774 ; Rise       ; clk             ;
+; segment2[*]  ; clk        ; 3.708 ; 3.708 ; Rise       ; clk             ;
+;  segment2[0] ; clk        ; 3.874 ; 3.874 ; Rise       ; clk             ;
+;  segment2[1] ; clk        ; 3.708 ; 3.708 ; Rise       ; clk             ;
+;  segment2[2] ; clk        ; 3.708 ; 3.708 ; Rise       ; clk             ;
+;  segment2[3] ; clk        ; 3.775 ; 3.775 ; Rise       ; clk             ;
+;  segment2[4] ; clk        ; 3.786 ; 3.786 ; Rise       ; clk             ;
+;  segment2[5] ; clk        ; 3.933 ; 3.933 ; Rise       ; clk             ;
+;  segment2[6] ; clk        ; 3.933 ; 3.933 ; Rise       ; clk             ;
+; segment3[*]  ; clk        ; 3.717 ; 3.717 ; Rise       ; clk             ;
+;  segment3[0] ; clk        ; 3.843 ; 3.843 ; Rise       ; clk             ;
+;  segment3[1] ; clk        ; 3.717 ; 3.717 ; Rise       ; clk             ;
+;  segment3[2] ; clk        ; 3.757 ; 3.757 ; Rise       ; clk             ;
+;  segment3[3] ; clk        ; 3.858 ; 3.858 ; Rise       ; clk             ;
+;  segment3[4] ; clk        ; 3.962 ; 3.962 ; Rise       ; clk             ;
+;  segment3[5] ; clk        ; 3.947 ; 3.947 ; Rise       ; clk             ;
+;  segment3[6] ; clk        ; 3.974 ; 3.974 ; Rise       ; clk             ;
+; segment4[*]  ; clk        ; 3.780 ; 3.780 ; Rise       ; clk             ;
+;  segment4[0] ; clk        ; 3.800 ; 3.800 ; Rise       ; clk             ;
+;  segment4[1] ; clk        ; 3.999 ; 3.999 ; Rise       ; clk             ;
+;  segment4[2] ; clk        ; 4.001 ; 4.001 ; Rise       ; clk             ;
+;  segment4[3] ; clk        ; 3.915 ; 3.915 ; Rise       ; clk             ;
+;  segment4[4] ; clk        ; 3.906 ; 3.906 ; Rise       ; clk             ;
+;  segment4[5] ; clk        ; 3.780 ; 3.780 ; Rise       ; clk             ;
+;  segment4[6] ; clk        ; 3.920 ; 3.920 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 177      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 177      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -194,10 +1246,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 104   ; 104  ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 84    ; 84   ;
 +---------------------------------+-------+------+
 
 
@@ -207,42 +1259,52 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 03 21:34:20 2015
+    Info: Processing started: Fri Dec 04 03:27:10 2015
 Info: Command: quartus_sta lab5 -c lab5
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab5.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332104): Reading SDC File: 'mastermind.sdc'
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332146): Worst-case setup slack is 15.605
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    15.605         0.000 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.889
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.889         0.000 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332146): Worst-case setup slack is 18.318
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    18.318         0.000 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is 9.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     9.000         0.000 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 396 megabytes
-    Info: Processing ended: Thu Dec 03 21:34:21 2015
-    Info: Elapsed time: 00:00:01
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 395 megabytes
+    Info: Processing ended: Fri Dec 04 03:27:12 2015
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -23,6 +23,7 @@ port (SC_CMP : in std_logic;
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : out std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
 		switch_REG : out std_logic;
+		RippleBlankInState : out std_logic;
 		
 		RP_LD : out std_logic; -- < new --
 		
@@ -70,6 +71,7 @@ if (mode = '1') then --user mode
 				end if;
 			when d => 
 				switch_REG <= '0';
+				RippleBlankInState <= '0';
 				
 				y_present <= e;
 			when e => 				
@@ -144,11 +146,13 @@ if (mode = '1') then --user mode
 				y_present <= n;
 			when m =>
 				switch_REG <= '1';
+				RippleBlankInState <= '1';
 				y_present <= n;
 				
 			when n =>
 				if (modify_G = '1') then
 					switch_REG <= '0';
+					RippleBlankInState <= '0';
 					y_present <= e;
 				end if;
 			

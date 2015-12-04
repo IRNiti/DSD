@@ -16,7 +16,9 @@ port (G : in std_logic_vector(11 downto 0);
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : in std_logic;
 		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : in std_logic;
 		switch_REG : in std_logic;
+		RippleBlank_In_state : in std_logic;
 		
+		segment1, segment2, segment3, segment4 : out std_logic_vector(6 downto 0);
 		
 		SR_SEL : in std_logic;
 		P_SEL : in std_logic;
@@ -56,10 +58,15 @@ signal switchreg : std_logic;
 signal swI : std_logic_vector(2 downto 0);
 signal clrledr : std_logic;
 signal sw1,sw2,sw3,sw4 : std_logic;
-signal S1,S2,S3,S4 : std_logic_vector (2 downto 0);
-signal sr1,sr2,sr3,sr4 : std_logic_vector (2 downto 0);
+--signal S1,S2,S3,S4 : std_logic_vector (2 downto 0);
+
+signal sr1N,sr2N,sr3N,sr4N : std_logic_vector (3 downto 0);
 signal led1,led2,led3,led4 : std_logic_vector (2 downto 0);
 signal LD1mux, LD2mux, LD3mux, LD4mux : std_logic_vector (2 downto 0);
+signal Gdecoder1,Gdecoder2,Gdecoder3,Gdecoder4 : std_logic_vector(3 downto 0);
+signal segment1N, segment2N, segment3N, segment4N : std_logic_vector (6 downto 0);
+signal SRcode1, SRcode2 : std_logic_vector (3 downto 0);
+
 
 component g10_mastermind_score is
 	port (P1, P2, P3, P4 : in std_logic_vector (2 downto 0);
@@ -94,6 +101,23 @@ port (clr : in std_logic;
 		R_LD : in std_logic;
 		p : in std_logic_vector (2 downto 0);
 		q : out std_logic_vector (2 downto 0));
+end component;
+
+component g10_3to4_decoder is
+	port(input: in std_logic_vector(2 downto 0);
+			output: out std_logic_vector(3 downto 0));
+end component;
+
+component g10_display_LED is
+port (sr1, sr2, sr3, sr4 : in std_logic_vector (3 downto 0);
+		RippleBlank_In_state : in std_logic;
+		segment1, segment2, segment3, segment4 : out std_logic_vector(6 downto 0));
+end component;
+
+component g10_score_encoder_user_mode is
+port (score_code : in std_logic_vector (3 downto 0);
+		code1 : out std_logic_vector (3 downto 0);
+		code2 : out std_logic_vector (3 downto 0));
 end component;
 
 component g10_comp4 IS 
@@ -141,35 +165,27 @@ Gate9: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD2, p => d2, 
 Gate10: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD3, p => d3, q => G3);
 Gate11: register_3bit port map (clr => clr, clk => CLK, R_LD => GR_LD4, p => d4, q => G4);
 
+gate12: g10_3to4_decoder port map (input => G1, output => Gdecoder1);
+gate13: g10_3to4_decoder port map (input => G2, output => Gdecoder2);
+gate14: g10_3to4_decoder port map (input => G3, output => Gdecoder3);
+gate15: g10_3to4_decoder port map (input => G4, output => Gdecoder4);
 
+gate16: g10_display_LED port map (sr1 => sr1N, sr2 => sr2N, sr3 => sr3N, sr4 => sr4N, RippleBlank_In_state => RippleBlank_In_state,
+									segment1 => segment1, segment2 => segment2, segment3 => segment3, segment4 => segment4);
+gate17: g10_score_encoder_user_mode port map (score_code => h, code1 => SRcode1, code2 => SRcode2 );
 
-
-
---gate8: RandomPatternGenerator port map (P_Generated => P_Generated, clk => clk, EXT_PATTERN => pattern, Start => Start,
---													RP_LD => rpld, TC_EN2 => tce2, TC_RST2 => tcr2, TM_ADDRN => addrn);	
-
---map
-
---display_score <= h; --**
-
---GR1 <= d1;
---GR2 <= d2;
---GR3 <= d3;
---GR4 <= d4;
-
-datapath: process (SR_SEL, P_SEL, SR_LD,ADDR1,ADDR2,ADDR3,ADDR4, EXT_PATTERN1, EXT_PATTERN2, 
-							EXT_PATTERN3, EXT_PATTERN4, exact, color, f, G1,G2,G3,G4,S1,S2,S3,S4)
+datapath: process (SR_SEL, P_SEL,switch_REG,SR_LD,ADDR1, exact, color, Gdecoder1, Gdecoder2, Gdecoder3, Gdecoder4, SRcode1, SRcode2)
 begin
 
 case switch_REG is 
-	when '0' =>    sr1 <= G1;
-						sr2 <= G2;
-						sr3 <= G3;
-						sr4 <= G4;
-	when others => sr1 <= S1;
-						sr2 <= S2;
-						sr3 <= S3;
-						sr4 <= S4;
+	when '0' =>    sr1N <= Gdecoder1;
+						sr2N <= Gdecoder2;
+						sr3N <= Gdecoder3;
+						sr4N <= Gdecoder4;
+	when others => sr1N <= "0000";
+						sr2N <= SRcode1;
+						sr3N <= "0000";
+						sr4N <= SRcode2;
 end case;
 
 
