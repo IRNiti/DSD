@@ -51,9 +51,6 @@ controller : process (CLK, READY, START,SC_CMP, TC_LAST)
 begin
 RP_LD <= '1';
 
-
-		
-
 if (mode = '1') then --user mode
 		
 	 if (START = '0') then
@@ -67,6 +64,7 @@ if (mode = '1') then --user mode
 			when a =>
 				if (START = '1') then 
 					switch_REG <= '0';
+					rippleBlankInState <= '0';
 					y_present <= b;
 				end if;	
 			when b => 
@@ -84,12 +82,12 @@ if (mode = '1') then --user mode
 			
 			when e => 
 				if (ready = '0') then
-					SR_LD <= '1'; 
+					GR_LD <= '1'; 
 					y_present <= f;
 				end if;
 				
 			when f =>
-				SR_LD <= '0';
+				SR_LD <= '1';
 				y_present <= g;
 			when g =>
 				switch_REG <= '1';

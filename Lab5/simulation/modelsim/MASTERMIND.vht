@@ -17,7 +17,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "12/04/2015 17:46:50"
+-- Generated on "12/04/2015 22:01:16"
                                                             
 -- Vhdl Test Bench template for design  :  MASTERMIND
 -- 
@@ -32,23 +32,22 @@ END MASTERMIND_vhd_tst;
 ARCHITECTURE MASTERMIND_arch OF MASTERMIND_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk : STD_LOGIC :='0';
-SIGNAL GR_SELECT : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL clk : STD_LOGIC := '0';
+SIGNAL GR_SELECT : STD_LOGIC_VECTOR(3 DOWNTO 0):= "0000" ;
 SIGNAL mode : STD_LOGIC;
 SIGNAL modify_G : STD_LOGIC;
-SIGNAL P_generated : STD_LOGIC;
-SIGNAL Ready : STD_LOGIC;
+SIGNAL P_generated : STD_LOGIC:= '1';
+SIGNAL Ready : STD_LOGIC:= '1';
 SIGNAL segment1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segment2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segment3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL segment4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL Start : STD_LOGIC;
-SIGNAL sw : STD_LOGIC_VECTOR(2 DOWNTO 0);
-SIGNAL switch_LED : STD_LOGIC;
+SIGNAL sw : STD_LOGIC_VECTOR(2 DOWNTO 0):= "000";
 COMPONENT MASTERMIND
 	PORT (
 	clk : IN STD_LOGIC;
-	GR_SELECT : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	GR_SELECT : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	mode : IN STD_LOGIC;
 	modify_G : IN STD_LOGIC;
 	P_generated : IN STD_LOGIC;
@@ -58,8 +57,7 @@ COMPONENT MASTERMIND
 	segment3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	segment4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	Start : IN STD_LOGIC;
-	sw : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-	switch_LED : IN STD_LOGIC
+	sw : IN STD_LOGIC_VECTOR(2 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -77,17 +75,15 @@ BEGIN
 	segment3 => segment3,
 	segment4 => segment4,
 	Start => Start,
-	sw => sw,
-	switch_LED => switch_LED
+	sw => sw
 	);
-                                   
+                                      
 always : PROCESS                                              
 -- optional sensitivity list                                  
 -- (        )                                                 
 -- variable declarations                                      
-BEGIN
-
-for i in 0 to 100 loop 
+BEGIN                                                         
+        for i in 0 to 100 loop 
 			clk <= not clk;
 			
 			if ( i = 0) then
@@ -109,30 +105,42 @@ for i in 0 to 100 loop
 			 if (i = 12) then
 				
 				P_generated <= '1';
-				sw <= "001";
-				GR_SELECT <= "00";
+				sw <= "000";
+				GR_SELECT <= "0001";
 			end if;
 			
 			if (i = 14) then 
-			  sw <= "010";
-				GR_SELECT <= "01";
+			  sw <= "001";
+				GR_SELECT <= "0001";
 			end if;
 			
 			if (i = 16) then 
-			  sw <= "011";
-				GR_SELECT <= "10";
+			  sw <= "010";
+				GR_SELECT <= "0010";
 			end if;
 			
 			if (i = 18) then 
-				GR_SELECT <= "11";
+			  sw <= "010";
+				GR_SELECT <= "0100";
 			end if;
 			
 			if (i = 20) then
+				modify_G <= '0';
 				ready <= '0';
 			end if;
+			
+			if (i = 22) then
+				ready <= '1';
+			end if;
+			
+			if (i = 36) then
+				modify_G <= '1';
+			end if;
+			
+			
 		wait for 20 ns;
-		end loop;
-			-- code executes for every event on sensitivity list  
+		
+		end loop;-- code executes for every event on sensitivity list  
 WAIT;                                                        
 END PROCESS always;                                          
 END MASTERMIND_arch;

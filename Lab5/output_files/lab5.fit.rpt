@@ -1,5 +1,5 @@
 Fitter report for lab5
-Fri Dec 04 21:51:15 2015
+Fri Dec 04 23:50:37 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,17 +62,17 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 04 21:51:15 2015           ;
+; Fitter Status                      ; Successful - Fri Dec 04 23:50:37 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab5                                            ;
 ; Top-level Entity Name              ; MASTERMIND                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 258 / 18,752 ( 1 % )                            ;
-;     Total combinational functions  ; 254 / 18,752 ( 1 % )                            ;
-;     Dedicated logic registers      ; 55 / 18,752 ( < 1 % )                           ;
-; Total registers                    ; 55                                              ;
+; Total logic elements               ; 247 / 18,752 ( 1 % )                            ;
+;     Total combinational functions  ; 244 / 18,752 ( 1 % )                            ;
+;     Dedicated logic registers      ; 54 / 18,752 ( < 1 % )                           ;
+; Total registers                    ; 54                                              ;
 ; Total pins                         ; 41 / 315 ( 13 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 239,616 ( 0 % )                             ;
@@ -149,8 +149,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 355 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 355 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 344 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 344 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -173,7 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 352     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 341     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -189,23 +189,23 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 258 / 18,752 ( 1 % )  ;
-;     -- Combinational with no register       ; 203                   ;
-;     -- Register only                        ; 4                     ;
+; Total logic elements                        ; 247 / 18,752 ( 1 % )  ;
+;     -- Combinational with no register       ; 193                   ;
+;     -- Register only                        ; 3                     ;
 ;     -- Combinational with a register        ; 51                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 143                   ;
-;     -- 3 input functions                    ; 87                    ;
-;     -- <=2 input functions                  ; 24                    ;
-;     -- Register only                        ; 4                     ;
+;     -- 4 input functions                    ; 134                   ;
+;     -- 3 input functions                    ; 96                    ;
+;     -- <=2 input functions                  ; 14                    ;
+;     -- Register only                        ; 3                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 254                   ;
+;     -- normal mode                          ; 244                   ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
-; Total registers*                            ; 55 / 19,649 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 55 / 18,752 ( < 1 % ) ;
+; Total registers*                            ; 54 / 19,649 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 54 / 18,752 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 897 ( 0 % )       ;
 ;                                             ;                       ;
 ; Total LABs:  partially or completely used   ; 19 / 1,172 ( 2 % )    ;
@@ -224,11 +224,11 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%          ;
-; Maximum fan-out                             ; 55                    ;
+; Peak interconnect usage (total/H/V)         ; 2% / 2% / 2%          ;
+; Maximum fan-out                             ; 54                    ;
 ; Highest non-global fan-out                  ; 38                    ;
-; Total fan-out                               ; 1108                  ;
-; Average fan-out                             ; 3.09                  ;
+; Total fan-out                               ; 1075                  ;
+; Average fan-out                             ; 3.11                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -241,23 +241,23 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 258 / 18752 ( 1 % )  ; 0 / 18752 ( 0 % )              ;
-;     -- Combinational with no register       ; 203                  ; 0                              ;
-;     -- Register only                        ; 4                    ; 0                              ;
+; Total logic elements                        ; 247 / 18752 ( 1 % )  ; 0 / 18752 ( 0 % )              ;
+;     -- Combinational with no register       ; 193                  ; 0                              ;
+;     -- Register only                        ; 3                    ; 0                              ;
 ;     -- Combinational with a register        ; 51                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 143                  ; 0                              ;
-;     -- 3 input functions                    ; 87                   ; 0                              ;
-;     -- <=2 input functions                  ; 24                   ; 0                              ;
-;     -- Register only                        ; 4                    ; 0                              ;
+;     -- 4 input functions                    ; 134                  ; 0                              ;
+;     -- 3 input functions                    ; 96                   ; 0                              ;
+;     -- <=2 input functions                  ; 14                   ; 0                              ;
+;     -- Register only                        ; 3                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 254                  ; 0                              ;
+;     -- normal mode                          ; 244                  ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 55                   ; 0                              ;
-;     -- Dedicated logic registers            ; 55 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
+; Total registers                             ; 54                   ; 0                              ;
+;     -- Dedicated logic registers            ; 54 / 18752 ( < 1 % ) ; 0 / 18752 ( 0 % )              ;
 ;                                             ;                      ;                                ;
 ; Total LABs:  partially or completely used   ; 19 / 1172 ( 2 % )    ; 0 / 1172 ( 0 % )               ;
 ;                                             ;                      ;                                ;
@@ -275,8 +275,8 @@ The pin-out file can be found in C:/Users/Benjamin/Desktop/DSD/Lab5/output_files
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 1108                 ; 0                              ;
-;     -- Registered Connections               ; 399                  ; 0                              ;
+;     -- Total Connections                    ; 1075                 ; 0                              ;
+;     -- Registered Connections               ; 370                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -911,23 +911,23 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                        ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |MASTERMIND                                 ; 258 (0)     ; 55 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 41   ; 0            ; 203 (0)      ; 4 (0)             ; 51 (0)           ; |MASTERMIND                                                                                                                                ; work         ;
+; |MASTERMIND                                 ; 247 (0)     ; 54 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 41   ; 0            ; 193 (0)      ; 3 (0)             ; 51 (0)           ; |MASTERMIND                                                                                                                                ; work         ;
 ;    |RandomPatternGenerator:gate4|           ; 37 (5)      ; 28 (4)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (1)        ; 0 (0)             ; 28 (4)           ; |MASTERMIND|RandomPatternGenerator:gate4                                                                                                   ; work         ;
-;       |counter_table:gate1|                 ; 20 (20)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 12 (12)          ; |MASTERMIND|RandomPatternGenerator:gate4|counter_table:gate1                                                                               ; work         ;
+;       |counter_table:gate1|                 ; 21 (21)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 13 (13)          ; |MASTERMIND|RandomPatternGenerator:gate4|counter_table:gate1                                                                               ; work         ;
 ;       |register_12bit:gate2|                ; 12 (12)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 12 (12)          ; |MASTERMIND|RandomPatternGenerator:gate4|register_12bit:gate2                                                                              ; work         ;
-;    |g10_mastermind_controller:gate1|        ; 20 (20)     ; 11 (11)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 9 (9)            ; |MASTERMIND|g10_mastermind_controller:gate1                                                                                                ; work         ;
-;    |g10_mastermind_datapath:gate2|          ; 213 (17)    ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 185 (17)     ; 2 (0)             ; 26 (2)           ; |MASTERMIND|g10_mastermind_datapath:gate2                                                                                                  ; work         ;
-;       |g10_display_LED:gate16|              ; 34 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 0 (0)             ; 1 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16                                                                           ; work         ;
-;          |g10_7_segment_decoder:gate10|     ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 1 (1)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10                                              ; work         ;
+;    |g10_mastermind_controller:gate1|        ; 19 (19)     ; 10 (10)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 8 (8)            ; |MASTERMIND|g10_mastermind_controller:gate1                                                                                                ; work         ;
+;    |g10_mastermind_datapath:gate2|          ; 203 (6)     ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 175 (5)      ; 1 (0)             ; 27 (1)           ; |MASTERMIND|g10_mastermind_datapath:gate2                                                                                                  ; work         ;
+;       |g10_display_LED:gate16|              ; 35 (9)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (7)       ; 0 (0)             ; 6 (2)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16                                                                           ; work         ;
+;          |g10_7_segment_decoder:gate10|     ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10                                              ; work         ;
 ;          |g10_7_segment_decoder:gate11|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11                                              ; work         ;
-;          |g10_7_segment_decoder:gate12|     ; 10 (10)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12                                              ; work         ;
+;          |g10_7_segment_decoder:gate12|     ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12                                              ; work         ;
 ;          |g10_7_segment_decoder:gate13|     ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13                                              ; work         ;
-;       |g10_mastermind_score:Gate1|          ; 155 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 132 (0)      ; 0 (0)             ; 23 (0)           ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1                                                                       ; work         ;
-;          |g10_color_matches:Gate2|          ; 135 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 118 (0)      ; 0 (0)             ; 17 (0)           ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2                                               ; work         ;
+;       |g10_mastermind_score:Gate1|          ; 158 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 138 (0)      ; 0 (0)             ; 20 (0)           ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1                                                                       ; work         ;
+;          |g10_color_matches:Gate2|          ; 138 (0)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 122 (0)      ; 0 (0)             ; 16 (0)           ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2                                               ; work         ;
 ;             |g10_minimum3:Gate21|           ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21                           ; work         ;
 ;             |g10_minimum3:Gate22|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22                           ; work         ;
 ;             |g10_minimum3:Gate23|           ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23                           ; work         ;
-;             |g10_minimum3:Gate24|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24                           ; work         ;
+;             |g10_minimum3:Gate24|           ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24                           ; work         ;
 ;             |g10_minimum3:Gate25|           ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25                           ; work         ;
 ;             |g10_minimum3:Gate26|           ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26                           ; work         ;
 ;             |g10_num1s:Gate10|              ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10                              ; work         ;
@@ -944,44 +944,44 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |g10_num1s:Gate9|               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9                               ; work         ;
 ;             |lpm_add_sub:Gate27|            ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27                            ; work         ;
 ;                |add_sub_8hf:auto_generated| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated ; work         ;
-;             |lpm_add_sub:Gate28|            ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28                            ; work         ;
-;                |add_sub_8hf:auto_generated| ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated ; work         ;
-;             |lpm_add_sub:Gate29|            ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29                            ; work         ;
-;                |add_sub_8hf:auto_generated| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated ; work         ;
-;             |lpm_add_sub:Gate30|            ; 1 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30                            ; work         ;
-;                |add_sub_8hf:auto_generated| ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated ; work         ;
-;             |lpm_add_sub:Gate31|            ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31                            ; work         ;
-;                |add_sub_8hf:auto_generated| ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated ; work         ;
-;             |lpm_add_sub:Gate34|            ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34                            ; work         ;
-;                |add_sub_r4f:auto_generated| ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated ; work         ;
+;             |lpm_add_sub:Gate28|            ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28                            ; work         ;
+;                |add_sub_8hf:auto_generated| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated ; work         ;
+;             |lpm_add_sub:Gate29|            ; 4 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29                            ; work         ;
+;                |add_sub_8hf:auto_generated| ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated ; work         ;
+;             |lpm_add_sub:Gate30|            ; 2 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30                            ; work         ;
+;                |add_sub_8hf:auto_generated| ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated ; work         ;
+;             |lpm_add_sub:Gate31|            ; 3 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31                            ; work         ;
+;                |add_sub_8hf:auto_generated| ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated ; work         ;
+;             |lpm_add_sub:Gate34|            ; 13 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34                            ; work         ;
+;                |add_sub_r4f:auto_generated| ; 13 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated ; work         ;
 ;             |lpm_decode:Gate1|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1                              ; work         ;
 ;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated    ; work         ;
-;             |lpm_decode:Gate2|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 1 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2                              ; work         ;
-;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated    ; work         ;
+;             |lpm_decode:Gate2|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2                              ; work         ;
+;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated    ; work         ;
 ;             |lpm_decode:Gate3|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3                              ; work         ;
 ;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated    ; work         ;
 ;             |lpm_decode:Gate4|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4                              ; work         ;
 ;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated    ; work         ;
-;             |lpm_decode:Gate5|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5                              ; work         ;
-;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated    ; work         ;
-;             |lpm_decode:Gate6|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 1 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6                              ; work         ;
-;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated    ; work         ;
-;             |lpm_decode:Gate7|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7                              ; work         ;
-;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated    ; work         ;
-;             |lpm_decode:Gate8|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 3 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8                              ; work         ;
-;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated    ; work         ;
-;          |g10_num_matches:Gate1|            ; 11 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 2 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1                                                 ; work         ;
+;             |lpm_decode:Gate5|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 1 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5                              ; work         ;
+;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated    ; work         ;
+;             |lpm_decode:Gate6|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6                              ; work         ;
+;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated    ; work         ;
+;             |lpm_decode:Gate7|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 1 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7                              ; work         ;
+;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated    ; work         ;
+;             |lpm_decode:Gate8|              ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 2 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8                              ; work         ;
+;                |decode_7jg:auto_generated|  ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated    ; work         ;
+;          |g10_num_matches:Gate1|            ; 11 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1                                                 ; work         ;
 ;             |g10_comp3:Gate1|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1                                 ; work         ;
-;             |g10_comp3:Gate2|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2                                 ; work         ;
+;             |g10_comp3:Gate2|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2                                 ; work         ;
 ;             |g10_comp3:Gate3|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3                                 ; work         ;
 ;             |g10_comp3:Gate4|               ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4                                 ; work         ;
 ;             |g10_num1s:Gate5|               ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5                                 ; work         ;
 ;          |g10_score_encoder:Gate3|          ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 4 (4)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3                                               ; work         ;
 ;       |g10_score_encoder_user_mode:gate17|  ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |MASTERMIND|g10_mastermind_datapath:gate2|g10_score_encoder_user_mode:gate17                                                               ; work         ;
 ;       |register_3bit:Gate10|                ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_3bit:Gate10                                                                             ; work         ;
-;       |register_3bit:Gate11|                ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_3bit:Gate11                                                                             ; work         ;
+;       |register_3bit:Gate11|                ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 2 (2)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_3bit:Gate11                                                                             ; work         ;
 ;       |register_3bit:Gate8|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_3bit:Gate8                                                                              ; work         ;
-;       |register_3bit:Gate9|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 1 (1)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_3bit:Gate9                                                                              ; work         ;
+;       |register_3bit:Gate9|                 ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_3bit:Gate9                                                                              ; work         ;
 ;       |register_4bit:Gate2|                 ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |MASTERMIND|g10_mastermind_datapath:gate2|register_4bit:Gate2                                                                              ; work         ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1020,14 +1020,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segment4[4]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; segment4[5]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; segment4[6]  ; Output   ; --            ; --            ; --                    ; --  ;
-; sw[2]        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; clk          ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; Start        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; mode         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; sw[1]        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; modify_G     ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; GR_SELECT[0] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; mode         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; sw[0]        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; sw[1]        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; sw[2]        ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; GR_SELECT[1] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; GR_SELECT[2] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; GR_SELECT[3] ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
@@ -1041,7 +1041,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                            ; Pad To Core Index ; Setting ;
 +----------------------------------------------------------------+-------------------+---------+
-; sw[2]                                                          ;                   ;         ;
 ; clk                                                            ;                   ;         ;
 ; Start                                                          ;                   ;         ;
 ;      - g10_mastermind_datapath:gate2|register_4bit:Gate2|q[0]  ; 1                 ; 6       ;
@@ -1061,45 +1060,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1] ; 1                 ; 6       ;
 ;      - g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2] ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|RippleBlankInState~0    ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[5]  ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[3]  ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[4]  ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[11] ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[9]  ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[10] ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[1]  ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[2]  ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[0]  ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[1]  ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[10] ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[11] ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[9]  ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[4]  ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[5]  ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[3]  ; 1                 ; 6       ;
+;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[7]  ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[8]  ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[6]  ; 1                 ; 6       ;
-;      - RandomPatternGenerator:gate4|register_12bit:gate2|q[7]  ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|y_present.a~0           ; 1                 ; 6       ;
 ;      - g10_mastermind_controller:gate1|y_present.f~0           ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|y_present.d~2           ; 1                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.c~2           ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|tcr2                       ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|y_present.A                ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|y_present.B                ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|tce2~0                     ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|y_present.A~0              ; 1                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|Selector1~0                ; 1                 ; 6       ;
+; mode                                                           ;                   ;         ;
+; sw[1]                                                          ;                   ;         ;
 ; modify_G                                                       ;                   ;         ;
 ; GR_SELECT[0]                                                   ;                   ;         ;
-; mode                                                           ;                   ;         ;
 ; sw[0]                                                          ;                   ;         ;
-; sw[1]                                                          ;                   ;         ;
+; sw[2]                                                          ;                   ;         ;
 ; GR_SELECT[1]                                                   ;                   ;         ;
 ; GR_SELECT[2]                                                   ;                   ;         ;
 ; GR_SELECT[3]                                                   ;                   ;         ;
 ; P_generated                                                    ;                   ;         ;
 ;      - g10_mastermind_controller:gate1|y_present.f~0           ; 0                 ; 6       ;
-;      - g10_mastermind_controller:gate1|y_present.d~3           ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.c~3           ; 0                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|tce2~0                     ; 0                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|y_present.A~0              ; 0                 ; 6       ;
 ;      - RandomPatternGenerator:gate4|Selector1~0                ; 0                 ; 6       ;
 ; Ready                                                          ;                   ;         ;
-;      - g10_mastermind_controller:gate1|y_present.f~1           ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|Selector10~0            ; 1                 ; 6       ;
-;      - g10_mastermind_controller:gate1|Selector5~0             ; 1                 ; 6       ;
+;      - g10_mastermind_controller:gate1|y_present.f~1           ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|Selector10~0            ; 0                 ; 6       ;
+;      - g10_mastermind_controller:gate1|Selector6~0             ; 0                 ; 6       ;
 +----------------------------------------------------------------+-------------------+---------+
 
 
@@ -1108,22 +1108,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                           ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]~0 ; LCCOMB_X21_Y19_N12 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[2]~1 ; LCCOMB_X22_Y19_N22 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]~6 ; LCCOMB_X22_Y19_N6  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]~3 ; LCCOMB_X22_Y19_N12 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; RandomPatternGenerator:gate4|tcr2                              ; LCFF_X21_Y19_N1    ; 14      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[2]~1 ; LCCOMB_X31_Y17_N12 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[2]~1 ; LCCOMB_X34_Y17_N16 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]~6 ; LCCOMB_X34_Y17_N30 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]~4 ; LCCOMB_X34_Y17_N20 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; RandomPatternGenerator:gate4|tcr2                              ; LCFF_X31_Y17_N1    ; 14      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 ; Start                                                          ; PIN_R22            ; 38      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clk                                                            ; PIN_L1             ; 55      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; g10_mastermind_controller:gate1|RippleBlankInState~0           ; LCCOMB_X22_Y18_N16 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|SR_LD                          ; LCFF_X22_Y18_N3    ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|y_present.a~0                  ; LCCOMB_X22_Y18_N4  ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; g10_mastermind_controller:gate1|y_present.d~4                  ; LCCOMB_X21_Y18_N20 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_controller:gate1|y_present.f~2                  ; LCCOMB_X21_Y18_N30 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_datapath:gate2|GR1_EN                           ; LCCOMB_X23_Y18_N0  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_datapath:gate2|GR2_EN                           ; LCCOMB_X23_Y18_N18 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_datapath:gate2|GR3_EN                           ; LCCOMB_X25_Y17_N4  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; g10_mastermind_datapath:gate2|GR4_EN                           ; LCCOMB_X25_Y17_N14 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clk                                                            ; PIN_L1             ; 54      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; g10_mastermind_controller:gate1|RippleBlankInState~0           ; LCCOMB_X44_Y16_N28 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|SR_LD                          ; LCFF_X44_Y16_N7    ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|y_present.a~0                  ; LCCOMB_X44_Y16_N0  ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; g10_mastermind_controller:gate1|y_present.c~4                  ; LCCOMB_X45_Y16_N20 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_controller:gate1|y_present.f~2                  ; LCCOMB_X45_Y16_N30 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_datapath:gate2|GR1_EN                           ; LCCOMB_X33_Y16_N0  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_datapath:gate2|GR2_EN                           ; LCCOMB_X33_Y16_N2  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_datapath:gate2|GR3_EN                           ; LCCOMB_X33_Y16_N12 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; g10_mastermind_datapath:gate2|GR4_EN                           ; LCCOMB_X33_Y16_N22 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; mode                                                           ; PIN_L22            ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1133,8 +1133,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                          ; Location          ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
-; clk                                           ; PIN_L1            ; 55      ; Global Clock         ; GCLK2            ; --                        ;
-; g10_mastermind_controller:gate1|y_present.a~0 ; LCCOMB_X22_Y18_N4 ; 8       ; Global Clock         ; GCLK9            ; --                        ;
+; clk                                           ; PIN_L1            ; 54      ; Global Clock         ; GCLK2            ; --                        ;
+; g10_mastermind_controller:gate1|y_present.a~0 ; LCCOMB_X44_Y16_N0 ; 8       ; Global Clock         ; GCLK6            ; --                        ;
 +-----------------------------------------------+-------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1144,243 +1144,229 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                                                                        ; Fan-Out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Start                                                                                                                                       ; 38      ;
-; g10_mastermind_controller:gate1|RippleBlankInState                                                                                          ; 29      ;
-; g10_mastermind_controller:gate1|switch_REG                                                                                                  ; 26      ;
+; g10_mastermind_controller:gate1|RippleBlankInState                                                                                          ; 22      ;
 ; RandomPatternGenerator:gate4|tcr2                                                                                                           ; 14      ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[0]                                                                                     ; 13      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1]                                                                                     ; 13      ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[0]                                                                                      ; 13      ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[1]                                                                                     ; 12      ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]                                                                                      ; 12      ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2]                                                                                     ; 11      ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]                                                                                      ; 11      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[1]                                                                                      ; 13      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1]                                                                                     ; 10      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate10|q[2]                                                                                     ; 10      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]                                                                                      ; 10      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate8|q[2]                                                                                      ; 10      ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2]                                                                                     ; 9       ;
+; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]                                                                                      ; 9       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[0]                                                                                     ; 8       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[1]                                                                                     ; 8       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate11|q[2]                                                                                     ; 8       ;
 ; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[0]                                                                                      ; 8       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[1]                                                                                      ; 8       ;
-; g10_mastermind_datapath:gate2|register_3bit:Gate9|q[2]                                                                                      ; 8       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]~0                                                                              ; 7       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[2]~1                                                                              ; 7       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[0]                                                                                ; 7       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5|num1s[1]~1                                   ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[7]                                                                                      ; 7       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5|num1s[0]~1                                   ; 7       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5|num1s[1]~0                                   ; 7       ;
 ; RandomPatternGenerator:gate4|register_12bit:gate2|q[6]                                                                                      ; 7       ;
 ; RandomPatternGenerator:gate4|register_12bit:gate2|q[8]                                                                                      ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[1]                                                                                      ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[0]                                                                                      ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[2]                                                                                      ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[10]                                                                                     ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[9]                                                                                      ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[11]                                                                                     ; 7       ;
-; RandomPatternGenerator:gate4|register_12bit:gate2|q[4]                                                                                      ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[7]                                                                                      ; 7       ;
 ; RandomPatternGenerator:gate4|register_12bit:gate2|q[3]                                                                                      ; 7       ;
 ; RandomPatternGenerator:gate4|register_12bit:gate2|q[5]                                                                                      ; 7       ;
-; g10_mastermind_datapath:gate2|sr4N[0]~3                                                                                                     ; 7       ;
-; g10_mastermind_datapath:gate2|sr4N[1]~2                                                                                                     ; 7       ;
-; g10_mastermind_datapath:gate2|sr4N[2]~1                                                                                                     ; 7       ;
-; g10_mastermind_datapath:gate2|sr2N[0]~4                                                                                                     ; 7       ;
-; g10_mastermind_datapath:gate2|sr2N[1]~3                                                                                                     ; 7       ;
-; g10_mastermind_datapath:gate2|sr2N[2]~1                                                                                                     ; 7       ;
-; mode                                                                                                                                        ; 6       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[4]                                                                                      ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[9]                                                                                      ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[11]                                                                                     ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[10]                                                                                     ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[0]                                                                                      ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[2]                                                                                      ; 7       ;
+; RandomPatternGenerator:gate4|register_12bit:gate2|q[1]                                                                                      ; 7       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code4[3]~3                                                                             ; 7       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code4[2]~2                                                                             ; 7       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code4[1]~0                                                                             ; 7       ;
+; g10_mastermind_datapath:gate2|sr4N[0]~0                                                                                                     ; 7       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code2[3]~4                                                                             ; 7       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code2[2]~3                                                                             ; 7       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code2[1]~1                                                                             ; 7       ;
+; g10_mastermind_datapath:gate2|sr2N[0]~0                                                                                                     ; 7       ;
 ; modify_G                                                                                                                                    ; 6       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]                                                                                ; 6       ;
+; mode                                                                                                                                        ; 6       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[1]                                                                                ; 6       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5|num1s[0]~0                                   ; 6       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~0       ; 6       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~0       ; 6       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]                                                                                ; 6       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated|op_1~1       ; 6       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_num1s:Gate5|num1s[2]                                     ; 6       ;
-; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[1]                                                                                      ; 6       ;
-; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[2]                                                                                      ; 6       ;
 ; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[3]                                                                                      ; 6       ;
+; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[2]                                                                                      ; 6       ;
+; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[1]                                                                                      ; 6       ;
 ; P_generated                                                                                                                                 ; 5       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]~1                                                                              ; 5       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|RPG_table~0                                                                                ; 5       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]                                                                                ; 5       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[1]                                                                                ; 5       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[2]                                                                                ; 5       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[1]                                                                                ; 5       ;
 ; g10_mastermind_controller:gate1|y_present.e                                                                                                 ; 5       ;
 ; g10_mastermind_controller:gate1|SR_LD                                                                                                       ; 5       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated|op_1~2       ; 5       ;
-; g10_mastermind_controller:gate1|y_present.d                                                                                                 ; 5       ;
-; g10_mastermind_controller:gate1|y_present.g                                                                                                 ; 5       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~2       ; 5       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|min[0]~1                               ; 5       ;
 ; g10_mastermind_datapath:gate2|register_4bit:Gate2|q[0]                                                                                      ; 5       ;
-; sw[1]                                                                                                                                       ; 4       ;
-; sw[0]                                                                                                                                       ; 4       ;
 ; sw[2]                                                                                                                                       ; 4       ;
+; sw[0]                                                                                                                                       ; 4       ;
+; sw[1]                                                                                                                                       ; 4       ;
 ; RandomPatternGenerator:gate4|y_present.B                                                                                                    ; 4       ;
 ; RandomPatternGenerator:gate4|y_present.A                                                                                                    ; 4       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[1]                                                                                ; 4       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[1]                                                                                ; 4       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]                                                                                ; 4       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[1]                                                                                ; 4       ;
 ; g10_mastermind_controller:gate1|y_present.h                                                                                                 ; 4       ;
 ; g10_mastermind_controller:gate1|y_present.c                                                                                                 ; 4       ;
 ; g10_mastermind_controller:gate1|y_present.f                                                                                                 ; 4       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~10      ; 4       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated|op_1~0       ; 4       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated|op_1~1       ; 4       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~11      ; 4       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated|op_1~0       ; 4       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|min[0]~1                               ; 4       ;
+; g10_mastermind_controller:gate1|y_present.d                                                                                                 ; 4       ;
 ; g10_mastermind_controller:gate1|y_present.a                                                                                                 ; 4       ;
+; g10_mastermind_controller:gate1|y_present.g                                                                                                 ; 4       ;
 ; Ready                                                                                                                                       ; 3       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]~6                                                                              ; 3       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[2]~1                                                                              ; 3       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[2]                                                                                ; 3       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[2]                                                                                ; 3       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[2]                                                                                ; 3       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[2]                                                                                ; 3       ;
 ; g10_mastermind_controller:gate1|y_present.f~2                                                                                               ; 3       ;
 ; g10_mastermind_datapath:gate2|GR4_EN                                                                                                        ; 3       ;
 ; g10_mastermind_datapath:gate2|GR3_EN                                                                                                        ; 3       ;
 ; g10_mastermind_datapath:gate2|GR2_EN                                                                                                        ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated|op_1~2       ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated|op_1~2       ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19|num1s[1]~1                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13|num1s[1]~1                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9|num1s[2]~2                                 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15|num1s[1]~2                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9|num1s[1]~1                                 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15|num1s[2]~1                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode1w[3]~0  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode1w[3]~0  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22|NgtM~1                                 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16|num1s[0]~1                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10|num1s[0]~1                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated|op_1~0       ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~1       ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3|AeqB                                         ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1|AeqB                                         ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4|AeqB                                         ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2|AeqB                                         ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26|NgtM~1                                 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20|num1s[0]~1                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14|num1s[0]~1                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17|num1s[1]~1                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11|num1s[1]~1                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|NgtM~1                                 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14|num1s[0]~0                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20|num1s[0]~0                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19|num1s[2]                                  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13|num1s[2]                                  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13|num1s[1]~0                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19|num1s[1]~0                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18|num1s[0]~1                                ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12|num1s[0]~1                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18|num1s[2]                                  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12|num1s[2]                                  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12|num1s[1]~0                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18|num1s[1]~0                                ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17|num1s[2]                                  ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11|num1s[2]                                  ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11|num1s[1]~0                                ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode41w[3]   ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19|num1s[2]                                  ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13|num1s[2]                                  ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode52w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode63w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3|AeqB                                         ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1|AeqB                                         ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4|AeqB                                         ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2|AeqB                                         ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22|NgtM~1                                 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10|num1s[0]~0                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16|num1s[0]~0                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode19w[3]~0 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9|num1s[2]~1                                 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15|num1s[2]~1                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9|num1s[1]~0                                 ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate3|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate1|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate4|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate2|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15|num1s[1]~0                                ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode1w[3]    ; 3       ;
-; g10_mastermind_controller:gate1|RippleBlankInState~0                                                                                        ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17|num1s[1]~0                                ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate8|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate5|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate7|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_decode:Gate6|decode_7jg:auto_generated|w_anode30w[3]   ; 3       ;
 ; g10_mastermind_datapath:gate2|GR1_EN                                                                                                        ; 3       ;
-; g10_mastermind_datapath:gate2|sr3N[1]~2                                                                                                     ; 3       ;
-; g10_mastermind_datapath:gate2|sr3N[0]~1                                                                                                     ; 3       ;
-; g10_mastermind_datapath:gate2|sr3N[2]~0                                                                                                     ; 3       ;
-; g10_mastermind_datapath:gate2|sr1N[1]~2                                                                                                     ; 3       ;
-; g10_mastermind_datapath:gate2|sr1N[0]~1                                                                                                     ; 3       ;
-; g10_mastermind_datapath:gate2|sr1N[2]~0                                                                                                     ; 3       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]~3                                                                              ; 2       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]~4                                                                              ; 2       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[0]~0                                                                              ; 2       ;
 ; RandomPatternGenerator:gate4|tce2                                                                                                           ; 2       ;
-; g10_mastermind_controller:gate1|y_present.d~4                                                                                               ; 2       ;
+; g10_mastermind_controller:gate1|y_present.c~4                                                                                               ; 2       ;
 ; g10_mastermind_controller:gate1|y_present.f~1                                                                                               ; 2       ;
-; g10_mastermind_controller:gate1|y_present.d~0                                                                                               ; 2       ;
+; g10_mastermind_controller:gate1|y_present.c~0                                                                                               ; 2       ;
 ; g10_mastermind_controller:gate1|y_present.b                                                                                                 ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~11      ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~12      ; 2       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux1~0                                                     ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated|op_1~3       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated|op_1~1       ; 2       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate31|add_sub_8hf:auto_generated|op_1~0       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~2       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26|min[1]~0                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~1       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|min[1]~1                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~2       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|min[1]~0                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~1       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|min[1]~1                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~5       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|min[0]~0                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|NgtM~1                                 ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|NgtM~0                                 ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13|num1s[0]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19|num1s[0]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20|num1s[1]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14|num1s[1]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|min[0]~0                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|NgtM~1                                 ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|NgtM~0                                 ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11|num1s[0]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17|num1s[0]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18|num1s[1]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12|num1s[1]~0                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate18|num1s[2]                                  ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate12|num1s[2]                                  ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20|num1s[2]                                  ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14|num1s[2]                                  ; 2       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22|min[1]~0                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated|op_1~0       ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16|num1s[1]~1                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10|num1s[1]~1                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16|num1s[2]                                  ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10|num1s[2]                                  ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|min[0]~1                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|min[1]~0                               ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15|num1s[0]~2                                ; 2       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9|num1s[0]~2                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate27|add_sub_8hf:auto_generated|op_1~1       ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|min[1]~1                               ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~0       ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|min[0]~0                               ; 2       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|NgtM~1                                 ; 2       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|NgtM~0                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate9|num1s[0]~0                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate15|num1s[0]~0                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16|num1s[1]~0                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10|num1s[1]~0                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate16|num1s[2]                                  ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate10|num1s[2]                                  ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~3       ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~2       ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26|min[1]~0                               ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~0       ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20|num1s[1]~1                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14|num1s[1]~1                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate20|num1s[2]                                  ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate14|num1s[2]                                  ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|min[0]~1                               ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|min[1]~0                               ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate19|num1s[0]~1                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate13|num1s[0]~1                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|NgtM~1                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|NgtM~0                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|min[1]~0                               ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|NgtM                                   ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|NgtM~1                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|NgtM~0                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|min[1]~0                               ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate17|num1s[0]~1                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_num1s:Gate11|num1s[0]~1                                ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|NgtM~1                                 ; 2       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|NgtM~0                                 ; 2       ;
+; g10_mastermind_controller:gate1|RippleBlankInState~0                                                                                        ; 2       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux2~0                                                    ; 2       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux2~0                                                    ; 2       ;
 ; g10_mastermind_controller:gate1|y_present.a~feeder                                                                                          ; 1       ;
 ; GR_SELECT[3]                                                                                                                                ; 1       ;
 ; GR_SELECT[2]                                                                                                                                ; 1       ;
 ; GR_SELECT[1]                                                                                                                                ; 1       ;
 ; GR_SELECT[0]                                                                                                                                ; 1       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3[0]~7                                                                              ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]~3                                                                              ; 1       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2[0]~3                                                                              ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux5~3                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux5~2                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux6~3                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux6~2                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux5~3                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux5~2                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux6~3                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux6~2                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux0~5                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux0~4                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux0~5                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux0~4                                                    ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1[0]~3                                                                              ; 1       ;
 ; RandomPatternGenerator:gate4|Selector1~0                                                                                                    ; 1       ;
 ; RandomPatternGenerator:gate4|y_present.A~0                                                                                                  ; 1       ;
 ; RandomPatternGenerator:gate4|tce2~1                                                                                                         ; 1       ;
@@ -1388,53 +1374,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; RandomPatternGenerator:gate4|tcr2~0                                                                                                         ; 1       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3~5                                                                                 ; 1       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR3~4                                                                                 ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1~2                                                                                 ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1~1                                                                                 ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[1]~5                                                                              ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4~4                                                                                 ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|RPG_table~1                                                                                ; 1       ;
-; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4~2                                                                                 ; 1       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2~2                                                                                 ; 1       ;
 ; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR2~0                                                                                 ; 1       ;
-; g10_mastermind_controller:gate1|Selector5~0                                                                                                 ; 1       ;
-; g10_mastermind_controller:gate1|Selector8~0                                                                                                 ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4~5                                                                                 ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|RPG_table~1                                                                                ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4~3                                                                                 ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR4[1]~2                                                                              ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1~2                                                                                 ; 1       ;
+; RandomPatternGenerator:gate4|counter_table:gate1|TM_ADDR1~0                                                                                 ; 1       ;
+; g10_mastermind_controller:gate1|Selector6~0                                                                                                 ; 1       ;
+; g10_mastermind_controller:gate1|Selector9~0                                                                                                 ; 1       ;
 ; g10_mastermind_controller:gate1|y_present.b~0                                                                                               ; 1       ;
-; g10_mastermind_controller:gate1|y_present.c~0                                                                                               ; 1       ;
+; g10_mastermind_controller:gate1|y_present.c~5                                                                                               ; 1       ;
 ; g10_mastermind_controller:gate1|Selector10~0                                                                                                ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~3                                                                                               ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~2                                                                                               ; 1       ;
-; g10_mastermind_controller:gate1|y_present.d~1                                                                                               ; 1       ;
+; g10_mastermind_controller:gate1|y_present.c~3                                                                                               ; 1       ;
+; g10_mastermind_controller:gate1|y_present.c~2                                                                                               ; 1       ;
+; g10_mastermind_controller:gate1|y_present.c~1                                                                                               ; 1       ;
 ; g10_mastermind_controller:gate1|y_present.f~0                                                                                               ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux2~1                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux2~0                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux1~2                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux1~1                                                     ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux0~1                                                     ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux0~0                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux1~2                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux1~1                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux2~1                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux2~0                                                     ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux3~1                                                     ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_score_encoder:Gate3|Mux3~0                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~10      ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~9       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~8       ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~3       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~7       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~6       ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|NgtM                                   ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|NgtM                                   ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26|NgtM~0                                 ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate24|NgtM~0                                 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~5       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~4       ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate30|add_sub_8hf:auto_generated|op_1~1       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~3       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~2       ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|NgtM                                   ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~1       ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate34|add_sub_r4f:auto_generated|op_1~0       ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22|NgtM~0                                 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate3|AeqB~0                                       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate1|AeqB~0                                       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate4|AeqB~0                                       ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_num_matches:Gate1|g10_comp3:Gate2|AeqB~0                                       ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate22|NgtM~0                                 ; 1       ;
-; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate21|NgtM                                   ; 1       ;
-; g10_mastermind_controller:gate1|Selector9~0                                                                                                 ; 1       ;
-; g10_mastermind_controller:gate1|Selector0~0                                                                                                 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate29|add_sub_8hf:auto_generated|op_1~1       ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate26|NgtM~0                                 ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate25|NgtM                                   ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|lpm_add_sub:Gate28|add_sub_8hf:auto_generated|op_1~0       ; 1       ;
+; g10_mastermind_datapath:gate2|g10_mastermind_score:Gate1|g10_color_matches:Gate2|g10_minimum3:Gate23|NgtM                                   ; 1       ;
+; g10_mastermind_controller:gate1|Selector1~0                                                                                                 ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux0~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux1~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux2~0                                                    ; 1       ;
@@ -1442,13 +1429,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux4~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux5~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate13|Mux6~0                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_score_encoder_user_mode:gate17|Mux5~0                                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code4[2]~1                                                                             ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_score_encoder_user_mode:gate17|Mux4~0                                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|sr4N[2]~0                                                                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux1~0                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux2~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_score_encoder_user_mode:gate17|Mux5~0                                                                     ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux0~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux3~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux4~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux5~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate12|Mux6~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux0~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux1~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux2~0                                                    ; 1       ;
@@ -1456,13 +1444,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux4~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux5~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate11|Mux6~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code2[2]~2                                                                             ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|code2[1]~0                                                                             ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_score_encoder_user_mode:gate17|Mux2~0                                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|sr2N[1]~2                                                                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|sr2N[2]~0                                                                                                     ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux1~0                                                    ; 1       ;
-; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux2~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux0~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux3~0                                                    ; 1       ;
 ; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux4~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux5~0                                                    ; 1       ;
+; g10_mastermind_datapath:gate2|g10_display_LED:gate16|g10_7_segment_decoder:gate10|Mux6~0                                                    ; 1       ;
 +---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1471,115 +1460,113 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 238 / 54,004 ( < 1 % ) ;
-; C16 interconnects           ; 8 / 2,100 ( < 1 % )    ;
-; C4 interconnects            ; 120 / 36,000 ( < 1 % ) ;
-; Direct links                ; 60 / 54,004 ( < 1 % )  ;
+; Block interconnects         ; 268 / 54,004 ( < 1 % ) ;
+; C16 interconnects           ; 10 / 2,100 ( < 1 % )   ;
+; C4 interconnects            ; 130 / 36,000 ( < 1 % ) ;
+; Direct links                ; 69 / 54,004 ( < 1 % )  ;
 ; Global clocks               ; 2 / 16 ( 13 % )        ;
-; Local interconnects         ; 145 / 18,752 ( < 1 % ) ;
-; R24 interconnects           ; 27 / 1,900 ( 1 % )     ;
-; R4 interconnects            ; 165 / 46,920 ( < 1 % ) ;
+; Local interconnects         ; 126 / 18,752 ( < 1 % ) ;
+; R24 interconnects           ; 33 / 1,900 ( 2 % )     ;
+; R4 interconnects            ; 207 / 46,920 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.58) ; Number of LABs  (Total = 19) ;
+; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 19) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 0                            ;
+; 4                                           ; 1                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
 ; 9                                           ; 0                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 3                            ;
-; 12                                          ; 2                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 3                            ;
-; 15                                          ; 4                            ;
-; 16                                          ; 5                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 2                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 7                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.63) ; Number of LABs  (Total = 19) ;
+; LAB-wide Signals  (Average = 1.68) ; Number of LABs  (Total = 19) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 10                           ;
+; 1 Async. clear                     ; 7                            ;
 ; 1 Clock                            ; 12                           ;
 ; 1 Clock enable                     ; 7                            ;
-; 2 Async. clears                    ; 2                            ;
+; 2 Async. clears                    ; 5                            ;
+; 2 Clock enables                    ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.42) ; Number of LABs  (Total = 19) ;
+; Number of Signals Sourced  (Average = 15.79) ; Number of LABs  (Total = 19) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 0                            ;
+; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 1                            ;
 ; 13                                           ; 1                            ;
-; 14                                           ; 2                            ;
+; 14                                           ; 1                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 2                            ;
+; 16                                           ; 3                            ;
 ; 17                                           ; 1                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 3                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 8.21) ; Number of LABs  (Total = 19) ;
+; Number of Signals Sourced Out  (Average = 8.53) ; Number of LABs  (Total = 19) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 0                            ;
 ; 2                                               ; 1                            ;
-; 3                                               ; 3                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 2                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 1                            ;
-; 9                                               ; 3                            ;
-; 10                                              ; 1                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 0                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 5                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 0                            ;
+; 10                                              ; 0                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 3                            ;
+; 13                                              ; 3                            ;
 ; 14                                              ; 1                            ;
 ; 15                                              ; 1                            ;
-; 16                                              ; 1                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.42) ; Number of LABs  (Total = 19) ;
+; Number of Distinct Inputs  (Average = 11.21) ; Number of LABs  (Total = 19) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
@@ -1589,17 +1576,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 4                            ;
-; 11                                           ; 3                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 1                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 3                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 4                            ;
+; 16                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1670,12 +1655,12 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X12_Y14 to location X24_Y27
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X25_Y14 to location X37_Y27
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 28 output pins without output pin load capacitance assignment
     Info (306007): Pin "segment1[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1709,13 +1694,13 @@ Warning (306006): Found 28 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/Benjamin/Desktop/DSD/Lab5/output_files/lab5.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 633 megabytes
-    Info: Processing ended: Fri Dec 04 21:51:15 2015
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 637 megabytes
+    Info: Processing ended: Fri Dec 04 23:50:38 2015
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
 

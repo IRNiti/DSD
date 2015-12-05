@@ -48,20 +48,13 @@ case RippleBlank_In_state is
 					code2 <= c2;
 					code3 <= c3;
 					code4 <= c4;
-	when '1' => state1 <= '1';
+	when others => state1 <= '1';
 					state2 <= '0';
 					
 					code1 <= sr1;
 					code2 <= sr2;
 					code3 <= sr3;
 					code4 <= sr4;
-	when others => state1 <= '0';
-						state2 <= '0';
-						
-						code1 <= sr1;
-					   code2 <= sr2;
-					   code3 <= sr3;
-					   code4 <= sr4;
 						
 end case;
 
