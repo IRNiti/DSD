@@ -11,7 +11,7 @@ port (clr : in std_logic;
 end register_3bit;
 
 architecture behavior of register_3bit is
-signal tmp : std_logic_vector (2 downto 0);
+--signal tmp : std_logic_vector (2 downto 0);
 
 begin 
 

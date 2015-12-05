@@ -17,7 +17,7 @@
 -- suit user's needs .Comments are provided in each section to help the user  
 -- fill out necessary details.                                                
 -- ***************************************************************************
--- Generated on "12/04/2015 13:56:51"
+-- Generated on "12/04/2015 17:46:50"
                                                             
 -- Vhdl Test Bench template for design  :  MASTERMIND
 -- 
@@ -32,7 +32,8 @@ END MASTERMIND_vhd_tst;
 ARCHITECTURE MASTERMIND_arch OF MASTERMIND_vhd_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk : STD_LOGIC := '0';
+SIGNAL clk : STD_LOGIC;
+SIGNAL GR_SELECT : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL mode : STD_LOGIC;
 SIGNAL modify_G : STD_LOGIC;
 SIGNAL P_generated : STD_LOGIC;
@@ -47,6 +48,7 @@ SIGNAL switch_LED : STD_LOGIC;
 COMPONENT MASTERMIND
 	PORT (
 	clk : IN STD_LOGIC;
+	GR_SELECT : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 	mode : IN STD_LOGIC;
 	modify_G : IN STD_LOGIC;
 	P_generated : IN STD_LOGIC;
@@ -65,6 +67,7 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
+	GR_SELECT => GR_SELECT,
 	mode => mode,
 	modify_G => modify_G,
 	P_generated => P_generated,
@@ -77,99 +80,55 @@ BEGIN
 	sw => sw,
 	switch_LED => switch_LED
 	);
-	
+                                   
 always : PROCESS                                              
 -- optional sensitivity list                                  
 -- (        )                                                 
 -- variable declarations                                      
-BEGIN                                                         
-       for i in 0 to 100 loop 
+BEGIN
+
+for i in 0 to 100 loop 
 			clk <= not clk;
 			
 			if ( i = 0) then
 				start <= '0';
 				mode <= '1';
 				modify_G <= '1';
+				switch_REG <= '0';
 			end if;
 			
 			if (i = 2) then
 				start <= '1';
 				P_generated <= '0';
 			end if;
-			
-			if (i = 10) then
+			 
+			 
+			 if (i = 4) then
 				P_generated <= '1';
+				sw <= "001";
+				GR_SELECT <= "00";
 			end if;
 			
-			if (i = 12) then
-				switch_LED <= '0';
+			if (i = 6) then 
+			  sw <= "010";
+				GR_SELECT <= "01";
+			end if;
+			
+			if (i = 8) then 
+			  sw <= "011";
+				GR_SELECT <= "10";
+			end if;
+			
+			if (i = 10) then 
+				GR_SELECT <= "11";
 			end if;
 			
 			if (i = 14) then
-				switch_LED <= '1';
-				sw <= "001";
-			end if;
-			
-			if (i = 16) then
-				switch_LED <= '0';
-			end if;
-			
-			if (i = 18) then
-				switch_LED <= '1';
-				sw <= "010";
-			end if;
-			
-			if (i = 20) then
-				switch_LED <= '0';
-			end if;
-			
-			if (i = 22) then
-				switch_LED <= '1';
-				sw <= "011";
-			end if;
-			
-			if (i = 24) then
-				switch_LED <= '0';
-			end if;
-			
-			if (i = 26) then
-				switch_LED <= '1';
-				sw <= "100";
-			end if;
-			
-			if (i = 28) then
-				switch_LED <= '0';
-			end if;
-			
-			if (i = 30) then
-				switch_LED <= '1';
-				sw <= "100";
-			end if;
-			
-			if (i = 32) then
-				modify_G <= '0';
-			end if;
-			
-			if (i = 34) then
 				ready <= '0';
 			end if;
-		
-			if (i = 36) then
-				ready <= '1';
-			end if;
-			
-			if (i =44) then
-				modify_G <= '1';
-			end if;
-			
-			if (i =46) then
-				switch_LED <= '0';
-			end if;
-		
 		wait for 20 ns;
-	end loop;
-			
-		 -- code executes for every event on sensitivity list  
+		end loop;
+			-- code executes for every event on sensitivity list  
 WAIT;                                                        
 END PROCESS always;                                          
 END MASTERMIND_arch;

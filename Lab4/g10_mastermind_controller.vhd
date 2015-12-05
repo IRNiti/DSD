@@ -15,14 +15,16 @@ port (SC_CMP : in std_logic;
 		GR_LD : out std_logic;
 		SR_LD : out std_logic;
 		
+		--GR : out std_logic_vector;
+		--GR_SELECT : in std_logic_vector (1 downto 0);
 		modify_G : in std_logic;
 		mode : in std_logic;
-		switch_LED : in std_logic;
+		--switch_LED : in std_logic;
 		P_generated : in std_logic;
+		switch_REG : out std_logic;
 		
 		sw1_LD, sw2_LD, sw3_LD, sw4_LD : out std_logic;
-		GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
-		switch_REG : out std_logic;
+		--GR_LD1, GR_LD2, GR_LD3,GR_LD4 : out std_logic;
 		RippleBlankInState : out std_logic;
 		
 		RP_LD : out std_logic; -- < new --
@@ -36,9 +38,11 @@ end g10_mastermind_controller;
 
 architecture behavior of g10_mastermind_controller is
 
-TYPE state_type2 is (a,b,c,d,e,f,g,h,i,j,k,l,m,n);
+TYPE state_type2 is (a,b,c,d,e,f,g,h);
 signal y_present : state_type2;
 signal TM_ADDR : std_logic_vector(11 downto 0);
+
+
 
 begin 
 
@@ -48,17 +52,21 @@ begin
 RP_LD <= '1';
 
 
+		
+
 if (mode = '1') then --user mode
 		
 	 if (START = '0') then
 		y_present <= a;
 	 
 	 elsif rising_edge(CLK) then 
-
+	
+	 
 		Case y_present is 
 
 			when a =>
 				if (START = '1') then 
+					switch_REG <= '0';
 					y_present <= b;
 				end if;	
 			when b => 
@@ -72,114 +80,26 @@ if (mode = '1') then --user mode
 			when d => 
 				switch_REG <= '0';
 				RippleBlankInState <= '0';
-				
-				y_present <= e;
-			when e => 				
-				sw1_LD <= '0';
-				sw2_LD <= '0';
-				sw3_LD <= '0';
-				sw4_LD <= '0';
-				
-				GR_LD1 <= '1';
-				GR_LD2 <= '1';
-				GR_LD3 <= '1';
-				GR_LD4 <= '1';
-				
-				if (switch_LED = '0') then 
-					y_present <= f;
-				end if;
-			when f => 
-				sw1_LD <= '1';
-				sw2_LD <= '0';
-				sw3_LD <= '0';
-				sw4_LD <= '0';
-				
-				if (switch_LED = '0') then 
-					y_present <= g;
-				end if;
-				
-				if (modify_G = '0') then 
-					GR_LD1 <= '0';
-					GR_LD2 <= '0';
-					GR_LD3 <= '0';
-					GR_LD4 <= '0';
-					y_present <= j;
-				end if;
-				
-			when g => 
-				sw1_LD <= '0';
-				sw2_LD <= '1';
-				sw3_LD <= '0';
-				sw4_LD <= '0';
-				
-				if (switch_LED = '0') then 
-					y_present <= h;
-				end if;
-				
-				if (modify_G = '0') then 
-					GR_LD1 <= '0';
-					GR_LD2 <= '0';
-					GR_LD3 <= '0';
-					GR_LD4 <= '0';
-					y_present <= j;
-				end if;
+				y_present <= e;							
 			
-			when h => 
-				sw1_LD <= '0';
-				sw2_LD <= '0';
-				sw3_LD <= '1';
-				sw4_LD <= '0';
-				
-				if (switch_LED = '0') then 
-					y_present <= i;
-				end if;
-				
-				if (modify_G = '0') then 
-					GR_LD1 <= '0';
-					GR_LD2 <= '0';
-					GR_LD3 <= '0';
-					GR_LD4 <= '0';
-					y_present <= j;
-				end if;
-			
-			when i => 
-				sw1_LD <= '0';
-				sw2_LD <= '0';
-				sw3_LD <= '0';
-				sw4_LD <= '1';
-				
-				if (switch_LED = '0') then 
-					y_present <= f;
-				end if;
-				if (modify_G = '0') then 
-					GR_LD1 <= '0';
-					GR_LD2 <= '0';
-					GR_LD3 <= '0';
-					GR_LD4 <= '0';
-					y_present <= j;
-				end if;
-			when j => 
+			when e => 
 				if (ready = '0') then
 					SR_LD <= '1'; 
-					y_present <= k;
+					y_present <= f;
 				end if;
-			when k =>
-				y_present <= l;
 				
-			when l =>
+			when f =>
 				SR_LD <= '0';
-				y_present <= m;
-			when m =>
+				y_present <= g;
+			when g =>
 				switch_REG <= '1';
 				RippleBlankInState <= '1';
-				y_present <= n;
-				
-			when n =>
+				y_present <= h;
+			when h =>
 				if (modify_G = '1') then
-					switch_REG <= '0';
-					RippleBlankInState <= '0';
-					y_present <= e;
+					y_present <= d;
 				end if;
+		
 			
 			end case;
 		end if;
