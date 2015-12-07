@@ -1,0 +1,17 @@
+
+State Machine - |MASTERMIND|RandomPatternGenerator:gate4|y_present
+Name y_present.C y_present.B y_present.A 
+y_present.A 0 0 0 
+y_present.B 0 1 1 
+y_present.C 1 0 1 
+
+State Machine - |MASTERMIND|g10_mastermind_controller_ugm:gate1|y_present
+Name y_present.h y_present.g y_present.f y_present.e y_present.d y_present.c y_present.b y_present.a 
+y_present.a 0 0 0 0 0 0 0 0 
+y_present.b 0 0 0 0 0 0 1 1 
+y_present.c 0 0 0 0 0 1 0 1 
+y_present.d 0 0 0 0 1 0 0 1 
+y_present.e 0 0 0 1 0 0 0 1 
+y_present.f 0 0 1 0 0 0 0 1 
+y_present.g 0 1 0 0 0 0 0 1 
+y_present.h 1 0 0 0 0 0 0 1 

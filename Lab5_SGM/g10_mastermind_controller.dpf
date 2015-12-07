@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="segments3[3]" source="Pin Planner" >
+		</pin>
+		<pin name="segments3[2]" source="Pin Planner" >
+		</pin>
+		<pin name="segments3[1]" source="Pin Planner" >
+		</pin>
+		<pin name="segments3[0]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[6]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[5]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[4]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[3]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[2]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[1]" source="Pin Planner" >
+		</pin>
+		<pin name="segments4[0]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[6]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[5]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[4]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[3]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[2]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[1]" source="Pin Planner" >
+		</pin>
+		<pin name="segments1[0]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[6]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[5]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[4]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[3]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[2]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[1]" source="Pin Planner" >
+		</pin>
+		<pin name="segments2[0]" source="Pin Planner" >
+		</pin>
+		<pin name="segments3[6]" source="Pin Planner" >
+		</pin>
+		<pin name="segments3[5]" source="Pin Planner" >
+		</pin>
+		<pin name="segments3[4]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

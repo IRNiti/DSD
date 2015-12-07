@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity g10_rptest is
+
+port(start : in std_logic;
+		ext_pattern : in std_logic_vector(11 downto 0);
+		segment1, segment2, segment3, segment4 : out std_logic_vector(6 downto 0));
+		
+end g10_rptest;
+
+architecture behaviour of g10_rptest is
+
+signal ADDR1, ADDR2, ADDR3, ADDR4 : std_logic_vector(2 downto 0);
+signal code1, code2, code3, code4 : std_logic_vector(3 downto 0);
+
+component RandomPatternGenerator is
+port (P_generatedN : in std_logic;
+		clk : in std_logic;
+		Start : in std_logic;
+		RP_LD : in std_logic;
+		EXT_PATTERN : out std_logic_vector(11 downto 0));
+end component;
+
+component g10_7_segment_decoder is
+
+port( code            : in std_logic_vector(3 downto 0);
+		RippleBlank_In  : in std_logic;
+		RippleBlank_Out : out std_logic;  
+		segments        : out std_logic_vector(6 downto 0));
+end component;
+
+
+begin

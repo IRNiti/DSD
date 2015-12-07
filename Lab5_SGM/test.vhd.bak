@@ -1,0 +1,63 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity test is
+
+	port (clk : in std_logic;
+			addr : out std_logic_vector(11 downto 0));
+	
+end test;
+
+
+architecture behaviour of test is 
+
+	signal last, output, input, enable_count, enable_write, reset : std_logic;
+
+	component g10_possibility_table is
+		port (TC_EN : in std_logic; --indexer
+				TC_RST : in std_logic; 
+				TM_IN : in std_logic;  -- array 
+				TM_EN : in std_logic; 
+				CLK : in std_logic;
+				TC_LAST : out std_logic;
+				TM_ADDR : out std_logic_vector (11 downto 0);
+				TM_OUT : out std_logic);
+	end component;
+
+	component g10_nextguess is
+		port( CLK : in std_logic;
+				guess : out std_logic_vector(11 downto 0));
+	end component;
+
+	begin
+
+		Gate1: g10_possibility_table port map (TC_EN=>enable_count, TC_RST=>reset, TM_IN=>input, TM_EN=>enable_write, CLK=>clk, 
+														TC_LAST=>last, TM_ADDR=>addr, TM_OUT=>output);
+														
+		initialize : process(clk)
+		
+		begin	
+			
+			if rising_edge(clk) then
+			
+				for i in 0 to 5000 loop
+					enable_count <= '1';
+					reset <='0';
+					input <= '1';
+					enable_write <= '1';
+					
+					if(last = '1') then
+						reset = '1';
+						exit;
+						
+					end if;
+				end loop;
+				
+				
+			end if;
+			
+		end process;
+
+
+end behaviour;

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Dec 06 12:24:52 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : g10_mastermind_controller
+Top-level Entity Name : MASTERMIND
+Family : Cyclone II
+Device : EP2C20F484C7
+Timing Models : Final
+Total logic elements : 270 / 18,752 ( 1 % )
+    Total combinational functions : 270 / 18,752 ( 1 % )
+    Dedicated logic registers : 45 / 18,752 ( < 1 % )
+Total registers : 45
+Total pins : 45 / 315 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

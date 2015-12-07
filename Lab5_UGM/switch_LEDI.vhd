@@ -1,0 +1,39 @@
+--library ieee;
+--use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+--
+--entity switch_LEDI is 
+--port (clk : in std_logic;
+--		switch_LED : in std_logic;
+--		LED_valueN : out std_logic);
+--end switch_LEDI;
+--
+--architecture behavior of switch_LEDI is 
+--signal g1,g2,g3,g4 : std_logic_vector(2 downto 0);
+--signal current_LED, next_LED : std_logic_vector(1 downto 0);
+--
+--begin
+--
+--process (clk, switch_LED) 
+--
+--LED1 <= current_LED("00");
+--LED2 <= current_LED("01");
+--LED3 <= current_LED("10");
+--LED4 <= current_LED("11");
+--begin
+--
+--	if (rising_edge(clk)) then 
+--		if switch_LED = '0' then
+--			LED <= current_LED;
+--			else
+--			LED <= next_LED;
+--				case curent_LED is
+--					when "00" => next_LED <= "01";
+--					when "01" => next_LED <= "10";
+--					when "10" => next_LED <= "11";
+--					when "11" => next_LED <= "00";
+--				end case;
+--				
+--		end if;
+--	end if;
+--	
